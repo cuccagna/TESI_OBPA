@@ -1,0 +1,520 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 2.6 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\entry{Angluin87}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Angluin}{A.}%
+     {Dana}{D.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Academic Press, Inc.}%
+  }
+  \strng{namehash}{AD1}
+  \strng{fullhash}{AD1}
+  \field{sortinit}{A}
+  \verb{doi}
+  \verb 10.1016/0890-5401(87)90052-6
+  \endverb
+  \field{issn}{0890-5401}
+  \field{number}{2}
+  \field{pages}{87\bibrangedash 106}
+  \field{title}{Learning Regular Sets from Queries and Counterexamples}
+  \field{volume}{75}
+  \list{location}{1}{%
+    {Duluth, MN, USA}%
+  }
+  \field{journaltitle}{Inf. Comput.}
+  \field{month}{11}
+  \field{year}{1987}
+\endentry
+
+\entry{Angluin90}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Angluin}{A.}%
+     {Dana}{D.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Academic, Kluwer}%
+  }
+  \strng{namehash}{AD1}
+  \strng{fullhash}{AD1}
+  \field{sortinit}{A}
+  \verb{doi}
+  \verb 10.1007/BF00116034
+  \endverb
+  \field{issn}{0885--6125}
+  \field{pages}{121\bibrangedash 150}
+  \field{title}{Negative results for equivalence queries}
+  \field{volume}{5}
+  \list{location}{1}{%
+    {Boston , USA}%
+  }
+  \field{journaltitle}{Machine Learning Journal}
+  \field{month}{06}
+  \field{year}{1990}
+\endentry
+
+\entry{Chomsky59}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Chomsky}{C.}%
+     {Noam}{N.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Elsevier}%
+  }
+  \strng{namehash}{CN1}
+  \strng{fullhash}{CN1}
+  \field{sortinit}{C}
+  \verb{doi}
+  \verb 10.1016/S0019-9958(59)90362-6
+  \endverb
+  \field{pages}{137\bibrangedash 167}
+  \field{title}{On Certain Formal Properties of Grammars}
+  \field{volume}{II}
+  \field{journaltitle}{Information and Computation}
+  \field{month}{06}
+  \field{year}{1959}
+\endentry
+
+\entry{DeLaHiguera10}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {De~La~Higuera}{D.~L.~H.}%
+     {Colin}{C.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Cambridge University Press}%
+  }
+  \strng{namehash}{DLHC1}
+  \strng{fullhash}{DLHC1}
+  \field{sortinit}{D}
+  \field{isbn}{0521763169 9780521763165}
+  \field{title}{Grammatical Inference: Learning Automata and Grammars}
+  \list{location}{1}{%
+    {New York, NY, USA}%
+  }
+  \field{year}{2010}
+\endentry
+
+\entry{Hop71}{report}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Hopcroft}{H.}%
+     {J.E.}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Karp}{K.}%
+     {R.M.}{R.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{HJKR1}
+  \strng{fullhash}{HJKR1}
+  \field{sortinit}{H}
+  \field{title}{A Linear Algorithm for Testing Equivalence of Finite Automata}
+  \verb{url}
+  \verb http://hdl.handle.net/1813/5958
+  \endverb
+  \list{institution}{1}{%
+    {Cornell Unisersity}%
+  }
+  \field{type}{techreport}
+  \field{month}{12}
+  \field{year}{1971}
+\endentry
+
+\entry{Hop07}{book}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Hopcroft}{H.}%
+     {J.E.}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Motwani}{M.}%
+     {R}{R}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Ullman}{U.}%
+     {J.D.}{J.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Pearson/Addison Wesley}%
+  }
+  \strng{namehash}{HJMRUJ1}
+  \strng{fullhash}{HJMRUJ1}
+  \field{sortinit}{H}
+  \field{edition}{2}
+  \field{isbn}{9780201441246}
+  \field{pages}{153}
+  \field{title}{Introduction to Automata Theory, Languages, and Computation}
+  \field{year}{2007}
+\endentry
+
+\entry{Howar12}{thesis}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Howar}{H.}%
+     {Falk~M.}{F.~M.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{HFM1}
+  \strng{fullhash}{HFM1}
+  \field{sortinit}{H}
+  \verb{doi}
+  \verb 2003/29486
+  \endverb
+  \field{pages}{9\bibrangedash 23}
+  \field{title}{Active learning of interface programs}
+  \list{institution}{1}{%
+    {Technischen Universitat Dortmund}%
+  }
+  \field{type}{phdthesis}
+  \field{year}{2012}
+\endentry
+
+\entry{Kearns94}{book}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Kearns}{K.}%
+     {Michael~J.}{M.~J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Vazirani}{V.}%
+     {Umesh~V.}{U.~V.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {MIT Press}%
+  }
+  \strng{namehash}{KMJVUV1}
+  \strng{fullhash}{KMJVUV1}
+  \field{sortinit}{K}
+  \field{isbn}{0-262-11193-4}
+  \field{title}{An Introduction to Computational Learning Theory}
+  \list{location}{1}{%
+    {Cambridge, MA, USA}%
+  }
+  \field{year}{1994}
+\endentry
+
+\entry{Mic86a}{incollection}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Michalski}{M.}%
+     {Ryszard~Si}{R.~S.}%
+     {}{}%
+     {}{}}%
+  }
+  \name{editor}{1}{}{%
+    {{}%
+     {Shapiro}{S.}%
+     {Stuart~C.}{S.~C.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Wiley--Interscience Publications}%
+  }
+  \strng{namehash}{MRS1}
+  \strng{fullhash}{MRS1}
+  \field{sortinit}{M}
+  \field{booktitle}{Encyclopedia of Artificial Intelligence}
+  \field{pages}{185\bibrangedash 194}
+  \field{title}{Concept learning}
+  \field{volume}{I}
+  \field{month}{01}
+  \field{year}{1986}
+\endentry
+
+\entry{Mic93}{incollection}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Michalski}{M.}%
+     {Ryszard~Si}{R.~S.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Morgan Kauffman Inc.}%
+  }
+  \strng{namehash}{MRS1}
+  \strng{fullhash}{MRS1}
+  \field{sortinit}{M}
+  \field{booktitle}{Machine Learning: a Multistrategy Approach}
+  \field{title}{Inferential theory of learning: Developing fondations for
+  multistrategy learning}
+  \field{volume}{IV}
+  \field{year}{1993}
+\endentry
+
+\entry{Mic86b}{incollection}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Michalski}{M.}%
+     {Ryszard~Si}{R.~S.}%
+     {}{}%
+     {}{}}%
+  }
+  \name{editor}{3}{}{%
+    {{}%
+     {Michalski}{M.}%
+     {S.~Ryszard}{S.~R.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Carbonell}{C.}%
+     {G.~Jaime}{G.~J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Mitchell}{M.}%
+     {M.~Tom}{M.~T.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Morgan Kaufmann}%
+  }
+  \strng{namehash}{MRS1}
+  \strng{fullhash}{MRS1}
+  \field{sortinit}{M}
+  \field{booktitle}{Machine Learning, an Artificial Intelligence Approach}
+  \field{isbn}{0-934613-00-1}
+  \field{title}{Understanding the nature of learning: Issue and research
+  direction}
+  \field{volume}{II}
+  \field{year}{1986}
+\endentry
+
+\entry{Nor09}{thesis}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Norton}{N.}%
+     {Daphne}{D.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{ND1}
+  \strng{fullhash}{ND1}
+  \field{sortinit}{N}
+  \field{pages}{19\bibrangedash 31}
+  \field{title}{Algorithms for testing equivalence of finite automata, with a
+  grading tool for JFLAP}
+  \verb{url}
+  \verb http://scholarworks.rit.edu/theses/6939/
+  \endverb
+  \list{institution}{1}{%
+    {Rochester Institute of Technology}%
+  }
+  \field{type}{mathesis}
+  \field{month}{03}
+  \field{year}{2009}
+\endentry
+
+\entry{Schapire93}{article}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Rivest}{R.}%
+     {Ronald~L.}{R.~L.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Schapire}{S.}%
+     {Robert~E.}{R.~E.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Academic Press, Inc.}%
+  }
+  \strng{namehash}{RRLSRE1}
+  \strng{fullhash}{RRLSRE1}
+  \field{sortinit}{R}
+  \verb{doi}
+  \verb 10.1006/inco.1993.1021
+  \endverb
+  \field{issn}{0890-5401}
+  \field{pages}{299\bibrangedash 347}
+  \field{title}{Inference of Finite Automata Using Homing Sequences}
+  \field{volume}{103}
+  \field{journaltitle}{Information and Computation}
+  \field{month}{04}
+  \field{year}{1993}
+\endentry
+
+\entry{Sim83}{incollection}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Simon}{S.}%
+     {Herbert~A.}{H.~A.}%
+     {}{}%
+     {}{}}%
+  }
+  \name{editor}{3}{}{%
+    {{}%
+     {Mitchell}{M.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Michalski}{M.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Carbonel}{C.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Tioga Publishing Company}%
+  }
+  \strng{namehash}{SHA1}
+  \strng{fullhash}{SHA1}
+  \field{sortinit}{S}
+  \field{booktitle}{Machine Learning, an Artificial Intelligence Approach}
+  \field{pages}{25\bibrangedash 37}
+  \field{title}{Why should machine learn?}
+  \field{volume}{I}
+  \field{year}{1983}
+\endentry
+
+\entry{SteffenTTT14}{incollection}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Steffen}{S.}%
+     {Bernhard}{B.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Howar}{H.}%
+     {Falk~M.}{F.~M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Isberner}{I.}%
+     {Malte}{M.}%
+     {}{}%
+     {}{}}%
+  }
+  \name{editor}{2}{}{%
+    {{}%
+     {Bonakdarpour}{B.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Smolka}{S.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Springer}%
+  }
+  \strng{namehash}{SBHFMIM1}
+  \strng{fullhash}{SBHFMIM1}
+  \field{sortinit}{S}
+  \field{booktitle}{Runtime Verification}
+  \verb{doi}
+  \verb 10.1007/978-3-319-11164-3
+  \endverb
+  \field{isbn}{978-3-319-11163-6}
+  \field{pages}{307\bibrangedash 322}
+  \field{series}{Lecture Notes in Computer Science}
+  \field{title}{The TTT Algorithm: A Redundancy Free Approach to Active
+  Automata Learning}
+  \field{volume}{8734}
+  \field{year}{2014}
+\endentry
+
+\entry{StefCounterexample14}{inproceedings}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Steffen}{S.}%
+     {Bernhard}{B.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Isberner}{I.}%
+     {Malte}{M.}%
+     {}{}%
+     {}{}}%
+  }
+  \name{editor}{3}{}{%
+    {{}%
+     {Clark}{C.}%
+     {A.}{A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Kanazawa}{K.}%
+     {M.}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Yoshinaka}{Y.}%
+     {R.}{R.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{organization}{1}{%
+    {Proceedings of the International Conference on Grammatical Inference, ICGI
+  2014}%
+  }
+  \strng{namehash}{SBIM1}
+  \strng{fullhash}{SBIM1}
+  \field{sortinit}{S}
+  \field{pages}{79\bibrangedash 93}
+  \field{title}{An Abstract Framework for Counterexample Analysis in Active
+  Automata Learning}
+  \verb{url}
+  \verb http://jmlr.org/proceedings/papers/v34/isberner14a.pdf
+  \endverb
+  \field{volume}{34}
+  \list{location}{1}{%
+    {Kyoto, Japan}%
+  }
+  \field{month}{09}
+  \field{year}{2014}
+\endentry
+
+\lossort
+\endlossort
+
+\endinput

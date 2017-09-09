@@ -1,0 +1,194 @@
+%!TEX encoding = UTF-8 Unicode
+%!TEX root = ./../main.tex
+
+% L*
+@article{Angluin87,
+ author = {Angluin, Dana},
+ title = {Learning Regular Sets from Queries and Counterexamples},
+ journal = {Inf. Comput.},
+ issue_date = {November 1, 1987},
+ volume = {75},
+ number = {2},
+ month = nov,
+ year = {1987},
+ issn = {0890-5401},
+ pages = {87--106},
+ numpages = {20},
+ doi = {10.1016/0890-5401(87)90052-6},
+ publisher = {Academic Press, Inc.},
+ address = {Duluth, MN, USA},
+} 
+
+@article{Angluin90,
+ author = {Angluin, Dana},
+ title = {Negative results for equivalence queries},
+ journal = {Machine Learning Journal},
+ volume = {5},
+ month = jun,
+ year = {1990},
+ issn = {0885--6125},
+ pages = {121--150},
+ numpages = {30},
+ doi = {10.1007/BF00116034},
+ publisher = {Academic, Kluwer},
+ address = {Boston , USA},
+} 
+
+@article{Schapire93,
+author ={Rivest, Ronald L. and Schapire, Robert E.},
+title  = {Inference of Finite Automata Using Homing Sequences},
+journal = {Information and Computation},
+month =apr,
+year ={1993},
+volume = {103},
+publisher = {Academic Press, Inc.},
+doi = {10.1006/inco.1993.1021},
+pages = {299--347},
+issn  = {0890-5401},
+}
+
+@article{Chomsky59,
+author ={Chomsky, Noam},
+title  = {On Certain Formal Properties of Grammars},
+journal = {Information and Computation},
+month =jun,
+year ={1959},
+volume = {II},
+publisher = {Elsevier},
+doi = {10.1016/S0019-9958(59)90362-6},
+pages = {137--167},
+}
+
+@book{Hop07,
+author = {Hopcroft, J.E. and Motwani, R and Ullman, J.D.},
+title  = {Introduction to Automata Theory, Languages, and Computation},
+year   = {2007},
+isbn   = {9780201441246},
+publisher = {Pearson/Addison Wesley},
+pages     = {153},
+edition   ={2},
+}
+
+@book{Kearns94,
+author = {Kearns, Michael J. and Vazirani, Umesh V.},
+title  = {An Introduction to Computational Learning Theory},
+year   = {1994},
+isbn   = {0-262-11193-4},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+}
+
+@book{DeLaHiguera,
+author = {De La Higuera, Colin},
+title  = {Grammatical Inference: Learning Automata and Grammars},
+year   = {2010},
+isbn   = {0521763169 9780521763165},
+publisher = {Cambridge University Press},
+address = {New York, NY, USA},
+}
+
+@incollection{SteffenTTT14,
+author = {Steffen, Bernhard and Howar, Falk M. and Isberner, Malte},
+title  = {The TTT Algorithm: A Redundancy Free Approach to Active Automata Learning},
+booktitle = {Runtime Verification},
+doi    = {10.1007/978-3-319-11164-3},
+volume = {8734},
+pages  = {307--322},
+year   = {2014},
+isbn   = {978-3-319-11163-6},
+publisher = {Springer},
+series = {Lecture Notes in Computer Science},
+editor = {Bonakdarpour and Smolka},
+}
+
+@incollection{Mic86a,
+author = {Michalski, Ryszard Si},
+title  = {Concept learning},
+booktitle = {Encyclopedia of Artificial Intelligence},
+volume = {I},
+year   = {1986},
+pages  = {185--194},
+month  = jan,
+editor = {Shapiro, Stuart C.},
+publisher = {Wiley--Interscience Publications},
+}
+
+@incollection{Mic86b,
+author = {Michalski, Ryszard Si},
+title  = {Understanding the nature of learning: Issue and research direction},
+booktitle = {Machine Learning, an Artificial Intelligence Approach},
+volume = {II},
+year   ={1986},
+publisher ={Morgan Kaufmann},
+editor ={Michalski, S. Ryszard  and Carbonell,G. Jaime and Mitchell,M. Tom},
+isbn  = {0-934613-00-1},
+}
+
+@incollection{Sim83,
+title  = {Why should machine learn?},
+author = {Simon, Herbert A.},
+booktitle ={Machine Learning, an Artificial Intelligence Approach},
+volume = {I},
+year   = {1983},
+pages  = {25--37},
+editor = {Mitchell and Michalski and Carbonel},
+publisher = {Tioga Publishing Company},
+}
+
+@incollection{Mic93,
+title  = {Inferential theory of learning: Developing fondations for multistrategy learning},
+author = {Michalski, Ryszard Si},
+booktitle ={Machine Learning: a Multistrategy Approach},
+volume = {IV},
+year   = {1993},
+publisher = {Morgan Kauffman Inc.},
+}
+
+@inproceedings{StefCounterexample14,
+author = {Steffen, Bernhard and Isberner, Malte},
+title  = {An Abstract Framework for Counterexample Analysis in Active Automata Learning},
+year   = {2014},
+month  = sep,
+pages  = {79-93},
+volume = {34},
+organization   = {Proceedings of the International Conference on Grammatical Inference, ICGI 2014},
+editor = {Clark, A. and Kanazawa, M. and Yoshinaka, R. },
+address= {Kyoto, Japan},
+url    = {http://jmlr.org/proceedings/papers/v34/isberner14a.pdf},
+}
+
+@mastersthesis{Nor09,
+author = {Norton, Daphne},
+title  = {Algorithms for testing equivalence of finite automata, with a grading tool for JFLAP},
+school = {Rochester Institute of Technology},
+year   = {2009},
+month  = mar,
+url    = {http://scholarworks.rit.edu/theses/6939/},
+pages  = {19--31},
+numpages={13},
+}
+
+@phdthesis{Howar12,
+author = {Howar, Falk M.},
+title  = {Active learning of interface programs},
+school = {Technischen Universitat Dortmund},
+year   = {2012},
+doi    = {2003/29486},
+pages  = {9--23},
+numpages={15}
+}
+
+
+@techreport{Hop71,
+author = {Hopcroft, J.E. and Karp, R.M.},
+title  = {A Linear Algorithm for Testing Equivalence of Finite Automata},
+year   = {1971},
+month  = dec,
+institution = {Cornell Unisersity},
+url    = {http://hdl.handle.net/1813/5958},
+}
+
+
+
+
+

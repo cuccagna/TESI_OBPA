@@ -1,0 +1,50 @@
+%!TEX encoding = UTF-8 Unicode
+%!TEX root = ./../main.tex
+%!TEX TS-program = xelatex
+
+\chapter{TITOLO CAPITOLO 1} % Main chapter title
+\label{cap:uno}
+
+\lipsum[1-2]
+
+\section{Sezione 1}
+\lipsum[3-5]
+ \begin{equation}
+ \label{eq: gsig}
+ r(\mathbf{x}_i,\mathbf{x}_j)= \exp{\left(-\frac{\left\lVert \mathbf{x}_i - \mathbf{x}_j \right\rVert^2}{\sigma_s}\right)} + \mathcal{N}(0,\tau)\text{,}
+ \end{equation}
+ 
+ L'Equazione \eqref{eq: gsig} è molto importante nello sviluppo del presente elaborato.
+
+\subsection{Sottosezione 1}
+\lipsum[4-6]
+Come si vede in Figura \ref{fig:prova}.
+
+\begin{figure}
+	\centering
+	\includegraphics[trim=0 0 0 83, clip, width=\columnwidth, keepaspectratio]{planisfero}
+	\caption[{\it Esempio di figura}: questa è la didascalia]{{\it Esempio di figura}: questa è la didascalia.}
+   \label{fig:prova}
+\end{figure}
+
+\subsubsection{Sottosottosezione 1}
+\lipsum[7-9]
+Come si evince dalla Tabella \ref{tab:esempio}
+
+
+
+\begin{table}[tb]
+\caption{Esempio Tabella.}
+\label{tab:esempio}
+\centering 
+ \begin{tabular}{|l||c|c|c|}
+ \cline{2-3}
+ \multicolumn{1}{c|}{}   & {\bf ALFA }  & {\bf BETA }  \\ 
+ \cline{2-3}\hline 
+\textit{UNO}  &  1.1553 (0.003)  & 1.0561 (0.002) \\ 
+\textit{DUE}  &  1.2170 (0.004) & 1.3418 (0.007) \\ 
+\textit{TRE} & 1.4080 (0.005) & 1.4312 (0.008) \\ 
+\textit{QUATTRO}  & 0.4809 (0.001) & 0.5498 (0.089) \\
+\hline 
+ \end{tabular}%
+\end{table} 

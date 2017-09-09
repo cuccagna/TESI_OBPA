@@ -1,0 +1,25 @@
+%!TEX encoding = UTF-8 Unicode
+%!TEX root = ./../main.tex
+%!TEX TS-program = xelatex
+
+
+\chapter*{Introduzione} % Main chapter title
+\label{cap:intro}
+
+%----------------------------------------------------------------------------------------
+%	INTERPRETAZIONE ALTO LIVELLO
+%----------------------------------------------------------------------------------------
+ 
+L'oggetto di studio di questo elaborato è un algoritmo utilizzato per l'appredimento di linguaggi regolari: l' \ac{ObP}.
+L'apprendimento di linguaggi regolari è collocabile nel più ampio tema dell' inferenza grammaticale --- usata in una varietà di campi come pattern recognition, biologia computazionale e elaborazione del linguaggio naturale --- ed è il processo di automaticamente inferire una grammatica esaminando delle stringhe di un linguaggio sconosciuto.
+Il modus operandi degli algoritmi d'inferenza grammaticale o regolare e dell'\ac{ObP} è inquadrabile all'interno dell''apprendimento per induzione e per questo è spesso detta \ac{IIR}  (o grammaticale).
+Allo stato dell'arte l' \ac{ObP} costituisce il secondo algoritmo di riferimento nell'ambito dell'apprendimento di linguaggi regolari.  L'algoritmo più performante è invece il più recente TTT algorithm [].
+Si può trovare una presentazione completa dell' \ac{ObP}  in [] e una sua implemetazione nella libreria LearnLib in [] . Corredato a questa tesina vi è anche l'implementazione dell' \ac{ObP} in C++ , codice che è stato integrato in una libreria preesistente.
+Il lavoro qui esposto si divide in quattro parti. Nel primo capitolo si parlerà dell'induzione, e riferendosi alla classificazione proposta in [Micb7b], si inquadrerà questo meccanismo nel complesso meccanismo dell'apprendimento.
+Inoltre, dopo avere messo a confronto l'induzione con la deduzione e l'abduzione verranno passati in rassegna le peculiarità del processo induttivo
+Nel secondo capitolo si definirà l'inferenza induttiva grammaticale specificando e approfondendo i punti di cui si compone. Poi saranno scandagliati i risultati teorici e i limiti dell'\ac{IIR}.
+Nel terzo capitolo saranno presentati brevemente i principali algoritmi dell'\ac{IIR} RPNI e EDSM nel red-blue framework e poi nel paradigma dell'Active Learning sarà introdotto e approfondito L* [] che può essere considerato il capostipite dell'\ac{ObP}
+Nel quarto capitolo verrà esposto in maniera dettagliata la ratio che muove l'\ac{ObP} le strutture dati e le prestazioni. Inoltre verranno riportate le scelte discostanti dall'algoritmo di riferimento [] e le motivazioni. Verranno proposti infine i risultati sperimentali per mettere a confronto le prestazioni dell'algoritmo oggetto di studio con L*
+
+%Un importante riferimento bibliografico è \cite{Angluin87}.
+

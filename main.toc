@@ -1,0 +1,145 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {italian}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Acronimi}{v}{section*.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Introduzione}{vi}{section*.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}Inferenza Induttiva}{1}{chapter.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.1}Apprendimento}{1}{section.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.1.1}Definire l'apprendimento}{1}{subsection.1.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.1.2}Una possibile schematizzazione}{2}{subsection.1.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.2}Induzione}{5}{section.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2.1}Metodologia di ricerca induttiva}{10}{subsection.1.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}Algoritmi d'apprendimento}{11}{chapter.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}Active Learning}{11}{section.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.1}Active learning nell' Inferenza Induttiva Regolare}{12}{subsection.2.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}L*}{13}{section.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.1}Tabella di Osservazione}{14}{subsection.2.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.2}L'algoritmo}{15}{subsection.2.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Funzionamento}{15}{section*.22}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Correttezza}{18}{section*.23}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Complessità computazionale}{19}{section*.24}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.3}Il teacher}{20}{subsection.2.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Table-filling}{20}{section*.25}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Una versione più efficiente}{21}{section*.26}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Observation Pack}{22}{chapter.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1}Fondamenta teoriche}{22}{section.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.2}Costruzione dell'ipotesi}{23}{section.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.1}Tabella di osservazione localizzata}{23}{subsection.3.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Completezza}{24}{section*.29}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Chiusura}{24}{section*.30}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.2}Discrimination tree}{25}{subsection.3.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.3}Observation Pack}{26}{subsection.3.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.3}Gestione Controesempio}{26}{section.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3.1}Classificazione}{26}{subsection.3.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3.2}Decomposizione controesempio}{28}{subsection.3.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Decomposizione del controesempio riformulata}{29}{section*.35}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3.3}Metodi decomposizione controesempio}{29}{subsection.3.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Binary search}{30}{section*.36}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Exponential Search}{30}{section*.37}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Partition Search}{31}{section*.38}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Eager Search}{31}{section*.39}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.4}L'algoritmo}{32}{section.3.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.1}Funzionamento}{32}{subsection.3.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.2}Correttezza}{35}{subsection.3.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.3}Complessità computazionale}{38}{subsection.3.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.4}Discrimination tree vs Tabella di Osservazione localizzata}{40}{subsection.3.4.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.5}Teacher}{42}{subsection.3.4.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.5}Scelte Progettuali}{42}{section.3.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {A}Preliminari}{45}{appendix.A}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.1}Notazione matematica}{45}{section.A.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.1.1}Insiemi}{45}{subsection.A.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.1.2}Relazione d'equivalenza}{45}{subsection.A.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.2}Linguaggi e grammatiche}{46}{section.A.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.2.1}Alfabeto, stringhe e linguaggi}{46}{subsection.A.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Alfabeto}{46}{section*.44}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Stringhe}{46}{section*.45}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Linguaggi}{47}{section*.46}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.2.2}Grammatiche}{48}{subsection.A.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.3}Automi a stati finiti}{49}{section.A.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.3.1}FSA particolari}{51}{subsection.A.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Maximal Canonical Automaton}{52}{section*.51}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Automa quoziente}{52}{section*.53}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Prefix Tree Acceptor}{53}{section*.54}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Automa Universale}{53}{section*.56}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.3.2}Funzioni di output regolari}{54}{subsection.A.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Relazione di Nerode}{54}{section*.57}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Teorema Myhill-Nerode}{54}{section*.58}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {B}Prel. e impl. ObP}{56}{appendix.B}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {B.1}Notazione specifica per l'ObP}{56}{section.B.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {B.1.1}Definizioni}{56}{subsection.B.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {B.1.2}Def. fram.}{57}{subsection.B.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Prefix Transformation}{57}{section*.59}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Altre definizioni}{57}{section*.60}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {B.2}Dett. impl. ObP}{57}{section.B.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliografia}{60}{section*.61}

@@ -1,0 +1,265 @@
+%!TEX encoding = UTF-8 Unicode
+%!TEX TS-program = xelatex
+% !TEX root = main.tex
+
+\documentclass[12pt, oneside]{book}
+
+\usepackage{ifxetex}
+
+\ifxetex
+  \usepackage{fontspec}
+  \usepackage{polyglossia}
+  \setmainlanguage{italian}
+\else
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage[italian]{babel} 
+  %\usepackage{lmodern}
+\fi
+
+
+
+\usepackage{csquotes}
+\usepackage[backend=bibtex,style=numeric-comp, doi=true,url=true]{biblatex}
+\bibliography{./chapters/bibliography.bib}
+
+%\usepackage{microtype}
+
+% Math package
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{braket}
+\usepackage{enumitem}
+\usepackage{lastpage}
+\usepackage{listings}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+\usepackage[]{float}
+\usepackage[compatibility=false]{caption}
+\usepackage{subfig}
+\usepackage{verbatim}
+
+\usepackage{array}
+
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+\DeclarePairedDelimiter{\norma}{\lVert}{\rVert}
+
+\makeatletter
+\renewcommand{\ALG@name}{Algoritmo}
+\makeatother
+\DeclareCaptionFormat{ruled}{\leavevmode\leaders\hrule height 0.8pt depth0pt\hfill\mbox{}\endgraf#1#2 #3 \vspace{-0.7\baselineskip}\leavevmode\leaders\hrule height 0.6pt\hfill\null\vspace*{-0.8\baselineskip}}
+%ACRONIMI
+\usepackage{acronym}%\usepackage[nohyperlinks]{acronym} senza link
+%\renewcommand*\acfsfont{\textbf}
+\renewcommand*{\acsfont}[1]{\textit{#1}}%stile della sigla dell'acronimo
+\renewcommand*{\acffont}[1]{\textbf{#1}} %stile del nome  dell'acronimo la prima volta che compare
+
+
+% Redefine margins
+\usepackage[paper=a4paper,includehead,includefoot,margin=1in]{geometry}
+
+\usepackage{graphicx}
+\graphicspath{{pictures/}}
+\DeclareGraphicsExtensions{.pdf,.jpg,.png}
+
+
+\usepackage[table]{xcolor}% http://ctan.org/pkg/xcolor
+
+\usepackage{array,booktabs,arydshln,multirow}
+
+\usepackage{tikz} %for automata
+\usetikzlibrary{automata,positioning}
+% Fancy headers
+\usepackage{fancyhdr}
+ \let\cleardoublepage\clearpage  %per eliminare le pagine bianche. 
+
+\setlength{\parindent}{0pt}
+\setlength{\parsep}{10pt}
+
+
+\newfontfamily\quotefont{Arial}
+\newcommand{\apostrophe}{{\quotefont'}}
+
+\newenvironment{rientra} %definisco un ambiente personalizzato da usare per avere un rientro
+  {\par\setlength{\leftskip}{0.7cm}\setlength{\rightskip}{0cm}\noindent\ignorespaces}
+
+\theoremstyle{definition}
+\newtheorem*{definizione*}{Definizione}
+\newtheorem{definizione}{Definizione}[chapter]
+%\setcounter{definizione}{1} %per fare partire il numero della definizione da dove vuoi tu
+
+%\theoremstyle{definition}
+%\newtheorem*{ nonnumeratadefinizione }{ Definizione }
+
+\theoremstyle{plain}
+\newtheorem*{teorema*}{Teorema} %per avere teoremi non numerati
+\newtheorem{teorema}{Teorema}[chapter]
+\newtheorem{lemma}{Lemma} %\newtheorem{lemma}[teorema]{Lemma} lemma che segue la numerazione dei teoremi
+\newtheorem{corollary}[teorema]{Corollary}
+
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}} %allineamento orizzontale centrale di p (nota che P è maiuscolo) per una cella di tabella.
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}} %allineamento verticale  oltre che orizzontale .
+\newcolumntype{N}{@{}m{0pt}@{}}
+
+\algnewcommand\algorithmicinput{\textbf{Input:}}
+\algnewcommand\Input{\item[\algorithmicinput]}
+\algnewcommand\algorithmicoutput{\textbf{Output:}}
+\algnewcommand\Output{\item[\algorithmicoutput]}
+\algnewcommand{\LineComment}[1]{\Statex \(\triangleright\) #1}
+
+\usepackage{hyperref}
+ \hypersetup{colorlinks,
+           citecolor=blue,  
+            filecolor=black,  
+            linkcolor=black,  
+            urlcolor=violet } 
+%-----------------------------------------------------------------------------------------------
+%	INIZIO DOCUMENTO
+%----------------------------------------------------------------------------------------
+\begin{document}
+\pagestyle{empty}
+%----------------------------------------------------------------------------------------
+%	PAGINA TITOLO
+%----------------------------------------------------------------------------------------
+\title{STUDIO ED IMPLEMENTAZIONE DELL'OBSERVATION PACK ALGORITHM}
+\author{NICOLA CIACO}
+\date{\today}
+%\maketitle
+
+\begin{titlepage}
+\begin{center}
+\begin{figure}[!h]
+  	\centering
+ 	\includegraphics[width=2.5cm]{./pictures/frontespizio/logo_unipa.png}
+\end{figure}
+{{\Large{\textsc{Università degli Studi di Palermo}}}} \\
+\rule[0.1cm]{15.8cm}{0.1mm}
+\rule[0.5cm]{15.8cm}{0.6mm}
+{\small{\bf SCUOLA POLITECNICA\\
+Corso di Laurea Magistrale in Ingegneria Informatica\\
+Dipartimento di Ingegneria Chimica, Gestionale, Informatica e Meccanica}}\\
+\vspace{10mm}
+{\large{Tesina per il Corso di\textbf{  INTELLIGENZA ARTIFICIALE}}}\\
+\vspace{2mm}
+{\large{Docente:\textbf{ Chiar.mo Prof. Salvatore Gaglio}}}
+\end{center}
+\vspace{12mm}
+\begin{center}
+{\LARGE{\bf STUDIO ED IMPLEMENTAZIONE}}\\
+\vspace{3mm}
+{\LARGE{\bf DELL' OBSERVATION PACK}}\\
+ \vspace{3mm}
+ {\LARGE{\bf ALGORITHM}}\\
+\end{center}
+\vspace{25mm}
+\par
+\noindent
+\begin{minipage}[t]{0.70\textwidth}\raggedright
+{\large Presentata da:\\
+\vspace{3mm}
+\bf {Nicola Ciaco}}
+\end{minipage}
+\begin{minipage}[t]{0.47\textwidth}\raggedright
+{\large Relatori:\\
+\vspace{3mm}
+\bf{Chiar.mo Prof.\\ Marco Ortolani\\
+\vspace{5mm}
+Dott. Pietro Cottone}}
+\end{minipage}
+\hfill
+\vspace{20mm}
+\begin{center}
+{\large Anno Accademico\\2015\textbackslash16 }%inserire l'anno accademico a cui si è iscritti
+\end{center}
+\end{titlepage}
+
+\newgeometry{top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm, bindingoffset=10mm,includehead,includefoot}
+
+\frontmatter % Use roman page numbering style (i, ii, iii, iv...) for the pre-content pages
+
+%----------------------------------------------------------------------------------------
+%	INDICE
+%----------------------------------------------------------------------------------------
+\tableofcontents
+\listoffigures
+\listoftables
+
+
+%----------------------------------------------------------------------------------------
+%	INTRODUZIONE & RING
+%----------------------------------------------------------------------------------------
+
+
+%----------------------------------------------------------------------------------------
+%	STILE PAGINA
+%----------------------------------------------------------------------------------------
+
+
+%\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % New command to make the lines in the title page
+
+% PDF meta-data
+%\hypersetup{pdftitle={CIAO}}
+%\hypersetup{pdfsubject=\subjectname}
+%\hypersetup{pdfauthor=\authornames}
+%\hypersetup{pdfkeywords=\keywordnames}}
+
+
+
+%----------------------------------------------------------------------------------------
+%	THESIS CONTENT - CHAPTERS
+%----------------------------------------------------------------------------------------
+
+%%%%%%%%%
+% ACRONYMS %
+%%%%%%%%%
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{Acronimi}
+\input{./chapters/acronym}
+
+%%%%%%%%%%%
+% INTRODUZIONE %
+%%%%%%%%%%%
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{Introduzione}
+\input{./chapters/introduzione}
+
+
+
+
+\mainmatter 		% Begin numeric (1,2,3...) page numbering
+\pagestyle{fancy} 	% Return the page headers back to the "fancy" style
+
+%%%%%%%%%
+% CAPITOLO1  %
+%%%%%%%%%
+\input{./chapters/capitolo1}
+
+\input{./chapters/capitolo3}
+\input{./chapters/capitolo4}
+\appendix
+
+%%%%%%%%%%
+% APPENDICE 1 %
+%%%%%%%%%%
+\input{./chapters/appendice1}
+
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+%
+%
+
+%\bibliography{Bibliography} % The references (bibliography) information are stored in the file named "Bibliography.bib"
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{\bibname}
+\printbibliography
+
+\backmatter
+
+\end{document}  
