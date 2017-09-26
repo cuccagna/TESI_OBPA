@@ -18,9 +18,9 @@
 \fi
 
 
-
+%style=numeric-comp
 \usepackage{csquotes}
-\usepackage[backend=bibtex,style=numeric-comp, doi=true,url=true]{biblatex}
+\usepackage[backend=bibtex,style=numeric-comp, backref=true,doi=true,url=true]{biblatex}
 \bibliography{./chapters/bibliography.bib}
 
 %\usepackage{microtype}
@@ -42,6 +42,8 @@
 \usepackage{verbatim}
 
 \usepackage{array}
+\usepackage{makeidx}
+\makeindex %per creare indice analitico
 
 \DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
 \DeclarePairedDelimiter{\norma}{\lVert}{\rVert}
@@ -109,12 +111,13 @@
 \algnewcommand\Output{\item[\algorithmicoutput]}
 \algnewcommand{\LineComment}[1]{\Statex \(\triangleright\) #1}
 
+
 \usepackage{hyperref}
  \hypersetup{colorlinks,
-           citecolor=blue,  
+           citecolor=cyan,  
             filecolor=black,  
             linkcolor=black,  
-            urlcolor=violet } 
+            urlcolor=cyan } 
 %-----------------------------------------------------------------------------------------------
 %	INIZIO DOCUMENTO
 %----------------------------------------------------------------------------------------
@@ -171,7 +174,7 @@ Dott. Pietro Cottone}}
 \hfill
 \vspace{20mm}
 \begin{center}
-{\large Anno Accademico\\2015\textbackslash16 }%inserire l'anno accademico a cui si è iscritti
+{\large Anno Accademico\\2016\textbackslash17 }%inserire l'anno accademico a cui si è iscritti
 \end{center}
 \end{titlepage}
 
@@ -257,9 +260,16 @@ Dott. Pietro Cottone}}
 %\bibliography{Bibliography} % The references (bibliography) information are stored in the file named "Bibliography.bib"
 \cleardoublepage
 \phantomsection
+\hypersetup{linkcolor=cyan} %to have link of pages cyan rather than black
 \addcontentsline{toc}{chapter}{\bibname}
 \printbibliography
 
-\backmatter
 
+
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{\indexname}
+\printindex
+
+\backmatter
 \end{document}  
