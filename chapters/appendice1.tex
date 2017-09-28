@@ -4,20 +4,20 @@
 
 \chapter{Preliminari} % Main chapter title
 \label{app:uno}
-Lo scopo di quest'appendice è di stabilire una comune sintassi e semantica per concetti che sono rilevanti in tutta la tesi. Le definizioni e le notazioni qui introdotte sono essenziali per la maggior parte dei capitoli e quindi andrebbe letta.
+Lo scopo di quest'appendice è di stabilire una comune sintassi e semantica per concetti che sono rilevanti in tutta la tesi. Le definizioni e le notazioni qui introdotte sono essenziali per la maggior parte dei capitoli e quindi andrebbero lette.
 
 L'appendice è divisa concettualmente in tre parti. Nella prima parte si introdurranno questioni  puramente matematiche mentre nella seconda parte si definiranno grammatiche e linguaggi, infine nell'ultima parte si tratteranno in dettaglio gli automi a stati finiti. 
 
 \section{Notazione matematica}
-L'obiettivo di questa sezione è di introdurre i concetti matematici propedeutici per questa tesi. Senza dubbio una conoscenza matematica di base è necessaria e chiaramente non può essere introdotto ogni singolo elementare concetto
+L'obiettivo di questa sezione è di introdurre i concetti matematici propedeutici per questa tesi. Senza dubbio una conoscenza matematica di base è necessaria e chiaramente non può essere introdotto ogni singolo elementare concetto.
 \subsection{Insiemi}
 Con $\mathbb{N}$ si indica l'insieme di numeri naturali interi non negativi incluso 0 (cioè $\mathbb{N} = {0,1,2,\dots}$). L'insieme di interi positivi è denotato da $\mathbb{N}^{+}$ . Si definisce con $\mathbb{B} = {0,1}$ l'insieme di valori booleani dove 0 è associato al valore logico \textit{falso} ed 1 al valore logico \textit{vero}.
 
 Dato un generico insieme $X, \abs{X}$ denota la sua cardinalità, cioè il numero di elementi che contiene.
 \subsection{Relazione d'equivalenza}
-Una riflessiva ,simmetrica e transitiva relazione binaria $\approx \, \subseteq X\!\times{}\!X$ su un insieme $X$ è detta una \textbf{\textit{relazione d'equivalenza}}. Dato un insieme $X$ ed un elemento $x \in X$ si denota con $[x]_\approx = \{x' \in X\ | \: x \approx x'\}$ la \textit{classe di equivalenza} di x(rispetto alla relazione d'equivalenza $\approx$).
+Una relazione binaria riflessiva ,simmetrica e transitiva  $\approx \, \subseteq X\!\times{}\!X$ su un insieme $X$ è detta una \textbf{\textit{relazione d'equivalenza}}. Dato un insieme $X$ ed un elemento $x \in X$ si denota con $[x]_\approx = \{x' \in X\ | \: x \approx x'\}$ la \textit{classe di equivalenza} di x(rispetto alla relazione d'equivalenza $\approx$).
 
-Una relazione d'equivalenza $\approx$ su un insieme \textit{X} si dice che \textit{satura} un sottoinsieme $X' \subseteq X$ se e solo se $X'$ è l'unione di qualche classe d'equivalenza di $\approx$. In simboli si ha:
+Una relazione d'equivalenza $\approx$ su un insieme \textit{X} si dice che \textit{satura} un sottoinsieme $X' \subseteq X$ se e solo se $X'$ è l'unione di alcune delle classi d'equivalenza di $\approx$. In simboli si ha:
 \begin{equation*}
 X' = \bigcup_{x \in X'}^{}{\!\![x]_\approx} \text{ ,}
 \end{equation*}
@@ -26,7 +26,7 @@ Il \textbf{\textit{quoziente}} (o insieme quoziente) di \textit{X} rispetto a un
  Una \textit{partizione} di un insieme $X$ è un insieme $P$ i cui elementi, detti \textit{blocchi} ed indicati con $C$, sono sottoinsiemi (disgiunti e non vuoti) dell'insieme $X$ tali che: 
 \begin{enumerate}
 \item se $C \in P \text{ allora } C \ne \emptyset$
-\item se $C_1,C_2 \in P \text{ e } C_1 \ne C_2 \text{ allora } C_1 \cap C_2  \ne \emptyset   $
+\item se $C_1,C_2 \in P \text{ e } C_1 \ne C_2 \text{ allora } C_1 \cap C_2  = \emptyset   $
 \item se $a \in X \text{ allora esiste } C \in P \text{ tale che } a \in C$ (è un altro modo di dire che l'unione di tutti gli insiemi C deve formare X)
 \end{enumerate}  
 Il \textit{quoziente} di \textit{X} forma una \textit{partizione} di \textit{X}
@@ -47,7 +47,7 @@ Un \textbf{\textit{prefisso}}  di una stringa $w \in \Sigma^{*}$ è una stringa 
 Un \textbf{\textit{suffisso}}  di una stringa $w \in \Sigma^{*}$ è una stringa $v \in \Sigma^{*}$ tale che esiste una stringa $u \in \Sigma^{*}$ soddisfacente $w=uv$. L'insieme di tutti i suffissi di una stringa $w$ si indica con Suff(w)\\
 
 \subsubsection{Linguaggi}
-Un linguaggio \textit{L} è un qualsiasi sottoinsieme di stringhe di $\Sigma^{*}$\\ 
+Un linguaggio \textit{L} su un alfabeto $\Sigma$ è un qualsiasi sottoinsieme di stringhe di $\Sigma^{*}$\\ 
 Si definisce l'insieme dei prefissi di un linguaggio \textit{L}:
 \begin{equation*}
  \text{Pref}(L) = \bigcup_{w \in L}^{}{\text{Pref}(w)}
@@ -119,7 +119,7 @@ Il linguaggio generato da una grammatica $\mathcal{G}$ è l'insieme di tutte le 
 Infine è rilevante notare che come detto una grammatica genera un unico linguaggio ma un linguaggio può essere generato da molteplici grammatiche.
 
 \section{Automi a stati finiti}
-Nella sottosezione \ref{sub:gra} sono stati introdotti gli automi e una loro classificazione. Qui ci si concentrerà sullo studio dei \ac{FSA} in relazione ai linguaggi regolari, la classe dei linguaggi a cui questa tesi è rivolta. Come visto gli \ac{FSA} sono un caso speciale di \textit{macchina di Turing} e più nello specifico un caso speciale di \ac{FSM} che in questa sede non interessa definire. Qui basterà dire che   una \ac{FSM} è un \textit{transiction system} costituita da un insieme finito di stati dove ogni transizione è innescata da un'azione tra un insieme finito di azioni (di solito denotato da $\Sigma$). Esistono diversi tipi di \ac{FSM} come le \textit{Mealy Machines} e i \ac{FSA}. Tra i \ac{FSA} si annoverano i \ac{NFA} strettamente correlati ai \ac{DFA} su cui si focalizzerà l'attenzione.
+Nella sottosezione \ref{sub:gra} sono stati introdotti gli automi e una loro classificazione. Qui ci si concentrerà sullo studio dei \ac{FSA} in relazione ai linguaggi regolari, la classe dei linguaggi a cui questa tesi è rivolta. Come visto gli \ac{FSA} sono un caso speciale di \textit{macchina di Turing} e più nello specifico un caso speciale di \ac{FSM} che in questa sede non interessa definire. Qui basterà dire che   una \ac{FSM} è un \textit{transiction system} costituita da un insieme finito di stati dove ogni transizione è innescata da un'azione tra un insieme finito di azioni (di solito denotato da $\Sigma$). Esistono diversi tipi di \ac{FSM} come le \textit{Mealy Machines} e gli \ac{FSA}. Tra gli \ac{FSA} si annoverano gli \ac{NFA} strettamente correlati ai \ac{DFA} su cui si focalizzerà l'attenzione.
 \begin{definizione}[Automa a stati finiti deterministico]
 \label{def:dfa}
 Un \ac{DFA} A è una quintupla:\\
@@ -153,7 +153,7 @@ La \textit{funzione di output} è la \textit{funzione caratteristica} di L(A).In
 \begin{definizione*}[Stati equivalenti]
 Detto A essere un \ac{DFA}, e q e p $\in Q^{A}$ stati di A. q e p sono \textit{equivalenti} ,denotato da $q \equiv p$, se $\lambda_{q}^{A} = \lambda_{p}^{A}$
 \end{definizione*}
-Una stretta correlazione tra l'equivalenza di stati e l'equivalenza di \ac{DFA} è il seguente risultato: $A \cong A' \Leftrightarrow q_{\epsilon}^{A} \equiv p_{\epsilon}^{A'}$.
+Una stretta correlazione tra l'equivalenza di stati e l'equivalenza di \ac{DFA} è il seguente risultato: $A \cong A' \Leftrightarrow q_{\epsilon}^{A} \equiv q_{\epsilon}^{A'}$.
 Un altro concetto importante è quello di \textit{isomorfismo} tra due DFA.
 \begin{definizione*}[Isomorfismo di \ac{DFA}]
 Detti A ed $\text{A}'$ due \ac{DFA} definiti su $\Sigma$. A ed $\text{A}'$ sono detti isomorfici se esiste un isomorfismo $f : Q^{A} \to Q^{A'}$, cioè una funzione soddisfacente le seguenti condizioni:
@@ -230,7 +230,7 @@ Allora da A tramite $\approx$ è possibile ricavare il \textit{\textbf{DFA quozi
 \item $\mathbb{F}_\mathbb{A}^{A/\!\approx} = \{[q]_\approx : q \in \mathbb{F}_\mathbb{A}^{A}\}$
 \item $\delta^{A/\!\approx}([q]_\approx,a) = [\delta^{A}(q,a)]_\approx \quad \forall q \in Q^{A},a\in{\Sigma}$
 \end{enumerate}
-L'automa quoziente $A/\!\equiv$ ,dove la relazione d'equivalenza utilizzata utilizzata è quella di equivalenza tra gli stati, corrisponde al \ac{DFA} canonico. Quindi banalizzando si può concludere dicendo che l'automa quoziente di un \ac{DFA} è ciò che si ottiene fondendo insieme alcuni stati del \ac{DFA} di partenza in base a una relazione d'equivalenza. Quando la relazione usata è quella di stati equivalenti si ottiene il DFA minimo: quindi $Q^{A/\!\approx}$ sarà una partizione in cui in ogni blocco (sottoinsieme) ci saranno stati equivalenti tra loro (in uno specifico blocco). Ogni blocco è una classe d'equivalenza.
+L'automa quoziente $A/\!\equiv$ ,dove la relazione d'equivalenza utilizzata è quella di equivalenza tra gli stati, corrisponde al \ac{DFA} canonico. Quindi banalizzando si può concludere dicendo che l'automa quoziente di un \ac{DFA} è ciò che si ottiene fondendo insieme alcuni stati del \ac{DFA} di partenza in base a una relazione d'equivalenza. Quando la relazione usata è quella di stati equivalenti si ottiene il DFA minimo: quindi $Q^{A/\!\approx}$ sarà una partizione in cui in ogni blocco (sottoinsieme) ci saranno stati equivalenti tra loro (in uno specifico blocco). Ogni blocco è una classe d'equivalenza.
 
 \subsubsection{Prefix Tree Acceptor}
 Si è visto che l'automa quoziente che si ottiene usando la relazione di equivalenza degli stati su un \ac{DFA} A è il \ac{DFA} minimo. Analogamente è possibile ottenere il \textit{\textbf{Prefix Tree Acceptor di $I_+$}} indicato con \textit{\textbf{PTA$(I_+)$}} applicando la definizione di automa quoziente al \textit{MCA$(I_+)$}\footnote{Anche se tecnicamente può essere un \ac{NFA} la definizione di automa quoziente può essere applicata comunque} con la relazione: \textit{stati che identificano lo stesso prefisso}. Quindi verrà effettuata la fusione degli stati che condividono lo stesso prefisso.\\
@@ -275,7 +275,7 @@ Si indica con \textit{\textbf{UA l'automa universale}} che accetta tutte le stri
 \subsection{Funzioni di output regolari}
 In una sottosezione di \ref{subsub:aqu}  si è visto che è possibile ottenere il  \ac{DFA} canonico minimo di un \ac{DFA} A tramite $A/\!\!\equiv$ (l'automa quoziente sulla relazione di stati equivalenti). In questa sezione invece si vedrà come ottenere il \ac{DFA} canonico minimo non a partire da un \ac{DFA} preesistente, ma semplicemente sfruttando le proprietà di una funzione di output $\lambda : \Sigma^{*} \to \mathbb{B}$ che è la funzione caratteristica di qualche linguaggio regolare.
 \subsubsection{Relazione di Nerode}
-Si possono caratterizzare le \textit{funzioni di output regolare} come la classe di funzioni $\lambda : \Sigma^{*} \to \mathbb{B}$ per cui un \ac{DFA} con quella \textit{funzione di output} esiste\footnote{L'insieme delle funzione di output regolari identifica la classe dei linguaggi regolari}.  Il famoso teorema \textit{Myhill-Nerode} [INSERIRE RIFERIMENTO] fornisce una caratterizzazione alternative delle \textit{funzioni di output regolari} , che non fa affidamento sulla nozione di \ac{DFA}. Come primo step si definisce la \textit{relazione di Nerode} [INSERIRE RIFERIMENTO] sulle stringhe che definisce un'equivalenza sulle stringhe secondo $\lambda$:
+Si possono caratterizzare le \textit{funzioni di output regolare} come la classe di funzioni $\lambda : \Sigma^{*} \to \mathbb{B}$ per cui un \ac{DFA} con quella \textit{funzione di output} esiste\footnote{L'insieme delle funzione di output regolari identifica la classe dei linguaggi regolari}.  Il famoso teorema \textit{Myhill-Nerode} \cite{Ner58} fornisce una caratterizzazione alternative delle \textit{funzioni di output regolari} , che non fa affidamento sulla nozione di \ac{DFA}. Come primo step si definisce la \textit{relazione di Nerode} \cite{Ner58} sulle stringhe che definisce un'equivalenza sulle stringhe secondo $\lambda$:
 \begin{definizione}[Relazione di Nerode]
 \label{def:ner}
 Sia $\lambda : \Sigma^{*} \to \mathbb{B}$ una funzione di output a due valori arbitraria definita su $\Sigma$. Due stringhe $u, u' \in \Sigma^{*}$ sono equivalenti secondo $\simeq_\lambda$\footnote{Si noti che per denotare l'equivalenza non si è usato il simbolo $\equiv$ (equivalenza tra stati) perchè qui si parla di equivalenza tra stringhe} denotato da $u \simeq_\lambda \!u'$ se e solo se:
@@ -285,12 +285,12 @@ Sia $\lambda : \Sigma^{*} \to \mathbb{B}$ una funzione di output a due valori ar
 dove $\simeq_\lambda \, \subseteq \Sigma^{*}\!\!\!\times\!\!\Sigma^{*}$ è una relazione binaria detta \textit{relazione di Nerode} o \textit{congruenza di Nerode} che definisce l'equivalenza tra stringhe secondo $\lambda$
 \end{definizione}
 \subsubsection{Teorema Myhill-Nerode}
-La \textit{relazione di Nerode} $\simeq_\lambda$ può essere vista come l'equivalente a livello di stringhe della relazione di equivalenza $\equiv_A \subseteq Q^{A}\!\!\times\!Q^{A}$, sugli stati di un \ac{DFA} A. Dovrebbe essere osservato, tuttavia , che $\simeq_\lambda$ può essere definito per \textit{funzioni di output} arbitrarie, non solo regolari. Il teorema \textit{Myhill-Nerode} [INSERIRE RIFERIMENTO] fornisce una caratterizzazione delle \textit{funzioni di output regolari} basata su  $\simeq_\lambda$ :
+La \textit{relazione di Nerode} $\simeq_\lambda$ può essere vista come l'equivalente a livello di stringhe della relazione di equivalenza $\equiv_A \subseteq Q^{A}\!\!\times\!Q^{A}$, sugli stati di un \ac{DFA} A. Dovrebbe essere osservato, tuttavia , che $\simeq_\lambda$ può essere definito per \textit{funzioni di output} arbitrarie, non solo regolari. Il teorema \textit{Myhill-Nerode}  fornisce una caratterizzazione delle \textit{funzioni di output regolari} basata su  $\simeq_\lambda$ :
 \begin{teorema}[Teorema Myhill-Nerode o di caratterizzazione]
 \label{teo:m-n}
 Sia $\lambda : \Sigma^{*} \to \mathbb{B}$ una \textit{funzione di output} a due valori. $\lambda$ è regolare se e solo se la \textit{relazione di Nerode}  $\simeq_\lambda$ ha indice finito. 
 \end{teorema}
-Una dimostrazione del teorema si trova in [INSERIRE RIFERIMENTO PROVA TEOREMA]. L'implicazione in uno dei due versi del teorema dice che se $\simeq_\lambda$ ha indice finito, allora $\lambda$ è \textit{una funzione di output regolare} cioè esiste un \ac{DFA} A con $\lambda^{A} = \lambda$. Questo \ac{DFA} $A = \Braket{\Sigma,Q^{A},q_{\epsilon}^{A},\delta^{A},F_{\mathbb{A}}^{A}}$ è definito come:
+Una dimostrazione del teorema si trova in \cite{Stef11}. L'implicazione in uno dei due versi del teorema dice che se $\simeq_\lambda$ ha indice finito, allora $\lambda$ è \textit{una funzione di output regolare} cioè esiste un \ac{DFA} A con $\lambda^{A} = \lambda$. Questo \ac{DFA} $A = \Braket{\Sigma,Q^{A},q_{\epsilon}^{A},\delta^{A},F_{\mathbb{A}}^{A}}$ è definito come:
 \begin{itemize}
 \item $\Sigma \text{ è il dominio di } \lambda$
 \item $Q^{A} = \Sigma^{*}/\!\!\simeq_{\lambda}$

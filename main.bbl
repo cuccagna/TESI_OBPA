@@ -355,6 +355,30 @@
   \field{year}{1986}
 \endentry
 
+\entry{Ner58}{inproceedings}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Nerode}{N.}%
+     {Anil}{A.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{organization}{1}{%
+    {Proceedings of the American Mathematical Society}%
+  }
+  \strng{namehash}{NA1}
+  \strng{fullhash}{NA1}
+  \field{sortinit}{N}
+  \verb{doi}
+  \verb 10.1090/S0002-9939-1958-0135681-9
+  \endverb
+  \field{pages}{541\bibrangedash 544}
+  \field{title}{Linear Automaton Transformations}
+  \field{volume}{9}
+  \field{month}{08}
+  \field{year}{1958}
+\endentry
+
 \entry{Nor09}{thesis}{}
   \name{author}{1}{}{%
     {{}%
@@ -496,6 +520,55 @@
   Automata Learning}
   \field{volume}{8734}
   \field{year}{2014}
+\endentry
+
+\entry{Stef11}{incollection}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Steffen}{S.}%
+     {Bernhard}{B.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Howar}{H.}%
+     {Falk~M.}{F.~M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Merten}{M.}%
+     {Mike}{M.}%
+     {}{}%
+     {}{}}%
+  }
+  \name{editor}{2}{}{%
+    {{}%
+     {Bernanrdo}{B.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Issarny}{I.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Springer Verlag}%
+  }
+  \strng{namehash}{SBHFMMM1}
+  \strng{fullhash}{SBHFMMM1}
+  \field{sortinit}{S}
+  \field{booktitle}{Formal Methods for Eternal Networked Software Systems}
+  \verb{doi}
+  \verb 10.1007/978-3-642-21455-4_8
+  \endverb
+  \field{isbn}{978-3-642-21455-4}
+  \field{pages}{256\bibrangedash 259}
+  \field{series}{Lecture Notes in Computer Science}
+  \field{title}{Introduction to Active Automata Learning from a Practical
+  Perspective}
+  \field{volume}{6659}
+  \field{year}{2011}
 \endentry
 
 \entry{StefCounterexample14}{inproceedings}{}

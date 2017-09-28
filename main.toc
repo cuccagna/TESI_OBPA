@@ -143,5 +143,3 @@
 \contentsline {section}{\numberline {B.2}Dett. impl. ObP}{57}{section.B.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{Bibliografia}{60}{section*.62}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Indice analitico}{62}{section*.64}
