@@ -1,0 +1,158 @@
+%!TEX encoding = UTF-8 Unicode
+%!TEX root = ./../main.tex
+%!TEX TS-program = xelatex
+
+\chapter{Inferenza Grammaticale} % Second chapter title
+\label{cap:due}
+
+L' \ac{GI} è considerata una branca del \textit{machine learning} sebbene il primo algoritmo di \ac{GI} sia più datato della nascita del concetto di machine learning. Più in dettaglio \ac{GI} è un'istanza dell'inferenza induttiva e in particolare dell'apprendimento per induzione da esempi introdotti in \ref{sub:tipiapp}, e può quindi essere descritto come il problema di congetturare un linguaggio target sconosciuto  a partire da un \textit{training set} che di solito comprende un insieme finito di stringhe $S^{+}$ appartenenti ad un \ac{L} ,definite su un alfabeto $\Sigma$, dette positive ed eventualmente anche un insieme finito di stringhe negative $S^{-}$ che non appartengono ad \ac{L}.
+
+Sebbene il nome \textit{inferenza grammaticale} potrebbe suggerire che l'\textit{output} di un algoritmo d'\textit{inferenza grammaticale} sia una grammatica non è questo il caso --- qualsiasi altra descrizione di un linguaggio come un automa, un'espressione regolare, ecc. può essere pure usata. In questa tesi l'attenzione è volta agli algoritmi di \ac{GI} il cui \textit{linguaggio target}  appartiene alla classe più semplice della gerarchia di Chomsky: i linguaggi regolari. In quest ultimo caso si suole parlare di \textbf{inferenza grammaticale regolare} e talvolta di \textbf{inferenza induttiva regolare} (\ac{IIR}).
+
+\section{Connotare l'IIR}
+Una caratterizzazione del \textit{learning da esempi}  induttivo  ,seguendo \cite{Mic86a}, è stata già fornita in \ref{sub:appindes}. In questa sede è opportuno puntualizzare ed approfondire alcuni dei punti di cui si compone e soprattutto contestualizzarla all'\ac{IIR} dato che la classificazione in \ref{sub:appindes} fa riferimento all'apprendimento generico di un concetto e nell'\ac{IIR} si specializza l'oggetto dell'inferenza che diventa un linguaggio regolare.  I punti di cui si compone sono\footnote{Da adesso in poi e per tutto il resto della tesi ci si discosterà dalla definizione di consistenza di Mychalski esposta in \ref{sub:appindes} a meno che non venga espressamente indicato. Con consistenza si intenderà che, dato un \ac{DFA} $A$ e un insieme di istanze $S=S^{+} \cup S^{-} \,\, \forall x \in S^{+} :   \lambda^{A}(x)=1 \land \forall x \in S^{-} :   \lambda^{A}(x)=0$ }:
+
+\begin{description}
+\item[Spazio delle istanze]L’algoritmo inferenziale
+induttivo riceve in ingresso degli esempi (ed eventualmente anche controesempi),di membri del concetto target(specifiche istanze) , sottoinsieme dello spazio delle istanze che costituisce l’insieme di tutte le possibili istanze osservabili. Nell'\ac{IIR} le istanze sono delle stringhe definite sull'alfabeto $\Sigma$. 
+\item[Spazio dei concetti]E' l'insieme di tutte le possibili soluzioni e nell'\ac{IIR} rappresenta l'insieme dei linguaggi regolari.
+\item[Spazio delle descrizioni]Costituisce lo spazio che contiene le descrizioni operative degli elementi dello spazio dei concetti. Nell'\ac{IIR} si possono usare le espressioni regolari, gli \textit{NFA} o i \ac{DFA} anche se di norma si usano i \ac{DFA} perchè è garantita l'esistenza di un \ac{DFA} canonico.
+\item[Spazio delle ipotesi]Lo spazio delle ipotesi contiene quei concetti consistenti con gli esempi osservati ed è quindi un sottoinsieme dello spazio dei concetti.
+\item[Criteri di successo]Sono i criteri che permettono di decretare che il processo d'inferenza è concluso. Esistono varie tecniche e varianti ma i due metodi principali sono:
+\begin{itemize}
+\item{\textit{Identification in the limit}}
+\item{\textit{PAC-learning}}
+\end{itemize}
+\begin{definizione*}[Identification in the limit]Un linguaggio \ac{L} è identificato al limite da un algoritmo di inferenza  se ad un certo punto del processo inferenziale l' ipotesi intermedia $H$ generata è una descrizione di \ac{L} e da quel punto in poi $H$ non muta al variare delle istanze presentate in ingresso all'algoritmo.
+\end{definizione*}
+Si è supposto che le istanze presentate in ingresso ad ogni iterazione dell'algoritmo di inferenza siano crescenti e includenti le istanze contenute alle iterazioni precedenti, e che le istanze possano divenire anche infinite. Allora si ha identificazione al limite \cite{Gold67} se a partitire da una determinata iterazione dell'algoritmo induttivo \ac{H} resta invariata. \\
+Nel \textit{PAC-learning} \cite{Val84} invece si richiede una identificazione solo parziale e probabilistica di \ac{L}. Sia \ac{L} il target e \ac{H} l'ipotesi induttiva generata da un algoritmo di \ac{IIR} . Sia $D$ una distribuzione di probabilità di tutte le stringhe su $\Sigma^{*}$ allora si ha la seguente definizione:
+\begin{definizione*}[True error]Il \textbf{\textit{tasso di errore}} o \textbf{\textit{true error}} $error_{D}(H)$ di \ac{H} rispetto alla distribuzione  $D$ e ad \ac{L} è
+\begin{equation*}
+    error_{D}(H) = \sum_{x \in \ac{L} \oplus L(\ac{H})}^{}D(x)
+\end{equation*}
+\end{definizione*}
+Informalmente il \textit{true error} è la probabilità che una stringa estratta casualmente dallo spazio delle istanze --- in accordo alla distribuzione di probabilità $D$ --- appartenga allo spazio dove \ac{H} ed \ac{L} differiscono . L'algoritmo induttivo nel \textit{PAC-learning} prende due parametri in ingresso l'accuratezza $\epsilon$ e la confidenza $\delta$ entro cui operare.
+
+\begin{definizione}[PAC learning]Una classe di linguaggi $\mathbb{L}$ è \textbf{PAC-learnable} se esiste un algoritmo $A$ tale che $\forall L \in \mathbb{L}$, per ogni distribuzione $D$ su $\Sigma^{*} \text{,} \forall \epsilon(0<\epsilon<1) \text{,} \forall \delta(0<\delta<1), A$ su istanze fornite in accordo alla distribuzione $D$ produce con probabilità $1-\delta$ un'ipotesi \ac{H} tale che $error_{D}(H) \leq \epsilon$.
+\end{definizione}
+\end{description}
+
+E' possibile trovare una caratterizzazione alternativa ma analoga del problema induttivo rispetto a quella data in \cite{Angluin83} in cui si effettua una classificazione anche in base a come sono presentate le istanze e al metodo impiegato nello spazio di ricerca:
+\begin{description}
+\item[Presentazione delle istanze]Se l'insieme di istanze disponibili per l'algoritmo d'inferenza induttiva regolare, S , per apprendere una \ac{DFA}  target $A$ sono tali che $\forall x \in S \,\lambda^{A}(x) = 1$ si parla di \textbf{presentazione positiva} cioè tutti gli esempi(istanze) sono accettanti nel \ac{DFA} $A$. In questo caso si scrive $S=S^{+}$. Questo \textit{setting} è  denominato \textit{text learning}\cite[p. 217]{DeLaHiguera10}. Si parla invece di \textbf{presentazione completa} quando $S=S^{+} \cup S^{-}$ cioè esistono sia esempi accettanti che rigettanti in simboli $\exists x \in S :   \lambda^{A}(x)=1 \land \exists x \in S :   \lambda^{A}(x)=0$. Quest ultimo caso è menzionato come \textit{informed learning} \cite[p. 237]{DeLaHiguera10} .\\
+
+Si effettua un'ulteriore suddivisione del tipo di presentazione in base a come gli esempi vengono presentati all'algoritmo di'inferenza:
+\begin{itemize}
+\item \textbf{Presentazione Given-Data}\\Le istanze sono un insieme finito presentate totalmente fin dall'inizio del processo.
+\item \textbf{Presentazione completa}\\Le istanze (positive o complete) sono una sequenza infinita e sono presentate in successione (in maniera incrementale).  
+\item Esiste un \textbf{\textit{Oracolo}} che è in grado di rispondere a delle \textit{membership query} ed \textit{equivalence query} ed è la macchina inferenziale che direttamente interroga attivamente l'\textit{Oracolo}. Questa modalità sarà approfondita nel capitolo \ref{cap:tre}.
+\end{itemize}
+\item[Metodo inferenziale]Gli algoritmi di \ac{GI} e di \ac{IIR} si possono ricondurre a dei problemi di ricerca in un grafo in cui ogni nodo è un'astrazione che rappresenta uno dei possibili linguaggi dello spazio dei concetti. \ac{L} ,cioè il target, è da ricercare in questo spazio.  Allora con algoritmo d'inferenza \textit{astratto} si intende un algoritmo che ha valenza solo teorica perchè una effettiva realizzazione sarebbe troppo onerosa computazionalmente. Il più importante di questi algoritmi è l'algoritmo di \textit{induzione per numerazione} per il quale esiste la seguente congettura largamente condivisa:
+
+\begin{teorema*}La classe dei linguaggi ricorsivi identificabili al limite da un algoritmo di inferenza grammaticale , è anche identificabile al limite da un algoritmo di induzione per numerazione
+\end{teorema*} 
+ L'induzione per numerazione cerca ad ogni iterazione dell'algoritmo tra le descrizioni di tutti i concetti consistenti con gli esempi in ingresso secondo qualche criterio di preferenza. Tali descrizioni sono tipicamente un insieme di cardinalità infinita e ciò rende questo metodo impraticabile.\\
+ Per algoritmi induttivi \textit{concreti} si intende invece quegli algoritmi efficientemente implementabili. Tra quest possiamo distinguere tra:
+ \begin{itemize}
+ \item \textbf{Algoritmi esaustivi}\\
+ Sono algoritmi deterministici che sotto opportune condizioni degli esempi d'ingresso garantiscono di trovare il linguaggio target
+ \item \textbf{Algoritmi euristici}\\
+ Si tralascia di seguire dei percorsi di ricerca nel grafo per aumentare l'efficienza ,di solito a scapito della perdita della garanzia di successo. Tipicamente si usano dei meccanismi aleatori, come nel caso degli algoritmi genetici che manipolano delle informazioni simboliche attraverso dei processi aleatori numerici.
+ \end{itemize}  
+\end{description}
+
+\section{Limiti dell' IIR}
+\label{sec:limIIR}
+Uno dei problemi dell'\ac{GI} e di \ac{IIR} è che nessun sottoinsieme finito di un insieme infinito ha informazioni sufficienti che gli consentono di inferire con assoluta certezza a quale insieme il sottoinsieme appartiene. Nella fattispecie ,dato un insieme finito di stringhe $S$,  appartenente a un linguaggio infinito \ac{L} , non si può inferire \ac{L} da $S$ con assoluta certezza. Il motivo è che $S$ è un sottoinsieme di molti altri, tipicamente infiniti, linguaggi diversi da \ac{L}. Questo problema è stato trattato da Gold in \cite{Gold67} nel paradigma dell'\textit{identification in the limit} ottenendo i seguenti risultati:
+\begin{teorema}
+La classe dei linguaggi superfiniti non può essere identificata al limite attraverso una presentazione positiva di esempi.
+\end{teorema}
+Ne consegue che i linguaggi regolari di cui i linguaggi superfiniti sono un sottoinsieme non sono parimenti identificabili al limite solo tramite esempi positivi. Considerando anche gli esempi negativi il seguente teorema sempre in  \cite{Gold67}  stabilisce il limite alla classe di linguaggi inferibili:
+\begin{teorema}
+Non è possibile inferire l'intera classe dei linguaggi ricorsivi attraverso una presentazione completa degli esempi.
+\end{teorema}
+Invece i linguaggi primitivi ricorsivi e quindi anche i linguaggi regolari che sono un sottoinsieme sono identificabili al limite come attesta il seguente risultato:
+\begin{teorema}
+La classe dei linguaggi primitivi ricorsivi è identificabile al limite mediante una presentazione completa degli esempi
+\end{teorema}
+
+Un altro risultato implicito che si evince dal lavoro di Gold è che non possiamo mai essere sicuri di apprendere il linguaggio corretto a meno che il numero di esempi non sia infinito. Con una presentazione finita l'unica cosa di cui possiamo essere certi è della consistenza della soluzione inferita con il \textit{training set} (la presentazione). Se il \textit{training set}  è grande aumenta la fiducia nell'approssimazione della soluzione inferita con il linguaggio target sconosciuto ma senza mai esserne certi e questa assunzione è nota come \textbf{Inductive Learning Hypothesis} \cite{Abela02}. Con il \textit{PAC-learning} si ottiene pure un'approssimazione del linguaggio target ma è possibile quantificare quanto vicini saranno la soluzione ottenuta ed il target e con quale probabilità.\\
+
+Un altro problema che va affrontato è che tipicamente il numero di ipotesi consistenti  con gli esempi a disposizione è  infinito, quindi è necessario stabilire un \textbf{inductive preference bias} \cite{Abela02} cioè un criterio di preferenza da usare per selezionare quale delle congetture consistenti  rispetto ai dati scegliere. Nel caso dell'\ac{IIR}  l'\textit{inductive preference bias} che si adotta è il principio del \textbf{\textit{Rasoio di Occam}} che consiste nello scegliere sempre la soluzione più semplice che nell'\ac{IIR} significa scegliere il \ac{DFA} minimo\footnote{Si è soliti scegliere quasi sempre i \ac{DFA} come descrizione di un linguaggio regolare proprio perchè assicurano l'esistenza e l'unicità di un \ac{DFA} minimo}. Tale scelta da maggiori garanzie che il processo di generalizzazione abbia avuto luogo scongiurando il rischio di \textit{overfitting} cioè di un \ac{DFA} sovradattato agli esempi dati.
+
+Il seguente risultato negativo è relativo a quest ultimo requisito di trovare il \ac{DFA} minimo:
+\begin{teorema}
+\label{teo:minhard}
+Trovare il più piccolo automa finito deterministico consistente  rispetto a  un insieme di esempi completo è un problema NP-hard \cite{Gold78}.
+\end{teorema}
+
+\section{Passive learning}
+ 
+Gli studi su \ac{GI} si possono suddivedere in due filoni, uno volto ad indagare i limiti teorici dell'apprendimento di linguaggi in determinati paradigmi ,come in \ref{sec:limIIR}, e l'altro volto a superare sotto opportune assunzioni i limiti teorici emersi rendendo gli algoritmi utilizzabili in termini di efficienza computazionale. Quest ultimo tema sarà affrontato adesso volgendo in particolare l'attenzione sugli algoritmi di \textbf{passive learning} e sulla strategia che li governa. La trattazione non sarà volutamente esaustiva dato che l'oggetto di studio di questo lavoro è l'\textit{active learning} che è una tecnica duale rispetto al \textit{passive learning}.
+
+\subsection{Ricerca nel reticolo}
+\label{sub:ricret}
+I risultati negativi del teorema \ref{teo:minhard} sull'apprendimento del \ac{DFA} minimo possono essere superati delineando il problema di ricerca del  \ac{DFA} minimo come un problema di ricerca in un uno spazio degli stati in cui ogni stato è la modellazione di un \ac{DFA}. La strategia più semplice sarebbe quella enumerativa che ha come grafo di ricerca tutto lo spazio delle descrizioni e preleva da questo spazio l' ipotesi minima. Ma tale tecnica è impraticabile perchè tale spazio ha cardinalità infinita (basta pensare che solo i \ac{DFA} consistenti e completi con un dato \textit{training set} sono di per sè infiniti). Allora si definisce come grafo di ricerca il cosidetto \textbf{reticolo booleano} indicato con \textbf{$Lattice(PTA(S^+))$}che ha come nodo radice \textit{PTA$(S^+)$}. La radice può essere modellata come un insieme che comprende tutti gli stati dell'automa \textit{PTA$(S^+)$}, e l'operatore che consente di generare i nodi figli della radice (e  applicando ricorsivamente l'operatore anche ai figli ottenuti consente di derivare anche gli altri nodi) è una relazione d'ordine parziale  $\approx$ (cioè binaria transitiva,simmetrica e riflessiva) che applicata al \textit{PTA$(S^+)$} consente di derivare gli automi quoziente $PTA(S^+)/\!\!\approx$ che non sono altro che una fusione di alcuni degli stati del \ac{DFA} di partenza in base alla relazione d'ordine parziale definita. Inoltre l'automa quoziente $A/\!\!\approx$ ottenuto applicando la relazione $\approx$ sul nodo che è un automa $A$ è tale che $L(A) \subseteq L(A/\!\!\approx)$ quindi tutti gli automi ottenuti nel reticolo sono consistenti con $S^{+}$ ed estendendo il linguaggio da cui sono originati effettuano il processo induttivo generalizzando. Questa tecnica è detta di \textit{state-merging} in quanto ad ogni passo effettua una \textbf{fusione} degli stati dell'automa cui la relazione è applicata per ottenere un nuovo nodo e tutto il processo è noto in letteratura come \textbf{passive learning}.\\
+Un aspetto che finora è stato trascurato riguarda se il \ac{DFA} minimo è sempre contenuto nel \textit{lattice}  altrimenti la procedura di ricerca potrebbe essere infruttuosa. Il seguente teorema \cite{Pao78} da una risposta affermativa se alcune condizioni sono verificate:
+
+\begin{teorema}
+Se l'insieme di istanze positive $S^{+}$ è strutturalmente completo rispetto al \ac{DFA} minimo target $M$ allora $M \in Lattice(PTA(S^{+}))$. 
+\end{teorema}
+laddove
+\begin{definizione}[Insieme di esempi positivi strutturalmente completo]
+\label{def:strcom}
+Un insieme di esempi positivi $S^{+}$ è detto \textbf{strutturalmente completo} rispetto a un automa $M$ accettante $L$ se
+\begin{itemize}
+\item ogni stato di $\mathbb{F}_{\mathbb{A}}^{M}$ è impiegato da almeno una stringa di $S^{+}$
+\item ogni transizione di $M$ è utilizzata nell'accettazione di almeno un esempio di $S^{+}$
+\end{itemize}
+\end{definizione}
+
+Tuttavia la cardinalità del $Lattice(PTA(S^{+}))$ se $\norma{PTA(S^{+})} = n$ è :
+\begin{equation*}
+C_{n} = \sum_{i=0}^{n-1}\binom{n-1}{i}C_{i}  \quad \text{con } C_{0}=1
+\end{equation*}
+e rende impraticabile qualsiasi algoritmo di ricerca per enumerazione. Anche una ricerca in ampiezza è impraticabile. Inoltre  per avere la garanzia dell'automa minimo nel \textit{lattice} è necessario fare delle assunzioni, analogamente per effettuare una ricerca efficiente nel \textit{lattice} del \ac{DFA} minimo sarà necessario imporre dei vincoli.
+
+\subsection{Algoritmi concreti} 
+ Qui si presentano le peculiarità dei due principali algoritmi di \textit{passive learning} in uno scenario di \textit{informed learning}. La trattazione ivi esposta è qualitativa e di alto livello ed i dettagli implementativi sono tralasciati.
+ \subsubsection{Red-Blue Framework}
+ \label{subsub:rbf}
+ Questo framework riduce significativamente il numero di possibili \textit{merge} tra stati senza ridurre il numero di possibili soluzioni. Gli algoritmi con questo \textit{setting} mantengono un cuore di stati \textit{red} e una frontiera di stati \textit{blue} che sono gli stati immediatamente raggiungibili (figli diretti) a partire dagli stati \textit{red}. Un algoritmo di \textit{red-blue state-merging} esegue \textit{merges} solo tra stati \textit{blue} e stati \textit{red} e se non sono possibili \textit{red-blue merges} l'algoritmo \textbf{\textit{promuove}} uno stato \textit{blue} a \textit{red}. Gli stati \textit{red} inoltre sono gli stati del \ac{DFA} target che sono già stati identificati.
+L'idea è stata descritta per la prima volta in \cite{Abbadingo98} in cui una prima versione dell'algoritmo \textit{EDSM}--- che valuta il \textit{merge} tra tutte le coppie di stati dell' ipotesi corrente \cite[p. 6]{Abbadingo98} ---  è migliorata nel \textit{Blue-fringe Algorithm} che secondo il principio di blanda località summenzionato valuta il merge solo tra stati di colore \textit{red} e \textit{blue}.\\
+Sebbene la nomenclatura \textit{red-blue framework} non venga ufficialmente introdotta in \cite{Abbadingo98} con questo nome, è adottata in molti autorevoli testi e conferenze di riferimento su \ac{GI} come \cite{DeLaHiguera10} e  \cite[p. 70] {RBF10}.
+
+\subsubsection{RPNI}
+L'algoritmo \textit{ REGULAR POSITIVE  AND NEGATIVE INFERENCE} (RPNI) \cite{Oncina92} è uno dei più noti algoritmi di \textit{state-merging} che consente di trovare un \ac{DFA} --- in uno scenario di \textit{informed learning} --- consistente e completo con gli esempi $S = S^{+} \cup S^{-}$ in tempo polinomiale. E' un algoritmo esaustivo  che supera il problema della dimensionalità del reticolo booleano eseguendo una ricerca in profondità con backtracking a partire dal $PTA(S^{+})$ guidata dagli esempi negativi.\\
+Se S è caratteristico per \ac{L} allora RPNI assicura che venga trovato il \ac{DFA} minimo:
+\begin{definizione}[Insieme caratteristico]
+\label{def:car}
+ Un insieme di esempi completo $S = S^{+} \cup S^{-}$ è \textbf{caratteristico} per un linguaggio $L$ se:
+\begin{itemize}
+\item $S^{+}$ è \textit{strutturalmente completo} (definizione \ref{def:strcom})  per il \ac{DFA} che accetta $L$
+\item  $S^{-}$ impedisce il \textit{merge} di due stati $p,q \text{ di un } \ac{DFA} \in Lattice(PTA(S^{+})) \text{tali che } p \not\equiv q$ durante un'esplorazione del lattice.
+\end{itemize}
+\end{definizione}
+Se viene a mancare la condizione in \ref{def:car} di insieme caratteristico non è assicurata la terminazione con il \ac{DFA} minimo ma è comunque garantito un \ac{DFA} consistente rispetto agli \textit{esempi nel training set} grazie alla proprietà d'inclusione descritta  in \ref{sub:ricret}.
+
+Il funzionamento a grandi linee di RPNI è:
+\begin{enumerate}
+\item Costruire $PTA(S^{+})$, numerare gli stati in base all'ordine lessicografico delle stringhe di $S^{+}$ e inizializzare l'insieme degli stati \textit{red} con lo stato corrispondente a $\epsilon$ e gli stati \textit{blue} con i suoi figli diretti.
+
+\item Per ogni stato \textit{blue} si effettua sul \ac{DFA} corrente (inizialmente è $PTA(S^{+})$)il \textit{merge} con ogni stato \textit{red} estraendo gli stati in ordine lessicografico ottenendo un \ac{DFA} temporaneo $A$.
+\begin{enumerate}
+\item Se $A[S^{-}] \not\in \mathbb{F}_{\mathbb{A}}^{A}$ il \textit{merge} è valido, i restanti \textit{merge} dello stato \textit{blue} corrente con gli altri eventuali stati \textit{red} non vengono valutati, ed $A$ è il nuovo automa da considerare.
+\item Se per il corrente stato \textit{blue} non si trova nessun \textit{merge} compatibile (con nessuno dei nodi \textit{red}), si esegue la sua \textit{promozione} a nodo \textit{red} e gli stati che sono figli diretti di questo nuovo nodo \textit{red} sono aggiunti ai nodi \textit{blue}
+\end{enumerate}
+\item Torna al punto 2 fin quando l'insieme degli stati \textit{blue} non è vuoto.
+\end{enumerate}
+
+Questa procedura può generare condizioni di non-determinismo cioè gli automi intermedi e finale prodotti possono essere degli NFA, per ovviare a questo inconveniente si può rendere il \textit{merge} una procedura ricorsiva che oltre a fondere gli stati rossi e blu effettua eventualmente delle ulteriori fusioni se la condizione di determinismo dell'automa creato dal corrente \textit{merge} non è posseduta. Vedasi \cite{DeLaHiguera10} per una versione di RPNI che genera sempre \ac{DFA}.
+Infine il costo computazionale dell'algoritmo nella sua versione originale \cite{Oncina92} è $\mathcal{O}( (\norma{S^{+}}+\norma{S^{-}})\norma{S^{+}}^{2} )$
+
+\subsubsection{EDSM}
+\textit{EVIDENCE DRIVE STATE MERGING}  è un algoritmo di \textit{state-merging} \textit{euristico} che come RPNI non garantisce di trovare un \ac{DFA} canonico ma solo una soluzione ottima a meno che il \textit{training set} non sia caratteristico \ref{def:car}. L'algoritmo nella sua versione base è presentato in \cite{Abbadingo98} ed esistono delle versioni più efficienti come \textit{Blue-fringe EDSM} sempre in \cite{Abbadingo98} che usando il \textit{red-blue framework} limitano notevolemente il numero dei \textit{merge} e ne incrementano le \textit{performances}, ed è questo ultimo che viene brevemente spiegato qui.
+Il miglioramento rispetto a RPNI è che EDSM non è \textit{greedy} nell'esecuzione dei \textit{merges} ma valuta tutti i merges possibili tra stati \textit{red} e \textit{blue} ---invece RPNI selezionerebbe il primo possibile e ignorerebbe gli altri \textit{merges} --- e si sceglie il \textit{merge} migliore in base ad un'euristica. La migliore euristica emersa nella competizione Abbandingo è quella di Price che valuta un \textit{merge} non possibile se almeno una stringa accettante e almeno una rigettante rispettivamente di $S^{+} \text{ e } S^{-}$ terminano nello stesso stato , ed ha invece un punteggio tanto più alto quante più stringhe di $S^{+}$ \text{ o di } $S^{-}$ (ma non di entrambi gli insiemi, quindi l'\textit{or} è esclusivo)  terminano in uno stesso stato del \ac{DFA} \textit{mergiato} che si sta valutando. Si sceglierà il \ac{DFA} col punteggio maggiore.\\
+Un'altra differenza sostanziale rispetto a RPNI in EDSM è la priorità data alle \textit{promozioni} a scapito di possibili fusioni: il \textit{merge} viene effettuato soltanto se tutti i possibili \textit{merges} tra tutte le coppie di stati \textit{red} e \textit{blue} è possibile secondo l'euristica, altrimenti si privilegia la \textit{promozione} dello stato \textit{blue} a \textit{red}. 
+EDSM costituisce lo stato dell'arte per ciò che riguarda gli algoritmi di \textit{passive learning}.

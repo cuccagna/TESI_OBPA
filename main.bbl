@@ -16,6 +16,26 @@
   {}
 \endgroup
 
+\entry{Abela02}{thesis}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Abela}{A.}%
+     {John~M.}{J.~M.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{AJM1}
+  \strng{fullhash}{AJM1}
+  \field{sortinit}{A}
+  \field{title}{ETS Learning of Kernel Languages}
+  \list{institution}{1}{%
+    {University of New Brunswick}%
+  }
+  \field{type}{mathesis}
+  \field{month}{11}
+  \field{year}{2002}
+\endentry
+
 \entry{Angluin87}{article}{}
   \name{author}{1}{}{%
     {{}%
@@ -73,6 +93,34 @@
   \field{journaltitle}{Machine Learning Journal}
   \field{month}{06}
   \field{year}{1990}
+\endentry
+
+\entry{Angluin83}{article}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Angluin}{A.}%
+     {Dana}{D.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Smith}{S.}%
+     {Carl~H.}{C.~H.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{ADSCH1}
+  \strng{fullhash}{ADSCH1}
+  \field{sortinit}{A}
+  \verb{doi}
+  \verb 10.1145/356914.356918
+  \endverb
+  \field{number}{3}
+  \field{pages}{237\bibrangedash 269}
+  \field{title}{Inductive Inference: Theory and Methods}
+  \field{volume}{15}
+  \field{journaltitle}{ACM Computing Surveys (CSUR) Journal}
+  \field{month}{09}
+  \field{year}{1983}
 \endentry
 
 \entry{Chomsky59}{article}{}
@@ -155,6 +203,57 @@
     {New York, NY, USA}%
   }
   \field{year}{2010}
+\endentry
+
+\entry{Gold78}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Gold}{G.}%
+     {Mark~E.}{M.~E.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Elsevier}%
+  }
+  \strng{namehash}{GME1}
+  \strng{fullhash}{GME1}
+  \field{sortinit}{G}
+  \verb{doi}
+  \verb 10.1016/S0019-9958(78)90562-4
+  \endverb
+  \field{number}{3}
+  \field{pages}{302\bibrangedash 320}
+  \field{title}{Complexity of automaton identification from given data}
+  \field{volume}{37}
+  \field{journaltitle}{Information and Control}
+  \field{month}{06}
+  \field{year}{1978}
+\endentry
+
+\entry{Gold67}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Gold}{G.}%
+     {Mark~E.}{M.~E.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Elsevier}%
+  }
+  \strng{namehash}{GME1}
+  \strng{fullhash}{GME1}
+  \field{sortinit}{G}
+  \verb{doi}
+  \verb 10.1016/S0019-9958(67)91165-5
+  \endverb
+  \field{pages}{447\bibrangedash 474}
+  \field{title}{Language identification in the limit}
+  \field{volume}{10}
+  \field{journaltitle}{Information and Control}
+  \field{month}{05}
+  \field{year}{1967}
 \endentry
 
 \entry{Hop71}{report}{}
@@ -264,6 +363,70 @@
     {Cambridge, MA, USA}%
   }
   \field{year}{1994}
+\endentry
+
+\entry{Abbadingo98}{inproceedings}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Lang}{L.}%
+     {Kevin~J.}{K.~J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Pearlmutter}{P.}%
+     {Barak~A.}{B.~A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Price}{P.}%
+     {Rodney~A.}{R.~A.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{organization}{1}{%
+    {Proceedings of the 4th International Colloquium on Grammatical Inference,
+  ICGI 1998}%
+  }
+  \list{publisher}{1}{%
+    {Springer-Verlag}%
+  }
+  \strng{namehash}{LKJPBAPRA1}
+  \strng{fullhash}{LKJPBAPRA1}
+  \field{sortinit}{L}
+  \field{pages}{1\bibrangedash 12}
+  \field{title}{Results of the Abbadingo One DFA Learning Competition and a New
+  Evidence Driven State Merging Algorithm}
+  \verb{url}
+  \verb http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.48.7621
+  \endverb
+  \list{location}{1}{%
+    {London, UK}%
+  }
+  \field{month}{05}
+  \field{year}{1998}
+\endentry
+
+\entry{Levelt08}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Levelt}{L.}%
+     {Willem~J.M.}{W.~J.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {John Benjamins Publishing Company}%
+  }
+  \strng{namehash}{LWJ1}
+  \strng{fullhash}{LWJ1}
+  \field{sortinit}{L}
+  \verb{doi}
+  \verb 10.1075/z.144
+  \endverb
+  \field{isbn}{9789027290069}
+  \field{title}{Formal Grammars in Linguistics and Psycholinguistics}
+  \field{volume}{I}
+  \field{year}{2008}
 \endentry
 
 \entry{Mic86a}{incollection}{}
@@ -404,6 +567,68 @@
   \field{year}{2009}
 \endentry
 
+\entry{Oncina92}{inproceedings}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Oncina}{O.}%
+     {Jose}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Garcia}{G.}%
+     {Pedro}{P.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {World Scientific}%
+  }
+  \strng{namehash}{OJGP1}
+  \strng{fullhash}{OJGP1}
+  \field{sortinit}{O}
+  \field{booktitle}{Advances in structural and Syntactic Pattern Recognition}
+  \field{pages}{99\bibrangedash 108}
+  \field{series}{Machine Perception and artificial intelligence}
+  \field{title}{Identifying Regular Languages In Polynomial Time}
+  \verb{url}
+  \verb http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.20.3126
+  \endverb
+  \field{volume}{5}
+  \field{year}{1992}
+\endentry
+
+\entry{Pao78}{article}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Pao}{P.}%
+     {T.}{T.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {J.W.}{J.}%
+     {Carr}{C.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Elsevier}%
+  }
+  \strng{namehash}{PTJC1}
+  \strng{fullhash}{PTJC1}
+  \field{sortinit}{P}
+  \verb{doi}
+  \verb 10.1016/0096-0551(78)90006-1
+  \endverb
+  \field{number}{1}
+  \field{pages}{53\bibrangedash 64}
+  \field{title}{A solution of the syntactical induction-inference problem for
+  regular languages}
+  \field{volume}{3}
+  \field{journaltitle}{Computer Languages}
+  \field{month}{06}
+  \field{year}{1978}
+\endentry
+
 \entry{Schapire93}{article}{}
   \name{author}{2}{}{%
     {{}%
@@ -433,6 +658,52 @@
   \field{journaltitle}{Information and Computation}
   \field{month}{04}
   \field{year}{1993}
+\endentry
+
+\entry{Rob47}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Robinson}{R.}%
+     {M.~Raphael}{M.~R.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{RMR1}
+  \strng{fullhash}{RMR1}
+  \field{sortinit}{R}
+  \verb{doi}
+  \verb 10.1090/S0002-9904-1947-08911-4
+  \endverb
+  \field{pages}{925\bibrangedash 942}
+  \field{title}{Primitive recursive functions}
+  \field{volume}{53}
+  \field{journaltitle}{Bulletin of the American Mathematical Society}
+  \field{year}{1947}
+\endentry
+
+\entry{RBF10}{proceedings}{}
+  \name{editor}{2}{}{%
+    {{}%
+     {Sempere}{S.}%
+     {José}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Garcia}{G.}%
+     {Pedro}{P.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{organization}{1}{%
+    {Proceedings of the 10th International Colloquium on Grammatical Inference,
+  ICGI 2010}%
+  }
+  \strng{namehash}{SJGP1}
+  \strng{fullhash}{SJGP1}
+  \field{sortinit}{S}
+  \field{title}{Grammatical Inference: Theoretical Results and Applications}
+  \field{month}{09}
+  \field{year}{2010}
 \endentry
 
 \entry{Sim83}{incollection}{}
@@ -620,6 +891,32 @@
   }
   \field{month}{09}
   \field{year}{2014}
+\endentry
+
+\entry{Val84}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Valiant}{V.}%
+     {L.G.}{L.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Waltz David}%
+  }
+  \strng{namehash}{VL1}
+  \strng{fullhash}{VL1}
+  \field{sortinit}{V}
+  \verb{doi}
+  \verb 10.1145/1968.1972
+  \endverb
+  \field{number}{11}
+  \field{pages}{1134\bibrangedash 1142}
+  \field{title}{A theory of the learnable}
+  \field{volume}{27}
+  \field{journaltitle}{Information and Control}
+  \field{month}{11}
+  \field{year}{1984}
 \endentry
 
 \lossort

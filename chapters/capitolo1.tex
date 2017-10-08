@@ -26,6 +26,7 @@ L'altro fattore che contraddistingue l'apprendimento è l'acquisizione di nuove 
 
 E' possibile quindi constatare il grado di apprendimento di un sistema misurando i miglioramenti nel portare a compimento un certo job dopo l'apprendimento. (Miglioramenti che implicitamente sono considerati una conseguenza della rappresentazione interna dell'agente della realtà esterna). Si fa presente che in questa caratterizzazione si assume che l'agente abbia un obbiettivo e che tale obbiettivo sia conosciuto all'osservatore che valuta l'apprendimento. 
 \subsection{Una possibile schematizzazione}
+\label{sub:tipiapp}
 Esistono diverse possibilità di classificare i fattori che influenzano l’apprendimento. Michalski \cite{Mic86b} propone una divisione  basata sulle
 caratteristiche del sistema che apprende.
 
@@ -197,4 +198,5 @@ Nell'esempio specifico si assume che un elemento \textit{a} gode della propriet�
 \end{enumerate} 
 
 \subsection{Metodologia di ricerca induttiva}
+\label{sub:appindes}
 Si introduce brevemente,seguendo ancora \cite{Mic86a} il \textit{learning da esempi} induttivo di un concetto come un problema di ricerca in uno spazio. L'algoritmo inferenziale induttivo riceve in ingresso degli esempi (ed eventualmente anche controesempi) ,di membri del concetto target(specifiche istanze) , sottoinsieme dello \textbf{spazio delle istanze} che costituisce l'insieme di tutte le possibili istanze osservabili. Lo \textbf{spazio dei concetti} costituisce invece l'insieme di tutti i possibili concetti (tutte le possibili soluzioni). I concetti quasi sempre necessitano di una descrizione, un linguaggio che formalmente consente di definire operativamente un concetto e per questo si parla in maniera interscambiabile di \textbf{spazio delle descrizioni}. Un concetto è consistente se accetta alcuni esempi positivi e rifiuta tutti quelli negativi; è completo invece quando accetta tutti gli esempi positivi. La macchina inferenziale induttiva ha lo scopo di selezionare un'ipotesi dallo \textbf{spazio delle ipotesi} che sia consistente e completa con gli esempi visti. Lo spazio delle ipotesi è un sottoinsieme dello spazio dei concetti. All'aumentare degli esempi visti lo spazio delle ipotesi si riduce, tuttavia le ipotesi valide possono comunque essere numerose e spesso è necessario utilizzare dei criteri di preferenza per scegliere l'ipotesi corrente. E' necessario anche definire dei criteri di terminazione per sancire la ricerca conclusa.  In sintesi il \textit{concept learning induttivo} può essere descritto come una ricerca euristica nello spazio delle descrizioni della migliore ipotesi tra tutte quelle consistenti e complete rispetto agli esempi forniti.

@@ -11,7 +11,7 @@ L'appendice è divisa concettualmente in tre parti. Nella prima parte si introdu
 \section{Notazione matematica}
 L'obiettivo di questa sezione è di introdurre i concetti matematici propedeutici per questa tesi. Senza dubbio una conoscenza matematica di base è necessaria e chiaramente non può essere introdotto ogni singolo elementare concetto.
 \subsection{Insiemi}
-Con $\mathbb{N}$ si indica l'insieme di numeri naturali interi non negativi incluso 0 (cioè $\mathbb{N} = {0,1,2,\dots}$). L'insieme di interi positivi è denotato da $\mathbb{N}^{+}$ . Si definisce con $\mathbb{B} = {0,1}$ l'insieme di valori booleani dove 0 è associato al valore logico \textit{falso} ed 1 al valore logico \textit{vero}.
+Con $\mathbb{N}$ si indica l'insieme di numeri naturali interi non negativi incluso 0 (cioè $\mathbb{N} = {0,1,2,\dots}$). L'insieme di interi positivi è denotato da $\mathbb{N}^{+}$ . Si definisce con $\mathbb{B} = \{0,1\}$ l'insieme di valori booleani dove 0 è associato al valore logico \textit{falso} ed 1 al valore logico \textit{vero}.
 
 Dato un generico insieme $X, \abs{X}$ denota la sua cardinalità, cioè il numero di elementi che contiene.
 \subsection{Relazione d'equivalenza}
@@ -116,9 +116,22 @@ Il linguaggio generato da una grammatica $\mathcal{G}$ è l'insieme di tutte le 
 
 \centerline{$L(\mathcal{G}) = \{x \in \Sigma^{*} :S\xRightarrow[]{\mathcal{G}} x\}$}
 \end{definizione*}
-Infine è rilevante notare che come detto una grammatica genera un unico linguaggio ma un linguaggio può essere generato da molteplici grammatiche.
-
+E' rilevante notare che come detto una grammatica genera un unico linguaggio ma un linguaggio può essere generato da molteplici grammatiche.\\
+Inoltre la tassonomia di Chomsky non è esaustiva di tutti i linguaggi possibili, infatti esistono dei linguaggi che non sono ricorsivamente enumerabili cioè non c'è nessuna macchina di Turing che li riconosce.\\
+Infine esistono altre classi di linguaggi che non sono incluse nella classificazione appena esposta e che saranno adoperate nel corso della trattazione:
+\begin{definizione*}[Linguaggio Ricorsivo] Un linguaggio $L$ è detto \textbf{ricorsivo} se è decidibile cioè esiste una macchina di Turing $M$ che accetta ogni stringa in $x \in L$ e rigetta ogni stringa $x \not\in L$
+\end{definizione*}
+I linguaggi regolari e context-free sono ricorsivi. Esistono invece linguaggi context-sensitive non ricorsivi, cioè non ne sono un sottoinsieme \cite[p. 124]{Levelt08}. Tutti  i linguaggi ricorsivi sono ricorsivamente enumerabili (cioè sono linguaggi semidecidibili per i quali una stringa non appartenente al linguaggio può essere sia rigettata che andare in ciclo infinito rispetto a una macchina di Turing) ma non è sempre vero il viceversa.
+\begin{definizione*}[Linguaggio primitivo ricorsivo]
+Un linguaggio è \textbf{primitivo ricorsivo} quando la sua funzione caratteristica è primitiva ricorsiva.
+\end{definizione*}
+Il concetto di funzione caratteristica è spiegato nella sezione \ref{sec:FSA}. Invece una funzione primitiva ricorsiva è una funzione definita come una delle funzioni di base o combinando le funzioni di base con operazioni come composizione e ricorsione. Per una definizione formale si rimanda a \cite{Rob47}. I linguaggi primitivi ricorsivi sono un sottoinsieme dei linguaggi ricorsivi.
+\begin{definizione*}[Linguaggi superfiniti]
+La classe dei linguaggi superfiniti è tale se contiene tutti i linguaggi finiti ed almeno un linguaggio infinito.
+\end{definizione*}
+ 
 \section{Automi a stati finiti}
+\label{sec:FSA}
 Nella sottosezione \ref{sub:gra} sono stati introdotti gli automi e una loro classificazione. Qui ci si concentrerà sullo studio dei \ac{FSA} in relazione ai linguaggi regolari, la classe dei linguaggi a cui questa tesi è rivolta. Come visto gli \ac{FSA} sono un caso speciale di \textit{macchina di Turing} e più nello specifico un caso speciale di \ac{FSM} che in questa sede non interessa definire. Qui basterà dire che   una \ac{FSM} è un \textit{transiction system} costituita da un insieme finito di stati dove ogni transizione è innescata da un'azione tra un insieme finito di azioni (di solito denotato da $\Sigma$). Esistono diversi tipi di \ac{FSM} come le \textit{Mealy Machines} e gli \ac{FSA}. Tra gli \ac{FSA} si annoverano gli \ac{NFA} strettamente correlati ai \ac{DFA} su cui si focalizzerà l'attenzione.
 \begin{definizione}[Automa a stati finiti deterministico]
 \label{def:dfa}
@@ -230,7 +243,7 @@ Allora da A tramite $\approx$ è possibile ricavare il \textit{\textbf{DFA quozi
 \item $\mathbb{F}_\mathbb{A}^{A/\!\approx} = \{[q]_\approx : q \in \mathbb{F}_\mathbb{A}^{A}\}$
 \item $\delta^{A/\!\approx}([q]_\approx,a) = [\delta^{A}(q,a)]_\approx \quad \forall q \in Q^{A},a\in{\Sigma}$
 \end{enumerate}
-L'automa quoziente $A/\!\equiv$ ,dove la relazione d'equivalenza utilizzata è quella di equivalenza tra gli stati, corrisponde al \ac{DFA} canonico. Quindi banalizzando si può concludere dicendo che l'automa quoziente di un \ac{DFA} è ciò che si ottiene fondendo insieme alcuni stati del \ac{DFA} di partenza in base a una relazione d'equivalenza. Quando la relazione usata è quella di stati equivalenti si ottiene il DFA minimo: quindi $Q^{A/\!\approx}$ sarà una partizione in cui in ogni blocco (sottoinsieme) ci saranno stati equivalenti tra loro (in uno specifico blocco). Ogni blocco è una classe d'equivalenza.
+L'automa quoziente $A/\!\!\equiv$ ,dove la relazione d'equivalenza utilizzata è quella di equivalenza tra gli stati, corrisponde al \ac{DFA} canonico. Quindi banalizzando si può concludere dicendo che l'automa quoziente di un \ac{DFA} è ciò che si ottiene fondendo insieme alcuni stati del \ac{DFA} di partenza in base a una relazione d'equivalenza. Quando la relazione usata è quella di stati equivalenti si ottiene il DFA minimo: quindi $Q^{A/\!\approx}$ sarà una partizione in cui in ogni blocco (sottoinsieme) ci saranno stati equivalenti tra loro (in uno specifico blocco). Ogni blocco è una classe d'equivalenza.
 
 \subsubsection{Prefix Tree Acceptor}
 Si è visto che l'automa quoziente che si ottiene usando la relazione di equivalenza degli stati su un \ac{DFA} A è il \ac{DFA} minimo. Analogamente è possibile ottenere il \textit{\textbf{Prefix Tree Acceptor di $I_+$}} indicato con \textit{\textbf{PTA$(I_+)$}} applicando la definizione di automa quoziente al \textit{MCA$(I_+)$}\footnote{Anche se tecnicamente può essere un \ac{NFA} la definizione di automa quoziente può essere applicata comunque} con la relazione: \textit{stati che identificano lo stesso prefisso}. Quindi verrà effettuata la fusione degli stati che condividono lo stesso prefisso.\\
@@ -240,7 +253,7 @@ p \approx q \Leftrightarrow \text{ Prefix}(p) = \text{ Prefix}(q)
 \end{equation*}
 allora:
 \begin{equation*}
-MCA(I_+)/\!\!\approx \,=\, PTA(I_+)
+MCA(I_+)/\!\!\approx \,\,=\, PTA(I_+)
 \end{equation*}
 In figura \ref{fig:PTA} il \textit{PTA} ricavato a partite dal \textit{MCA} di figura \ref{fig:MCA} .
 \begin{figure}[htp]

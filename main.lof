@@ -10,30 +10,32 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Correlazione tra ipotesi e discrimination tree}}{26}{figure.caption.32}
+\addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.2}{\ignorespaces LCA di due nodi}}{27}{figure.caption.34}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Correlazione tra ipotesi e discrimination tree}}{35}{figure.caption.36}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Sfruttare il controesempio}}{29}{figure.caption.35}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces LCA di due nodi}}{36}{figure.caption.38}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.4}{\ignorespaces DFA ipotesi e corrispondente tabella di osservazione in L*\relax }}{40}{figure.caption.42}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Sfruttare il controesempio}}{38}{figure.caption.39}
 \defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces \emph {Tab. Osservazione L*}}}{40}{subfigure.4.1}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces DFA ipotesi e corrispondente tabella di osservazione in L*\relax }}{49}{figure.caption.46}
 \defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces \emph {DFA ipotesi}.}}{40}{subfigure.4.2}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces \emph {Tab. Osservazione L*}}}{49}{subfigure.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Discrimination Tree e split di uno stato\relax }}{41}{figure.caption.43}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces \emph {DFA ipotesi}.}}{49}{subfigure.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces \emph {Discrimination Tree}}}{41}{subfigure.5.1}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Discrimination Tree e split di uno stato\relax }}{50}{figure.caption.47}
 \defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces \emph {Split}.}}{41}{subfigure.5.2}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces \emph {Discrimination Tree}}}{50}{subfigure.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces \emph {Split}.}}{50}{subfigure.5.2}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Gerarchia di linguaggi}}{49}{figure.caption.49}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Gerarchia di linguaggi}}{58}{figure.caption.53}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Maximal Canonical Automaton}}{52}{figure.caption.53}
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Maximal Canonical Automaton}}{62}{figure.caption.57}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {A.3}{\ignorespaces Prefix Tre Acceptor}}{53}{figure.caption.56}
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Prefix Tre Acceptor}}{63}{figure.caption.60}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
