@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.5-0.9999.3 (TeX Live 2013/Debian) (format=xelatex 2016.3.9)  8 OCT 2017 21:03
+This is XeTeX, Version 3.1415926-2.5-0.9999.3 (TeX Live 2013/Debian) (format=xelatex 2016.3.9)  11 OCT 2017 19:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1874,7 +1874,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [16]
-Overfull \hbox (20.72867pt too wide) in paragraph at lines 134--135
+Overfull \hbox (20.72867pt too wide) in paragraph at lines 135--136
 []$\OML/cmm/m/it/12 S[]$ \EU1/lmr/m/n/12 impedisce il \EU1/lmr/m/it/12 merge \E
 U1/lmr/m/n/12 di due stati $\OML/cmm/m/it/12 p; q[][][] \OMS/cmsy/m/n/12 2 \OML
 /cmm/m/it/12 Lattice\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 PTA\OT1/cmr/m/n/12 (\OML/
@@ -1989,12 +1989,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 77--87
 
 Overfull \hbox (29.3747pt too wide) in paragraph at lines 77--87
 [] 
- []
-
-
-Overfull \hbox (5.96872pt too wide) in paragraph at lines 89--90
-[]\EU1/lmr/m/n/12 Dalla tabella di osservazione si costruisce una nuova ipotesi
- e la si sottopone al’\EU1/lmr/m/it/12 teacher\EU1/lmr/m/n/12 .
  []
 
 
@@ -2538,10 +2532,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
  )
 (\end occurred when \iftrue on line 124 was incomplete) 
 Here is how much of TeX's memory you used:
- 41197 strings out of 495643
- 754612 string characters out of 6187228
+ 41199 strings out of 495643
+ 754636 string characters out of 6187228
  1000703 words of memory out of 5000000
- 43696 multiletter control sequences out of 15000+600000
+ 43698 multiletter control sequences out of 15000+600000
  13888 words of font info for 97 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  56i,20n,92p,10406b,2004s stack positions out of 5000i,500n,10000p,200000b,80000s

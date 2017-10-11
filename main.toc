@@ -46,9 +46,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.2.1}Tabella di Osservazione}{23}{subsection.3.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.2}L'algoritmo}{24}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.2}L'algoritmo}{27}{subsection.3.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Funzionamento}{24}{section*.28}
+\contentsline {subsubsection}{Funzionamento}{27}{section*.28}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Correttezza}{27}{section*.29}
 \defcounter {refsection}{0}\relax 
