@@ -123,6 +123,32 @@
   \field{year}{1983}
 \endentry
 
+\entry{Burges98}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Burges}{B.}%
+     {Christopher~J.C.}{C.~J.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{BCJ1}
+  \strng{fullhash}{BCJ1}
+  \field{sortinit}{B}
+  \verb{doi}
+  \verb 10.1023/A:1009715923555
+  \endverb
+  \field{issn}{1573-756X}
+  \field{pages}{121\bibrangedash 167}
+  \field{title}{A Tutorial on Support Vector Machines for Pattern Recognition}
+  \verb{url}
+  \verb https://doi.org/10.1023/A:1009715923555
+  \endverb
+  \field{volume}{2}
+  \field{journaltitle}{Data Mining and Knowledge Discovery}
+  \field{month}{01}
+  \field{year}{1998}
+\endentry
+
 \entry{Chomsky59}{article}{}
   \name{author}{1}{}{%
     {{}%
@@ -917,6 +943,62 @@
   \field{journaltitle}{Information and Control}
   \field{month}{11}
   \field{year}{1984}
+\endentry
+
+\entry{Vapnik82}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Vapnik}{V.}%
+     {Vladimir~N.}{V.~N.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Springer-Verlag}%
+  }
+  \strng{namehash}{VVN1}
+  \strng{fullhash}{VVN1}
+  \field{sortinit}{V}
+  \field{isbn}{0387907335}
+  \field{title}{Estimation of Dependences Based on Empirical Data}
+  \list{location}{1}{%
+    {New York, NY, USA}%
+  }
+  \field{year}{1982}
+\endentry
+
+\entry{Vapnik95}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Vapnik}{V.}%
+     {Vladimir~N.}{V.~N.}%
+     {}{}%
+     {}{}}%
+  }
+  \name{editor}{2}{}{%
+    {{}%
+     {Jordan}{J.}%
+     {M.}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Lauritzen}{L.}%
+     {Steffen~L.}{S.~L.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Springer-Verlag}%
+  }
+  \strng{namehash}{VVN1}
+  \strng{fullhash}{VVN1}
+  \field{sortinit}{V}
+  \field{isbn}{0-387-94559-8}
+  \field{title}{The nature of statistical learning theory}
+  \list{location}{1}{%
+    {New York, NY, USA}%
+  }
+  \field{year}{1995}
 \endentry
 
 \lossort
