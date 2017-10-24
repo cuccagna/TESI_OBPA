@@ -568,6 +568,20 @@
   \field{year}{1958}
 \endentry
 
+\entry{Ng}{unpublished}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Ng}{N.}%
+     {Andrew}{A.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{NA2}
+  \strng{fullhash}{NA2}
+  \field{sortinit}{N}
+  \field{title}{Support Vector Machines}
+\endentry
+
 \entry{Nor09}{thesis}{}
   \name{author}{1}{}{%
     {{}%
@@ -621,6 +635,43 @@
   \endverb
   \field{volume}{5}
   \field{year}{1992}
+\endentry
+
+\entry{Osuna97}{report}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Osuna}{O.}%
+     {Edgar~E.}{E.~E.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Freund}{F.}%
+     {Robert}{R.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Girosi}{G.}%
+     {Federico}{F.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Massachusetts Institute of Technology}%
+  }
+  \strng{namehash}{OEEFRGF1}
+  \strng{fullhash}{OEEFRGF1}
+  \field{sortinit}{O}
+  \field{title}{Support Vector Machines: Training and Applications}
+  \verb{url}
+  \verb http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.41.418&rep=rep
+  \verb 1&type=pdf
+  \endverb
+  \list{location}{1}{%
+    {Cambridge, MA, USA}%
+  }
+  \field{type}{techreport}
+  \field{month}{03}
+  \field{year}{1997}
 \endentry
 
 \entry{Pao78}{article}{}

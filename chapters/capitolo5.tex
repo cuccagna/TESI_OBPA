@@ -15,7 +15,7 @@ f : X \to Y \quad \text{con } X=\{x_{1},x_{2},\dots,x_{l}\}
 $X$ contiene i campioni e rappresenta il \textit{training set} e $Y$ rappresenta i possibili valori delle etichette di ciascun campione e nel caso di \textbf{classificazione binaria} $Y=\{0,1\}$. Inoltre si parla di famiglia di funzioni perchè \ac{SVM} (come gli altri modelli) ha una serie di iperparametri ,rappresentati da $\alpha$ , che identificano i diversi classificatori\footnote{Classificatore e modello non sono termini interscambiabili. Il modello è rappresentato dalle funzioni $f(x,\alpha)$ con $\alpha$ generico ,un classificatore invece è una singola funzione che si ottiene dal modello per una specifica istanza degli \textit{iperparametri} $\alpha$.}.  Una capacità alta implica che le funzioni $f(x,\alpha)$ sono complesse cioè di alto grado ad esempio: il discorso è analogo a ciò che accade in una feedback-forward con tante unità nascoste. Per il principio del \textit{Rasoio di Occam} [INSERIRE RIFERIMENTO AL CAPITOLO 2 DOVE SI PARLA DEL RASOIO] è bene selezionare il classificatore con la capacità minima che contemporaneamente si adatta ai dati del \textit{training set} ma come si vedrà i due aspetti sono in contrapposizione e sarà necessario trovarne il giusto compromesso. Questo assunto più avanti sarà approfondito e giustificato. Per il momento basti dire che un classificatore con troppa capacità è come un botanista con una memoria fotografica che quando vede un albero mai visto --- cioè appartenente a quello che formalmente viene identificato come \textit{test set} --- conclude che non è un albero perchè ha un numero di foglie diverso dagli alberi visti finora: situazione detta di \textit{overfitting} in cui il classificatore si è adattato esclusivamente ai dati del \textit{training set} ma non generalizza (analogo della rete neurale con troppe unità nascoste rispetto alla cardinalità del \textit{training set}). D'altro canto una macchina con bassa capacità è come il fratello pigro del botanista  che classifica qualunque cosa sia verde come un albero. In nessuno dei due casi si avrà una buona generalizzazione.
 
 \subsection{Rischio Atteso}
-Supponiamo di avere $l$ osservazioni nel \textit{training set}. Ogni osservazione è una coppia: un vettore $x_{i} \in \mathbb{R}^{n} \text{ , } i=1,\cdots,l$ e l'etichetta corretta corretta associata $y_{i}$. Per semplicità $y_{i} \in \{-1,1\}$. Si assume che le coppie $(x_i,y_i)$ siano estratte da una distribuzione di probabilità cumulativa (CDF) che si indica con $P(x,y)$,  e con $p(x,y)$ la corrispondente densità di probabilità (PDF).  Supponiamo che il modello sta provando ad imparare il mapping $x_i \to y_i \text{ per } i=1,\dots,l$.  Il modello è definito da una serie di possibili mapping $f(x,\alpha) \text{ tali che } x \to f(x,\alpha) $. Il modello rappresenta la classe di funzioni $f(x,\alpha) $, si parla di classe perchè più funzioni possono essere imparate dal modello cambiando gli \textit{iperparametri} $\alpha$ e fissare $\alpha$ (che possono essere più di uno) per un modello si concretizza in un modello ``trained'', cioè in uno specifico classificatore. Ad esempio se il modello è una rete neurale gli \textit{iperparametri} $\alpha$ sono tipicamente i pesi e il bias. \\A questo, seguendo il riferimento \cite{Vapnik95}, si può definire il \textbf{rischio atteso} per un classificatore ($\alpha$ fissato) come:
+Supponiamo di avere $l$ osservazioni nel \textit{training set}. Ogni osservazione è una coppia: un vettore $x_{i} \in \mathbb{R}^{n} \text{ , } i=1,\cdots,l$ e l'etichetta corretta corretta associata $y_{i}$. Per semplicità $y_{i} \in \{-1,1\}$. Si assume che le coppie $(x_i,y_i)$ siano estratte da una distribuzione di probabilità cumulativa (CDF) che si indica con $P(x,y)$,  e con $p(x,y)$ la corrispondente densità di probabilità (PDF).  Supponiamo che il modello sta provando ad imparare il mapping $x_i \to y_i \text{ per } i=1,\dots,l$.  Il modello è definito da una serie di possibili mapping $f(x,\alpha) \text{ tali che } x \to f(x,\alpha) $. Il modello rappresenta la classe di funzioni $f(x,\alpha) $, si parla di classe perchè più funzioni possono essere imparate dal modello cambiando gli \textit{iperparametri} $\alpha$ e fissare $\alpha$ (che possono essere più di uno) per un modello si concretizza in un modello ``trained'', cioè in uno specifico classificatore. Ad esempio se il modello è una rete neurale gli \textit{iperparametri} $\alpha$ sono tipicamente i pesi e il bias. \\ Seguendo il riferimento \cite{Vapnik95}, si può definire il \textbf{rischio atteso} per un classificatore ($\alpha$ fissato) come:
 \begin{equation}
 \label{eqn:rischioatteso}
 R(\alpha) = \int \frac{1}{2} \abs{y-f(x,\alpha)} \, dP(x,y) = \int \frac{1}{2} \abs{y-f(x,\alpha)} \, p(x,y) \, dx \, dy
@@ -69,7 +69,7 @@ Innanzitutto si precisa che un numero di parametri ($\alpha$) maggiore nel model
 \begin{figure}[htp]
 	\centering
 	\includegraphics[ width=0.7\textwidth]{SRM}
-	\caption[principio della \ac{SRM}]{Il \textit{risk bound} è la somma del rischio empirico e la \ac{VC} \textit{confidence}. Il più piccolo \textit{risk bound} è raggiunto su qualche elemento della struttura. }
+	\caption[Principio della SRM]{Il \textit{risk bound} è la somma del rischio empirico e la \ac{VC} \textit{confidence}. Il più piccolo \textit{risk bound} è raggiunto su qualche elemento della struttura. }
    \label{fig:srm}
 \end{figure} 
 
@@ -80,4 +80,109 @@ Innanzitutto si precisa che un numero di parametri ($\alpha$) maggiore nel model
 	\includegraphics[ width=0.7\textwidth]{SottoinsiemiSRM}
 	\caption[Sottoinsiemi \ac{SRM}]{Famiglia di funzioni del modello suddivise in base alla \ac{VC} \textit{dimension} }
    \label{fig:ssrm}
-\end{figure}   
+\end{figure}
+
+\section{SVM}
+Support Vector Machines (\ac{SVM}) sono un metodo d'apprendimento supervisionato, introdotte per la prima volta da Vapnik e Chervonenkis nel 1963. Nel corso degli anni sono state introdotte varie versioni di \ac{SVM} tra cui ne sono rimarcabili quattro:
+\begin{enumerate}
+\item Quella originale: Il \textit{Maximal Margin Classifier}.
+\item La versione con il \textbf{\textit{kernel}}.
+\item La versione detta \textbf{\textit{soft-margin}}.
+\item La versione \textit{soft-margin} con \textit{kernel} che combina i tre punti precedenti.
+\end{enumerate}
+La letteratura sull'argomento è sterminata e \cite{Osuna97} \cite{Burges98} \cite{Ng}  sono solo alcuni dei riferimenti esistenti. Da essi si è tratto gran parte del materiale presentato in questa sezione.
+ Le \ac{SVM} consentono di affrontare essenzialmente tre tipi di problemi:
+\begin{itemize}
+\item Classificazione binaria
+\item Classificazione con più classi
+\item Regressione lineare
+\end{itemize}   
+
+La classificazione binaria è naturale con \ac{SVM} ed è adatta a quei problemi in cui i dati possono appartenere a due classi distinte (etichettate di solito con 1 o -1).\\
+Nella classificazione con più classi i dati possono appartenere a più classi.
+Nella regressione lineare lo scopo è determinare una funzione lineare che meglio approssimi  un insieme di dati.\\
+Il problema affrontato in questa tesi attiene ai problemi di classificazione binaria.
+
+\subsection{Classificazione binaria}
+\label{sub:clb}
+Un problema di classificazione per molti versi è simile a un problema di inferenza induttiva [INSERIRE RIFERIMENTO TESI]. Da una serie di osservazioni cioè di elementi del \textit{training set} X si deve estrarre il migliore classificatore dallo spazio delle ipotesi $f(x,\alpha)$ secondo qualche criterio di preferenza. Gli elementi del training set in un problema di classificazione binaria supervisionato sono del tipo $(x_i , y_i)$ con $i=1,\dots,l$ cioè $\abs{X}=l$ , $x_i \in \mathbb{R}^{n}$ cioè ogni singolo elemento del \textit{training set} ha dimensionalità $n$, e $y_i \in Y=\{-1,1\}$ (o $\mathbb{B}$ in alcuni casi). La dicotomia delle etichette dell'insieme $Y$ rende la classificazione come \textit{binaria}.
+ Nel caso delle \ac{SVM} le funzioni sono del tipo:
+\begin{equation*}
+f : X \subseteq \mathbb{R}^{n} \to \mathbb{R}
+\end{equation*}
+Da un punto di vista geometrico la classificazione binaria nelle \ac{SVM} consiste nel trovare l' iperpiano ottimo ,secondo qualche criterio, nello spazio $\mathbb{R}^n$  che separi i dati del \textit{training set} etichettati positivamente da quelli etichettati negativamente. Se almeno un iperpiano siffatto esiste i dati del \textit{training set} sono detti essere \textbf{linearmente separabili}. Un esempio in figura \ref{fig:lsd}\\
+Da un punto di vista alanitico è necessario una funzione lineare che classifichi correttamente il \textit{training set}. Una funzione lineare,cioè un iperpiano,  è nella forma:
+\begin{equation*}
+f(x) = w \bullet x +b = \Biggl(\sum_{i=1}^{n}w_{i}x_{i}\Biggl) + b
+\end{equation*}
+Quindi la dipendenza dai parametri $\alpha$ si riconduce alla dipendenza da $w$ --- che è un vettore nello spazio $\mathbb{R}^n$ che rappresenta la normale all'iperpiano --- e $b$ uno scalare che consente all'iperpiano di muoversi parallelamente a se stesso.\\  
+Una volta scelto il classificatore dallo spazio delle ipotesi, l'ingresso $x=(x_1,x_2,\dots,x_n) $ del \textit{test set} (cioè di un insieme di elementi non sottoposti in fase di addestramento al modello) sarà classificato in base all'esito della funzione $sign(f(x))$ cioè associato alla classe positiva se $f(x) \geq 0$, altrimenti sarà associato alla classe negativa.
+ 
+ \begin{figure}[htp]
+	\centering
+	\includegraphics[ width=0.5\textwidth]{linearlyseparabledata}
+	\caption[Lineare separabilità]{Dati in $\mathbb{R}^{2}$ linearmente separabili}
+   \label{fig:lsd}
+\end{figure}
+
+\subsection{Classificatore  a margine massimo}
+Il \textit{Maximal Margin Classifier} rappresenta la versione iniziale di \ac{SVM} e spesso in letteratura questa tecnica è nota anche come \textbf{hard margin}. Si applica quando i dati sono \textbf{linearmente separabili}. Come accennato nella sottosezione \ref{sub:clb} è necessario trovare il ``migliore'' iperpiano che separa linearmente i dati nel \textit{training set}. Ai nostri scopi per lineare separabilità si intende che si può trovare una coppia $(w,b)$ tale che i seguenti vincoli sono rispettati:
+\begin{align*}
+&w \bullet x_i + b \geq \:\:\:1 \quad \quad \qquad\text{ per } y_i = +1 \:\:\:\forall i\\
+&w \bullet x_i + b \leq -1 \quad \quad \qquad\text{ per } y_i = -1 \:\:\:\forall i
+\end{align*}
+I due vincoli possono essere convenientemente combinati insieme in modo da ottenere un unico vincolo più compatto:
+\begin{equation}
+\label{eq:vin}
+y_i(w \bullet x_i + b) - 1 \geq 0 \qquad \qquad \forall i
+\end{equation}
+Il vincolo \eqref{eq:vin}  deriva dalla constatazione che la \textit{\textbf{decision function}} $sign(w \bullet x + b)$, cioè l'iperpiano separatore ,rispettante il vincolo \eqref{eq:vin}, che viene selezionato come migliore , è tale che se $w$ e $b$ sono scalati\footnote{Per scalati si intende moltiplicati} per la stessa quantità scalare $\alpha \in \mathbb{R}^{+}$  il vincolo \eqref{eq:vin} è ancora rispettato. Dunque per eliminare questa ridondanza , e per rendere ogni \textit{decision function} corrispondente ad un'unica coppia $(w,b)$, viene imposto il seguente vincolo:
+\begin{equation}
+\label{eq:vin2}
+\min_{i=1,\dots,l}^{}\abs{w \bullet x_{i} + b} = 1
+\end{equation}
+che è un modo equivalente di scrivere il vincolo \eqref{eq:vin}.  Nel gergo tecnico delle \ac{SVM} si suole dire che si è scelto un parametro $\alpha$ tale che il \textit{margine funzionale dell'iperpiano}\footnote{Informalmente il \textit{margine funzionale dell'iperpiano} è la distanza minima tra tutti i punti del \textit{training set} e l'iperpiano separatore} è pari a 1 cioè la valutazione della \textit{\textbf{decision function}} nei punti del \textit{training set}  più vicini all'iperpiano separatore è tale che\footnote{Si può dimostrare che l'esistenza di tali punti è assicurata}
+\begin{align}
+&w \bullet x_i + b = \:\:\:1 \qquad \qquad\text{ per } y_i = +1 \label{eqn:h1}\\
+&w \bullet x_i + b = -1 \qquad \qquad\text{ per } y_i = -1  \label{eqn:h2}
+\end{align}
+L'nsieme di iperpiani che soddisfano \eqref{eq:vin} sono detti \textbf{Iperpiani Canonici}\footnote{In molte trattazioni si definisce il margine geometrico come il margine funzionale rispetto all'iperpiano normalizzato rispetto a $\norma{w}$ e poi si dimostra che margine funzionale e margine geometrico coincidono imponendo il vincolo  \eqref{eq:vin}}.  Per un'\textit{iperpiano canonico} in cui il margine geometrico e il \textit{margine funzionale dell'iperpiano} coincidono si può dare una definizione intuitiva di \textbf{margine}.
+\begin{definizione}
+\label{def:mar}
+Si indichi con $d_+$ la più breve distanza dell'iperpiano separatore dal più vicino esempio positivo del \textit{training set} e con $d_{-}$ la più breve distanza dall'esempio negativo più vicino del \textit{training set}. Allora:
+\begin{equation*}
+margine = d_{+} + d_{-}
+\end{equation*}
+\end{definizione}
+
+Si può dimostrare che la distanza di un punto $x$ da un iperpiano $w \bullet x +b$ è pari a:
+\begin{equation*}
+d = \frac{\abs{w \bullet x + b}}{\norma{w}}
+\end{equation*}
+In accordo alla normalizzazione definita in \ref{eq:vin2} la distanza tra l'\textit{iperpiano canonico} e il più vicino degli elementi del \textit{training set} è $\frac{1}{\norma{w}}$. Quindi il margine di un \textit{iperpiano separatore canonico} secondo la definizione \ref{def:mar} è $\frac{2}{\norma{w}}$. L'immagine [INSERIRE RIFERIMENTO IMMAGINE] può essere chiarificatrice.\\
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[ width=0.7\textwidth]{Margine}
+	\caption[Esempio iperpiano separatore]{Iperpiano separatore per dati linearmente separabili. $H_{1}$ e $H{2}$ sono paralleli dato che hanno la stessa normale $w$ come si apprezza nelle equazioni \ref{eqn:h1} e \ref{eqn:h2}}
+   \label{fig:lsd}
+\end{figure}
+
+Lo scopo di una \ac{SVM} è:
+\begin{enumerate}
+\item \label{ite:obj}classificare correttamente il \textit{training set}
+\item e selezionare tra quelli che rispettano il punto \ref{ite:obj} quello che generalizza meglio.
+\end{enumerate}
+
+Detto succintamente il goal di una \ac{SVM} è trovare l'iperpiano canonico ottimo che separa il \textit{training set} , dove per ottimo si intende quello che massimizza il margine.\\
+
+\subsubsection{Legame con SRM}
+In questa sottosezione si vedrà come la tecnica \textbf{hard margin} di \ac{SVM} è in stretta relazione con \ac{SRM} introdotto in [INSERIRE PARTE TESI DOVE  PARLO di SRM]. Si ha infatti che essendo i dati linearmente separabili la rispondenza con il training set è totale quindi $R_{emp}=0$. Quindi il rischio atteso dipende unicamente dalla \ac{VC} \textit{confidence} che a sua volta dipende dalla \ac{VC} \textit{dimension} $h$. Quindi il classificatore migliore nel caso di \ac{SVM} sarà quello con \ac{VC} \textit{dimension} $h$ minima.  La \ac{SRM} in questo caso diventa una ricerca del classificatore con \ac{VC} \textit{dimension} minima. Si consideri inoltre il seguente teorema:
+\begin{teorema*}
+Sia X un insieme di punti x di uno spazio n-dimensionale  che contiene tutti gli esempi di apprendimento. Sia R il diametro della più piccola ``palla'' (da pensare n-dimesionale) centrata nell'origine che contiene tutti i punti di X. Allora la \ac{VC} dimension ,h, dell'insieme di iperpiani $w \bullet x + b = 0$ aventi margine $\gamma$ è limitata superiormente da: 
+\begin{equation*}
+h \leq min \biggl( \ceil*{\frac{R^{2}}{\gamma^{2}}} \:\:,\:\: n \biggl) + 1
+\end{equation*}
+\end{teorema*}
+Siccome il margine è $\gamma = 2/\norma{w}$ la \ac{VC} \textit{dimension},h, più piccola (che abbiamo detto minimizza la \ac{VC} \textit{confidence} e avendo il $R_{emp}$ nullo minimizza anche il rischio atteso) si ottiene per la $\norma{w}$ minima cioè per il margine ($2/\norma{w}$) massimo.  Da quanto detto segue che le \ac{SVM} ricercano l'iperpiano col margine massimo per ottenere il classificatore migliore che da cioè più garanzie di generalizzazione secondo il risultato dell'equazione \eqref{eqn:vapnik} e della \ac{SRM}.
+Il discorso è analogo ,ma leggermente differente, nel caso in cui i dati non sono linearmente separabili come nel \textbf{soft-margin}[INSERIRE RIFERIMENTO]: in questo caso l'errore empirico non è nullo e le \ac{SVM} cercano per il migliore compromesso tra gli errori nel \textit{training set} e la massimizzazione del margine nell'ottica di minimizzare il \textit{risk boud} $R(\alpha)$.
