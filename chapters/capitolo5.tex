@@ -78,7 +78,7 @@ Innanzitutto si precisa che un numero di parametri ($\alpha$) maggiore nel model
  \begin{figure}[htp]
 	\centering
 	\includegraphics[ width=0.7\textwidth]{SottoinsiemiSRM}
-	\caption[Sottoinsiemi \ac{SRM}]{Famiglia di funzioni del modello suddivise in base alla \ac{VC} \textit{dimension} }
+	\caption[Sottoinsiemi SRM]{Famiglia di funzioni del modello suddivise in base alla \ac{VC} \textit{dimension} }
    \label{fig:ssrm}
 \end{figure}
 
@@ -126,6 +126,7 @@ Una volta scelto il classificatore dallo spazio delle ipotesi, l'ingresso $x=(x_
 \end{figure}
 
 \subsection{Classificatore  a margine massimo}
+\label{sub:cmm}
 Il \textit{Maximal Margin Classifier} rappresenta la versione iniziale di \ac{SVM} e spesso in letteratura questa tecnica è nota anche come \textbf{hard margin}. Si applica quando i dati sono \textbf{linearmente separabili}. Come accennato nella sottosezione \ref{sub:clb} è necessario trovare il ``migliore'' iperpiano che separa linearmente i dati nel \textit{training set}. Ai nostri scopi per lineare separabilità si intende che si può trovare una coppia $(w,b)$ tale che i seguenti vincoli sono rispettati:
 \begin{align*}
 &w \bullet x_i + b \geq \:\:\:1 \quad \quad \qquad\text{ per } y_i = +1 \:\:\:\forall i\\
@@ -177,12 +178,209 @@ Lo scopo di una \ac{SVM} è:
 Detto succintamente il goal di una \ac{SVM} è trovare l'iperpiano canonico ottimo che separa il \textit{training set} , dove per ottimo si intende quello che massimizza il margine.\\
 
 \subsubsection{Legame con SRM}
+\label{subsub:lsrm}
 In questa sottosezione si vedrà come la tecnica \textbf{hard margin} di \ac{SVM} è in stretta relazione con \ac{SRM} introdotto in [INSERIRE PARTE TESI DOVE  PARLO di SRM]. Si ha infatti che essendo i dati linearmente separabili la rispondenza con il training set è totale quindi $R_{emp}=0$. Quindi il rischio atteso dipende unicamente dalla \ac{VC} \textit{confidence} che a sua volta dipende dalla \ac{VC} \textit{dimension} $h$. Quindi il classificatore migliore nel caso di \ac{SVM} sarà quello con \ac{VC} \textit{dimension} $h$ minima.  La \ac{SRM} in questo caso diventa una ricerca del classificatore con \ac{VC} \textit{dimension} minima. Si consideri inoltre il seguente teorema:
-\begin{teorema*}
+\begin{teorema}
+\label{teo:suphdim}
 Sia X un insieme di punti x di uno spazio n-dimensionale  che contiene tutti gli esempi di apprendimento. Sia R il diametro della più piccola ``palla'' (da pensare n-dimesionale) centrata nell'origine che contiene tutti i punti di X. Allora la \ac{VC} dimension ,h, dell'insieme di iperpiani $w \bullet x + b = 0$ aventi margine $\gamma$ è limitata superiormente da: 
 \begin{equation*}
 h \leq min \biggl( \ceil*{\frac{R^{2}}{\gamma^{2}}} \:\:,\:\: n \biggl) + 1
 \end{equation*}
-\end{teorema*}
-Siccome il margine è $\gamma = 2/\norma{w}$ la \ac{VC} \textit{dimension},h, più piccola (che abbiamo detto minimizza la \ac{VC} \textit{confidence} e avendo il $R_{emp}$ nullo minimizza anche il rischio atteso) si ottiene per la $\norma{w}$ minima cioè per il margine ($2/\norma{w}$) massimo.  Da quanto detto segue che le \ac{SVM} ricercano l'iperpiano col margine massimo per ottenere il classificatore migliore che da cioè più garanzie di generalizzazione secondo il risultato dell'equazione \eqref{eqn:vapnik} e della \ac{SRM}.
+\end{teorema}
+Siccome il margine è $\gamma = 2/\norma{w}$ la \ac{VC} \textit{dimension} h più piccola (che abbiamo detto minimizza la \ac{VC} \textit{confidence} e avendo il $R_{emp}$ nullo minimizza anche il rischio atteso) si ottiene per la $\norma{w}$ minima cioè per il margine (pari a $2/\norma{w}$) massimo.  Da quanto detto segue che le \ac{SVM} ricercano l'iperpiano col margine massimo per ottenere il classificatore migliore che da cioè più garanzie di generalizzazione secondo il risultato dell'equazione \eqref{eqn:vapnik} e della \ac{SRM}.
 Il discorso è analogo ,ma leggermente differente, nel caso in cui i dati non sono linearmente separabili come nel \textbf{soft-margin}[INSERIRE RIFERIMENTO]: in questo caso l'errore empirico non è nullo e le \ac{SVM} cercano per il migliore compromesso tra gli errori nel \textit{training set} e la massimizzazione del margine nell'ottica di minimizzare il \textit{risk boud} $R(\alpha)$.
+
+\subsubsection{Formulazione matematica}
+Dalla sottosezione \ref{subsub:lsrm} si evince che \ac{SVM} deve risolvere un problema di programmazione lineare infatti il goal è massimizzare il margine  soggetto a dei vincoli lineari cioè un problema di massimizzazione con vincoli. Ricapitolando dato il \textit{training set} $X$ è necessario trovare tra tutti gli iperpiani che separano i dati (che sono linearmente separabili) quello che massimizza il margine, che è pari a $\frac{2}{\norma{w}}$.  Matematicamente si ha:
+\begin{alignat*}{2}
+&massimizzare \quad&&\frac{2}{\norma{w}} \\
+&soggetto \:\:a &&y_i(w \bullet x_i +b) - 1 \geq 0 \qquad \forall i
+\end{alignat*} 
+
+Osservando che $\norma{w}^{2} = w \bullet w$ si può dare una formulazione  alternativa ma equivalente che cambia leggermente la natura del problema rendendolo quadratico ma è più conveniente come si vedrà più avanti:
+\begin{alignat}{2}
+\label{eq:svmpro1}
+&minimizzare \quad&&\frac{1}{2}(w \bullet w) \\
+\label{eq:svmpro2}
+&soggetto \:\:a &&y_i(w \bullet x_i +b) - 1 \geq 0 \qquad \forall i
+\end{alignat}
+ Per risolvere un problema di \textbf{minimizzazione vincolato} si usano i \textbf{moltiplicatori di Lagrange}. Ad esempio si ha da $\underset{x,y}{minimizzare} \:\: f(x,y)$ col vincolo $g(x,y) = 0$ . Si ha inoltre che $g(x,y) = y+x-1$ allora si ha che $y = 1 - x$ che costituisce il cosiddetto \textbf{feasible set} cioè il luogo dei punti dove la soluzione può venire a trovarsi. Lagrange ha dimostrato che la soluzione si ha laddove il gradiente\footnote{Il gradiente è una quantità vettoriale, cioè un vettore espresso tramite le sue componenti. Per i nostri scopi le singole componenti sono formate facendo le derivate parziali della funzione rispetto a ogni singola variabile}  di $f(x,y)$  e quello di $g(x,y)$ puntano nella stessa direzione cioè 
+ \begin{equation}
+ \label{eq:lag}
+ \nabla f(x,y) = \lambda \,\nabla g(x,y)
+ \end{equation}
+  La quantità scalare $\lambda$ si chiama \textbf{moltiplicatore di Lagrange} e si rende necessaria per il fatto che $\nabla f(x,y) \text{ e } \nabla g(x,y)$ devono avere la stessa direzione ma non necessariamente lo stesso modulo, $\lambda$ è quindi un fattore moltiplicativo che ne tiene conto in modo da eguagliare anche i moduli. Il metodo dei moltiplicatori di Lagrange è valido solo per vincoli di uguaglianza ($g(x,y) = 0$) e in questo caso nelle condizioni per la risoluzione non ci sarà alcun vincolo su $\lambda$. Si definisce la funzione di Lagrange:
+ \begin{equation*}
+ L(x,y,\lambda) = f(x,y) - \lambda g(x,y) 
+ \end{equation*}
+ allora 
+ \begin{equation*}
+ \nabla L(x,y,\lambda) = \nabla f(x,y) - \lambda \, \nabla g(x,y)
+ \end{equation*}
+e dall'equazione \eqref{eq:lag} si deduce che $\nabla L(x,y,\lambda) = 0$ cioè:
+\[
+\begin{cases}
+\frac{\partial L}{\partial x} = 0 \\
+\frac{\partial L}{\partial y} = 0 \\
+\frac{\partial L}{\partial \lambda} = 0
+\end{cases}
+\]
+Per trattare casi in cui sono presenti anche dei vincoli di iniguaglianza come nel caso delle \ac{SVM} (vedasi vincoli \eqref{eq:vin}) si utilizzano le \textbf{Karush-Kuhn-Tucker (KKT)} condizioni che consistono nell'imporre --- oltre alle condizioni del metodo dei moltiplicatori di Lagrange per i vincoli di uguaglianza che permangono --- che il moltiplicatore relativo ad ogni vincolo di ineguaglianza venga posto maggiore uguale a 0 , e le condizioni di complementarità che consistono nell'imporre che il prodotto tra un moltiplicatore e il corrispondente vincolo sia uguale a zero. Il metodo dei moltiplicatori di Lagrange  è un caso speciale (sono presenti solo vincoli di uguaglianza) delle KKT condizioni che invece hanno validità generale.
+Ad esempio se avessimo due vincoli $g_{1}(x,y) \geq 0 \text{ e } g_{2}(x,y) \geq 0$ si avrebbe che $L(x,y,\lambda_{1},\lambda_{2}) = f(x,y) - \lambda_{1}\,g_{1}(x,y) - \lambda_{2}\,g_{2}(x,y)$ da cui si calcola il gradiente come fatto nell'esempio precedente ottenendo:
+\[
+\begin{dcases}
+\frac{\partial L}{\partial x} = 0 \\
+\frac{\partial L}{\partial y} = 0 \\
+\frac{\partial L}{\partial \lambda_{1}} = 0 \\
+\frac{\partial L}{\partial \lambda_{2}} = 0 \\
+\lambda_{1} \geq 0 \\
+\lambda_{2} \geq 0
+\end{dcases}
+\]
+I vincoli di complementarità $\lambda_{1}g_{1}(x,y) = 0$ e $\lambda_{2}g_{2}(x,y) = 0$ non sono presenti perchè già posseduti (per via delle condizioni KKT e del segno delle funzioni $g_{1}$ e $g_{2}$ ) e quindi sarebbero ridondanti.\\
+Adesso, alla luce di quanto è stato esposto, si risolverà il problema matematico posto da \ac{SVM} e delineato nelle equazioni \eqref{eq:svmpro1} e \eqref{eq:svmpro2}. Siccome si hanno $l$ vincoli (tanti quanti gli elementi nel \textit{training set}) si deve introdurre un moltiplicatore $\alpha_{i} \text{ con } i=1,\dots,l$ per ognuno degli $l$ vincoli d'ineguaglianza ottenendo il seguente lagrangiano:
+\begin{equation}
+\label{eq:pri}
+L_{p} = \frac{1}{2}\norma{w}^{2} - \sum_{i=1}^{l}\alpha_{i}y_{i}(w \bullet x_{i} + b) + \sum_{i=1}^{l}\alpha_{i}
+\end{equation}
+dove l'ultima sommatoria scaturisce dal -1 dei vincoli in \eqref{eq:svmpro2}.
+Adesso si deve imporre pari a zero $\nabla L_{p}$ ,e siccome è un vettore imporre pari a zero le singole derivate parziali , e imporre le KKT condizioni ottenendo:
+
+\[
+\begin{dcases}
+\frac{\partial L_{p}}{\partial w} = 0 \\
+\frac{\partial L_{p}}{\partial b} = 0 \\
+\frac{\partial L_{p}}{\partial \alpha_{i}} = 0 \quad \forall i \\
+ \alpha_{i} \geq 0 \quad \forall i \\
+\alpha_{i}[y_{i}(w \bullet x_i + b) - 1] = 0 \quad \forall i \\
+\end{dcases}
+\]
+\\\\
+che svolgendo le derivate parziali diventa:
+
+\begin{subequations}
+\begin{numcases}{}
+w - \sum_{i=1}^{l}\alpha_{i}y_{i}x_{i} =0 \label{wvar}\\
+\sum_{i=1}^{l}\alpha_{i}y_{i} = 0 \label{bvar}\\
+y_{i}(w \bullet x_i + b) - 1 = 0 \quad \forall i \notag \\
+ \alpha_{i} \geq 0 \quad \forall i \notag \\
+\alpha_{i}[y_{i}(w \bullet x_i + b) - 1] = 0 \quad \forall i \label{vecsup}
+\end{numcases}
+\end{subequations}
+
+Il problema appena impostato è un problema di programmazione quadratico dato che la funzione obiettivo ($\frac{1}{2}\norma{w}^2$) è quadratica, ma è anche un \textbf{problema convesso di programmazione quadratica} perchè la funzione obiettivo è anche convessa essendo un paraboloide, ed i punti che soddisfano i vincoli cioè il \textit{feasible set} è pure un insieme convesso\footnote{Qualsiasi vincolo lineare definisce un insieme convesso, e un insieme di $N$ vincoli lineari simultanei definisce l'intersezione di $N$ insiemi convessi, che è ancora un insieme convesso.} Questo sta a significare ch e otteremo lo stesso risultato affrontando il problema \textbf{duale} (quello descritto finora è il problema \textbf{primario} ): anzichè minimizzare rispetto alle variabili $w \text{ e } b$ soggetto a vincoli che coinvolgono i moltiplicatori lagrangiani $\alpha$, si massimizza rispetto alle variabili $\alpha$ (variabili duali) soggetto alle relazioni ottenute prima per $w \text{ e } b$ cioè le equazioni \eqref{wvar} e \eqref{bvar} oltre che ad $\alpha_{i} \geq 0$. Alla formulazione duale si possono aggiungere le KKT condizioni della forma primaria che ci forniscono ulteriori informazioni per comprendere la struttura della soluzione. La condizione  \eqref{vecsup} :
+\[
+\alpha_{i}[y_{i}(w \bullet x_i + b) - 1] \quad \forall i
+\]
+ci dice che solo i punti del \textit{training set} $x_i$ per i quali $y_{i}(w \bullet x_i + b) = 1$ ,cioè i punti più vicini all'iperpiano separatore (quelli doppiamente cerchiati in figura \ref{fig:lsd} sugli iperpiani $H_{1}$ e $H_{2}$ ) , hanno valori $\alpha_{i}$ non nulli. Pertanto solo tali punti contribuiranno al calcolo dei pesi $w$ e per tale motivo sono chiamati \textbf{vettori di supporto}.\\
+La formulazione duale del problema è detta \textbf{Wolf duale}, vediamo come si ottiene. Si sostituiscono i vincoli di eguaglianza \eqref{wvar} e \eqref{bvar} riguardanti $b$ e $w$ ($\frac{\partial L_{p}}{\partial w} = 0 \text{ e } \frac{\partial L_{p}}{\partial b} = 0$) nella formulazione primaria cioè nell'equazione \eqref{eq:pri}. Si ha:
+\begin{equation}
+\begin{split}
+&L_{p} = \frac{1}{2}\norma{w}^{2} - \sum_{i=1}^{l}\alpha_{i}y_{i}(w \bullet x_{i} + b) + \sum_{i=1}^{l}\alpha_{i} = \frac{1}{2}(w \bullet w) - \sum_{i=1}^{l}\alpha_{i}y_{i}(w \bullet x_{i} ) \quad\:\: -\\
+ &- \sum_{i=1}^{l}\alpha_{i}y_{i}b + \sum_{i=1}^{l}\alpha_{i}
+\underset{Si \:sostituisce \:l'equazione \:\eqref{wvar}}{=} \frac{1}{2} \Biggl(\sum_{i=1}^{l}\alpha_{i}y_{i}x_{i} \bullet \sum_{i=1}^{l}\alpha_{i}y_{i}x_{i} \Biggl) \quad\:\:\:\, - \\&
+- \Biggl(\sum_{i=1}^{l}\alpha_{i}y_{i}\Bigl(x_{i} \bullet \sum_{j=1}^{l}\alpha_{j}y_{j}x_{j}\Bigl)\Biggl) -\:b\sum_{i=1}^{l}\alpha_{i}y_{i} + \sum_{i=1}^{l}\alpha_{i}
+\underset{b \:sparisce\:per \:l'equazione\:\eqref{bvar}}{=} \frac{1}{2} \\&\sum_{i,j = 1}^{l}\alpha_{i}\alpha_{j}y_{i}y_{j}\,(x_{i} \bullet x_{j}) - 
+ \sum_{i,j = 1}^{l}\alpha_{i}\alpha_{j}y_{i}y_{j}\,(x_{i} \bullet x_{j}) + \sum_{i=1}^{l}\alpha_{i} \qquad \qquad \qquad \qquad \quad\:\:\,=\\
+ &= - \frac{1}{2} \sum_{i,j = 1}^{l}\alpha_{i}\alpha_{j}y_{i}y_{j}\,(x_{i} \bullet x_{j}) + \sum_{i=1}^{l}\alpha_{i}
+\end{split}
+\end{equation}
+quindi si è trovato che la formulazione duale da massimizzare è:
+\begin{alignat}{4}
+& L_{d} = - \frac{1}{2} \sum_{i,j = 1}^{l}\alpha_{i}\alpha_{j}y_{i}y_{j}\,(x_{i} \bullet x_{j}) + \sum_{i=1}^{l}\alpha_{i} \label{eq:dual}\\
+& soggetta \:ai\:vincoli: \nonumber\\
+&\sum_{i=1}^{l}\alpha_{i}y_{i} = 0 \quad \forall i \\
+&\alpha_{i} \geq 0 \qquad \quad\:\:\: \forall i
+\end{alignat}
+Si procede come per la forma primale,  cioè imponendo che il lagrangiano della forma duale $L_{d}$ sia pari a zero. Si risolve il sistema, in cui la dipendenza da $w$ e $b$ è sparita (visionare equazione \eqref{eq:dual}), e si trovano gli $\alpha_{i}$.\\
+ L'obiettivo finale è trovare l'iperpiano $f(x) = w \bullet x +b$ con i $w \text{ e } b$ cioè la coppia $(w,b)$, che massimizzano il margine. Mediante la formulazione duale si trovano gli $\alpha_i$ che garantiscono i ``migliori'' $(w,b)$ e vengono sosti,tuiti nell'equazione \eqref{wvar} per calcolare il vettore $w$ ricordando che soltanto i \textit{vettori di supporto} ,che hanno $\alpha_{i} \neq 0$, contribuiscono al calcolo di $w$. Quindi si ha: 
+\begin{alignat}{3}
+f(x)&= w \bullet x +b = \Biggl(\sum_{i=1}^{l}\alpha_{i}y_{i}x_i\Biggl) \bullet x +b = \nonumber\\
+&=\Biggl(\sum_{i=1}^{l}\alpha_{i}y_{i}(x_i \bullet x)\Biggl) +b =\nonumber\\
+&= \Biggl(\sum_{i \in sv}^{}\alpha_{i}y_{i}(x_i \bullet x)\Biggl) +b \label{eq:test}
+\end{alignat} 
+Per calcolare $b$ si sostituisce in \ref{eq:test} un elemento $x$ del \textit{training set} --- ed anche la corrispondente etichetta $y$ --- che rappresenta un vettore di supporto, ed i valori ottenuti vengono poi mediati quindi:
+\begin{equation}
+\label{eq:bhard}
+b = \frac{1}{\abs{sv}} \sum_{i \in sv}^{}\Biggl(y_i - \Bigl(\sum_{j \in sv}^{}\alpha_{j}y_{j}(x_i \bullet x_j)\Bigl)\Biggl)
+\end{equation}
+
+\subsubsection{Fase di Test}
+Una volta trovati $w$ e $b$, e quindi una volta che la \ac{SVM} è stata \textit{trained} come si usa il classificatore trovato? Immaginiamo di avere un campione n-dimensionale del \textit{test set} $m$ allora si usa l'iperpiano $w \bullet x +b$ per classificare il campione \emph{unseen} $m$ in base all'esito di $sign(w \bullet f + b)$ (l'etichetta di m è 1 oppure -1 in base a $sign(w \bullet m + b)$)
+
+\subsection{Soft Margin}
+L'esposizione della sottosezione \ref{sub:cmm} è valida per un \textit{training set} linearmente separabile. Nella maggiore parte dei casi reali i dati tipicamente non sono linearmente separabili cioè non ci sarà una \textit{``feasible region''} perchè non esisterà nessun valore $(w,b)$ ,cioè nessun iperpiano , per cui i vincoli \ref{eqn:h1} e \ref{eqn:h2} siano rispettati. L'idea ,in \cite{Cortes95},è di rilassare tali vincoli  mediante l'introduzione delle \textit{\textbf{variabili slack}} così definite:
+\begin{definizione*}
+Detta $f$ la funzione caratteristica un classificatore, che ha come dominio il training set $X$, e un campione $\in X (x_i , y_i)$, si definisce variabile slack del campione, rispetto alla funzione $f$ e al margine $\gamma$, la quantità :
+\begin{equation*}
+\xi((x_i , y_i) , f , \gamma  ) = \xi_{i} = max(0 , \gamma - y_if(x_i))
+\end{equation*}
+\end{definizione*}
+e il \textit{vettore slack} di $X$ come:
+\[ 
+\xi = \Braket{\xi_1,\xi_2,\dots,\xi_l}
+\] 
+Si noti che $\xi_i > \gamma$ indica un'errata classificazione del campione $x_i$.
+Quindi i vincoli \ref{eqn:h1} e \ref{eqn:h2} sul \textit{training set} vengono riformulati definendo:
+\begin{align}
+&w \bullet x_i + b \geq \:\:\:1-\xi_i \qquad \qquad\text{ per } y_i = +1 \label{eqn:h1sm}\\
+&w \bullet x_i + b \leq -1+\xi_i \qquad \qquad\text{ per } y_i = -1  \label{eqn:h2sm}\\
+&\xi_i \geq 0 \quad \qquad \qquad \qquad \qquad \quad\:\: \forall i \label{eqn:slack}
+\end{align}
+Un errore in \eqref{eqn:h1sm} e \eqref{eqn:h2sm} occorre quando il corrispondente $\xi_i$ eccede l'unità, ne consegue che $\sum_{i=1}^{l}\xi_i$ è un limite superiore al numero di errori sul \textit{training set}. Allora la funzione obiettivo da minimizzare diventa:
+\begin{equation}
+\label{eq:softorig}
+\frac{1}{2}\norma{w}^2 + Cf\Bigl(\sum_{i=1}^{l}\xi_i^k\Bigl)
+\end{equation}
+soggetta ai vincoli \eqref{eqn:h1sm} \eqref{eqn:h2sm} e \eqref{eqn:slack}. Il problema appena formulato è convesso  per qualunque $k$ ma si sceglie sempre $k=1$ perchè assicura l'unicità della soluzione (con $k=1$ ne le $\xi_i$ ne i moltiplicatori di Lagrange del problema primale appaiono nel Wolf duale problema come sarà accennato). La soluzione di questo problema di ottimizzazione è chiamato iperpiano \textbf{soft margin}. Inoltre la scelta maggiormente adottata è di approssimare\footnote{Si definisce la norma-1 di un vettore x a l componenti come $\norma{x}_1 = \sum_{i=1}^{l}\abs{x_i}$} $f\Bigl(\sum_{i=1}^{l}\xi_i\Bigl) \text{ con } \Bigl(\sum_{i=1}^{l}\xi_i\Bigl) = \norma{\xi}_1$ per questo talvolta si parla d'iperpiano soft margin norma-1.\footnote{Esiste anche la formulazione norma-2 ma non ci interessa approfondirla}. Il problema originale delineato in \eqref{eq:softorig}  minimizza il numero di errori di classificazione sull'insieme di addestramento ,e quindi minimizza il rischio empirico, ma è un problema NP-completo. Invece con l'approssimazione fatta si minimizza la norma di $\xi$  che non equivale più a minimizzare il numero di errori sui campioni del \textit{training set} ma consiste nel minimizzare gli scostamenti dei punti misclassificati dal nostro iperpiano  mentre determina l'iperpiano con margine massimo  per i restanti punti di $X$. E queso non è più un problema NP-completo. Ricapitolando la formulazione del problema di minimizzazione soft margin\footnote{Si intende da ora in avanti sempre norma-1} è :
+
+
+\begin{alignat}{3}
+\label{eq:softfor}
+&minimizzare \quad&&\frac{1}{2}(w \bullet w) + C\sum_{i=1}^{l}\xi_i \\
+\label{eq:softvinc}
+&soggetto \:\:a &&y_i(w \bullet x_i + b) \geq \:\:\:1-\xi_i \qquad \qquad \\
+&\:&&\xi_i \geq 0 \label{eq:softvin2}
+\end{alignat}
+La scelta di definire la funzione obiettivo \eqref{eq:softfor} tramite la norma risulta ottima dal punto di vista dell'errore di generalizzazione perchè si può dimostrare che quest ultimo è limitato superiormente da una quantità direttamente proporzionale alla norma dello \textit{slack vector} $\xi$, per cui minimizzare la norma consente di minimizzare anche l'errore di generalizzazione.
+
+\subsubsection{Formulazione matematica}
+Si  procede alla stessa maniera di hard margin ,cioè per dati linearmente separabili, su dati non linearmenti separabili con la differenza che la funzione obiettivo e anche i vincoli sono cambiati ( equazioni \eqref{eq:softfor} \eqref{eq:softvinc} \eqref{eq:softvinc2} ) per tollerare degli errori di classificazione del \textit{training set} e al contempo cercare di massimizzare il margine. Il problema primale diventa:
+\begin{equation}
+L_p = \frac{1}{2}\norma{w}^2 + C\sum_{i=1}^{l}\xi_i - \sum_{i=1}^{l}\alpha_{i}\{y_i(x_i \bullet w + b) - 1 + \xi_i\} - \sum_{i=1}^{l}\mu_i\xi_i
+\end{equation}
+Imponendo $\nabla L_p = 0$ e le KKT condizioni si ha:
+
+\begin{subequations}
+\begin{numcases}{}
+\frac{\partial L_p}{\partial w} = \ w - \sum_{i=1}^{l}\alpha_{i}y_{i}x_{i} =0 \label{wdualsoft}\\
+\frac{\partial L_p}{\partial b} = \sum_{i=1}^{l}\alpha_{i}y_{i} = 0 \notag\\
+\frac{\partial L_p}{\partial \alpha_i} = y_{i}(w \bullet x_i + b) - 1 + \xi_i = 0 \quad \forall i \notag\\
+\frac{\partial L_p}{\partial \xi_i} = C - \alpha_i - \mu_i = 0 \quad \forall i \notag\\
+\xi_i \geq 0 \quad \forall i \notag\\
+\alpha_i \geq 0 \quad \forall i \notag\\
+\mu_i \geq 0 \quad \forall i \notag\\
+ \mu_i\xi_i = 0 \quad \forall i \notag\\
+ \alpha_i\{y_{i}(w \bullet x_i + b) - 1 + \xi_i\} = 0 \quad \forall i  \notag
+\end{numcases}
+\end{subequations}
+
+Con dei calcoli analoghi a quanto fatto per il caso linearmente separabile si perviene alla forma duale che consiste nel:
+\begin{alignat}{3}
+\label{eq:softford}
+&massimizzare \quad&&L_{d} = - \frac{1}{2} \sum_{i,j = 1}^{l}\alpha_{i}\alpha_{j}y_{i}y_{j}\,(x_{i} \bullet x_{j}) + \sum_{i=1}^{l}\alpha_{i} \\
+\label{eq:softvincd}
+&soggetto \:\:a &&0 \leq \alpha_i \leq C \qquad \qquad \\
+\label{eq:softvind2}
+&\:&&\sum_{i=1}^{l} \alpha_i y_i = 0 
+\end{alignat}
+Come per hard margin imponendo $\nabla L_d = 0$ e risolvendo si trovano gli $\alpha_i$ che sono usati in \ref{wdualsoft} per calcolare il vettore dei pesi $w$, cui come prima contribuiranno solo i vettori di supporto in quanto unico con $\alpha_i \neq 0$:
+\begin{equation}
+\label{eq:softw}
+w = \sum_{i \in sv}^{}\alpha_iy_ix_i
+\end{equation}
+Il valore di b può essere ricavato come in \eqref{eq:bhard}.
+Si osservi come la formulazione duale soft margin sia uguale , fatta eccezione per il vincolo sugli $\alpha_i$ , alla formulazione duale del problema del margine massimo. 
+
+\subsubsection{Parametro C e legami con SRM}
+Nella funzione obiettivo della formulazione soft margin \eqref{eq:softfor} compare il parametro $C$, talvota detto parametro \textbf{trade-off} , che è essenzialmente un parametro di \textbf{regolarizzazione} che regola il compromesso tra raggiungere un basso errore sul \textit{training set} e minimizzare $\norma{w}$ (cioè massimizzare il margine, che è $2/\norma{w}$ ed avere presumibilmente un minore errore di generalizzazione). Infatti nella forma duale l'unica dipendenza da C è negli $\alpha_i$ nell'equazione \eqref{eq:softvincd} ed avere un valore di $C$ piccolo limita il valore degli $\alpha_i$ e a sua volta del vettore $w$ che come si vede dall'equazione \eqref{eq:softw} aumenta all'aumentare degli $\alpha_i$. Quindi quando $C$ è più piccolo $w$ è pure più piccolo , e quindi il margine è più grande e di conseguenza per il teorema \ref{teo:suphdim} si avranno migliori performances di generalizzazione tuttavia un $C$ piccolo  comporta una minore \textit{accuracy} sul \textit{training set}. Viceversa , per gli stessi motivi, un valore di $C$ più grande classifica meglio il \textit{training set} ma avrà presumibilmente un maggiore errore di generalizzazione. Quindi la regolazione del parametro $C$ è uno step vitale perchè \ac{SRM} è parzialmente implementato tramite la regolazione di questo parametro dato che l'incremento di $C$ incrementa la complessità della classe delle ipotesi ,perchè in ultima analisi aumentare $C$ comporta l'aumento della \ac{VC} \textit{dimension} $h$. Molto spesso per trovare il migliore valore per $C$ si usa la validazione incrociata su vari valori del parametro. Quindi l'implementazione di \ac{SRM} nel soft margin è approssimata tramite la regolazione del parametro $C$.

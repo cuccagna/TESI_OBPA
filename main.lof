@@ -4,7 +4,7 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Relazione tra deduzione e induzione}}{7}{figure.caption.19}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Relazione tra deduzione e induzione}}{7}{figure.caption.18}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
@@ -12,19 +12,19 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Correlazione tra ipotesi e discrimination tree}}{35}{figure.caption.37}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Correlazione tra ipotesi e discrimination tree}}{35}{figure.caption.36}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.2}{\ignorespaces LCA di due nodi}}{36}{figure.caption.39}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces LCA di due nodi}}{36}{figure.caption.38}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Sfruttare il controesempio}}{38}{figure.caption.40}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Sfruttare il controesempio}}{38}{figure.caption.39}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.4}{\ignorespaces DFA ipotesi e corrispondente tabella di osservazione in L*\relax }}{49}{figure.caption.47}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces DFA ipotesi e corrispondente tabella di osservazione in L*\relax }}{49}{figure.caption.46}
 \defcounter {refsection}{0}\relax 
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces \emph {Tab. Osservazione L*}}}{49}{subfigure.4.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces \emph {DFA ipotesi}.}}{49}{subfigure.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Discrimination Tree e split di uno stato\relax }}{49}{figure.caption.48}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Discrimination Tree e split di uno stato\relax }}{49}{figure.caption.47}
 \defcounter {refsection}{0}\relax 
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces \emph {Discrimination Tree}}}{49}{subfigure.5.1}
 \defcounter {refsection}{0}\relax 
@@ -32,11 +32,11 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Tre punti shattered nel piano}}{58}{figure.caption.51}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Tre punti shattered nel piano}}{58}{figure.caption.50}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Principio della SRM}}{59}{figure.caption.52}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Sottoinsiemi \ac {SRM}}}{59}{figure.caption.53}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Sottoinsiemi SRM}}{59}{figure.caption.53}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {5.4}{\ignorespaces Lineare separabilità}}{61}{figure.caption.54}
 \defcounter {refsection}{0}\relax 
@@ -44,10 +44,10 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Gerarchia di linguaggi}}{69}{figure.caption.61}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Gerarchia di linguaggi}}{76}{figure.caption.65}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Maximal Canonical Automaton}}{73}{figure.caption.65}
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Maximal Canonical Automaton}}{80}{figure.caption.69}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {A.3}{\ignorespaces Prefix Tre Acceptor}}{74}{figure.caption.68}
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Prefix Tre Acceptor}}{81}{figure.caption.72}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
