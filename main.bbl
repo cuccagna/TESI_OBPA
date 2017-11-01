@@ -123,6 +123,40 @@
   \field{year}{1983}
 \endentry
 
+\entry{Vapnik92}{inproceedings}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Boser}{B.}%
+     {Bernhard~E.}{B.~E.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Guyon}{G.}%
+     {Isabelle~M.}{I.~M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Vapnik}{V.}%
+     {Vladimir~N.}{V.~N.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{organization}{1}{%
+    {COLT '92 Proceedings of the fifth annual workshop on Computational
+  learning theory}%
+  }
+  \strng{namehash}{BBEGIMVVN1}
+  \strng{fullhash}{BBEGIMVVN1}
+  \field{sortinit}{B}
+  \verb{doi}
+  \verb 10.1145/130385.130401
+  \endverb
+  \field{pages}{144\bibrangedash 152}
+  \field{title}{A training algorithm for optimal margin classifiers}
+  \field{month}{07}
+  \field{year}{1992}
+\endentry
+
 \entry{Burges98}{article}{}
   \name{author}{1}{}{%
     {{}%
@@ -238,6 +272,33 @@
   \field{title}{Gl-learning: an optimized framework for grammatical inference}
   \field{month}{06}
   \field{year}{2016}
+\endentry
+
+\entry{Cover65}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Cover}{C.}%
+     {Thomas~M.}{T.~M.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{CTM1}
+  \strng{fullhash}{CTM1}
+  \field{sortinit}{C}
+  \verb{doi}
+  \verb 10.1109/pgec.1965.264137
+  \endverb
+  \field{pages}{326\bibrangedash 334}
+  \field{title}{Geometrical and Statistical Properties of Systems of Linear
+  Inequalities with Applications in Pattern Recognition}
+  \verb{url}
+  \verb http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.366.5645&rep=r
+  \verb ep1&type=pdf
+  \endverb
+  \field{volume}{14}
+  \field{journaltitle}{IEEE Transactions on Electronic Computers}
+  \field{month}{06}
+  \field{year}{1965}
 \endentry
 
 \entry{DeLaHiguera10}{book}{}

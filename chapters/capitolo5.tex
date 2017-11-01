@@ -384,3 +384,167 @@ Si osservi come la formulazione duale soft margin sia uguale , fatta eccezione p
 
 \subsubsection{Parametro C e legami con SRM}
 Nella funzione obiettivo della formulazione soft margin \eqref{eq:softfor} compare il parametro $C$, talvota detto parametro \textbf{trade-off} , che è essenzialmente un parametro di \textbf{regolarizzazione} che regola il compromesso tra raggiungere un basso errore sul \textit{training set} e minimizzare $\norma{w}$ (cioè massimizzare il margine, che è $2/\norma{w}$ ed avere presumibilmente un minore errore di generalizzazione). Infatti nella forma duale l'unica dipendenza da C è negli $\alpha_i$ nell'equazione \eqref{eq:softvincd} ed avere un valore di $C$ piccolo limita il valore degli $\alpha_i$ e a sua volta del vettore $w$ che come si vede dall'equazione \eqref{eq:softw} aumenta all'aumentare degli $\alpha_i$. Quindi quando $C$ è più piccolo $w$ è pure più piccolo , e quindi il margine è più grande e di conseguenza per il teorema \ref{teo:suphdim} si avranno migliori performances di generalizzazione tuttavia un $C$ piccolo  comporta una minore \textit{accuracy} sul \textit{training set}. Viceversa , per gli stessi motivi, un valore di $C$ più grande classifica meglio il \textit{training set} ma avrà presumibilmente un maggiore errore di generalizzazione. Quindi la regolazione del parametro $C$ è uno step vitale perchè \ac{SRM} è parzialmente implementato tramite la regolazione di questo parametro dato che l'incremento di $C$ incrementa la complessità della classe delle ipotesi ,perchè in ultima analisi aumentare $C$ comporta l'aumento della \ac{VC} \textit{dimension} $h$. Molto spesso per trovare il migliore valore per $C$ si usa la validazione incrociata su vari valori del parametro. Quindi l'implementazione di \ac{SRM} nel soft margin è approssimata tramite la regolazione del parametro $C$.
+
+\subsection{Kernels}
+L'approccio soft margin per addestrare dati non linearmente separabili non garantisce usualmente ottime prestazioni. Un'alternativa molto potente è quella introdotta in \cite{Vapnik92}. L'idea per gestire dati non linearmente separabili è quella di mappare questi dati in uno spazio di maggiore dimensionalità $\mathcal{H}$ detto \textbf{spazio delle features} o \textbf{spazio delle caratteristiche} in cui i dati diventano lineramente separabili e poi applicare la tecnica hard margin. Questo mapping può essere fatto tramite una funzione $\phi$ siffatta:
+\begin{equation*}
+\phi : \mathbb{R}^n \to \mathcal{H}
+\end{equation*}
+Quindi $(x_i \bullet x_j)$ nella formulazione duale in \eqref{eq:dual} diventa $(\phi(x_i) \bullet \phi(x_j))$. Tuttavia utilizzando il \textbf{kernel trick} è possibile pensare di usare una una \textbf{kernel function k} tale che
+\begin{equation}
+\label{eq:kerdef}
+k(x_i , x_j) = \phi(x_i) \bullet \phi(x_j)
+\end{equation}
+che consente di usare K nelle \ac{SVM} senza esplicitamente conoscere $\phi$.
+Una puntualizzazione su $\phi$ è doverosa. Se $\mathcal{H}$ è di dimensione $M$ $\phi$ può essere una funzione che per calcolare ciascuna delle $M$ coordinate del generico campione $x \in \mathbb{R}^{d}$ nello spazio $H$ si usano $M$ differenti funzioni cioè:
+\[
+\phi(x) =[\phi_1(x),\dots,\phi_M(x)]
+\]
+e allora il kernel diventa:
+\begin{equation}
+k(x_i , x_j) = \phi(x_i) \bullet \phi(x_j) = \sum_{d=0}^{M}\phi_d(x_i)\phi_d(x_j)
+\end{equation}
+ Un esempio è il kernel in [INSERIRE RIFERIMENTO KERNEL GAUSSIANO] in cui $\mathcal{H}$ è di dimensione infinita. In quest ultimo esempio si può dimostare che $\mathcal{H}$ è di dimensione infinita così potrebbe non essere semplice lavorare con $\phi$ esplicitamente. Usando il \textit{kernel trick} si aggira il problema, infatti non va più svolto un prodotto scalare e due valutazioni della funzione $\phi()$ per ogni coppia $(x_i , x_j)$  ma la più semplice ed efficiente valutazione del kernel che sotto opportune condizioni del kernel assicura che implicitamente si sta svolgendo un prodotto scalare(ma senza svolgerne il calcolo esplicito che con alte o infinite dimensionalità di $\mathcal{H}$ come per il kernel gaussiano in[INSERIRE RIFERIMENTO KERNEL GAUSSIANO] è impossibile). Un altro esempio chiarificatore in cui i campioni $x$ del \textit{training set} appartengono allo spazio $\mathbb{R}^2$ è il seguente. Dato il \textit{kernel}:
+ \begin{equation*}
+ k(x_i,x_j) = (x_i \bullet x_j)^2
+ \end{equation*}
+ è facile trovare una funzione $\phi : \mathbb{R}^2 \to \mathcal{H}$ tale che si ha:
+\begin{equation*}
+ K(x,y) = (x \bullet y)^2 = \phi(x) \bullet \phi(y) \qquad \text{ con } x,y \in \mathbb{R}^2
+\end{equation*}
+Infatti se $x=\braket{x_1 , x_2} \text{ e } y=\braket{y_1 , y_2}$ si ha che
+\begin{equation}
+\label{eq:kernelex}
+(x \bullet y)^2 = (x_1y_1 + x_2y_2)^2 = x_{1}^{2}y_{1}^{2} + x_{2}^{2}y_{2}^{2} + 2x_{1}y_{1}x_{2}y_{2}
+\end{equation}
+e scegliendo $\mathcal{H} = \mathbb{R}^3$ si può avere
+ \begin{align*}
+    \phi(x) &= \begin{pmatrix}
+           x_{1}^2 \\
+           \sqrt{2}\,x_{1}x_{2} \\
+           x_{2}^2
+         \end{pmatrix}
+  \end{align*}
+ 
+  quindi:
+ \begin{align*}
+    \phi(x) \bullet \phi(y) &= \begin{pmatrix}
+           x_{1}^2 \\
+           \sqrt{2}\,x_{1}x_{2} \\
+           x_{2}^2
+         \end{pmatrix}\bullet
+         \begin{pmatrix}
+           y_{1}^2 \\
+           \sqrt{2}\,y_{1}y_{2} \\
+           y_{2}^2
+         \end{pmatrix} = x_{1}^{2}y_{1}^{2} + x_{2}^{2}y_{2}^{2} + 2x_{1}y_{1}x_{2}y_{2}
+  \end{align*}
+
+che coincide con quanto ottenuto in \eqref{eq:kernelex}. Inoltre fissato un \textit{kernel} non sono univoci ne i mapping $\phi$ nela dimensionalità dello spazio $\mathcal{H}$. Per esempio per il \textit{kernel} precedente si sarebbe potuto scegliere $\mathcal{H} = \mathbb{R}^3$ e 
+ \begin{align*}
+    \phi(x) &= \frac{1}{\sqrt{2}}\begin{pmatrix}
+           (x_{1}^2 - x_{2}^2)\\
+           2x_{1}x_{2} \\
+           (x_{1}^2 + x_{2}^2)
+         \end{pmatrix}
+  \end{align*}
+  oppure $\mathcal{H} = \mathbb{R}^4$ e
+  \begin{align*}
+    \phi(x) &= \begin{pmatrix}
+           x_{1}^2\\
+           x_{1}x_{2} \\
+           x_{1}x_{2} \\
+           x_{2}^2
+         \end{pmatrix}
+  \end{align*}
+Per quanto riguarda $\mathcal{H}$ è uno spazio di Hilbert che generalizza lo spazio euclidiano classico, e ha intrinsecamente un \textit{inner product} definito. Comunque non ci si soffermerà su di esso piuttosto è importante comprendere in quali circostanze dato un \textit{kernel} esiste una coppia $(\mathcal{H} , \phi)$ con la proprietà \eqref{eq:kerdef}.
+\begin{teorema}[Teorema di Mercer]Dato un kernel continuo e simmetrico\footnote{Simmetrico significa che k(x,y) = k(y,x).} nell'intervallo chiuso    $\overrightarrow{a} \leq \overrightarrow{x} \leq \overrightarrow{b}$ e $\overrightarrow{a} \leq \overrightarrow{y} \leq \overrightarrow{b}$. Allora k(x,y) può essere espanso come
+\begin{equation}
+k(\overrightarrow{x},\overrightarrow{y}) = \sum_{i=1}^{\infty}\lambda_i\,\phi_i(\overrightarrow{x})\phi_i(\overrightarrow{y})
+\end{equation}
+con $\lambda_i > 0$. Condizione necessaria e sufficiente affinchè tale espansione sia valida e la sua convergenza assoluta e uniforme è:
+\begin{equation*}
+\int_{\overrightarrow{b}}^{\overrightarrow{a}}\int_{\overrightarrow{b}}^{\overrightarrow{a}} g(\overrightarrow{x})k(\overrightarrow{x},\overrightarrow{y})g(\overrightarrow{y})\,d\overrightarrow{x}\,d\overrightarrow{y} \geq 0
+\end{equation*}
+
+\begin{equation*}
+\text{per } \forall g(\cdot) \text{ : } \:\:\int_{\overrightarrow{b}}^{\overrightarrow{a}}g^2(\overrightarrow{x})\,d\overrightarrow{x} < \infty
+\end{equation*}
+\end{teorema}
+
+Quindi una funzione \textit{kernel} che soddisfa le condizioni del teorema di Mercer rappresenta un prodotto scalare in uno spazio delle features ($\mathcal{H}$) generato da una qualche trasformazione non lineare. Si noti che tale spazio delle features $\mathcal{H}$ può essere infinito e il fatto che $\forall i \:\lambda_i > 0$ implica che il kernel K è definito positivo. Si ha che un kernel simmetrico K definito positivo soddisfa le condizioni del Teorema di Mercer quindi condizione necessaria e sufficiente affinchè un Kernel rappresenti un prodotto scalare in qualche spazio di Hilbert $\mathcal{H}$ è che il kernel sia simmetrico definito positivo.\footnote{Ad essere simmetrica definita positiva è la matrice associata al kernel. I valori della matrice sono calcolati sulle possibili coppie dei vettori del \textit{training set} cioè su $K(x_i,x_j) \text{ con } i,j=1,\dots,l$ e quindi possono essere raccolti in una matrice $K \in \mathbb{R}^l \times \mathbb{R}^l$ denominata matrice del kernel. E' questa matrice che deve essere simmetrica definita positiva affinchè siano rispettate le condizioni del teorema di Mercer} 
+
+\begin{table}[htp]
+\centering
+\[ 
+\begin{array}{lc} 
+\toprule
+\text{\textbf{Tipo di Kernel}} & \text{\textbf{k(x , y)}}  \\
+\midrule  
+\text{Polinomiale}  &  (x \bullet y +1)^p \\
+\text{Gaussiano}  &  e^{-\frac{\norma{x-y}^{2}}{2\sigma^2}}\\[1ex]
+\text{Iperbolico}  & \tanh(\text{{\footnotesize {\textsl k}}}x \bullet y - \delta) \\
+
+\bottomrule
+\end{array}
+\]
+ \caption[Kernels più noti]{Tipi di kernels più conosciuti}
+\label{tab:kerrem}
+\end{table}  
+
+Nell tabella \ref{tab:kerrem} si annoverano i kernel predefiniti più noti e maggiormente adottati. Un kernel di per sè non ci dice niente su $\phi$ e la dimensione di $\mathcal{H}$(spazio delle caratteristiche). Tuttavia è stato dimostrato che il \textit{kernel} polinomiale ha per  $\mathcal{H}$ una dimensione di $\binom{n+p-1}{p}$ dove si ricorda che $n$ è la dimensionalità di ogni campione del \textit{training set}. Invece il \textit{kernel} gaussiano ha una dimensionalità di $\mathcal{H}$ infinita. Il suo funzionamento è molto simile alle classiche \textit{Radial Basis Function} infatti  il numero di centri ($\abs{sv}$), i centri stessi (cioè i vettori di supporto) ed i pesi (gli$ \alpha_i$) sono prodotti automaticamente da \ac{SVM}. La quantità $\norma{x-y}$ rappresenta la distanza euclidea quadrata e quindi una misura di similarità e il parametro $\gamma = 1/2\sigma^2$ decide il peso di $y$ (se questo è un vettore di supporto) nell'influenzare la classificazione di $x$. Un $\gamma$ piccolo significa un gaussiano con una grande varianza e quindi $y$ (si sottintende che $y$ è un vettore di supporto) avrà un'influenza rilevante su $x$ anche se la distanza tra $x$ e $y$ è grande, al contrario se $\gamma$ è grande la varianza del gaussiano è piccola e $y$ non avrà una influenza molto significativa su $x$ (specie se molto distanti). Le prestazioni del \textit{gaussiano} danno risultati eccellenti paragonate alle classiche RBF.  Il \textit{kernel} iperbolico è detto anche neurale perchè ricalca da vicino una rete neurale ed in particolare un'unità sigmoidale a due strati. Il primo strato consiste in $\abs{sv}$ insiemi di pesi, ed ogni insieme consta $n_l$ (la dimensionalità dei campioni) pesi, e il secondo strato consiste di $\abs{sv}$ pesi (gli $\alpha_i$) cosiché una valutazione richiede di prendere una somma pesata dei sigmoidi, essi stessi valutati sul prodotto scalare dei dati nel \textit{test set} con i vettori di supporto. Il \textit{kernel} iperbolico-neurale è poco utilizzato perchè solo per alcuni specifici valori di {\footnotesize {\textsl k}} ,$\delta$ e dei dati $x$ le condizioni del teorema di Mercer sono soddisfatte ed è stato dimostrato che molte combinazioni dei parametri ci si riconduce al \textit{kernel} gaussiano.\\
+La ragione per mappare i campioni dallo spazio originario in uno spazio a dimensione molto superiore (\textit{feature space} che come visto per il \textit{kernel} gaussiano può essere anche infinita è il \textbf{teorema di Cover sulla separabilità} \cite{Cover65}:
+\begin{teorema}
+\label{teo:Cover}
+Un problema di classificazione complesso, formulato attraverso una classificazione non lineare dei dati ad altà dimensionalità, ha maggiore probabilità di essere linearmente separabile che in uno spazio a bassa dimensionalità.
+\end{teorema}
+
+\subsubsection{Formulazione matematica}
+Come indicato dal teorema \ref{teo:Cover} nello spazio $\mathcal{H}$ si avrà presumibilmente una lineare separazione dei dati e questo consente di utilizzare la formulazione hard margin in \eqref{eq:dual}  che resta pressochè invariata. L'unica sostituzione da fare è nell'utilizzo del mapping nel prodotto scalare. Quindi la nuova formulazione  con kernel diventa:
+
+\begin{alignat}{4}
+& L_{d} = - \frac{1}{2} \sum_{i,j = 1}^{l}\alpha_{i}\alpha_{j}y_{i}y_{j}\,(\phi(x_{i}) \bullet \phi(x_{j})) + \sum_{i=1}^{l}\alpha_{i} = - \frac{1}{2} \sum_{i,j = 1}^{l}\alpha_{i}\alpha_{j}y_{i}y_{j}\,k(x_{i} ,  x_{j}) + \sum_{i=1}^{l}\alpha_{i} \label{eq:Kerdual}\\
+& soggetta \:ai\:vincoli: \nonumber\\
+&\sum_{i=1}^{l}\alpha_{i}y_{i} = 0 \quad \forall i \nonumber\\
+&\alpha_{i} \geq 0 \qquad \quad\:\:\: \forall i \nonumber
+\end{alignat}
+
+Anche in fase di test non ci sono problemi dato che  la classificazione del campione di test $x$ scaturisce dalla valutazione di $sign(w \bullet \phi(x) +b)$ ma $w = \sum_{i =1}^{\abs{sv}}y_i\alpha_i\phi(x_i)$ dove gli $x_i$ sono i vettori di supporto. Quindi sostituendo si ha:
+\begin{equation}
+sign\Bigl(\sum_{i=1}^{\abs{sv}}\alpha_iy_i\phi(x_i) \bullet \phi(x) + b \Bigl)= sign\Bigl(\sum_{i=1}^{\abs{sv}}\alpha_iy_i\,k(x_i , x) + b\Bigl)
+\end{equation}
+quindi anche in fase di test non abbiamo la necessità di calcolare $\phi$ che comporterebbe l'effettuazione di prodotti scalari di vettori con un numero di componenti eleveto se non addirittura infinito (come il \textit{kernel} gaussiano). E' proprio questo il vantaggio che apporta il \textbf{kernel trick}.
+
+\subsubsection{Prodotto scalare come misura di similarità}
+Il motivo per cui si predilige la formulazione duale rispetto a quella primaria è da ricercare nel fatto che in essa compare il prodotto scalare che come visto conduce alla tecnica dei \textit{kernels}. Un altro motivo è che il prodotto scalare è una \textbf{misura di similarità} e quindi trascendendo i \textit{kernels} classici della tabella \ref{tab:kerrem} ,se si rivelano inappropriati, è possibile definire un \textit{kernel} su misura che implicitamente definisce una misura di similarità \textit{customizzata} tra i campioni. Riferendoci ,senza perdere di generalità,alla formulazione duale hard margin in \eqref{eq:dual} \footnote{Per la formulazione con kernels la misurà di similarità è relativa ai campioni trasformati cioè a $\phi(x_i) \bullet \phi(x_j)$} si cerca di interpretare più in dettaglio come funziona il prodotto scalare ricordando che $L_d$ va massimizzato. Assumendo che $x_i$ e $x_j$ sono due campioni  si ha che:
+\begin{enumerate}
+\item Se $x_i \text{ e } x_j$ sono \textbf{completamente dissimili} come in figura \ref{fig:dissp} il prodotto scalare è zero e non contribuiscono a $L_d$ (anche se non sono esattamente otogonali ma quasi il prodotto scalare sarà piccolo ed anche il contributo a $L_d$).
+\item Se $x_i \text{ e } x_j$ sono \textbf{completamente simili} (o quasi) cioè il loro prodotto scalare è uno (o quasi uno) si può fare un ulteriore distinguo:
+\begin{itemize}
+\item $y_i \text{ e } y_j$ cioè le rispettive etichette sono uguali (cioè entrambe 1 o entrambe -1), allora siccome $\alpha_i,\alpha_j \geq 0$ $\alpha_i\alpha_jy_iy_j(x_i \bullet x_j)$ per quei due specifici campioni $x_i,x_j$ è positivo (o nullo) ma moltiplicato per -1/2 è negativo quindi $L_d$ diminuisce. Se ne deduce che campioni simili (prodotto scalare uguale o vicino a uno) con la stessa etichetta come in figura \ref{fig:simpsamelab} sono ignorati da \ac{SVM} (perchè altrimenti il margine diminuirebbe) e quindi \ac{SVM} non li rende vettori di supporto.
+\item $y_i \text{ e } y_j$ cioè le rispettive etichette sono opposte (cioè 1 e -1 o viceversa). Inoltre i vettori sono simili e il prodotto scalare è vicino a 1 come in figura \ref{fig:simpdifflab} quindi $\alpha_i\alpha_jy_iy_j(x_i \bullet x_j) \leq 0$ e moltiplicato per -1/2 diventa positivo e quindi contribuisce ad incrementare il margine. Quindi \ac{SVM} renderà tali elementi del \textit{training set} vettori di supporto (perchè fanno aumentare il margine) 
+\end{itemize}
+\end{enumerate}
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[ width=0.5\textwidth]{VettoriDissimili}
+	\caption[Campioni dissimili]{Due campioni dissimili(ortogonali), indipendentemente dall'etichetta, non contano affatto.}
+   \label{fig:dissp}
+\end{figure}
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[ width=0.5\textwidth]{VettoriSimiliDifferenteLabel}
+	\caption[Campioni simili differenti etichette]{Due campioni molto simili,$x_i$ e $x_j$, con etichette diverse, tendono a massimizzare il margine e sono resi vettori di supporto.}
+   \label{fig:simpdifflab}
+\end{figure}
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[ width=0.5\textwidth]{VettoriSimiliUgualeLabel}
+	\caption[Campioni simili differenti etichette]{Due campioni molto simili,$x_i$ e $x_j$, con etichette uguali, tendono a minimizzare il margine e quindi non vanno resi vettori di supporto. Oppure se uno di loro è un vettore di supporto (perchè con altri campioni contribuisce ad aumentare il margine) l'altro non va reso un vettore di supporto (in modo da avere coefficiente nullo) in modo da non influenzare negativamente il margine.}
+   \label{fig:simpsamelab}
+\end{figure}
+
+Come accennato in precedenza in determinati ambiti è possibili definire un \textit{kernel} che rappresenta una misura di similarità adatta allo specifico problema da affrontare o in cui gli elementi del \textit{training set} sono strutturati come ad esempio stringhe ed alberi. Un esempio molto importante , e rilevante ai fini della tesi, è quello dei \textbf{kernel string}, dei quali  è possibile trovare un'introduzione in \cite{DeLaHiguera10}. 
