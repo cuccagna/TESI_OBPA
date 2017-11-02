@@ -138,62 +138,68 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {5.2.4}Kernels}{71}{subsection.5.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Formulazione matematica}{74}{section*.62}
+\contentsline {subsubsection}{Formulazione matematica}{75}{section*.63}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Prodotto scalare come misura di similarità}{75}{section*.63}
+\contentsline {subsubsection}{Prodotto scalare come misura di similarità}{75}{section*.64}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Preliminari}{78}{appendix.A}
+\contentsline {subsubsection}{String kernels}{78}{section*.68}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.1}Notazione matematica}{78}{section.A.1}
+\contentsline {subsection}{\numberline {5.2.5}Versione soft margin kernelized}{79}{subsection.5.2.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.1.1}Insiemi}{78}{subsection.A.1.1}
+\contentsline {subsection}{\numberline {5.2.6}Globalità e unicità della soluzione}{80}{subsection.5.2.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.1.2}Relazione d'equivalenza}{78}{subsection.A.1.2}
+\contentsline {chapter}{\numberline {A}Preliminari}{81}{appendix.A}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.2}Linguaggi e grammatiche}{79}{section.A.2}
+\contentsline {section}{\numberline {A.1}Notazione matematica}{81}{section.A.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.2.1}Alfabeto, stringhe e linguaggi}{79}{subsection.A.2.1}
+\contentsline {subsection}{\numberline {A.1.1}Insiemi}{81}{subsection.A.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Alfabeto}{79}{section*.67}
+\contentsline {subsection}{\numberline {A.1.2}Relazione d'equivalenza}{81}{subsection.A.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Stringhe}{79}{section*.68}
+\contentsline {section}{\numberline {A.2}Linguaggi e grammatiche}{82}{section.A.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Linguaggi}{80}{section*.69}
+\contentsline {subsection}{\numberline {A.2.1}Alfabeto, stringhe e linguaggi}{82}{subsection.A.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.2.2}Grammatiche}{81}{subsection.A.2.2}
+\contentsline {subsubsection}{Alfabeto}{82}{section*.71}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.3}Automi a stati finiti}{83}{section.A.3}
+\contentsline {subsubsection}{Stringhe}{82}{section*.72}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.3.1}FSA particolari}{85}{subsection.A.3.1}
+\contentsline {subsubsection}{Linguaggi}{83}{section*.73}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Maximal Canonical Automaton}{85}{section*.74}
+\contentsline {subsection}{\numberline {A.2.2}Grammatiche}{84}{subsection.A.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Automa quoziente}{86}{section*.76}
+\contentsline {section}{\numberline {A.3}Automi a stati finiti}{86}{section.A.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Prefix Tree Acceptor}{86}{section*.77}
+\contentsline {subsection}{\numberline {A.3.1}FSA particolari}{88}{subsection.A.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Automa Universale}{87}{section*.79}
+\contentsline {subsubsection}{Maximal Canonical Automaton}{88}{section*.78}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.3.2}Funzioni di output regolari}{87}{subsection.A.3.2}
+\contentsline {subsubsection}{Automa quoziente}{89}{section*.80}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Relazione di Nerode}{87}{section*.80}
+\contentsline {subsubsection}{Prefix Tree Acceptor}{89}{section*.81}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Teorema Myhill-Nerode}{88}{section*.81}
+\contentsline {subsubsection}{Automa Universale}{90}{section*.83}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {B}Prel. e impl. ObP}{89}{appendix.B}
+\contentsline {subsection}{\numberline {A.3.2}Funzioni di output regolari}{90}{subsection.A.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.1}Notazione specifica per l'ObP}{89}{section.B.1}
+\contentsline {subsubsection}{Relazione di Nerode}{90}{section*.84}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {B.1.1}Definizioni}{89}{subsection.B.1.1}
+\contentsline {subsubsection}{Teorema Myhill-Nerode}{91}{section*.85}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {B.1.2}Def. fram.}{90}{subsection.B.1.2}
+\contentsline {chapter}{\numberline {B}Prel. e impl. ObP}{92}{appendix.B}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Prefix Transformation}{90}{section*.82}
+\contentsline {section}{\numberline {B.1}Notazione specifica per l'ObP}{92}{section.B.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Altre definizioni}{90}{section*.83}
+\contentsline {subsection}{\numberline {B.1.1}Definizioni}{92}{subsection.B.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.2}Dett. impl. ObP}{90}{section.B.2}
+\contentsline {subsection}{\numberline {B.1.2}Def. fram.}{93}{subsection.B.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliografia}{93}{section*.84}
+\contentsline {subsubsection}{Prefix Transformation}{93}{section*.86}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Indice analitico}{97}{section*.86}
+\contentsline {subsubsection}{Altre definizioni}{93}{section*.87}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {B.2}Dett. impl. ObP}{93}{section.B.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliografia}{96}{section*.88}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Indice analitico}{100}{section*.90}

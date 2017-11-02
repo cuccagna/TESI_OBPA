@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.5-0.9999.3 (TeX Live 2013/Debian) (format=xelatex 2016.3.9)  1 NOV 2017 13:10
+This is XeTeX, Version 3.1415926-2.5-0.9999.3 (TeX Live 2013/Debian) (format=xelatex 2016.3.9)  2 NOV 2017 12:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1451,6 +1451,15 @@ LaTeX Warning: Label `sub:tea' multiply defined.
 
 LaTeX Warning: Label `fig:lsd' multiply defined.
 
+
+LaTeX Warning: Label `eq:softford' multiply defined.
+
+
+LaTeX Warning: Label `eq:softvincd' multiply defined.
+
+
+LaTeX Warning: Label `eq:softvind2' multiply defined.
+
 )
 \openout1 = `main.aux'.
 
@@ -2480,6 +2489,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [70]
+File: pictures/KernelLinSepara.png Graphic file (type QTm)
+ <use  "pictures/KernelLinSepara.png" >
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2522,14 +2533,14 @@ File: pictures/VettoriSimiliDifferenteLabel.png Graphic file (type QTm)
 <use  "pictures/VettoriSimiliDifferenteLabel.png" >
 File: pictures/VettoriSimiliUgualeLabel.png Graphic file (type QTm)
 
-<use  "pictures/VettoriSimiliUgualeLabel.png" >)
+<use  "pictures/VettoriSimiliUgualeLabel.png" >
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[76] (./chapters/appendice1.tex
+[76]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2537,21 +2548,38 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [77]
-Appendice A.
-[78
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 42--48
-
- []
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[79]
+[78]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[79]) (./chapters/appendice1.tex
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[80]
+Appendice A.
+[81
+
+]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[82]
 Underfull \hbox (badness 10000) in paragraph at lines 58--60
 
  []
@@ -2567,7 +2595,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[80]
+[83]
 Underfull \hbox (badness 10000) in paragraph at lines 81--86
 
  []
@@ -2597,7 +2625,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[81]
+[84]
 Underfull \hbox (badness 10000) in paragraph at lines 115--116
 
  []
@@ -2608,7 +2636,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[82]
+[85]
 Package acronym Info: Label `acro:FSM' newly defined as it shall be overridden
 although it is yet undefined on input line 135.
 Package acronym Info: Label `acro:NFA' newly defined as it shall be overridden
@@ -2634,7 +2662,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[83]
+[86]
 Underfull \hbox (badness 10000) in paragraph at lines 157--166
 
  []
@@ -2650,7 +2678,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[84]
+[87]
 Underfull \hbox (badness 10000) in paragraph at lines 192--200
 
  []
@@ -2666,32 +2694,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[85]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[86]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[87]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
 [88]
-Appendice B.
-[89
 
-]
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[89]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2705,14 +2715,32 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[91])
+[91]
+Appendice B.
+[92
+
+]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[92] [93
+[93]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[94])
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[95] [96
 
 
 ]
@@ -2727,7 +2755,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[94]
+[97]
 Overfull \hbox (4.22997pt too wide) in paragraph at lines 270--270
 \EU1/lmr/m/n/12 Homing Sequences». In: \EU1/lmr/m/it/12 Information and Computa
 tion \EU1/lmr/m/n/12 103 (apr. 1993), pp. 299–
@@ -2739,14 +2767,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[95]
+[98]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[96] (./main.ind [97
+[99] (./main.ind [100
 
 
 
@@ -2770,12 +2798,12 @@ Package logreq Info: Writing requests to 'main.run.xml'.
  )
 (\end occurred when \iftrue on line 127 was incomplete) 
 Here is how much of TeX's memory you used:
- 41460 strings out of 495643
- 758071 string characters out of 6187228
+ 41474 strings out of 495643
+ 758300 string characters out of 6187228
  995232 words of memory out of 5000000
- 43937 multiletter control sequences out of 15000+600000
+ 43950 multiletter control sequences out of 15000+600000
  15877 words of font info for 105 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 56i,20n,92p,10406b,2007s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,20n,92p,10406b,2009s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (105 pages).
+Output written on main.pdf (108 pages).

@@ -390,12 +390,21 @@ L'approccio soft margin per addestrare dati non linearmente separabili non garan
 \begin{equation*}
 \phi : \mathbb{R}^n \to \mathcal{H}
 \end{equation*}
-Quindi $(x_i \bullet x_j)$ nella formulazione duale in \eqref{eq:dual} diventa $(\phi(x_i) \bullet \phi(x_j))$. Tuttavia utilizzando il \textbf{kernel trick} è possibile pensare di usare una una \textbf{kernel function k} tale che
+L'immagine \ref{fig:kls} illustra quanto appena detto. 
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[ width=0.5\textwidth]{KernelLinSepara}
+	\caption[Mapping in feature space]{\textit{Dati in $\mathbb{R}^{2}$ resi linearmente separabili ,dalla funzione $\phi$, nello spazio di Hilbert di dimensione tre}}
+   \label{fig:kls}
+\end{figure}
+
+Inoltre $(x_i \bullet x_j)$ nella formulazione duale in \eqref{eq:dual} diventa $(\phi(x_i) \bullet \phi(x_j))$. Tuttavia utilizzando il \textbf{kernel trick} è possibile pensare di usare una una \textbf{kernel function k} tale che
 \begin{equation}
 \label{eq:kerdef}
 k(x_i , x_j) = \phi(x_i) \bullet \phi(x_j)
 \end{equation}
-che consente di usare K nelle \ac{SVM} senza esplicitamente conoscere $\phi$.
+che consente di usare il \textit{kernel} K nelle \ac{SVM} senza esplicitamente conoscere $\phi$.
 Una puntualizzazione su $\phi$ è doverosa. Se $\mathcal{H}$ è di dimensione $M$ $\phi$ può essere una funzione che per calcolare ciascuna delle $M$ coordinate del generico campione $x \in \mathbb{R}^{d}$ nello spazio $H$ si usano $M$ differenti funzioni cioè:
 \[
 \phi(x) =[\phi_1(x),\dots,\phi_M(x)]
@@ -472,7 +481,7 @@ con $\lambda_i > 0$. Condizione necessaria e sufficiente affinchè tale espansio
 \end{equation*}
 \end{teorema}
 
-Quindi una funzione \textit{kernel} che soddisfa le condizioni del teorema di Mercer rappresenta un prodotto scalare in uno spazio delle features ($\mathcal{H}$) generato da una qualche trasformazione non lineare. Si noti che tale spazio delle features $\mathcal{H}$ può essere infinito e il fatto che $\forall i \:\lambda_i > 0$ implica che il kernel K è definito positivo. Si ha che un kernel simmetrico K definito positivo soddisfa le condizioni del Teorema di Mercer quindi condizione necessaria e sufficiente affinchè un Kernel rappresenti un prodotto scalare in qualche spazio di Hilbert $\mathcal{H}$ è che il kernel sia simmetrico definito positivo.\footnote{Ad essere simmetrica definita positiva è la matrice associata al kernel. I valori della matrice sono calcolati sulle possibili coppie dei vettori del \textit{training set} cioè su $K(x_i,x_j) \text{ con } i,j=1,\dots,l$ e quindi possono essere raccolti in una matrice $K \in \mathbb{R}^l \times \mathbb{R}^l$ denominata matrice del kernel. E' questa matrice che deve essere simmetrica definita positiva affinchè siano rispettate le condizioni del teorema di Mercer} 
+Quindi una funzione \textit{kernel} che soddisfa le condizioni del teorema di Mercer rappresenta un prodotto scalare in uno spazio delle features ($\mathcal{H}$) generato da una qualche trasformazione non lineare. Si noti che tale spazio delle features $\mathcal{H}$ può essere infinito e il fatto che $\forall i \:\lambda_i > 0$ implica che il kernel K è definito positivo. Si ha che un kernel simmetrico K semidefinito positivo soddisfa le condizioni del Teorema di Mercer quindi condizione necessaria e sufficiente affinchè un Kernel rappresenti un prodotto scalare in qualche spazio di Hilbert $\mathcal{H}$ è che il kernel sia simmetrico semidefinito positivo.\footnote{\label{note:hessiano}Ad essere simmetrica definita positiva è la matrice associata al kernel. I valori della matrice sono calcolati sulle possibili coppie dei vettori del \textit{training set} cioè su $K(x_i,x_j) \text{ con } i,j=1,\dots,l$ e quindi possono essere raccolti in una matrice $K \in \mathbb{R}^l \times \mathbb{R}^l$ denominata matrice del kernel. E' questa matrice che deve essere simmetrica semidefinita positiva affinchè siano rispettate le condizioni del teorema di Mercer} 
 
 \begin{table}[htp]
 \centering
@@ -492,7 +501,7 @@ Quindi una funzione \textit{kernel} che soddisfa le condizioni del teorema di Me
 \label{tab:kerrem}
 \end{table}  
 
-Nell tabella \ref{tab:kerrem} si annoverano i kernel predefiniti più noti e maggiormente adottati. Un kernel di per sè non ci dice niente su $\phi$ e la dimensione di $\mathcal{H}$(spazio delle caratteristiche). Tuttavia è stato dimostrato che il \textit{kernel} polinomiale ha per  $\mathcal{H}$ una dimensione di $\binom{n+p-1}{p}$ dove si ricorda che $n$ è la dimensionalità di ogni campione del \textit{training set}. Invece il \textit{kernel} gaussiano ha una dimensionalità di $\mathcal{H}$ infinita. Il suo funzionamento è molto simile alle classiche \textit{Radial Basis Function} infatti  il numero di centri ($\abs{sv}$), i centri stessi (cioè i vettori di supporto) ed i pesi (gli$ \alpha_i$) sono prodotti automaticamente da \ac{SVM}. La quantità $\norma{x-y}$ rappresenta la distanza euclidea quadrata e quindi una misura di similarità e il parametro $\gamma = 1/2\sigma^2$ decide il peso di $y$ (se questo è un vettore di supporto) nell'influenzare la classificazione di $x$. Un $\gamma$ piccolo significa un gaussiano con una grande varianza e quindi $y$ (si sottintende che $y$ è un vettore di supporto) avrà un'influenza rilevante su $x$ anche se la distanza tra $x$ e $y$ è grande, al contrario se $\gamma$ è grande la varianza del gaussiano è piccola e $y$ non avrà una influenza molto significativa su $x$ (specie se molto distanti). Le prestazioni del \textit{gaussiano} danno risultati eccellenti paragonate alle classiche RBF.  Il \textit{kernel} iperbolico è detto anche neurale perchè ricalca da vicino una rete neurale ed in particolare un'unità sigmoidale a due strati. Il primo strato consiste in $\abs{sv}$ insiemi di pesi, ed ogni insieme consta $n_l$ (la dimensionalità dei campioni) pesi, e il secondo strato consiste di $\abs{sv}$ pesi (gli $\alpha_i$) cosiché una valutazione richiede di prendere una somma pesata dei sigmoidi, essi stessi valutati sul prodotto scalare dei dati nel \textit{test set} con i vettori di supporto. Il \textit{kernel} iperbolico-neurale è poco utilizzato perchè solo per alcuni specifici valori di {\footnotesize {\textsl k}} ,$\delta$ e dei dati $x$ le condizioni del teorema di Mercer sono soddisfatte ed è stato dimostrato che molte combinazioni dei parametri ci si riconduce al \textit{kernel} gaussiano.\\
+Nella tabella \ref{tab:kerrem} si annoverano i kernel predefiniti più noti e maggiormente adottati. Un kernel di per sè non ci dice niente su $\phi$ e la dimensione di $\mathcal{H}$(spazio delle caratteristiche). Tuttavia è stato dimostrato che il \textit{kernel} polinomiale ha per  $\mathcal{H}$ una dimensione di $\binom{n+p-1}{p}$ dove si ricorda che $n$ è la dimensionalità di ogni campione del \textit{training set}. Invece il \textit{kernel} gaussiano ha una dimensionalità di $\mathcal{H}$ infinita. Il suo funzionamento è molto simile alle classiche \textit{Radial Basis Function} infatti  il numero di centri ($\abs{sv}$), i centri stessi (cioè i vettori di supporto) ed i pesi (gli$ \alpha_i$) sono prodotti automaticamente da \ac{SVM}. La quantità $\norma{x-y}$ rappresenta la distanza euclidea quadrata e quindi una misura di similarità e il parametro $\gamma = 1/2\sigma^2$ decide il peso di $y$ (se questo è un vettore di supporto) nell'influenzare la classificazione di $x$. Un $\gamma$ piccolo significa un gaussiano con una grande varianza e quindi $y$ (si sottintende che $y$ è un vettore di supporto) avrà un'influenza rilevante su $x$ anche se la distanza tra $x$ e $y$ è grande, al contrario se $\gamma$ è grande la varianza del gaussiano è piccola e $y$ non avrà una influenza molto significativa su $x$ (specie se molto distanti). Le prestazioni del \textit{gaussiano} danno risultati eccellenti paragonate alle classiche RBF.  Il \textit{kernel} iperbolico è detto anche neurale perchè ricalca da vicino una rete neurale ed in particolare un'unità sigmoidale a due strati. Il primo strato consiste in $\abs{sv}$ insiemi di pesi, ed ogni insieme consta $n_l$ (la dimensionalità dei campioni) pesi, e il secondo strato consiste di $\abs{sv}$ pesi (gli $\alpha_i$) cosiché una valutazione richiede di prendere una somma pesata dei sigmoidi, essi stessi valutati sul prodotto scalare dei dati nel \textit{test set} con i vettori di supporto. Il \textit{kernel} iperbolico-neurale è poco utilizzato perchè solo per alcuni specifici valori di {\footnotesize {\textsl k}} ,$\delta$ e dei dati $x$ le condizioni del teorema di Mercer sono soddisfatte ed è stato dimostrato che molte combinazioni dei parametri ci si riconduce al \textit{kernel} gaussiano.\\
 La ragione per mappare i campioni dallo spazio originario in uno spazio a dimensione molto superiore (\textit{feature space} che come visto per il \textit{kernel} gaussiano può essere anche infinita è il \textbf{teorema di Cover sulla separabilità} \cite{Cover65}:
 \begin{teorema}
 \label{teo:Cover}
@@ -516,6 +525,7 @@ sign\Bigl(\sum_{i=1}^{\abs{sv}}\alpha_iy_i\phi(x_i) \bullet \phi(x) + b \Bigl)= 
 quindi anche in fase di test non abbiamo la necessità di calcolare $\phi$ che comporterebbe l'effettuazione di prodotti scalari di vettori con un numero di componenti eleveto se non addirittura infinito (come il \textit{kernel} gaussiano). E' proprio questo il vantaggio che apporta il \textbf{kernel trick}.
 
 \subsubsection{Prodotto scalare come misura di similarità}
+\label{subsub:prscal}
 Il motivo per cui si predilige la formulazione duale rispetto a quella primaria è da ricercare nel fatto che in essa compare il prodotto scalare che come visto conduce alla tecnica dei \textit{kernels}. Un altro motivo è che il prodotto scalare è una \textbf{misura di similarità} e quindi trascendendo i \textit{kernels} classici della tabella \ref{tab:kerrem} ,se si rivelano inappropriati, è possibile definire un \textit{kernel} su misura che implicitamente definisce una misura di similarità \textit{customizzata} tra i campioni. Riferendoci ,senza perdere di generalità,alla formulazione duale hard margin in \eqref{eq:dual} \footnote{Per la formulazione con kernels la misurà di similarità è relativa ai campioni trasformati cioè a $\phi(x_i) \bullet \phi(x_j)$} si cerca di interpretare più in dettaglio come funziona il prodotto scalare ricordando che $L_d$ va massimizzato. Assumendo che $x_i$ e $x_j$ sono due campioni  si ha che:
 \begin{enumerate}
 \item Se $x_i \text{ e } x_j$ sono \textbf{completamente dissimili} come in figura \ref{fig:dissp} il prodotto scalare è zero e non contribuiscono a $L_d$ (anche se non sono esattamente otogonali ma quasi il prodotto scalare sarà piccolo ed anche il contributo a $L_d$).
@@ -529,22 +539,93 @@ Il motivo per cui si predilige la formulazione duale rispetto a quella primaria 
 \begin{figure}[htp]
 	\centering
 	\includegraphics[ width=0.5\textwidth]{VettoriDissimili}
-	\caption[Campioni dissimili]{Due campioni dissimili(ortogonali), indipendentemente dall'etichetta, non contano affatto.}
+	\caption[Campioni dissimili]{\textit{Due campioni dissimili(ortogonali), indipendentemente dall'etichetta, non contano affatto.}}
    \label{fig:dissp}
 \end{figure}
 
 \begin{figure}[htp]
 	\centering
 	\includegraphics[ width=0.5\textwidth]{VettoriSimiliDifferenteLabel}
-	\caption[Campioni simili differenti etichette]{Due campioni molto simili,$x_i$ e $x_j$, con etichette diverse, tendono a massimizzare il margine e sono resi vettori di supporto.}
+	\caption[Campioni simili differenti etichette]{\textit{Due campioni molto simili,$x_i$ e $x_j$, con etichette diverse, tendono a massimizzare il margine e sono resi vettori di supporto.}}
    \label{fig:simpdifflab}
 \end{figure}
 
 \begin{figure}[htp]
 	\centering
 	\includegraphics[ width=0.5\textwidth]{VettoriSimiliUgualeLabel}
-	\caption[Campioni simili differenti etichette]{Due campioni molto simili,$x_i$ e $x_j$, con etichette uguali, tendono a minimizzare il margine e quindi non vanno resi vettori di supporto. Oppure se uno di loro è un vettore di supporto (perchè con altri campioni contribuisce ad aumentare il margine) l'altro non va reso un vettore di supporto (in modo da avere coefficiente nullo) in modo da non influenzare negativamente il margine.}
+	\caption[Campioni simili differenti etichette]{\textit{Due campioni molto simili,$x_i$ e $x_j$, con etichette uguali, tendono a minimizzare il margine e quindi non vanno resi vettori di supporto. Oppure se uno di loro è un vettore di supporto (perchè con altri campioni contribuisce ad aumentare il margine) l'altro non va reso un vettore di supporto (in modo da avere coefficiente nullo) in modo da non influenzare negativamente il margine.}}
    \label{fig:simpsamelab}
 \end{figure}
 
-Come accennato in precedenza in determinati ambiti è possibili definire un \textit{kernel} che rappresenta una misura di similarità adatta allo specifico problema da affrontare o in cui gli elementi del \textit{training set} sono strutturati come ad esempio stringhe ed alberi. Un esempio molto importante , e rilevante ai fini della tesi, è quello dei \textbf{kernel string}, dei quali  è possibile trovare un'introduzione in \cite{DeLaHiguera10}. 
+\subsubsection{String kernels}
+Come accennato in precedenza in \ref{subsub:prscal} determinati ambiti è possibili definire un \textit{kernel} che rappresenta una misura di similarità adatta allo specifico problema da affrontare o in cui gli elementi del \textit{training set} sono strutturati, come ad esempio stringhe ed alberi. Un esempio molto importante , e rilevante ai fini della tesi, è quello dei \textbf{string kernels}, dei quali  è possibile trovare un'introduzione in \cite[p. 60]{DeLaHiguera10}. In questa sede a titolo esemplificativo se ne descriveranno un paio che saranno menzionati più avanti. In generale l'obiettivo di uno \textit{string kernel} è quello di rappresentare o estrapolare delle features delle stringhe che possono essere rilevanti per un problema specifico in termini di similarità o dissimilarità. Uno dei più semplici è il \textbf{Parikh kernel} che associa ad ogni stringa un vettore di numeri naturali dove ogni componente è il numero di occorrenze di un simbolo dell'alfabeto nella stringa. La dimensione del \textit{feature space} dipende dal numero di elementi nell'alfabeto. Si consideri l' esempio nella tabella \ref{tab:parker} in cui si hanno quattro elementi del \textit{training set} $\{bac , baa , cab , bad\}$ e i quattro simboli dell'alfabeto $\{a,b,c,d\}$ che rappresentano le funzioni $\phi_{1}\text{,}\phi_{2}\text{,}\phi_{3}\text{,}\phi_{4}$ che mappano gli elementi nel \textit{feature space}. Si ha allora che la valutazione del \textit{kernel} tra gli elementi $bad \text{ e } baa$ è
+\begin{equation*}
+k(bad , baa) = 1\cdot2 + 1\cdot1 + 0\cdot0+1\cdot0 = 3
+\end{equation*}
+Un altro \textit{string kernel} molto noto è \textbf{all k-subsequences kernel} che calcola il prodotto scalare di due vettori in cui ogni componente è il numero di occorrenze di sottosequenze (che si ricorda possono essere contigue o non contigue) di lunghezza al più $k$ in una stringa. Nella tabella \ref{tab:all2subker} vi un esempio di \textit{All 2-subsequences kernel}.\footnote{Dalla tabella nell'esempio per motivi di spazio sono omesse le \textit{features}, cioè le sottosequenze , per le quali tutti i campioni hanno valore zero come ad esempio la sottosequenza $cc$} Si ha allora che la valutazione del \textit{kernel} nell'esempio tra gli elementi $bad \text{ e } baa$ è
+\begin{equation*}
+k(bad , baa) =  6
+\end{equation*} 
+\textbf{All k-subsequences kernel} ha sempre almeno valore 1 per la presenza della $feature$ $\lambda$ cioè la stringa vuota che è sottosequenza di ogni stringa. Anche per i \textit{string kernels} tipicamente non si calcolano le funzioni $\phi$ e irelativi prodotti scalari ma si usa il \textit{kernel trick} che viene realizzato tramite tecniche di programmazione dinamica. Per un'implementazione di molti dei più noti \textit{string kernels} compresi quelli esposti in questa sede si veda \cite{Cristianini04}.
+I kernel non sono solo un escamotage per renderne efficiente il calcolo, che comunque in alcuni casi come uno spazio delle caratteristiche enorme o infinito sarebbe impossibile, ma hanno due pregi notevoli che rendono \ac{SVM} molto versatile ed applicabile nei più svariati contesti:
+\begin{enumerate}
+\item Consentono di trattare con elementi del \textit{training set} che non sono in forma vettoriale ma che sono strutturati come ad esempio alberi e grafi
+\item Consentono di trattare con elementi del \textit{training set} che hanno lunghezza differente infatti finora si è sottaciuto che le \ac{SVM} nella loro formulazione senza \textit{kernel} possono funzionare solo con elementi della stessa lunghezza. Una trasformazione $\phi$, implicitamente indotta da un kernel che rispetta le condizioni di Mercer, uniforma le stringhe alla stessa lunghezza $M$ (M è la dimensione dello spazio di Hilbert $\mathcal{H}$) e quindi permette di trattare anche campioni di lunghezza diversa.
+\end{enumerate}
+
+\begin{table}[htp]
+\centering 
+\begin{tabular}{lcccc} 
+\toprule
+\multirow{2}*{Dati} &  $\phi_1$ &  $\phi_2$ &  $\phi_3$ &  $\phi_4$\\
+\cmidrule(lr){2-5}
+& $a$ & $b$ & $c$ & $d$  \\
+ \midrule  
+bac  &  1 & 1 & 1 & 0 \\ 
+baa  &  2 & 1 & 0 & 0 \\
+cab  &  1 & 1 & 1 & 0 \\
+bad  &  1 & 1 & 0 & 0 \\
+\bottomrule
+\end{tabular}
+\caption[Parikh kernel]{\textit{Parikh kernel su quattro stringhe e su un alfabeto quaternario}}
+\label{tab:parker}
+\end{table}    
+
+
+
+
+\begin{table}[htp]
+\centering 
+\begin{tabular}{lcccccccccccccc} 
+\toprule
+\multirow{2}*{Dati} &  $\phi_1$ &  $\phi_2$ &  $\phi_3$ &  $\phi_4$ &  $\phi_5$ &  $\phi_6$ &  $\phi_7$ &  $\phi_8$ &  $\phi_9$ &  $\phi_{10}$ &  $\phi_{11}$ &  $\phi_{12}$ &  $\phi_{13}$ &  $\phi_{14}$\\
+\cmidrule(lr){2-15}
+& $\lambda$ & $a$ & $b$ & $c$ & $d$ & $aa$ & $ab$ & $ac$ & $ad$ & $ba$ & $bc$ & $bd$ & $ca$ & $cb$  \\
+ \midrule  
+bac  &  1 & 1 & 1 & 1 &  0 & 0 & 0 & 1  &  0 & 1 & 1 & 0 &  0 & 0 \\ 
+baa  &  1 & 2 & 1 & 0 &  0 & 1 & 0 & 0  &  0 & 2 & 0 & 0 &  0 & 0 \\
+cab  &  1 & 1 & 1 & 1 &  0 & 0 & 1 & 0  &  0 & 0 & 0 & 0 &  1 & 1 \\
+bad  &  1 & 1 & 1 & 0 &  1 & 0 & 0 & 0  &  1 & 1 & 0 & 1 &  0 & 0 \\
+\bottomrule
+\end{tabular}
+ \caption[All 2-subsequences kernel]{\textit{All 2-subsequences kernel su quattro stringhe e su un alfabeto quaternario}}
+\label{tab:all2subker}
+\end{table}
+
+\subsection{Versione soft margin kernelized}
+Le tecniche esposte nelle sottosezioni [INSERIRE RIFERIMENTI SOFT E KERNELS] sono combinate insieme per ottenere la versione delle \ac{SVM} di riferimento maggiormente adottata. Infatti sebbene i  \textit{kernels} rendano presumibilmente il \textit{training set} linearmente separabile non c'è alcuna garanzia che questo avvenga realmente. Inoltre anche se i deti vengono resi linearmente separabili è consigliabile utilizzare ugualmente la tecnica soft margin anziche quella del classificatore a margine massimo (hard margin) perchè può accadere che a causa della presenza di alcuni \textbf{\textit{outliers}}\footnote{Sono delle anomalie cioè degli elementi del \textit{training set}, tipicamente in numero esiguo, che si discostano nettamente dal resto dei campioni} ci sia \textit{overfitting} , cioè eccessivo adattamento al \textit{training set} e scarsa capacità di generalizzare , che potrebbe essere scongiurato scegliendo un \textbf{decision boundary}\footnote{cioè un iperpiano separatore} con soft margin che anche se ignora gli \textit{outliers} misclassificandoli porta alla scelta di un iperpiano separatore con un margine più grande e quindi con migliori capacità di generalizzare. Per questa ragione anche se la scelta di un kernel rendesse i dati lineramente separabili (asserzione che comunque non è sempre verificata) si predilige soft margin ad hard margin per cui usualmente la versione di riferimento di \ac{SVM} combina i \textit{kernels} con soft margin e la formulazione matematica del problema duale da risolvere diventa:
+\begin{alignat}{3}
+\label{eq:softford}
+&massimizzare \quad&&L_{d} = - \frac{1}{2} \sum_{i,j = 1}^{l}\alpha_{i}\alpha_{j}y_{i}y_{j}\,k(x_{i} , x_{j}) + \sum_{i=1}^{l}\alpha_{i} \\
+\label{eq:softvincd}
+&soggetto \:\:a &&0 \leq \alpha_i \leq C \qquad \qquad \\
+\label{eq:softvind2}
+&\:&&\sum_{i=1}^{l} \alpha_i y_i = 0 
+\end{alignat}
+
+\subsection{Globalità e unicità della soluzione}
+Uno dei vantaggi delle \ac{SVM} rispetto alle reti neurali è che assicurano una soluzione deterministica nel senso che dato un \textit{training set} la soluzione non dipende da elementi aleatori cosa che accade nelle reti neurali dove l'inizializzazione casuale dei pesi può condurre a una soluzione differente da un'esecuzione all'altra. Un altro vantaggio delle \ac{SVM} è che essendo un problema di programmazione quadratica convessa con vincoli lineari assicura di trovare una soluzione globale mentre nelle reti neurali si ha la certezza di trovare un minimo locale ma non è assicurato di trovare la soluzione migliore. Nelle \ac{SVM} il rispetto delle  KKT condizioni è una condizione necessaria per trovare un minimo o un massimo globale ma in generale non sono condizioni sufficienti cioè vi è solo la garanzia di un minimo locale. Tuttavia la natura convessa del problema assicura che la soluzione trovata sia sempre quella globale e questo è il motivo per cui si usa la formulazione quadratica alternativa in \ref{eq:svmpro1}. Ma è necessario garantire anche l'\textbf{unicità} della soluzione $\{w,b\}$ perchè potrebbero esistere un'altra coppia $\{w,b\}$ che sia pure soluzione (esistenza più minimi globali equivalenti) oppure la stessa soluzione, ma con una diversa espansione di $w=\sum_{i=1}^{\abs{sv}}\alpha_iy_ix_i$ e questo è pure rilevalente perchè potrebbe essere un'espansione migliore con meno vettori di supporto\footnote{Una soluzione con tanti vettori di supporto vicino al numero di elementi nel \textit{training set} è indice di \textit{overfitting}.}.
+E' garantito che la soluzione sia unica se la formulazione duale \ref{eq:dual} o la formulazione duale con \textit{kernel} \ref{eq:Kerdual} è strettamente convessa. Anzichè le formulazioni \ref{eq:dual} e \ref{eq:Kerdual} si può definire l'\textbf{Hessiano} del problema che è una formulazione matriciale ottenuta come descritto nella nota \ref{note:hessiano}. Si ha che:
+\begin{teorema*} Un problema quadratico è strettamente convesso se e solo se l'Hessiano associato è definito positivo.
+\end{teorema*}
+Quando l'Hessiano non è definito positivo la natura convessa del problema assicura che l'Hessiano sia comunque  almeno semidefinito positivo cosa che assicurà la globalità della soluzione ma non l'unicità.  Riassumendo la globalità della soluzione è sempre garantita. L'unicità è garantita solo se l'Hessiano è definito positivo. 

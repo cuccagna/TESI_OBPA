@@ -875,6 +875,33 @@
   \field{year}{2010}
 \endentry
 
+\entry{Cristianini04}{book}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Shawe-Taylor}{S.-T.}%
+     {John}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Cristianini}{C.}%
+     {Nello}{N.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Cambridge University Press}%
+  }
+  \strng{namehash}{STJCN1}
+  \strng{fullhash}{STJCN1}
+  \field{sortinit}{S}
+  \field{isbn}{0521813972}
+  \field{title}{Kernel Methods for Pattern Analysis}
+  \list{location}{1}{%
+    {New York, NY, USA}%
+  }
+  \field{year}{2004}
+\endentry
+
 \entry{Sim83}{incollection}{}
   \name{author}{1}{}{%
     {{}%
