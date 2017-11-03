@@ -34,7 +34,7 @@ Nel \textit{PAC-learning} \cite{Val84} invece si richiede una identificazione so
 \end{definizione*}
 Informalmente il \textit{true error} è la probabilità che una stringa estratta casualmente dallo spazio delle istanze --- in accordo alla distribuzione di probabilità $D$ --- appartenga allo spazio dove \ac{H} ed \ac{L} differiscono . L'algoritmo induttivo nel \textit{PAC-learning} prende due parametri in ingresso l'accuratezza $\epsilon$ e la confidenza $\delta$ entro cui operare.
 
-\begin{definizione}[PAC learning]Una classe di linguaggi $\mathbb{L}$ è \textbf{PAC-learnable} se esiste un algoritmo $A$ tale che $\forall L \in \mathbb{L}$, per ogni distribuzione $D$ su $\Sigma^{*} \text{,} \forall \epsilon(0<\epsilon<1) \text{,} \forall \delta(0<\delta<1), A$ su istanze fornite in accordo alla distribuzione $D$ produce con probabilità $1-\delta$ un'ipotesi \ac{H} tale che $error_{D}(H) \leq \epsilon$.
+\begin{definizione}[PAC learning]\label{def:PacL}Una classe di linguaggi $\mathbb{L}$ è \textbf{PAC-learnable} se esiste un algoritmo $A$ tale che $\forall L \in \mathbb{L}$, per ogni distribuzione $D$ su $\Sigma^{*} \text{,} \forall \epsilon(0<\epsilon<1) \text{,} \forall \delta(0<\delta<1), A$ su istanze fornite in accordo alla distribuzione $D$ produce con probabilità $1-\delta$ un'ipotesi \ac{H} tale che $error_{D}(H) \leq \epsilon$.
 \end{definizione}
 \end{description}
 

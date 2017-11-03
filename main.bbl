@@ -208,6 +208,118 @@
   \field{year}{1959}
 \endentry
 
+\entry{Clark11}{article}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Clark}{C.}%
+     {Alexander}{A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Costa Flor{\^e}ncio}{C.}%
+     {Christophe}{C.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Watkins}{W.}%
+     {Chris}{C.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{CACCWC1}
+  \strng{fullhash}{CACCWC1}
+  \field{sortinit}{C}
+  \verb{doi}
+  \verb 10.1007/s10994-010-5218-3
+  \endverb
+  \field{issn}{1573-0565}
+  \field{number}{3}
+  \field{pages}{351\bibrangedash 373}
+  \field{title}{Languages as hyperplanes: grammatical inference with string
+  kernels}
+  \verb{url}
+  \verb https://doi.org/10.1007/s10994-010-5218-3
+  \endverb
+  \field{volume}{82}
+  \field{journaltitle}{Machine Learning}
+  \field{month}{03}
+  \field{year}{2011}
+\endentry
+
+\entry{Clark06}{inbook}{}
+  \name{author}{4}{}{%
+    {{}%
+     {Clark}{C.}%
+     {Alexander}{A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Flor{\^e}ncio}{F.}%
+     {Christophe~Costa}{C.~C.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Watkins}{W.}%
+     {Chris}{C.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Serayet}{S.}%
+     {Mariette}{M.}%
+     {}{}%
+     {}{}}%
+  }
+  \name{editor}{5}{}{%
+    {{}%
+     {Sakakibara}{S.}%
+     {Yasubumi}{Y.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Kobayashi}{K.}%
+     {Satoshi}{S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Sato}{S.}%
+     {Kengo}{K.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Nishino}{N.}%
+     {Tetsuro}{T.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Tomita}{T.}%
+     {Etsuji}{E.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Springer Berlin Heidelberg}%
+  }
+  \strng{namehash}{CA+1}
+  \strng{fullhash}{CAFCCWCSM1}
+  \field{sortinit}{C}
+  \field{booktitle}{Grammatical Inference: Algorithms and Applications: 8th
+  International Colloquium, ICGI 2006, Tokyo, Japan, September 20-22, 2006.
+  Proceedings}
+  \verb{doi}
+  \verb 10.1007/11872436_13
+  \endverb
+  \field{isbn}{978-3-540-45265-2}
+  \field{pages}{148\bibrangedash 160}
+  \field{title}{Planar Languages and Learnability}
+  \verb{url}
+  \verb https://doi.org/10.1007/11872436_13
+  \endverb
+  \list{location}{1}{%
+    {Berlin, Heidelberg}%
+  }
+  \field{year}{2006}
+\endentry
+
 \entry{Cortes95}{article}{}
   \name{author}{2}{}{%
     {{}%
@@ -481,6 +593,77 @@
     {Cambridge, MA, USA}%
   }
   \field{year}{1994}
+\endentry
+
+\entry{Cortes08}{article}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Kontorovich}{K.}%
+     {Leonid~(Aryeh)}{L.~A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Cortes}{C.}%
+     {Corinna}{C.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Mohri}{M.}%
+     {Mehryar}{M.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Elsevier Science Publishers Ltd.}%
+  }
+  \strng{namehash}{KLACCMM1}
+  \strng{fullhash}{KLACCMM1}
+  \field{sortinit}{K}
+  \verb{doi}
+  \verb 10.1016/j.tcs.2008.06.037
+  \endverb
+  \field{issn}{0304-3975}
+  \field{number}{3}
+  \field{pages}{223\bibrangedash 236}
+  \field{title}{Kernel Methods for Learning Languages}
+  \verb{url}
+  \verb http://dx.doi.org/10.1016/j.tcs.2008.06.037
+  \endverb
+  \field{volume}{405}
+  \list{location}{1}{%
+    {Essex, UK}%
+  }
+  \field{journaltitle}{Theoretical Computer Science}
+  \field{month}{10}
+  \field{year}{2008}
+\endentry
+
+\entry{Kontorovich09}{article}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Kontorovich}{K.}%
+     {Leonid~(Aryeh)}{L.~A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Nadler}{N.}%
+     {Boaz}{B.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{KLANB1}
+  \strng{fullhash}{KLANB1}
+  \field{sortinit}{K}
+  \field{pages}{1095\bibrangedash 1129}
+  \field{title}{Universal Kernel-Based Learning with Applications to Regular
+  Languages}
+  \verb{url}
+  \verb http://dl.acm.org/citation.cfm?id=1577069.1577108
+  \endverb
+  \field{volume}{10}
+  \field{journaltitle}{The Journal of Machine Learning Research}
+  \field{month}{06}
+  \field{year}{2009}
 \endentry
 
 \entry{Abbadingo98}{inproceedings}{}
@@ -1169,6 +1352,55 @@
     {New York, NY, USA}%
   }
   \field{year}{1995}
+\endentry
+
+\entry{Zhang05}{inproceedings}{}
+  \name{author}{6}{}{%
+    {{}%
+     {Zhuang}{Z.}%
+     {Dong}{D.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Zang}{Z.}%
+     {Benyu}{B.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Yang}{Y.}%
+     {Qiang}{Q.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Yan}{Y.}%
+     {Jun}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Chen}{C.}%
+     {Zheng}{Z.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Chen}{C.}%
+     {Ying}{Y.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{organization}{1}{%
+    {ICDM '05 Proceedings of the Fifth IEEE International Conference on Data
+  Mining}%
+  }
+  \strng{namehash}{ZD+1}
+  \strng{fullhash}{ZDZBYQYJCZCY1}
+  \field{sortinit}{Z}
+  \verb{doi}
+  \verb 10.1109/ICDM.2005.56
+  \endverb
+  \field{pages}{538\bibrangedash 545}
+  \field{title}{Efficient Text Classification by Weighted Proximal SVM}
+  \field{month}{11}
+  \field{year}{2005}
 \endentry
 
 \lossort
