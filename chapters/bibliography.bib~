@@ -189,7 +189,7 @@ volume = {10},
 url = {http://dl.acm.org/citation.cfm?id=1577069.1577108},
 }
 
-@article{Kontorovich08,
+@article{Cortes08,
  author = {Kontorovich, Leonid (Aryeh) and Cortes, Corinna and Mohri, Mehryar},
  title = {Kernel Methods for Learning Languages},
  journal = {Theoretical Computer Science},
@@ -286,6 +286,31 @@ isbn   = {0521813972},
 publisher = {Cambridge University Press},
 address   = {New York, NY, USA},
 }
+
+@book{Trevor09,
+author = {Hastie, Trevor and Tibshirani, Robert and Friedman, Jerome},
+title  = {The Elements of Statistical Learning},
+year   = {2009},
+isbn   = {978-0-387-84858-7},
+publisher = {Cambridge University Press},
+address = {New York, NY, USA},
+}
+
+
+@inbook{Clark06,
+author={Clark, Alexander and Flor{\^e}ncio, Christophe Costa and Watkins, Chris and Serayet, Mariette},
+editor={Sakakibara, Yasubumi and Kobayashi, Satoshi and Sato, Kengo and Nishino, Tetsuro and Tomita, Etsuji},
+title={Planar Languages and Learnability},
+bookTitle={Grammatical Inference: Algorithms and Applications: 8th International Colloquium, ICGI 2006, Tokyo, Japan, September 20-22, 2006. Proceedings},
+year={2006},
+publisher= {Springer Berlin Heidelberg},
+address={Berlin, Heidelberg},
+pages={148--160},
+isbn={978-3-540-45265-2},
+doi={10.1007/11872436_13},
+url={https://doi.org/10.1007/11872436_13},
+}
+
 
 @incollection{Stef11,
 author = {Steffen, Bernhard and Howar, Falk M. and Merten, Mike},

@@ -377,4 +377,110 @@ Infine si prende in esame l'implementazione del discrimination tree. Per quest u
 \item La \textit{Standard Template Library} non mette a disposizione nessuna struttura dati per modellare una albero binario. Esistono delle librerie esterne che mettono a disposizioni un albero n-ario ma l'overhead per gestire n figli ed altre operazioni inutili ai fini dell'\ac{ObP} ha fatto propendere per il declinare il loro utilizzo. Un'altra possibilità sarebbe stata quella d'implementare un albero binario \textit{ad hoc} nella maniera classica cioè tramite i puntatori ma essendo le prestazioni simili a quelle della soluzione adottata e descritta sopra non lo si è fatto. Inoltre si è supposto che chiamare un oggetto di una classe esterna (quella dell'eventuale implementazione dell'albero binario), dato che va fatto molte volte, sarebbe divenuto il costo preponderante. Il vantaggio principale nell'usare l'implementazione di un albero binario con i puntatori per il discrimination tree sta nel risparmio di memoria circa doppia ma comunque sempre lineare nella soluzione proposta, e che non avviene mai la riallocazione (operazione che accade quando le dimensioni del vettore superano la capacità dello stesso).
 \item Utilizzare un vettore indicizzato. Questa soluzione è da scartare perchè se il discrimination tree non è bilanciato e presenta un ramo molto più lungo degli altri sarebbe necessario rendere il vettore molto grande. Il vettore può crescere dinamicamente ed è molto più probabile con un vettore indicizzato superare la capacità totale del vettore (se l'inserimento del nodo avviene nello stesso ramo ciò avviene molto velocemente) che verrebbe quindi riallocato e ricopiato frequentemente degradando le prestazioni.
 \end{itemize} 
-  
+ 
+ \chapter[Prel. add.  class.]{Conoscenze preliminari nell'addestramento dei classificatori}
+\label{app:due}
+Questa appendice è propedeutica al capitolo \ref{cap:sei} e descrive succintamente alcune tecniche basilari di \textit{machine learning}  nell'addestramento dei classificatori che saranno impiegate per la costruzione del classificatore che approssima un \textit{Oracolo}. La trattazione non sarà esaustiva ma volta al fine di fare chiarezza su alcune delle scelte effettuate nel costruire l'\textit{Oracolo approssimato}. Per comprendere appieno quest'appendice è consigliabile leggere prima il capitolo \ref{cap:cinque}.
+
+\section{Bias-Varianza tradeoff}
+I concetti di modello,classificatore,classificazione,\textit{training set} e \textit{test set} sono stati introdotti nel \ref{cap:cinque}. In breve,  {eq:effe}il compito di un modello è quello di selezionare la funzione tra la famiglia di funzioni $\{f(x,\alpha)\}$ che da migliori garanzie di predire dati mai visti. Dati $X=x_1,\dots,x_l$ e le relative etichette $Y=y_1,\dots,y_l$ si assume che c'è qualche relazione tra i due insiemi che può essere espressa come:
+\begin{equation}
+Y = f(X) + \epsilon
+\end{equation}
+dove $\epsilon$ è un errore casuale a media zero, detto errore irriducibile.
+$f(\cdot)$ è funzione ignota che rappresenta il mapping corretto tra ingressi ed etichette ed è necessario scovare la funzione $\hat{f(\cdot)} \in \{f(x,\alpha)\}$ che meglio approssima la reale relazione $f(\cdot)$ tra ingressi ed uscite (le etichette) . Si ha inoltre che non si troverà mai $f=\hat{f}$ a causa dell' errore irriducibile. Si usa come misura l'errore quadratico medio (MSE) tra $f(x) \text{ e }\hat{f(x)}$ per campioni $x$ appartenenti al \textit{test set} dato che quello che interessa minimizzare è l'errore sulle predizioni (è possibile calcolare l'MSE anche su campioni appartenenti al \textit{training set}). Allora seguendo \cite{Trevor09} si può dimostrare che l'MSE atteso sul test set valutato per un dato valore $x_i$ è:
+\begin{equation}
+E[( y_i − \hat{f}(x_i) )^2] = Var( \hat{f}(x_i)) + [Bias( \hat{f}(x_i))]^2 + Var(\epsilon). 
+\end{equation}  
+ dove 
+ \begin{alignat*}{2}
+&Bias( \hat{f}(x_i)) = E[\hat{f}(x_i)] - f(x_i) \\
+ &Var( \hat{f}(x_i)) = E[(\hat{f}(x_i) - E[\hat{f}(x_i)])^2]
+\end{alignat*}
+
+$E$ è il valore atteso e $E[( y_i − \hat{f}(x_i) )^2]$  rappresenta la media degli errori quadratici medi (MSE) sul \textit{test set}  che si potrebbe ottenere stimando ripetutamente $f(\cdot)$ (quindi ottenendo varie $\hat{f(\cdot)}$ ) su tanti \textit{training set} diversi, e valutato ognuno in $x_i$. Il \textbf{bias} rappresenta di quanto la media della nostra stima (in un punto del \textit{test set}) differisce dal valore reale (in quel punto) e si parla di \textbf{ottimisticamente biased} se avviene una sovrastima (cioè il valore stimato è maggiore del valore reale) viceversa si parla di  \textbf{pessimisticamente biased}.  Questo concetto si può estendere ad un insieme cioè si dice ad esempio che l'accuracy predetta dal modello trovato sul \textit{training set} è ottimisticamente biased se il nostro modello stima un'accuracy maggiore dell'accuracy reale.La \textbf{varianza} invece indica la quantità di cui $\hat{f(\cdot)}$ dovrebbe cambiare se noi la stimassimo usando un \textit{training set} differente. Riepilogando un bias alto indica che la predizione fatta dal modello è lontana dal valore corretto e un'alta varianza riferisce che anche piccoli cambiamenti nel \textit{training set} producono grandi cambiamenti di $\hat{f}$ cioè il modello è fortemente influenzato dalla specificità del \textit{training set}. Quindi queste due quantità devono essere minimizzate ma sono in contrapposizione tra esse quando una cresce l'altra decresce ed inoltre sono in stretta relazione con la complessità del modello scelto come si apprezza in figura \ref{fig:bvtrd} quindi è necessario scegliere il modello che garantisce il  giusto compromesso tra le due.
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[ width=0.5\textwidth]{BiasVariance}
+	\caption[Bias-Varianza trade-off]{\textit{Bias-Varianza trade-off}}
+   \label{fig:bvtrd}
+\end{figure}
+
+\section[Tecniche selezione class.]{Model selection,Model evaluation,algorithm selection}
+Il workflow nella creazione di un classificatore che funga da predittore per un problema di classificazione supervisionato è tipicamente il seguente:
+\begin{description}
+\item[\textbf{Algorithm selection}] E' necessario scegliere il modello\footnote{Malgrado in letteratura si parli di selezione dell'algoritmo e più corretto parlare di selezione di un modello, ad esempio in un modello come \ac{SVM} l'algoritmo l'algoritmo rappresenta la specifica tecnica risolutiva utilizzata per affrontare il problema matematico delineato da \ac{SVM}}. Spesso conoscendo pregi e difetti dei vari classificatori la selezione avviene manualmente a secondo del modello che sembra più cofacente al problema da risolvere. E' possibile tuttavia effettuare la selezione usando delle tecniche per comparare i vari modelli tra di loro per stabilire quale esibisce le migliori perfomances in base a qualche misura.
+\item[\textbf{Model selection}] Con l'intento di migliorare le perfomances di generalizzazione è necessario scegliere ,a partire dal \textit{training set}, il classificatore\footnote{Malgrado in letteratura si parli di model selection è un classificatore che va selezionato.} con le migliori performances, in base a qualche misura , dallo spazio delle ipotesi. A tal fine  i modelli hanno uno o più \textit{iperparametri} cioè delle manopole da regolare.
+\item[\textbf{Model evaluation}] Si vogliono stimare le performances di generalizzazione, le performances predittive (in base a qualche misura) del nostro classificatore basandoci sul \textit{test set}.
+\end{description}
+Per raggiungere gli obbiettivi suddetti diventa fondamentale stabilire una misura da utilizzare. Nella sezione \ref{sub:measure} vi è una breve panoramica delle misure più note che si possono adottare.
+
+\subsection{Holdout}
+Questa è una delle tecniche più semplici ma anche efficaci. Si parte dal caso semplice che si vuole fare solo model evaluation e che già si conoscono i parametri migliori e quindi non è neccessario fare model selection. Il principio ispiratore è che fare l'addestramento del classificatore e la sua valutazione sullo stesso insieme produce un'accuracy ottimisticamente biased. \textbf{Holdout} divide i campioni disponibili in un \textit{training set} e un \textit{test set} in maniera casuale di solito in maniera 2/3 1/3. Si fa l'addestramento sul \textit{training set} e poi il classificatore ottenuto viene valutato sul \textit{test set}. Infine si rieffettua l'addestramento su tutti i campioni inizialmente disponibili\footnote{Riaddestrare alla fine del processo su tutti i campioni possibili è una tecnica valida solo se si è adottata la stratificazione(vedasi \ref{stra:stra}) nello splitting dei campioni iniziali,perchè assicura che i campioni nei vari insiemi splittati restino statisticamente indipendenti}. Questo metodo ha due grandi limiti:
+\begin{enumerate}
+\item La suddivisone casuale dei campioni in holdout può alterare le proprietà statistiche dei campioni. Questi sono assunti essere estratti dalla stessa distribuzione di probabilità ed essere statisticamente indipendenti. Questa proprietà può venire meno: ad esempio partendo da campioni bilanciati si potrebbero generare \textit{training set} e \textit{test set} non bilanciati.
+\item \label{item:holdlim} Utilizzare un numero ridotto di campioni (2/3) per effettuare l'addestramento può produrre una stima delle performances pessimisticamente biased. Si ha cioè che il classificatore non ha ancora raggiunto la sua capacità e si potrebbe apprendere un classificatore migliore utilizzando un numero di campioni più grande. 
+\end{enumerate}
+Il primo problema può essere superato usando una tecnica chiamata
+\label{stra:stra} \textbf{stratificazione} che consiste nel suddividere l'insieme di campioni iniziale in due insiemi in modo che il bilanciamento delle classi di campioni con diverse etichette sia ancora rispettato nei risultanti sottoinsiemi. Il secondo problema invece è strutturale in quanto se si usassero tutti i campioni disponibili per l'addestramento poi si dovrebbero valutare le performances su questi stessi campioni producendo stime ottimisticamente biased. Inoltre lo scenario tipico è quello in cui si vuole fare sia model selection che model evaluation. In quest ultimo caso è necessario dividere l'insieme di campioni di partenza in (usando la stratificazione):
+\begin{itemize}
+\item \textbf{un training set}
+\item \textbf{un validation set}
+\item \textbf{un test set}
+\end{itemize} 
+Prima si fa model selection effettuando l'addestramento sul \textit{training set} nello spazio dei parametri. Ad esempio se si usa una tecnica come \textbf{grid-search} per ogni parametro vanno scelti i valori oppure il range in cui i valori possono variare e il passo di variazione e poi si deve effettuare l'addestramento per ogni istanza dei parametri. Alla fine ognuno di questi classificatori va valutato in base a qualche misura sui campioni del \textit{validation set} e si seleziona il modello che massimizza tale misura. Quindi in questo modo si scelgono gli iperparametri migliori. A questo punto si rieffettua l'addestramento del classificatore risultato migliore usando sia i campioni del \textit{training set} che quelli del \textit{validation set}. A questo punto si fa model evaluation, cioè il classificatore ottenuto viene valutato sul \textit{test set}. Alla fine si riaddestra su tutti i campioni inizialmente disponibili. Avendo usato in fase di model evaluation un classificatore addestrato come meno campioni(\textit{training set} e \textit{validation set}) di quelli totali è molto probabile che le misure rilevate siano delle stime pessimisticamente biased. 
+
+\subsection{Validazione incrociata}
+
+
+\section{Misure}
+\label{sub:measure}
+Per un problema di classificazione binaria è possibile definire la matrice di confusione come in figura \ref{fig:mco} che stabilisce le seguenti quantità numeriche per un predittore binario:
+\begin{description}
+\item[TP(true positive)] Campioni positivi predetti dal classificatore come positivi.
+\item[TN(true negative)] Campioni negativi predetti dal classificatore come negativi.
+\item[FP(false positive)] Campioni negativi predetti erroneamente dal classificatore come positivi.
+\item[FN(false negative)] Campioni positivi predetti erroneamente dal classificatore come negativi.
+\end{description}
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[ width=0.5\textwidth]{MatriceConfusione}
+	\caption[Matrice di confusione]{\textit{Matrice di confusione per un problema di classificazione binaria}}
+   \label{fig:mco}
+\end{figure}
+
+Allora si definisce l'\textbf{accuracy} come:
+\begin{equation*}
+Accuracy = \frac{TP + TN}{TP+TN+FP+FN}
+\end{equation*}
+e quindi indica la percentuale di campioni predetti correttamente rispetto alla totalità. Non è rilevante l'insieme su cui si definiscono la matrice di confusione e le varie misure ad esempio è possibile calcolare l'accuracy sia sul \textit{training set} che sul \textit{test set}. Inoltre è possibile calcolare la percentuale d'errore facendo:
+\begin{equation*}
+Errore = 1 - Accuracy
+\end{equation*}
+ L'accuracy però non è una misura idonea per due ragioni:
+ \begin{itemize}
+ \item Se l'insieme su cui si calcola l'accuracy non è bilanciato la misura d'accuracy può essere ingannevole. Ad esempio immaginiamo che il nostro classificatore sia un \textit{majority class} che predica tutti i campioni positivamente e che il \textit{test set} abbia il 90\% di campioni positivi e i restanti negativi. In questo caso avremo un'accuracy pari a 0.9 cioè del 90\% nonostante il predittore sia pessimo.
+ \item Anche se l'insieme fosse bilanciato dall'accuracy non si evince se siano di più i FP oppure i FN, informazione che può essere rilevante.
+ \end{itemize}
+Per porre rimedio a questi problemi si usano \textbf{Precision (positive prediction value)} e \textbf{Recall (sensitivity o positive prediction value)} definite come:
+\begin{alignat*}{2}
+& Precision &= \frac{TP}{TP+FP}\\
+& Recall &= \frac{TP}{TP+FN}
+\end{alignat*}
+Recall ci dice quanto è buono un classificatore a predire i campioni positivi (in quanto avendo il denominatore tutti i dati positivi dell'insieme Recall rappresenta la percentuale di campioni positivi predetta correttamente come tale). Un predittore \textit{majority class} che predice sempre i campioni come positivi (quindi FN=0) può ingannarci massimizzando Recall e rendendolo pari a 1. Precision ci dice quanti dei dati predetti come positivi sono positivi veramente; un predittore può essere ingannevole massimizzando quest'ultima misura se classifica come positivi i campioni dei quali ha una maggiore fiducia che siano positivi e negativi i restanti. Queste due misure non risultano comunque sufficienti nei casi come questo di \ac{IIR} da stringhe in cui risulta rilevante anche come vengono classificati i campioni negativi per cui si utilizzano altre due misure $Precision^{-}$(Negative prediction value) e $Recall^{-}$(Specificity o true negative rate) \cite{Bogdanov08} :
+\begin{alignat*}{2}
+& Precision^{-} &= \frac{TN}{TN+FN}\\
+& Recall^{-} &=  \frac{TN}{TN+FP}
+\end{alignat*} 
+Queste ultime due misure hanno la stessa semantica di Precision e Recall ma sui campioni negativi. Si è accennato che le singole misure di per sè possono ancora essere ingannevoli tuttavia se combinate insieme tali problemi possono essere superati ad esempio se il predittore è un $majority class$ sempre positivo $Recall=1$ ma  $Recall^{-}=0$ (perchè TN=0) e quindi il problema può essere individuato. Inoltre utilizzare delle misure che combinano quelle definite sopra è necessario anche perchè per scegliere un classificatore rispetto ad un altro automaticamente è necessario avere un'unica misura. Uno dei criteri più noti e utilizzato è \textbf{F1-score (F-measure)} che effettua la media armonica tra Precisione e Recall quindi:
+\begin{equation*}
+\label{eq:f1s}
+F1 = 2 \cdot \frac{Precision \cdot Recall}{Precision + Recall}
+\end{equation*}
+Questa misura può essere utilizzata il luogo dell'accuracy per insiemi non bilanciati tuttavia non fa ancora al caso nostro perchè non tiene conto dei campioni negativi che nel nostro scenario sono rilevanti. Una possibilità è quella di definire un F1-score anche sulla classe negativa usando la stessa equazione \eqref{eq:f1s} con $Precision^{-}\text{ e } Recall^{-}$ e poi mediare le due quantità tuttavia in questo scenario è più adatto e semplice utilizzare un'altra misura \textbf{MCC(Mattehws correlation coeffient)} definito come:
+\begin{equation*}
+MCC = \frac{TP \cdot TN−FP \cdot FN}{\sqrt{(TP+FP)(TP+FN)(TN+FP)(TN+FN)}}
+ \end{equation*}
+ Questa misura è ottima nel caso di dati non bilanciati e rappresenta bene la matrice di confusione ed è sicuramente più adatta di F1-score nel caso in cui sia i campioni positivi che quelli negativi sono rilevanti.

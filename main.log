@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.5-0.9999.3 (TeX Live 2013/Debian) (format=xelatex 2016.3.9)  3 NOV 2017 21:45
+This is XeTeX, Version 3.1415926-2.5-0.9999.3 (TeX Live 2013/Debian) (format=xelatex 2016.3.9)  6 NOV 2017 18:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1444,23 +1444,8 @@ Package biblatex Info: Trying to load language 'italian'...
 Package biblatex Info: ... file 'italian.lbx' found.
 (/home/nick/texmf/tex/latex/biblatex/lbx/italian.lbx
 File: italian.lbx 2016/03/03 v3.3 biblatex localization (PK/JW/AB)
-) (./main.aux
-
-LaTeX Warning: Label `sub:tea' multiply defined.
-
-
-LaTeX Warning: Label `fig:lsd' multiply defined.
-
-
-LaTeX Warning: Label `eq:softford' multiply defined.
-
-
-LaTeX Warning: Label `eq:softvincd' multiply defined.
-
-
-LaTeX Warning: Label `eq:softvind2' multiply defined.
-
 )
+No file main.aux.
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 127.
@@ -1479,7 +1464,7 @@ LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 127.
 LaTeX Font Info:    ... okay on input line 127.
 LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 127.
 LaTeX Font Info:    Try loading font information for T3+cmr on input line 127.
- (/usr/share/texmf/tex/latex/tipa/t3cmr.fd
+(/usr/share/texmf/tex/latex/tipa/t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
 LaTeX Font Info:    ... okay on input line 127.
@@ -1627,13 +1612,15 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 127.
 LaTeX Info: Redefining \pageref on input line 127.
 LaTeX Info: Redefining \nameref on input line 127.
-
-(./main.out) (./main.out)
 \@outlinefile=\write7
 \openout7 = `main.out'.
 
+
+
+Package hyperref Warning: Rerun to get /PageLabels entry.
+
 File: ./pictures/frontespizio/logo_unipa.png Graphic file (type QTm)
- <use  "./pictures/frontespizio/logo_unipa.png" >
+<use  "./pictures/frontespizio/logo_unipa.png" >
 Overfull \hbox (79.61171pt too wide) in paragraph at lines 164--179
 [] []
  []
@@ -1679,60 +1666,131 @@ File: se-ascii-print.def 2011/12/02 v1.10 stringenc: Printable ASCII characters
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
- (./main.toc
-LaTeX Font Info:    Try loading font information for U+msa on input line 11.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 11.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
-
-
-
-] [2])
 \tf@toc=\write8
 \openout8 = `main.toc'.
 
- [3]
-(./main.lof)
+ [1
+
+
+
+]
 \tf@lof=\write9
 \openout9 = `main.lof'.
 
- [4
+ [2
 
-] (./main.lot)
+]
 \tf@lot=\write10
 \openout10 = `main.lot'.
 
- [5
+ [3
 
 ] (./chapters/acronym.tex
 LaTeX Font Info:    Font shape `EU1/lmss/bx/it' in size <12> not available
 (Font)              Font shape `EU1/lmss/bx/sl' tried instead on input line 9.
-) [6
+LaTeX Font Info:    Try loading font information for U+msa on input line 17.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 17.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)) [4
 
 
 ]
 (./chapters/introduzione.tex
 Package acronym Info: Label `acro:EQ' newly defined as it shall be overridden
 although it is yet undefined on input line 12.
+
+
+Package acronym Warning: Acronym `EQ' is not defined on input line 12.
+
+
+Package acronym Warning: Acronym `EQ' is not defined on input line 12.
+
 Package acronym Info: Label `acro:MQ' newly defined as it shall be overridden
 although it is yet undefined on input line 12.
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 12.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 12.
+
 Package acronym Info: Label `acro:SVM' newly defined as it shall be overridden
 although it is yet undefined on input line 12.
+
+Package acronym Warning: Acronym `SVM' is not defined on input line 12.
+
+
+Package acronym Warning: Acronym `SVM' is not defined on input line 12.
+
 Package acronym Info: Label `acro:IIR' newly defined as it shall be overridden
 although it is yet undefined on input line 13.
+
+Package acronym Warning: Acronym `IIR' is not defined on input line 13.
+
+
+Package acronym Warning: Acronym `IIR' is not defined on input line 13.
+
+
+Package acronym Warning: Acronym `IIR' is not defined on input line 14.
+
 Package acronym Info: Label `acro:ObP' newly defined as it shall be overridden
 although it is yet undefined on input line 14.
+
+Package acronym Warning: Acronym `ObP' is not defined on input line 14.
+
+
+Package acronym Warning: Acronym `ObP' is not defined on input line 14.
+
+
+Package acronym Warning: Acronym `ObP' is not defined on input line 15.
+
+
+Package acronym Warning: Acronym `ObP' is not defined on input line 16.
+
+
+Package acronym Warning: Acronym `ObP' is not defined on input line 16.
+
+
+Package acronym Warning: Acronym `ObP' is not defined on input line 16.
+
+
+Package acronym Warning: Acronym `EQ' is not defined on input line 16.
+
+
+Package acronym Warning: Acronym `IIR' is not defined on input line 19.
+
+
+Package acronym Warning: Acronym `ObP' is not defined on input line 20.
+
+
+Package acronym Warning: Acronym `ObP' is not defined on input line 21.
+
+
+Package acronym Warning: Acronym `SVM' is not defined on input line 22.
+
+
+Package acronym Warning: Acronym `ObP' is not defined on input line 23.
+
 Package acronym Info: Label `acro:DFA' newly defined as it shall be overridden
 although it is yet undefined on input line 24.
- [7
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 24.
 
 
-]) [8] (./chapters/capitolo1.tex
+Package acronym Warning: Acronym `DFA' is not defined on input line 24.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 24.
+
+[5
+
+
+]) [6] (./chapters/capitolo1.tex
 Capitolo 1.
 
 Underfull \hbox (badness 10000) in paragraph at lines 23--24
@@ -1762,6 +1820,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [3]
 
+Package acronym Warning: Acronym `IIR' is not defined on input line 66.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
@@ -1774,10 +1835,67 @@ Underfull \hbox (badness 10000) in paragraph at lines 73--74
 
 Package acronym Info: Label `acro:P' newly defined as it shall be overridden
 although it is yet undefined on input line 78.
+
+Package acronym Warning: Acronym `P' is not defined on input line 78.
+
+
+Package acronym Warning: Acronym `P' is not defined on input line 78.
+
 Package acronym Info: Label `acro:BK' newly defined as it shall be overridden
 although it is yet undefined on input line 79.
+
+Package acronym Warning: Acronym `BK' is not defined on input line 79.
+
+
+Package acronym Warning: Acronym `BK' is not defined on input line 79.
+
 Package acronym Info: Label `acro:H' newly defined as it shall be overridden
 although it is yet undefined on input line 84.
+
+Package acronym Warning: Acronym `H' is not defined on input line 84.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 84.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 87.
+
+
+Package acronym Warning: Acronym `P' is not defined on input line 87.
+
+
+Package acronym Warning: Acronym `BK' is not defined on input line 87.
+
+
+Package acronym Warning: Acronym `BK' is not defined on input line 87.
+
+
+Package acronym Warning: Acronym `P' is not defined on input line 87.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 87.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 90.
+
+
+Package acronym Warning: Acronym `BK' is not defined on input line 90.
+
+
+Package acronym Warning: Acronym `P' is not defined on input line 90.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 92.
+
+
+Package acronym Warning: Acronym `BK' is not defined on input line 92.
+
+
+Package acronym Warning: Acronym `BK' is not defined on input line 92.
+
+
+Package acronym Warning: Acronym `P' is not defined on input line 92.
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 91--94
 
@@ -1800,14 +1918,76 @@ Underfull \hbox (badness 10000) in paragraph at lines 101--104
  []
 
 
+Package acronym Warning: Acronym `P' is not defined on input line 113.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 113.
+
+
+Package acronym Warning: Acronym `BK' is not defined on input line 113.
+
+
+Package acronym Warning: Acronym `BK' is not defined on input line 115.
+
+
+LaTeX Warning: Reference `sub:defapp' on page 6 undefined on input line 117.
+
+
+LaTeX Warning: Reference `eqn:conslogica' on page 6 undefined on input line 117
+.
+
+
+Package acronym Warning: Acronym `BK' is not defined on input line 120.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [6]
+
+LaTeX Warning: Reference `eqn:fond' on page 7 undefined on input line 128.
+
+
+Package acronym Warning: Acronym `BK' is not defined on input line 128.
+
+
+LaTeX Warning: Reference `fig:dedind' on page 7 undefined on input line 129.
+
 File: pictures/DedInd.png Graphic file (type QTm)
- <use  "pictures/DedInd.png" >
+<use  "pictures/DedInd.png" >
+
+LaTeX Warning: Reference `eqn:fond' on page 7 undefined on input line 136.
+
+
+Package acronym Warning: Acronym `BK' is not defined on input line 136.
+
+
+Package acronym Warning: Acronym `BK' is not defined on input line 136.
+
+
+Package acronym Warning: Acronym `BK' is not defined on input line 136.
+
+
+Package acronym Warning: Acronym `BK' is not defined on input line 136.
+
+
+Package acronym Warning: Acronym `BK' is not defined on input line 138.
+
+
+LaTeX Warning: Reference `tab:ded' on page 7 undefined on input line 142.
+
+
+LaTeX Warning: Reference `eqn:fond' on page 7 undefined on input line 143.
+
+
+Package acronym Warning: Acronym `BK' is not defined on input line 143.
+
+
+Package acronym Warning: Acronym `BK' is not defined on input line 143.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 142--159
 
  []
@@ -1819,6 +1999,28 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [7]
+
+LaTeX Warning: Reference `tab:ind' on page 8 undefined on input line 160.
+
+
+LaTeX Warning: Reference `eqn:fond' on page 8 undefined on input line 160.
+
+
+Package acronym Warning: Acronym `BK' is not defined on input line 160.
+
+
+LaTeX Warning: Reference `eqn:fond' on page 8 undefined on input line 160.
+
+
+Package acronym Warning: Acronym `BK' is not defined on input line 160.
+
+
+Package acronym Warning: Acronym `BK' is not defined on input line 160.
+
+
+Package acronym Warning: Acronym `BK' is not defined on input line 162.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 162--178
 
  []
@@ -1830,6 +2032,25 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [8]
+
+LaTeX Warning: Reference `tab:abd' on page 9 undefined on input line 179.
+
+
+LaTeX Warning: Reference `eqn:fond' on page 9 undefined on input line 179.
+
+
+Package acronym Warning: Acronym `BK' is not defined on input line 179.
+
+
+LaTeX Warning: Reference `eqn:fond' on page 9 undefined on input line 179.
+
+
+Package acronym Warning: Acronym `BK' is not defined on input line 180.
+
+
+Package acronym Warning: Acronym `BK' is not defined on input line 182.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 182--198
 
  []
@@ -1852,11 +2073,119 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 Capitolo 2.
 Package acronym Info: Label `acro:GI' newly defined as it shall be overridden
 although it is yet undefined on input line 8.
+
+Package acronym Warning: Acronym `GI' is not defined on input line 8.
+
+
+Package acronym Warning: Acronym `GI' is not defined on input line 8.
+
+
+Package acronym Warning: Acronym `GI' is not defined on input line 8.
+
+
+Package acronym Warning: Acronym `GI' is not defined on input line 8.
+
+
+LaTeX Warning: Reference `sub:tipiapp' on page 11 undefined on input line 8.
+
 Package acronym Info: Label `acro:L' newly defined as it shall be overridden
 although it is yet undefined on input line 8.
+
+Package acronym Warning: Acronym `L' is not defined on input line 8.
+
+
+Package acronym Warning: Acronym `L' is not defined on input line 8.
+
+
+Package acronym Warning: Acronym `L' is not defined on input line 8.
+
+
+Package acronym Warning: Acronym `GI' is not defined on input line 10.
+
+
+Package acronym Warning: Acronym `IIR' is not defined on input line 10.
+
+
+LaTeX Warning: Reference `sub:appindes' on page 11 undefined on input line 13.
+
+
+Package acronym Warning: Acronym `IIR' is not defined on input line 13.
+
+
+LaTeX Warning: Reference `sub:appindes' on page 11 undefined on input line 13.
+
+
+Package acronym Warning: Acronym `IIR' is not defined on input line 13.
+
+
+LaTeX Warning: Reference `sub:appindes' on page 11 undefined on input line 13.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 13.
+
+
+Package acronym Warning: Acronym `IIR' is not defined on input line 17.
+
 [11
 
 ]
+
+Package acronym Warning: Acronym `IIR' is not defined on input line 18.
+
+
+Package acronym Warning: Acronym `IIR' is not defined on input line 19.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 19.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 19.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 19.
+
+
+Package acronym Warning: Acronym `L' is not defined on input line 26.
+
+
+Package acronym Warning: Acronym `L' is not defined on input line 26.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 28.
+
+
+Package acronym Warning: Acronym `L' is not defined on input line 29.
+
+
+Package acronym Warning: Acronym `L' is not defined on input line 29.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 29.
+
+
+Package acronym Warning: Acronym `IIR' is not defined on input line 29.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 30.
+
+
+Package acronym Warning: Acronym `L' is not defined on input line 30.
+
+
+Package acronym Warning: Acronym `L' is not defined on input line 32.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 32.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 35.
+
+
+Package acronym Warning: Acronym `L' is not defined on input line 35.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 37.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1864,9 +2193,28 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [12]
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 43.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 43.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 43--44
 
  []
+
+
+LaTeX Warning: Reference `cap:tre' on page 13 undefined on input line 49.
+
+
+Package acronym Warning: Acronym `GI' is not defined on input line 51.
+
+
+Package acronym Warning: Acronym `IIR' is not defined on input line 51.
+
+
+Package acronym Warning: Acronym `L' is not defined on input line 51.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1875,6 +2223,22 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [13]
+
+Package acronym Warning: Acronym `GI' is not defined on input line 67.
+
+
+Package acronym Warning: Acronym `IIR' is not defined on input line 67.
+
+
+Package acronym Warning: Acronym `L' is not defined on input line 67.
+
+
+Package acronym Warning: Acronym `L' is not defined on input line 67.
+
+
+Package acronym Warning: Acronym `L' is not defined on input line 67.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 80--81
 
  []
@@ -1887,6 +2251,54 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [14]
 
+Package acronym Warning: Acronym `IIR' is not defined on input line 82.
+
+
+Package acronym Warning: Acronym `IIR' is not defined on input line 82.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 82.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 82.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 82.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 82.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 84.
+
+
+Package acronym Warning: Acronym `GI' is not defined on input line 92.
+
+
+LaTeX Warning: Reference `sec:limIIR' on page 15 undefined on input line 92.
+
+
+LaTeX Warning: Reference `teo:minhard' on page 15 undefined on input line 96.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 96.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 96.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 96.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 96.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 96.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 97.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
@@ -1894,13 +2306,44 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [15]
 
+Package acronym Warning: Acronym `DFA' is not defined on input line 100.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 116.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [16]
-Overfull \hbox (20.72867pt too wide) in paragraph at lines 135--136
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 123.
+
+
+Package acronym Warning: Acronym `GI' is not defined on input line 125.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 128.
+
+
+Package acronym Warning: Acronym `L' is not defined on input line 129.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 129.
+
+
+LaTeX Warning: Reference `def:strcom' on page 17 undefined on input line 134.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 134.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 135.
+
+
+Overfull \hbox (29.53668pt too wide) in paragraph at lines 135--136
 []$\OML/cmm/m/it/12 S[]$ \EU1/lmr/m/n/12 impedisce il \EU1/lmr/m/it/12 merge \E
 U1/lmr/m/n/12 di due stati $\OML/cmm/m/it/12 p; q[][][] \OMS/cmsy/m/n/12 2 \OML
 /cmm/m/it/12 Lattice\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 PTA\OT1/cmr/m/n/12 (\OML/
@@ -1908,12 +2351,46 @@ cmm/m/it/12 S[]\OT1/cmr/m/n/12 ))[]\OML/cmm/m/it/12 p \OMS/cmsy/m/n/12 6^^Q
  []
 
 
+LaTeX Warning: Reference `def:car' on page 17 undefined on input line 138.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 138.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 138.
+
+
+LaTeX Warning: Reference `sub:ricret' on page 17 undefined on input line 138.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[17]) (./chapters/capitolo3.tex
+[17]
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 144.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 144.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 152.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 156.
+
+
+LaTeX Warning: Reference `def:car' on page 18 undefined on input line 156.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 157.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 157.
+
+) (./chapters/capitolo3.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1929,9 +2406,40 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [19]
 Capitolo 3.
+
+Package acronym Warning: Acronym `IIR' is not defined on input line 8.
+
+
+LaTeX Warning: Reference `sub:algcon' on page 20 undefined on input line 8.
+
+
+Package acronym Warning: Acronym `IIR' is not defined on input line 9.
+
+
+LaTeX Warning: Reference `cap:quattro' on page 20 undefined on input line 9.
+
+
+Package acronym Warning: Acronym `L' is not defined on input line 11.
+
+
+Package acronym Warning: Acronym `IIR' is not defined on input line 11.
+
+
+LaTeX Warning: Reference `sub:tea' on page 20 undefined on input line 11.
+
 [20
 
 ]
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 14.
+
+
+Package acronym Warning: Acronym `L' is not defined on input line 14.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 15.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 14--16
 
  []
@@ -1940,6 +2448,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 14--16
 Overfull \hbox (29.3747pt too wide) in paragraph at lines 14--16
 [] 
  []
+
+
+Package acronym Warning: Acronym `EQ' is not defined on input line 17.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 17.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 17.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 17.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 17.
+
+
+Package acronym Warning: Acronym `L' is not defined on input line 17.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 17.
+
+
+Package acronym Warning: Acronym `EQ' is not defined on input line 18.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 17--19
@@ -1952,6 +2484,15 @@ Overfull \hbox (29.3747pt too wide) in paragraph at lines 17--19
  []
 
 
+Package acronym Warning: Acronym `DFA' is not defined on input line 20.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 20.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 20.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 20--22
 
  []
@@ -1962,6 +2503,21 @@ Overfull \hbox (29.3747pt too wide) in paragraph at lines 20--22
  []
 
 
+Package acronym Warning: Acronym `H' is not defined on input line 23.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 23.
+
+
+Package acronym Warning: Acronym `L' is not defined on input line 23.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 23.
+
+
+Package acronym Warning: Acronym `L' is not defined on input line 23.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 23--25
 
  []
@@ -1970,6 +2526,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--25
 Overfull \hbox (29.3747pt too wide) in paragraph at lines 23--25
 [] 
  []
+
+
+Package acronym Warning: Acronym `L' is not defined on input line 31.
 
 
 Overfull \hbox (10.42151pt too wide) in paragraph at lines 31--33
@@ -1998,8 +2557,52 @@ LaTeX Font Info:    Try loading font information for U+euf on input line 43.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
+
+LaTeX Warning: Reference `def:pol' on page 22 undefined on input line 46.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 49.
+
+
+LaTeX Warning: Reference `teo:noi' on page 22 undefined on input line 51.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 51.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 56.
+
+
+Package acronym Warning: Acronym `EQ' is not defined on input line 56.
+
+
+LaTeX Warning: Reference `sec:lstar' on page 22 undefined on input line 58.
+
+
+Package acronym Warning: Acronym `IIR' is not defined on input line 61.
+
+
+Package acronym Warning: Acronym `L' is not defined on input line 61.
+
 Package acronym Info: Label `acro:MAT' newly defined as it shall be overridden
 although it is yet undefined on input line 61.
+
+Package acronym Warning: Acronym `MAT' is not defined on input line 61.
+
+
+Package acronym Warning: Acronym `MAT' is not defined on input line 61.
+
+
+Package acronym Warning: Acronym `EQ' is not defined on input line 61.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 61.
+
+
+LaTeX Warning: Reference `def:pol' on page 22 undefined on input line 61.
+
+
+Package acronym Warning: Acronym `MAT' is not defined on input line 63.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2008,6 +2611,22 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [22]
+
+LaTeX Warning: Reference `sub:algcon' on page 23 undefined on input line 66.
+
+
+LaTeX Warning: Reference `sub:algcon' on page 23 undefined on input line 66.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 69.
+
+
+Package acronym Warning: Acronym `L' is not defined on input line 86.
+
+
+Package acronym Warning: Acronym `L' is not defined on input line 86.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 77--87
 
  []
@@ -2016,6 +2635,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 77--87
 Overfull \hbox (29.3747pt too wide) in paragraph at lines 77--87
 [] 
  []
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 89.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 89--90
@@ -2029,17 +2651,39 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [23]
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 96.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 96--97
 
  []
+
+
+LaTeX Warning: Reference `alg:lstar-close' on page 24 undefined on input line 1
+00.
+
+
+LaTeX Warning: Reference `alg:lstar-buildautomaton' on page 24 undefined on inp
+ut line 100.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 100.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 103--104
 
  []
 
+
+LaTeX Warning: Reference `alg:lstar-consistent' on page 24 undefined on input l
+ine 107.
+
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 115.
+
+LaTeX Warning: Reference `teo:m-n' on page 24 undefined on input line 236.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2062,6 +2706,68 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [26]
 
+LaTeX Warning: Reference `alg:lstar-initialise' on page 27 undefined on input l
+ine 238.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 239.
+
+
+Package acronym Warning: Acronym `EQ' is not defined on input line 239.
+
+
+LaTeX Warning: Reference `alg:lstar' on page 27 undefined on input line 239.
+
+
+Package acronym Warning: Acronym `MAT' is not defined on input line 243.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 247.
+
+
+LaTeX Warning: Reference `alg:lstar-buildautomaton' on page 27 undefined on inp
+ut line 247.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 247.
+
+
+LaTeX Warning: Reference `teo:angm' on page 27 undefined on input line 249.
+
+
+Package acronym Warning: Acronym `L' is not defined on input line 249.
+
+
+LaTeX Warning: Reference `teo:angm' on page 27 undefined on input line 251.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 251.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 256.
+
+
+Package acronym Warning: Acronym `L' is not defined on input line 258.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 258.
+
+
+LaTeX Warning: Reference `teo:angm' on page 27 undefined on input line 258.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 258.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 258.
+
+
+LaTeX Warning: Reference `teo:angm' on page 27 undefined on input line 258.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 258.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
@@ -2069,12 +2775,67 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [27]
 
+Package acronym Warning: Acronym `H' is not defined on input line 260.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 260.
+
+
+LaTeX Warning: Reference `teo:angm' on page 28 undefined on input line 260.
+
+
+LaTeX Warning: Reference `lem:fgv' on page 28 undefined on input line 260.
+
+
+Package acronym Warning: Acronym `EQ' is not defined on input line 261.
+
+
+Package acronym Warning: Acronym `L' is not defined on input line 263.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 263.
+
+
+Package acronym Warning: Acronym `EQ' is not defined on input line 263.
+
+
+Package acronym Warning: Acronym `EQ' is not defined on input line 263.
+
+
+LaTeX Warning: Reference `sub:cor' on page 28 undefined on input line 263.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 263.
+
+
+LaTeX Warning: Reference `alg:lstar-consistent' on page 28 undefined on input l
+ine 263.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [28]
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 267.
+
+
+Package acronym Warning: Acronym `MAT' is not defined on input line 269.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 269.
+
+
+Package acronym Warning: Acronym `EQ' is not defined on input line 269.
+
+
+Package acronym Warning: Acronym `L' is not defined on input line 269.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 269.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2089,12 +2850,125 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [30]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[31]
 Capitolo 4.
+
+Package acronym Warning: Acronym `ObP' is not defined on input line 7.
+
+
+Package acronym Warning: Acronym `ObP' is not defined on input line 7.
+
 Package acronym Info: Label `acro:DT' newly defined as it shall be overridden
 although it is yet undefined on input line 7.
-[31
+
+Package acronym Warning: Acronym `DT' is not defined on input line 7.
+
+
+Package acronym Warning: Acronym `DT' is not defined on input line 7.
+
+
+Package acronym Warning: Acronym `ObP' is not defined on input line 7.
+
+
+LaTeX Warning: Reference `cap:tre' on page 32 undefined on input line 7.
+
+
+Package acronym Warning: Acronym `ObP' is not defined on input line 7.
+
+
+Package acronym Warning: Acronym `IIR' is not defined on input line 7.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 7.
+
+
+Package acronym Warning: Acronym `L' is not defined on input line 7.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 7.
+
+
+Package acronym Warning: Acronym `EQ' is not defined on input line 7.
+
+
+Package acronym Warning: Acronym `ObP' is not defined on input line 7.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 7.
+
+
+Package acronym Warning: Acronym `ObP' is not defined on input line 7.
+
+
+Package acronym Warning: Acronym `MAT' is not defined on input line 7.
+
+
+Package acronym Warning: Acronym `EQ' is not defined on input line 7.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 7.
+
+
+Package acronym Warning: Acronym `L' is not defined on input line 9.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 9.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 9.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 9.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 9.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 9.
+
+
+LaTeX Warning: Reference `teo:m-n' on page 32 undefined on input line 9.
+
+[32
 
 ]
+
+Package acronym Warning: Acronym `L' is not defined on input line 14.
+
+
+Package acronym Warning: Acronym `L' is not defined on input line 14.
+
+
+Package acronym Warning: Acronym `ObP' is not defined on input line 14.
+
+
+Package acronym Warning: Acronym `L' is not defined on input line 14.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 14.
+
+
+Package acronym Warning: Acronym `ObP' is not defined on input line 16.
+
+
+Package acronym Warning: Acronym `DT' is not defined on input line 16.
+
+
+Package acronym Warning: Acronym `ObP' is not defined on input line 18.
+
+
+Package acronym Warning: Acronym `L' is not defined on input line 32.
+
+
+Package acronym Warning: Acronym `L' is not defined on input line 32.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 19--34
 
  []
@@ -2115,7 +2989,17 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[32]
+[33]
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 35.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 35.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 41.
+
+
 Overfull \hbox (13.38063pt too wide) in paragraph at lines 45--46
 []\EU1/lmr/bx/n/12 Definizione \EU1/lmr/m/n/12 (Componente chiuso)\EU1/lmr/bx/n
 /12 . []\EU1/lmr/m/n/12 Un componente $[]$ è chiuso se $[]\OT1/cmr/m/n/12 (\OML
@@ -2128,20 +3012,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 47--48
  []
 
 
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
+LaTeX Warning: Reference `teo:m-n' on page 34 undefined on input line 49.
 
-[33]
-Underfull \hbox (badness 10000) in paragraph at lines 73--79
 
- []
+Package acronym Warning: Acronym `DFA' is not defined on input line 49.
 
-File: pictures/DTipotesi.png Graphic file (type QTm)
-<use  "pictures/DTipotesi.png" >
-Package acronym Info: Label `acro:LCA' newly defined as it shall be overridden
-although it is yet undefined on input line 87.
+
+Package acronym Warning: Acronym `H' is not defined on input line 49.
+
+
+LaTeX Warning: Reference `alg:obp-buildautomaton' on page 34 undefined on input
+ line 49.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2150,8 +3031,75 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [34]
-File: pictures/LCA.png Graphic file (type QTm)
- <use  "pictures/LCA.png" >
+
+Package acronym Warning: Acronym `DT' is not defined on input line 73.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 73--79
+
+ []
+
+File: pictures/DTipotesi.png Graphic file (type QTm)
+<use  "pictures/DTipotesi.png" >
+
+Package acronym Warning: Acronym `DT' is not defined on input line 87.
+
+
+LaTeX Warning: Reference `fig:hdt' on page 35 undefined on input line 87.
+
+
+Package acronym Warning: Acronym `DT' is not defined on input line 87.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 87.
+
+
+LaTeX Warning: Reference `fig:hdt' on page 35 undefined on input line 87.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 87.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 87.
+
+
+Package acronym Warning: Acronym `DT' is not defined on input line 87.
+
+Package acronym Info: Label `acro:LCA' newly defined as it shall be overridden
+although it is yet undefined on input line 87.
+
+Package acronym Warning: Acronym `LCA' is not defined on input line 87.
+
+
+Package acronym Warning: Acronym `LCA' is not defined on input line 87.
+
+
+Package acronym Warning: Acronym `LCA' is not defined on input line 87.
+
+
+LaTeX Warning: Reference `fig:lca' on page 35 undefined on input line 87.
+
+
+Package acronym Warning: Acronym `DT' is not defined on input line 87.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 87.
+
+
+LaTeX Warning: Reference `fig:hdt' on page 35 undefined on input line 87.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 87.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 87.
+
+
+LaTeX Warning: Reference `alg:sift' on page 35 undefined on input line 87.
+
+
+LaTeX Warning: Reference `sub:fun' on page 35 undefined on input line 87.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2160,14 +3108,50 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [35]
 
+Package acronym Warning: Acronym `DT' is not defined on input line 90.
+
+File: pictures/LCA.png Graphic file (type QTm)
+<use  "pictures/LCA.png" >
+
+Package acronym Warning: Acronym `H' is not defined on input line 104.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 104.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 104.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 107.
+
+
+Package acronym Warning: Acronym `ObP' is not defined on input line 109.
+
+
+Package acronym Warning: Acronym `ObP' is not defined on input line 109.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [36]
-File: pictures/DiscriminazioneControesempio.png Graphic file (type QTm)
- <use  "pictures/DiscriminazioneControesempio.png" >
+
+LaTeX Warning: Reference `teo:dec' on page 37 undefined on input line 115.
+
+
+Package acronym Warning: Acronym `ObP' is not defined on input line 117.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 117.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 117.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 117.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2176,12 +3160,96 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [37]
 
+LaTeX Warning: Reference `sub:corret' on page 38 undefined on input line 123.
+
+
+LaTeX Warning: Reference `teo:dec' on page 38 undefined on input line 123.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 123.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 123.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 123.
+
+
+LaTeX Warning: Reference `fig:con' on page 38 undefined on input line 123.
+
+
+LaTeX Warning: Reference `teo:dec' on page 38 undefined on input line 123.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 123.
+
+File: pictures/DiscriminazioneControesempio.png Graphic file (type QTm)
+<use  "pictures/DiscriminazioneControesempio.png" >
+
+LaTeX Warning: Reference `teo:dec' on page 38 undefined on input line 131.
+
+
+LaTeX Warning: Reference `app:due' on page 38 undefined on input line 131.
+
+
+LaTeX Warning: Reference `sub:corret' on page 38 undefined on input line 133.
+
+
+LaTeX Warning: Reference `teo:dec' on page 38 undefined on input line 133.
+
+
+LaTeX Warning: Reference `teo:dec' on page 38 undefined on input line 133.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [38]
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 138.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 138.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 138.
+
+
+Package acronym Warning: Acronym `DT' is not defined on input line 138.
+
+
+LaTeX Warning: Reference `alg:split' on page 39 undefined on input line 138.
+
+
+Package acronym Warning: Acronym `DT' is not defined on input line 138.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 138.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 138.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 140.
+
+
+Package acronym Warning: Acronym `EQ' is not defined on input line 140.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 140.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 140.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[39]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 147.
@@ -2193,12 +3261,66 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 See the caption package documentation for explanation.
 
 
+LaTeX Warning: Reference `alg:bin' on page 40 undefined on input line 212.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 212.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 212.
+
+
+LaTeX Warning: Reference `alg:bin' on page 40 undefined on input line 214.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 214.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 214.
+
+
+LaTeX Warning: Reference `alg:exp' on page 40 undefined on input line 215.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[39]
+[40]
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 218.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 218.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 218.
+
+
+LaTeX Warning: Reference `alg:par' on page 41 undefined on input line 218.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 221.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 221.
+
+
+LaTeX Warning: Reference `teo:decr' on page 41 undefined on input line 221.
+
+
+LaTeX Warning: Reference `equ:beta' on page 41 undefined on input line 222.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 222.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 222.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 222.
+
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 229.
@@ -2215,14 +3337,46 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[40]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
 [41]
+
+Package acronym Warning: Acronym `ObP' is not defined on input line 291.
+
+
+Package acronym Warning: Acronym `DT' is not defined on input line 291.
+
+
+LaTeX Warning: Reference `alg:obpp' on page 42 undefined on input line 291.
+
+
+LaTeX Warning: Reference `alg:clp' on page 42 undefined on input line 291.
+
+
+Package acronym Warning: Acronym `DT' is not defined on input line 291.
+
+
+LaTeX Warning: Reference `alg:split' on page 42 undefined on input line 291.
+
+
+Package acronym Warning: Acronym `DT' is not defined on input line 291.
+
+
+LaTeX Warning: Reference `sub:split' on page 42 undefined on input line 291.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 291.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 291.
+
+
+LaTeX Warning: Reference `alg:sift' on page 42 undefined on input line 291.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 291.
+
+
+Package acronym Warning: Acronym `DT' is not defined on input line 291.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2231,12 +3385,67 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [42]
 
+Package acronym Warning: Acronym `H' is not defined on input line 293.
+
+
+Package acronym Warning: Acronym `DT' is not defined on input line 295.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 296.
+
+
+LaTeX Warning: Reference `alg:obp-buildautomaton' on page 43 undefined on input
+ line 296.
+
+
+Package acronym Warning: Acronym `EQ' is not defined on input line 296.
+
+
+Package acronym Warning: Acronym `MAT' is not defined on input line 296.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 296.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 296.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 296.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [43]
+
+Package acronym Warning: Acronym `ObP' is not defined on input line 327.
+
+
+Package acronym Warning: Acronym `L' is not defined on input line 327.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 327.
+
+
+Package acronym Warning: Acronym `ObP' is not defined on input line 327.
+
+
+Package acronym Warning: Acronym `EQ' is not defined on input line 327.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 327.
+
+
+Package acronym Warning: Acronym `L' is not defined on input line 397.
+
+
+Package acronym Warning: Acronym `ObP' is not defined on input line 432.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 434.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2251,13 +3460,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [45]
-Underfull \hbox (badness 10000) in paragraph at lines 438--439
-
- []
-
-
-LaTeX Warning: Command \textbackslash invalid in math mode on input line 444.
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2266,21 +3468,141 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [46]
 
+Package acronym Warning: Acronym `H' is not defined on input line 435.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 436.
+
+
+LaTeX Warning: Reference `teo:m-n' on page 47 undefined on input line 438.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 438--439
+
+ []
+
+
+Package acronym Warning: Acronym `ObP' is not defined on input line 440.
+
+
+Package acronym Warning: Acronym `DT' is not defined on input line 444.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 444.
+
+
+Package acronym Warning: Acronym `ObP' is not defined on input line 446.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 446.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 446.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 446.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 446.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 446.
+
+
+Package acronym Warning: Acronym `EQ' is not defined on input line 446.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 446.
+
+
+Package acronym Warning: Acronym `EQ' is not defined on input line 446.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 446.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [47]
-File: pictures/OBTLSTAR.png Graphic file (type QTm)
- <use  "pictures/OBTLSTAR.png" >
-File: pictures/DFALstar.png Graphic file (type QTm)
- <use  "pictures/DFALstar.png" >
-File: pictures/DTLSTAR.png Graphic file (type QTm)
 
-<use  "pictures/DTLSTAR.png" >
-File: pictures/Split.png Graphic file (type QTm)
- <use  "pictures/Split.png" >
+Package acronym Warning: Acronym `DFA' is not defined on input line 450.
+
+
+Package acronym Warning: Acronym `L' is not defined on input line 450.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 450.
+
+
+Package acronym Warning: Acronym `EQ' is not defined on input line 450.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 450.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 450.
+
+
+Package acronym Warning: Acronym `ObP' is not defined on input line 450.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 450.
+
+
+LaTeX Warning: Reference `tab:mqa' on page 48 undefined on input line 450.
+
+
+Package acronym Warning: Acronym `EQ' is not defined on input line 450.
+
+
+Package acronym Warning: Acronym `EQ' is not defined on input line 450.
+
+
+Package acronym Warning: Acronym `ObP' is not defined on input line 452.
+
+
+LaTeX Warning: Reference `subsub:comcom' on page 48 undefined on input line 452
+.
+
+
+LaTeX Warning: Reference `tab:mqa' on page 48 undefined on input line 473.
+
+
+Package acronym Warning: Acronym `EQ' is not defined on input line 473.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 473.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 473.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 473.
+
+
+Package acronym Warning: Acronym `EQ' is not defined on input line 473.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 473.
+
+
+Package acronym Warning: Acronym `L' is not defined on input line 473.
+
+
+Package acronym Warning: Acronym `EQ' is not defined on input line 473.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 473.
+
+
+Package acronym Warning: Acronym `EQ' is not defined on input line 473.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 473.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2288,6 +3610,47 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [48]
+
+LaTeX Warning: Reference `sub:tol' on page 49 undefined on input line 475.
+
+File: pictures/OBTLSTAR.png Graphic file (type QTm)
+<use  "pictures/OBTLSTAR.png" >
+File: pictures/DFALstar.png Graphic file (type QTm)
+ <use  "pictures/DFALstar.png" >
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 485.
+
+
+LaTeX Warning: Reference `sub:dfah' on page 49 undefined on input line 485.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 485.
+
+
+Package acronym Warning: Acronym `DT' is not defined on input line 485.
+
+
+LaTeX Warning: Reference `sub:dis' on page 49 undefined on input line 485.
+
+
+Package acronym Warning: Acronym `DT' is not defined on input line 485.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 485.
+
+File: pictures/DTLSTAR.png Graphic file (type QTm)
+<use  "pictures/DTLSTAR.png" >
+File: pictures/Split.png Graphic file (type QTm)
+ <use  "pictures/Split.png" >
+
+LaTeX Warning: Reference `tab:com' on page 49 undefined on input line 495.
+
+
+Package acronym Warning: Acronym `ObP' is not defined on input line 495.
+
+
+Package acronym Warning: Acronym `ObP' is not defined on input line 495.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2302,15 +3665,90 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [50]
-LaTeX Font Info:    Try loading font information for EU1+lmtt on input line 542
-.
- (/usr/share/texlive/texmf-dist/tex/latex/euenc/eu1lmtt.fd
-File: eu1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-Underfull \hbox (badness 2401) in paragraph at lines 542--542
-[][][][][]$[][][] [] [][][][][][][][] [] [][]$[][] \EU1/lmr/m/n/10 in cui si pu
-ò trovare sotto la nomenclatura \EU1/lmr/m/it/10 Discrimination Tree
- []
+
+Package acronym Warning: Acronym `DT' is not defined on input line 534.
+
+
+Package acronym Warning: Acronym `DT' is not defined on input line 534.
+
+
+Package acronym Warning: Acronym `DT' is not defined on input line 535.
+
+
+LaTeX Warning: Reference `sub:fun' on page 51 undefined on input line 535.
+
+
+Package acronym Warning: Acronym `DT' is not defined on input line 535.
+
+
+Package acronym Warning: Acronym `EQ' is not defined on input line 535.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 535.
+
+
+Package acronym Warning: Acronym `L' is not defined on input line 535.
+
+
+Package acronym Warning: Acronym `DT' is not defined on input line 535.
+
+
+Package acronym Warning: Acronym `DT' is not defined on input line 535.
+
+
+Package acronym Warning: Acronym `DT' is not defined on input line 535.
+
+
+Package acronym Warning: Acronym `EQ' is not defined on input line 535.
+
+
+LaTeX Warning: Reference `sub:fun' on page 51 undefined on input line 535.
+
+
+Package acronym Warning: Acronym `EQ' is not defined on input line 535.
+
+
+Package acronym Warning: Acronym `EQ' is not defined on input line 535.
+
+
+Package acronym Warning: Acronym `EQ' is not defined on input line 535.
+
+
+LaTeX Warning: Reference `alg:clp' on page 51 undefined on input line 535.
+
+
+LaTeX Warning: Reference `lin:clpunclosed' on page 51 undefined on input line 5
+35.
+
+
+Package acronym Warning: Acronym `DT' is not defined on input line 535.
+
+
+Package acronym Warning: Acronym `ObP' is not defined on input line 535.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 535.
+
+
+Package acronym Warning: Acronym `DT' is not defined on input line 535.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 535.
+
+
+Package acronym Warning: Acronym `DT' is not defined on input line 535.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 535.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 535.
+
+
+Package acronym Warning: Acronym `DT' is not defined on input line 535.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 535.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2318,7 +3756,137 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[51]) (./chapters/capitolo5.tex
+[51]
+
+Package acronym Warning: Acronym `ObP' is not defined on input line 536.
+
+
+Package acronym Warning: Acronym `ObP' is not defined on input line 538.
+
+
+Package acronym Warning: Acronym `ObP' is not defined on input line 538.
+
+
+LaTeX Warning: Reference `sec:alobp' on page 52 undefined on input line 538.
+
+
+Package acronym Warning: Acronym `ObP' is not defined on input line 538.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 540.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 540.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 540.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 540.
+
+
+Package acronym Warning: Acronym `EQ' is not defined on input line 542.
+
+
+Package acronym Warning: Acronym `ObP' is not defined on input line 542.
+
+LaTeX Font Info:    Try loading font information for EU1+lmtt on input line 542
+.
+(/usr/share/texlive/texmf-dist/tex/latex/euenc/eu1lmtt.fd
+File: eu1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+
+Package acronym Warning: Acronym `ObP' is not defined on input line 542.
+
+
+Underfull \hbox (badness 2401) in paragraph at lines 542--542
+[][][][][]$[][][] [] [][][][][][][][] [] [][]$[][] \EU1/lmr/m/n/10 in cui si pu
+ò trovare sotto la nomenclatura \EU1/lmr/m/it/10 Discrimination Tree
+ []
+
+
+Package acronym Warning: Acronym `EQ' is not defined on input line 543.
+
+
+Package acronym Warning: Acronym `EQ' is not defined on input line 543.
+
+
+Package acronym Warning: Acronym `ObP' is not defined on input line 543.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[52]
+
+LaTeX Warning: Reference `alg:obpp' on page 53 undefined on input line 546.
+
+
+LaTeX Warning: Reference `lin:addsuffixes' on page 53 undefined on input line 5
+46.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 546.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 546.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 546.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 546.
+
+
+Overfull \hbox (0.7807pt too wide) in paragraph at lines 546--547
+[]\EU1/lmr/m/n/12 dopo l’individuazione del suffisso discriminante, nell’algori
+tmo e alla riga [].[],
+ []
+
+
+LaTeX Warning: Reference `alg:sift' on page 53 undefined on input line 547.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 547.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 547.
+
+
+Package acronym Warning: Acronym `DT' is not defined on input line 547.
+
+
+Package acronym Warning: Acronym `DT' is not defined on input line 547.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 547.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 549.
+
+
+LaTeX Warning: Reference `alg:clp' on page 53 undefined on input line 549.
+
+
+LaTeX Warning: Reference `lin:clpunclosed' on page 53 undefined on input line 5
+49.
+
+
+LaTeX Warning: Reference `alg:clp' on page 53 undefined on input line 550.
+
+
+LaTeX Warning: Reference `lin:clpsuffix' on page 53 undefined on input line 550
+.
+
+
+LaTeX Warning: Reference `alg:bin' on page 53 undefined on input line 551.
+
+
+LaTeX Warning: Reference `sec:implobp' on page 53 undefined on input line 552.
+
+) (./chapters/capitolo5.tex
 Underfull \hbox (badness 10000) in paragraph at lines 549--4
 
  []
@@ -2329,29 +3897,47 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[52]
+[53]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[53]
+[54]
 Capitolo 5.
-[54
+
+Package acronym Warning: Acronym `L' is not defined on input line 7.
+
+
+Package acronym Warning: Acronym `SVM' is not defined on input line 8.
+
+
+Package acronym Warning: Acronym `SVM' is not defined on input line 8.
+
+
+Package acronym Warning: Acronym `IIR' is not defined on input line 8.
+
+
+Package acronym Warning: Acronym `SVM' is not defined on input line 11.
+
+
+Package acronym Warning: Acronym `SVM' is not defined on input line 16.
+
+
+LaTeX Warning: Reference `sec:limIIR' on page 55 undefined on input line 16.
+
+[55
 
 ]
 
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
+LaTeX Warning: Reference `eqn:rischioatteso' on page 56 undefined on input line
+ 24.
 
-[55]
-Package acronym Info: Label `acro:VC' newly defined as it shall be overridden
-although it is yet undefined on input line 41.
-File: pictures/RettaShatter.png Graphic file (type QTm)
- <use  "pictures/RettaShatter.png" >
+
+LaTeX Warning: Reference `eqn:rischioatteso' on page 56 undefined on input line
+ 24.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2360,16 +3946,64 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [56]
 
+LaTeX Warning: Reference `def:PacL' on page 57 undefined on input line 32.
+
+Package acronym Info: Label `acro:VC' newly defined as it shall be overridden
+although it is yet undefined on input line 42.
+
+Package acronym Warning: Acronym `VC' is not defined on input line 42.
+
+
+Package acronym Warning: Acronym `VC' is not defined on input line 42.
+
+
+Package acronym Warning: Acronym `VC' is not defined on input line 42.
+
+
+Package acronym Warning: Acronym `VC' is not defined on input line 42.
+
+
+LaTeX Warning: Reference `sub:vcdim' on page 57 undefined on input line 42.
+
+
+LaTeX Warning: Reference `eqn:vapnik' on page 57 undefined on input line 42.
+
+
+LaTeX Warning: Reference `sub:srm' on page 57 undefined on input line 42.
+
+
+Package acronym Warning: Acronym `VC' is not defined on input line 42.
+
+
+Package acronym Warning: Acronym `VC' is not defined on input line 46.
+
+
+Package acronym Warning: Acronym `VC' is not defined on input line 46.
+
+
+Package acronym Warning: Acronym `VC' is not defined on input line 46.
+
+
+Package acronym Warning: Acronym `VC' is not defined on input line 46.
+
+
+LaTeX Warning: Reference `fig:sha' on page 57 undefined on input line 46.
+
+File: pictures/RettaShatter.png Graphic file (type QTm)
+<use  "pictures/RettaShatter.png" >
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [57]
-Package acronym Info: Label `acro:SRM' newly defined as it shall be overridden
-although it is yet undefined on input line 58.
-File: pictures/SRM.png Graphic file (type QTm)
- <use  "pictures/SRM.png" >
+
+Package acronym Warning: Acronym `VC' is not defined on input line 54.
+
+
+Package acronym Warning: Acronym `VC' is not defined on input line 54.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2377,8 +4011,83 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [58]
-File: pictures/SottoinsiemiSRM.png Graphic file (type QTm)
- <use  "pictures/SottoinsiemiSRM.png" >
+
+Package acronym Warning: Acronym `VC' is not defined on input line 58.
+
+
+LaTeX Warning: Reference `eqn:vapnik' on page 59 undefined on input line 58.
+
+
+Package acronym Warning: Acronym `VC' is not defined on input line 58.
+
+
+Package acronym Warning: Acronym `VC' is not defined on input line 58.
+
+
+Package acronym Warning: Acronym `VC' is not defined on input line 59.
+
+
+Package acronym Warning: Acronym `VC' is not defined on input line 59.
+
+
+Package acronym Warning: Acronym `VC' is not defined on input line 59.
+
+
+Package acronym Warning: Acronym `VC' is not defined on input line 59.
+
+
+Package acronym Warning: Acronym `VC' is not defined on input line 59.
+
+Package acronym Info: Label `acro:SRM' newly defined as it shall be overridden
+although it is yet undefined on input line 59.
+
+Package acronym Warning: Acronym `SRM' is not defined on input line 59.
+
+
+Package acronym Warning: Acronym `SRM' is not defined on input line 59.
+
+
+LaTeX Warning: Reference `fig:ssrm' on page 59 undefined on input line 61.
+
+
+Package acronym Warning: Acronym `VC' is not defined on input line 61.
+
+
+Package acronym Warning: Acronym `VC' is not defined on input line 61.
+
+
+Package acronym Warning: Acronym `SRM' is not defined on input line 68.
+
+
+LaTeX Warning: Reference `fig:srm' on page 59 undefined on input line 68.
+
+File: pictures/SRM.png Graphic file (type QTm)
+<use  "pictures/SRM.png" >
+
+Package acronym Warning: Acronym `VC' is not defined on input line 73.
+
+
+Package acronym Warning: Acronym `VC' is not defined on input line 73.
+
+
+Package acronym Warning: Acronym `SRM' is not defined on input line 77.
+
+
+Package acronym Warning: Acronym `VC' is not defined on input line 77.
+
+
+LaTeX Warning: Reference `subsub:lsrm' on page 59 undefined on input line 77.
+
+
+LaTeX Warning: Reference `subsub:srmsoft' on page 59 undefined on input line 77
+.
+
+
+Package acronym Warning: Acronym `SVM' is not defined on input line 77.
+
+
+Package acronym Warning: Acronym `SRM' is not defined on input line 77.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2386,7 +4095,47 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [59]
-Overfull \hbox (8.25479pt too wide) in paragraph at lines 117--120
+File: pictures/SottoinsiemiSRM.png Graphic file (type QTm)
+ <use  "pictures/SottoinsiemiSRM.png" >
+
+Package acronym Warning: Acronym `VC' is not defined on input line 82.
+
+
+Package acronym Warning: Acronym `VC' is not defined on input line 82.
+
+
+Package acronym Warning: Acronym `SVM' is not defined on input line 87.
+
+
+Package acronym Warning: Acronym `SVM' is not defined on input line 87.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[60]
+
+Package acronym Warning: Acronym `SVM' is not defined on input line 95.
+
+
+Package acronym Warning: Acronym `SVM' is not defined on input line 102.
+
+
+LaTeX Warning: Reference `cap:uno' on page 61 undefined on input line 109.
+
+
+Package acronym Warning: Acronym `SVM' is not defined on input line 110.
+
+
+Package acronym Warning: Acronym `SVM' is not defined on input line 114.
+
+
+LaTeX Warning: Reference `fig:lsd' on page 61 undefined on input line 114.
+
+
+Overfull \hbox (8.25479pt too wide) in paragraph at lines 118--121
 \EU1/lmr/m/n/12 Una volta scelto il classificatore dallo spazio delle ipotesi, 
 l’ingresso $\OML/cmm/m/it/12 x \OT1/cmr/m/n/12 = (\OML/cmm/m/it/12 x[]; x[]; []
  ; x[]\OT1/cmr/m/n/12 )$
@@ -2398,25 +4147,23 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[60]
+[61]
 File: pictures/linearlyseparabledata.png Graphic file (type QTm)
  <use  "pictures/linearlyseparabledata.png" >
 
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
+Package acronym Warning: Acronym `SVM' is not defined on input line 131.
 
-[61]
-Underfull \hbox (badness 10000) in paragraph at lines 162--164
 
- []
+LaTeX Warning: Reference `sub:clb' on page 62 undefined on input line 131.
 
-File: pictures/Margine.png Graphic file (type QTm)
-<use  "pictures/Margine.png" >
-Underfull \hbox (badness 10000) in paragraph at lines 178--179
 
- []
+LaTeX Warning: Reference `eq:vin' on page 62 undefined on input line 141.
+
+
+LaTeX Warning: Reference `eq:vin' on page 62 undefined on input line 141.
+
+
+LaTeX Warning: Reference `eq:vin' on page 62 undefined on input line 141.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2426,12 +4173,118 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [62]
 
+LaTeX Warning: Reference `eq:vin' on page 63 undefined on input line 146.
+
+
+Package acronym Warning: Acronym `SVM' is not defined on input line 146.
+
+
+LaTeX Warning: Reference `eq:vin' on page 63 undefined on input line 151.
+
+
+LaTeX Warning: Reference `eq:vin' on page 63 undefined on input line 151.
+
+
+LaTeX Warning: Reference `eq:vin2' on page 63 undefined on input line 164.
+
+
+LaTeX Warning: Reference `def:mar' on page 63 undefined on input line 164.
+
+
+LaTeX Warning: Reference `fig:lsd' on page 63 undefined on input line 164.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 163--165
+
+ []
+
+File: pictures/Margine.png Graphic file (type QTm)
+<use  "pictures/Margine.png" >
+
+LaTeX Warning: Reference `eqn:h1' on page 63 undefined on input line 169.
+
+
+LaTeX Warning: Reference `eqn:h2' on page 63 undefined on input line 169.
+
+
+LaTeX Warning: Reference `eqn:h1' on page 63 undefined on input line 169.
+
+
+LaTeX Warning: Reference `eqn:h2' on page 63 undefined on input line 169.
+
+
+Package acronym Warning: Acronym `SVM' is not defined on input line 173.
+
+
+LaTeX Warning: Reference `ite:obj' on page 63 undefined on input line 176.
+
+
+Package acronym Warning: Acronym `SVM' is not defined on input line 179.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--180
+
+ []
+
+
+Package acronym Warning: Acronym `SVM' is not defined on input line 183.
+
+
+Package acronym Warning: Acronym `SRM' is not defined on input line 183.
+
+
+LaTeX Warning: Reference `sub:srm' on page 63 undefined on input line 183.
+
+
+Package acronym Warning: Acronym `VC' is not defined on input line 183.
+
+
+Package acronym Warning: Acronym `VC' is not defined on input line 183.
+
+
+Package acronym Warning: Acronym `SVM' is not defined on input line 183.
+
+
+Package acronym Warning: Acronym `VC' is not defined on input line 183.
+
+
+Package acronym Warning: Acronym `SRM' is not defined on input line 183.
+
+
+Package acronym Warning: Acronym `VC' is not defined on input line 183.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [63]
+
+Package acronym Warning: Acronym `VC' is not defined on input line 186.
+
+
+Package acronym Warning: Acronym `VC' is not defined on input line 191.
+
+
+Package acronym Warning: Acronym `VC' is not defined on input line 191.
+
+
+Package acronym Warning: Acronym `SVM' is not defined on input line 191.
+
+
+LaTeX Warning: Reference `eqn:vapnik' on page 64 undefined on input line 191.
+
+
+Package acronym Warning: Acronym `SRM' is not defined on input line 191.
+
+
+LaTeX Warning: Reference `sub:softmargin' on page 64 undefined on input line 19
+2.
+
+
+Package acronym Warning: Acronym `SVM' is not defined on input line 192.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2440,15 +4293,38 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [64]
 
+LaTeX Warning: Reference `subsub:lsrm' on page 65 undefined on input line 195.
+
+
+Package acronym Warning: Acronym `SVM' is not defined on input line 195.
+
+
+LaTeX Warning: Reference `eq:lag' on page 65 undefined on input line 221.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [65]
-Underfull \hbox (badness 10000) in paragraph at lines 257--260
 
- []
+Package acronym Warning: Acronym `SVM' is not defined on input line 229.
+
+
+LaTeX Warning: Reference `eq:vin' on page 66 undefined on input line 229.
+
+
+Package acronym Warning: Acronym `SVM' is not defined on input line 242.
+
+
+LaTeX Warning: Reference `eq:svmpro1' on page 66 undefined on input line 242.
+
+
+LaTeX Warning: Reference `eq:svmpro2' on page 66 undefined on input line 242.
+
+
+LaTeX Warning: Reference `eq:svmpro2' on page 66 undefined on input line 247.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2457,6 +4333,31 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [66]
+Underfull \hbox (badness 10000) in paragraph at lines 258--261
+
+ []
+
+
+LaTeX Warning: Reference `wvar' on page 67 undefined on input line 272.
+
+
+LaTeX Warning: Reference `bvar' on page 67 undefined on input line 272.
+
+
+LaTeX Warning: Reference `vecsup' on page 67 undefined on input line 272.
+
+
+LaTeX Warning: Reference `fig:lsd' on page 67 undefined on input line 276.
+
+
+LaTeX Warning: Reference `wvar' on page 67 undefined on input line 277.
+
+
+LaTeX Warning: Reference `bvar' on page 67 undefined on input line 277.
+
+
+LaTeX Warning: Reference `eq:pri' on page 67 undefined on input line 277.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2465,12 +4366,51 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [67]
 
+LaTeX Warning: Reference `wvar' on page 68 undefined on input line 287.
+
+
+LaTeX Warning: Reference `bvar' on page 68 undefined on input line 287.
+
+
+LaTeX Warning: Reference `wvar' on page 68 undefined on input line 287.
+
+
+LaTeX Warning: Reference `bvar' on page 68 undefined on input line 287.
+
+
+LaTeX Warning: Reference `eq:dual' on page 68 undefined on input line 296.
+
+
+LaTeX Warning: Reference `wvar' on page 68 undefined on input line 297.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [68]
+
+LaTeX Warning: Reference `eq:test' on page 69 undefined on input line 303.
+
+
+Package acronym Warning: Acronym `SVM' is not defined on input line 310.
+
+
+LaTeX Warning: Reference `sub:cmm' on page 69 undefined on input line 314.
+
+
+LaTeX Warning: Reference `eqn:h1' on page 69 undefined on input line 314.
+
+
+LaTeX Warning: Reference `eqn:h2' on page 69 undefined on input line 314.
+
+
+LaTeX Warning: Reference `eqn:h1' on page 69 undefined on input line 326.
+
+
+LaTeX Warning: Reference `eqn:h2' on page 69 undefined on input line 326.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2479,14 +4419,48 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [69]
 
+LaTeX Warning: Reference `eqn:h1sm' on page 70 undefined on input line 332.
+
+
+LaTeX Warning: Reference `eqn:h2sm' on page 70 undefined on input line 332.
+
+
+LaTeX Warning: Reference `eqn:h1sm' on page 70 undefined on input line 337.
+
+
+LaTeX Warning: Reference `eqn:h2sm' on page 70 undefined on input line 337.
+
+
+LaTeX Warning: Reference `eqn:slack' on page 70 undefined on input line 337.
+
+
+LaTeX Warning: Reference `eq:softorig' on page 70 undefined on input line 337.
+
+
+LaTeX Warning: Reference `eq:softfor' on page 70 undefined on input line 347.
+
+
+LaTeX Warning: Reference `eq:softfor' on page 70 undefined on input line 350.
+
+
+LaTeX Warning: Reference `eq:softvinc' on page 70 undefined on input line 350.
+
+
+LaTeX Warning: Reference `eq:softvin2' on page 70 undefined on input line 350.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [70]
-File: pictures/KernelLinSepara.png Graphic file (type QTm)
- <use  "pictures/KernelLinSepara.png" >
+
+LaTeX Warning: Reference `wdualsoft' on page 71 undefined on input line 379.
+
+
+LaTeX Warning: Reference `eq:bhard' on page 71 undefined on input line 384.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2495,6 +4469,39 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [71]
 
+LaTeX Warning: Reference `eq:softfor' on page 72 undefined on input line 389.
+
+
+LaTeX Warning: Reference `eq:softvincd' on page 72 undefined on input line 389.
+
+
+
+LaTeX Warning: Reference `eq:softw' on page 72 undefined on input line 389.
+
+
+LaTeX Warning: Reference `teo:suphdim' on page 72 undefined on input line 389.
+
+
+Package acronym Warning: Acronym `SRM' is not defined on input line 389.
+
+
+Package acronym Warning: Acronym `VC' is not defined on input line 389.
+
+
+Package acronym Warning: Acronym `SRM' is not defined on input line 389.
+
+
+LaTeX Warning: Reference `fig:kls' on page 72 undefined on input line 397.
+
+File: pictures/KernelLinSepara.png Graphic file (type QTm)
+<use  "pictures/KernelLinSepara.png" >
+
+LaTeX Warning: Reference `eq:dual' on page 72 undefined on input line 406.
+
+
+Package acronym Warning: Acronym `SVM' is not defined on input line 411.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
@@ -2502,12 +4509,30 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [72]
 
+LaTeX Warning: Reference `tab:kerrem' on page 73 undefined on input line 420.
+
+
+LaTeX Warning: Reference `tab:kerrem' on page 73 undefined on input line 420.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [73]
+
+LaTeX Warning: Reference `eq:kernelex' on page 74 undefined on input line 456.
+
+
+LaTeX Warning: Reference `eq:kerdef' on page 74 undefined on input line 473.
+
+
+LaTeX Warning: Reference `tab:kerrem' on page 74 undefined on input line 508.
+
+
+Package acronym Warning: Acronym `SVM' is not defined on input line 508.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2522,14 +4547,18 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [75]
-File: pictures/VettoriDissimili.png Graphic file (type QTm)
- <use  "pictures/VettoriDissimili.png" >
-File: pictures/VettoriSimiliDifferenteLabel.png Graphic file (type QTm)
 
-<use  "pictures/VettoriSimiliDifferenteLabel.png" >
-File: pictures/VettoriSimiliUgualeLabel.png Graphic file (type QTm)
+LaTeX Warning: Reference `teo:Cover' on page 76 undefined on input line 516.
 
-<use  "pictures/VettoriSimiliUgualeLabel.png" >
+
+LaTeX Warning: Reference `eq:dual' on page 76 undefined on input line 516.
+
+
+LaTeX Warning: Reference `tab:kerrem' on page 76 undefined on input line 533.
+
+
+LaTeX Warning: Reference `eq:dual' on page 76 undefined on input line 533.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2537,6 +4566,41 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [76]
+
+LaTeX Warning: Reference `fig:dissp' on page 77 undefined on input line 535.
+
+
+LaTeX Warning: Reference `fig:simpsamelab' on page 77 undefined on input line 5
+38.
+
+
+Package acronym Warning: Acronym `SVM' is not defined on input line 538.
+
+
+Package acronym Warning: Acronym `SVM' is not defined on input line 538.
+
+
+LaTeX Warning: Reference `fig:simpdifflab' on page 77 undefined on input line 5
+39.
+
+
+Package acronym Warning: Acronym `SVM' is not defined on input line 539.
+
+File: pictures/VettoriDissimili.png Graphic file (type QTm)
+<use  "pictures/VettoriDissimili.png" >
+File: pictures/VettoriSimiliDifferenteLabel.png Graphic file (type QTm)
+
+<use  "pictures/VettoriSimiliDifferenteLabel.png" >
+File: pictures/VettoriSimiliUgualeLabel.png Graphic file (type QTm)
+
+<use  "pictures/VettoriSimiliUgualeLabel.png" >
+
+LaTeX Warning: Reference `subsub:prscal' on page 77 undefined on input line 565
+.
+
+
+LaTeX Warning: Reference `tab:parker' on page 77 undefined on input line 565.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2552,12 +4616,35 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [78]
 
+LaTeX Warning: Reference `tab:all2subker' on page 79 undefined on input line 56
+9.
+
+
+Package acronym Warning: Acronym `SVM' is not defined on input line 574.
+
+
+Package acronym Warning: Acronym `SVM' is not defined on input line 577.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [79]
+
+LaTeX Warning: Reference `sub:kernels' on page 80 undefined on input line 620.
+
+
+LaTeX Warning: Reference `sub:softmargin' on page 80 undefined on input line 62
+0.
+
+
+Package acronym Warning: Acronym `SVM' is not defined on input line 620.
+
+
+Package acronym Warning: Acronym `SVM' is not defined on input line 620.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2566,6 +4653,46 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [80]
 
+Package acronym Warning: Acronym `SVM' is not defined on input line 632.
+
+
+Package acronym Warning: Acronym `SVM' is not defined on input line 632.
+
+
+Package acronym Warning: Acronym `SVM' is not defined on input line 632.
+
+
+LaTeX Warning: Reference `eq:svmpro1' on page 81 undefined on input line 632.
+
+
+LaTeX Warning: Reference `eq:dual' on page 81 undefined on input line 633.
+
+
+LaTeX Warning: Reference `eq:Kerdual' on page 81 undefined on input line 633.
+
+
+LaTeX Warning: Reference `eq:dual' on page 81 undefined on input line 633.
+
+
+LaTeX Warning: Reference `eq:Kerdual' on page 81 undefined on input line 633.
+
+
+LaTeX Warning: Reference `note:hessiano' on page 81 undefined on input line 633
+.
+
+
+Package acronym Warning: Acronym `SVM' is not defined on input line 640.
+
+
+Package acronym Warning: Acronym `SVM' is not defined on input line 640.
+
+
+Package acronym Warning: Acronym `SVM' is not defined on input line 640.
+
+
+Package acronym Warning: Acronym `SVM' is not defined on input line 640.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
@@ -2573,16 +4700,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [81]
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 656.
+Package acronym Warning: Acronym `SVM' is not defined on input line 644.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 656.
+Package acronym Warning: Acronym `SVM' is not defined on input line 647.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 656.
+Package acronym Warning: Acronym `SVM' is not defined on input line 647.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2592,32 +4716,76 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [82]
 
+Package acronym Warning: Acronym `SVM' is not defined on input line 652.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 657.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 657.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 657.
+
+
+Package acronym Warning: Acronym `SVM' is not defined on input line 658.
+
+
+Package acronym Warning: Acronym `SVM' is not defined on input line 658.
+
+
+Package acronym Warning: Acronym `SVM' is not defined on input line 658.
+
+
+Package acronym Warning: Acronym `SVM' is not defined on input line 658.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [83]
-Underfull \hbox (badness 10000) in paragraph at lines 677--679
+
+Package acronym Warning: Acronym `SVM' is not defined on input line 660.
+
+
+Package acronym Warning: Acronym `SVM' is not defined on input line 675.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[84]
+Underfull \hbox (badness 10000) in paragraph at lines 678--680
 
  []
 
 
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
+LaTeX Warning: Reference `sub:unbalanced' on page 85 undefined on input line 68
+3.
 
-[84]) (./chapters/appendice1.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[85]
+[85]) (./chapters/appendice1.tex
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[86]
 Appendice A.
-[86
+[87
 
 ]
 
@@ -2626,10 +4794,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[87]
+[88]
 Underfull \hbox (badness 10000) in paragraph at lines 58--60
 
  []
+
+
+LaTeX Warning: Reference `sub:gra' on page 89 undefined on input line 71.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 76--77
@@ -2642,7 +4813,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[88]
+[89]
 Underfull \hbox (badness 10000) in paragraph at lines 81--86
 
  []
@@ -2664,6 +4835,15 @@ Overfull \hbox (29.3747pt too wide) in paragraph at lines 100--102
 
 Package acronym Info: Label `acro:FSA' newly defined as it shall be overridden
 although it is yet undefined on input line 103.
+
+Package acronym Warning: Acronym `FSA' is not defined on input line 103.
+
+
+Package acronym Warning: Acronym `FSA' is not defined on input line 103.
+
+
+LaTeX Warning: Reference `fig:linger' on page 90 undefined on input line 106.
+
 File: pictures/LinguaggiGerarchia.jpg Graphic file (type QTm)
 <use  "pictures/LinguaggiGerarchia.jpg" >
 
@@ -2672,10 +4852,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[89]
+[90]
 Underfull \hbox (badness 10000) in paragraph at lines 115--116
 
  []
+
+
+LaTeX Warning: Reference `sec:FSA' on page 91 undefined on input line 128.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2683,11 +4866,50 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[90]
+[91]
+
+LaTeX Warning: Reference `sub:gra' on page 92 undefined on input line 135.
+
+
+Package acronym Warning: Acronym `FSA' is not defined on input line 135.
+
+
+Package acronym Warning: Acronym `FSA' is not defined on input line 135.
+
 Package acronym Info: Label `acro:FSM' newly defined as it shall be overridden
 although it is yet undefined on input line 135.
+
+Package acronym Warning: Acronym `FSM' is not defined on input line 135.
+
+
+Package acronym Warning: Acronym `FSM' is not defined on input line 135.
+
+
+Package acronym Warning: Acronym `FSM' is not defined on input line 135.
+
+
+Package acronym Warning: Acronym `FSM' is not defined on input line 135.
+
+
+Package acronym Warning: Acronym `FSA' is not defined on input line 135.
+
+
+Package acronym Warning: Acronym `FSA' is not defined on input line 135.
+
 Package acronym Info: Label `acro:NFA' newly defined as it shall be overridden
 although it is yet undefined on input line 135.
+
+Package acronym Warning: Acronym `NFA' is not defined on input line 135.
+
+
+Package acronym Warning: Acronym `NFA' is not defined on input line 135.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 135.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 138.
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 138--139
 
@@ -2699,25 +4921,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 142--148
  []
 
 
+Package acronym Warning: Acronym `DFA' is not defined on input line 149.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 149.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 150.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 149--151
 
  []
 
 
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[91]
-Underfull \hbox (badness 10000) in paragraph at lines 157--166
-
- []
+Package acronym Warning: Acronym `DFA' is not defined on input line 152.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 157--166
-
- []
+Package acronym Warning: Acronym `DFA' is not defined on input line 152.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2726,9 +4947,111 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [92]
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 155.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 155.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 155.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 157.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 165.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 165.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 157--166
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 157--166
+
+ []
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 167.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 169.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 171.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 172.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 179.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 179.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 179.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 179.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 179.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 179.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 179.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[93]
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 181.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 187.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 189.
+
+
+Package acronym Warning: Acronym `NFA' is not defined on input line 189.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 189.
+
+
+Package acronym Warning: Acronym `NFA' is not defined on input line 189.
+
+
+Package acronym Warning: Acronym `NFA' is not defined on input line 189.
+
+
+Package acronym Warning: Acronym `NFA' is not defined on input line 189.
+
+
+Package acronym Warning: Acronym `NFA' is not defined on input line 192.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 192--200
 
  []
+
+
+Package acronym Warning: Acronym `NFA' is not defined on input line 202.
+
+
+LaTeX Warning: Reference `fig:MCA' on page 94 undefined on input line 202.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 201--230
@@ -2741,14 +5064,28 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[93]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
 [94]
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 233.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 246.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 246.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 246.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 249.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 249.
+
+
+Package acronym Warning: Acronym `NFA' is not defined on input line 249.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2757,37 +5094,235 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [95]
 
+LaTeX Warning: Reference `fig:PTA' on page 96 undefined on input line 258.
+
+
+LaTeX Warning: Reference `fig:MCA' on page 96 undefined on input line 258.
+
+
+LaTeX Warning: Reference `subsub:aqu' on page 96 undefined on input line 289.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 289.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 289.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 289.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 289.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 291.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 291.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [96]
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 301.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 306.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 306.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 314.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 314.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 314.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 314.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[97]
 Appendice B.
-[97
+
+LaTeX Warning: Reference `cap:quattro' on page 98 undefined on input line 318.
+
+
+Package acronym Warning: Acronym `ObP' is not defined on input line 318.
+
+
+LaTeX Warning: Reference `cap:quattro' on page 98 undefined on input line 320.
+
+
+LaTeX Warning: Reference `app:uno' on page 98 undefined on input line 320.
+
+
+Package acronym Warning: Acronym `ObP' is not defined on input line 320.
+
+
+Package acronym Warning: Acronym `ObP' is not defined on input line 320.
+
+
+Package acronym Warning: Acronym `ObP' is not defined on input line 322.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 322.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 322.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 322.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 322.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 324.
+
+
+Package acronym Warning: Acronym `DFA' is not defined on input line 325.
+
+[98
 
 ]
 
+Package acronym Warning: Acronym `H' is not defined on input line 349.
+
+
+Package acronym Warning: Acronym `ObP' is not defined on input line 357.
+
+
+Package acronym Warning: Acronym `H' is not defined on input line 357.
+
+
+LaTeX Warning: Reference `def:obstable' on page 99 undefined on input line 373.
+
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 373.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 373.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 373.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 373.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 373.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 373.
+
+
+Package acronym Warning: Acronym `MQ' is not defined on input line 373.
+
+
+LaTeX Warning: Reference `alg:split' on page 99 undefined on input line 374.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[98]
+[99]
+
+Package acronym Warning: Acronym `ObP' is not defined on input line 377.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[99])
+[100]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[100] [101
+[101]
+Appendice C.
+
+LaTeX Warning: Reference `cap:sei' on page 102 undefined on input line 383.
+
+
+LaTeX Warning: Reference `cap:cinque' on page 102 undefined on input line 383.
+
+
+LaTeX Warning: Reference `cap:cinque' on page 102 undefined on input line 386.
+
+[102
+
+]
+
+LaTeX Warning: Reference `fig:bvtrd' on page 103 undefined on input line 401.
+
+File: pictures/BiasVariance.png Graphic file (type QTm)
+<use  "pictures/BiasVariance.png" >
+
+Package acronym Warning: Acronym `SVM' is not defined on input line 413.
+
+
+Package acronym Warning: Acronym `SVM' is not defined on input line 413.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[103]
+
+LaTeX Warning: Reference `fig:mco' on page 104 undefined on input line 420.
+
+File: pictures/MatriceConfusione.png Graphic file (type QTm)
+<use  "pictures/MatriceConfusione.png" >
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[104]
+
+Package acronym Warning: Acronym `IIR' is not defined on input line 453.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[105]
+
+LaTeX Warning: Reference `eq:f1s' on page 106 undefined on input line 463.
+
+)
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[106] [107
 
 
 ]
@@ -2802,14 +5337,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[102]
+[108]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[103]
+[109]
 Overfull \hbox (4.22997pt too wide) in paragraph at lines 270--270
 \EU1/lmr/m/n/12 Homing Sequences». In: \EU1/lmr/m/it/12 Information and Computa
 tion \EU1/lmr/m/n/12 103 (apr. 1993), pp. 299–
@@ -2821,18 +5356,19 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[104]
+[110]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[105] (./main.ind [106
+[111]
+No file main.ind.
+
+Package lastpage Warning: Rerun to get the references right on input line 279.
 
 
-
-]) 
 AED: lastpage setting LastPage
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 279.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 279.
@@ -2841,7 +5377,14 @@ Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 279.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 279.
 
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package biblatex Warning: Please rerun LaTeX.
+(biblatex)                Page breaks have changed.
 
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
@@ -2849,12 +5392,12 @@ Package logreq Info: Writing requests to 'main.run.xml'.
  )
 (\end occurred when \iftrue on line 127 was incomplete) 
 Here is how much of TeX's memory you used:
- 41507 strings out of 495643
- 758826 string characters out of 6187228
- 995232 words of memory out of 5000000
- 43982 multiletter control sequences out of 15000+600000
- 17942 words of font info for 113 fonts, out of 8000000 for 9000
+ 41447 strings out of 495643
+ 757999 string characters out of 6187228
+ 991232 words of memory out of 5000000
+ 43930 multiletter control sequences out of 15000+600000
+ 17974 words of font info for 117 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 56i,20n,92p,10406b,2005s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,21n,92p,10406b,2003s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (115 pages).
+Output written on main.pdf (118 pages).

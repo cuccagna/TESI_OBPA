@@ -486,6 +486,38 @@
   \field{year}{1967}
 \endentry
 
+\entry{Trevor09}{book}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Hastie}{H.}%
+     {Trevor}{T.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Tibshirani}{T.}%
+     {Robert}{R.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Friedman}{F.}%
+     {Jerome}{J.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Cambridge University Press}%
+  }
+  \strng{namehash}{HTTRFJ1}
+  \strng{fullhash}{HTTRFJ1}
+  \field{sortinit}{H}
+  \field{isbn}{978-0-387-84858-7}
+  \field{title}{The Elements of Statistical Learning}
+  \list{location}{1}{%
+    {New York, NY, USA}%
+  }
+  \field{year}{2009}
+\endentry
+
 \entry{Hop71}{report}{}
   \name{author}{2}{}{%
     {{}%
