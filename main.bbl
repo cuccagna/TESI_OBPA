@@ -600,6 +600,34 @@
   \field{year}{2012}
 \endentry
 
+\entry{SvmPracticalGuide10}{misc}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Hsu}{H.}%
+     {Chih-wei}{C.-w.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Chang}{C.}%
+     {Chih-chung}{C.-c.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Lin}{L.}%
+     {Chih-jen}{C.-j.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{HCwCCcLCj1}
+  \strng{fullhash}{HCwCCcLCj1}
+  \field{sortinit}{H}
+  \field{title}{A practical guide to support vector classification}
+  \verb{url}
+  \verb http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.224.4115
+  \endverb
+  \field{year}{2010}
+\endentry
+
 \entry{Kearns94}{book}{}
   \name{author}{2}{}{%
     {{}%
@@ -696,6 +724,23 @@
   \field{journaltitle}{The Journal of Machine Learning Research}
   \field{month}{06}
   \field{year}{2009}
+\endentry
+
+\entry{SvmAnotherPracticalGuide14}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Kumar}{K.}%
+     {Neeraj}{N.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{KN1}
+  \strng{fullhash}{KN1}
+  \field{sortinit}{K}
+  \verb{url}
+  \verb https://neerajkumar.org/writings/svm/
+  \endverb
+  \field{year}{2014}
 \endentry
 
 \entry{Abbadingo98}{inproceedings}{}

@@ -52,16 +52,18 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Gerarchia di linguaggi}}{90}{figure.caption.75}
+\addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Maximal Canonical Automaton}}{94}{figure.caption.79}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Gerarchia di linguaggi}}{91}{figure.caption.75}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {A.3}{\ignorespaces Prefix Tre Acceptor}}{95}{figure.caption.82}
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Maximal Canonical Automaton}}{95}{figure.caption.79}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Prefix Tre Acceptor}}{96}{figure.caption.82}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {C.1}{\ignorespaces Bias-Varianza trade-off}}{102}{figure.caption.88}
+\contentsline {figure}{\numberline {C.1}{\ignorespaces Bias-Varianza trade-off}}{103}{figure.caption.88}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {C.2}{\ignorespaces Matrice di confusione}}{106}{figure.caption.89}
+\contentsline {figure}{\numberline {C.2}{\ignorespaces Matrice di confusione}}{111}{figure.caption.92}
