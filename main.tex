@@ -21,6 +21,12 @@
 %style=numeric-comp
 \usepackage{csquotes}
 \usepackage[backend=bibtex,style=numeric-comp, backref=true,doi=true,url=true]{biblatex}
+%Le seguenti 3 istruzioni sono necessarie  per gestire un bug che altrimenti
+%impedirebbe di generare la bibliografia correttamente in textlive16 in
+%caso di url lunghi.
+\makeatletter
+\def\blx@maxline{77}
+\makeatother
 \bibliography{./chapters/bibliography.bib}
 
 %\usepackage{microtype}
@@ -84,7 +90,7 @@
 \setlength{\parsep}{10pt}
 
 
-\newfontfamily\quotefont{Arial}
+%\newfontfamily\quotefont{Arial}
 \newcommand{\apostrophe}{{\quotefont'}}
 
 \newenvironment{rientra} %definisco un ambiente personalizzato da usare per avere un rientro

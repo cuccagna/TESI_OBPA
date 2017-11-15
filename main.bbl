@@ -1,5 +1,5 @@
 % $ biblatex auxiliary file $
-% $ biblatex version 2.6 $
+% $ biblatex bbl format version 2.7 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
@@ -16,1514 +16,1757 @@
   {}
 \endgroup
 
-\entry{Abela02}{thesis}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Abela}{A.}%
-     {John~M.}{J.~M.}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{AJM1}
-  \strng{fullhash}{AJM1}
-  \field{sortinit}{A}
-  \field{title}{ETS Learning of Kernel Languages}
-  \list{institution}{1}{%
-    {University of New Brunswick}%
-  }
-  \field{type}{mathesis}
-  \field{month}{11}
-  \field{year}{2002}
-\endentry
+\sortlist[entry]{nty/global/}
+  \entry{Abela02}{thesis}{}
+    \name{author}{1}{}{%
+      {{hash=AJM}{%
+         family={Abela},
+         family_i={A\bibinitperiod},
+         given={John\bibnamedelima M.},
+         given_i={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{AJM1}
+    \strng{fullhash}{AJM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{title}{ETS Learning of Kernel Languages}
+    \list{institution}{1}{%
+      {University of New Brunswick}%
+    }
+    \field{type}{mathesis}
+    \field{month}{11}
+    \field{year}{2002}
+  \endentry
 
-\entry{Angluin87}{article}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Angluin}{A.}%
-     {Dana}{D.}%
-     {}{}%
-     {}{}}%
-  }
-  \list{publisher}{1}{%
-    {Academic Press, Inc.}%
-  }
-  \strng{namehash}{AD1}
-  \strng{fullhash}{AD1}
-  \field{sortinit}{A}
-  \verb{doi}
-  \verb 10.1016/0890-5401(87)90052-6
-  \endverb
-  \field{issn}{0890-5401}
-  \field{number}{2}
-  \field{pages}{87\bibrangedash 106}
-  \field{title}{Learning Regular Sets from Queries and Counterexamples}
-  \field{volume}{75}
-  \list{location}{1}{%
-    {Duluth, MN, USA}%
-  }
-  \field{journaltitle}{Inf. Comput.}
-  \field{month}{11}
-  \field{year}{1987}
-\endentry
+  \entry{Angluin87}{article}{}
+    \name{author}{1}{}{%
+      {{hash=AD}{%
+         family={Angluin},
+         family_i={A\bibinitperiod},
+         given={Dana},
+         given_i={D\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Academic Press, Inc.}%
+    }
+    \strng{namehash}{AD1}
+    \strng{fullhash}{AD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \verb{doi}
+    \verb 10.1016/0890-5401(87)90052-6
+    \endverb
+    \field{issn}{0890-5401}
+    \field{number}{2}
+    \field{pages}{87\bibrangedash 106}
+    \field{title}{Learning Regular Sets from Queries and Counterexamples}
+    \field{volume}{75}
+    \list{location}{1}{%
+      {Duluth, MN, USA}%
+    }
+    \field{journaltitle}{Inf. Comput.}
+    \field{month}{11}
+    \field{year}{1987}
+  \endentry
 
-\entry{Angluin90}{article}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Angluin}{A.}%
-     {Dana}{D.}%
-     {}{}%
-     {}{}}%
-  }
-  \list{publisher}{1}{%
-    {Academic, Kluwer}%
-  }
-  \strng{namehash}{AD1}
-  \strng{fullhash}{AD1}
-  \field{sortinit}{A}
-  \verb{doi}
-  \verb 10.1007/BF00116034
-  \endverb
-  \field{issn}{0885--6125}
-  \field{pages}{121\bibrangedash 150}
-  \field{title}{Negative results for equivalence queries}
-  \field{volume}{5}
-  \list{location}{1}{%
-    {Boston , USA}%
-  }
-  \field{journaltitle}{Machine Learning Journal}
-  \field{month}{06}
-  \field{year}{1990}
-\endentry
+  \entry{Angluin90}{article}{}
+    \name{author}{1}{}{%
+      {{hash=AD}{%
+         family={Angluin},
+         family_i={A\bibinitperiod},
+         given={Dana},
+         given_i={D\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Academic, Kluwer}%
+    }
+    \strng{namehash}{AD1}
+    \strng{fullhash}{AD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \verb{doi}
+    \verb 10.1007/BF00116034
+    \endverb
+    \field{issn}{0885--6125}
+    \field{pages}{121\bibrangedash 150}
+    \field{title}{Negative results for equivalence queries}
+    \field{volume}{5}
+    \list{location}{1}{%
+      {Boston , USA}%
+    }
+    \field{journaltitle}{Machine Learning Journal}
+    \field{month}{06}
+    \field{year}{1990}
+  \endentry
 
-\entry{Angluin83}{article}{}
-  \name{author}{2}{}{%
-    {{}%
-     {Angluin}{A.}%
-     {Dana}{D.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Smith}{S.}%
-     {Carl~H.}{C.~H.}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{ADSCH1}
-  \strng{fullhash}{ADSCH1}
-  \field{sortinit}{A}
-  \verb{doi}
-  \verb 10.1145/356914.356918
-  \endverb
-  \field{number}{3}
-  \field{pages}{237\bibrangedash 269}
-  \field{title}{Inductive Inference: Theory and Methods}
-  \field{volume}{15}
-  \field{journaltitle}{ACM Computing Surveys (CSUR) Journal}
-  \field{month}{09}
-  \field{year}{1983}
-\endentry
+  \entry{Angluin83}{article}{}
+    \name{author}{2}{}{%
+      {{hash=AD}{%
+         family={Angluin},
+         family_i={A\bibinitperiod},
+         given={Dana},
+         given_i={D\bibinitperiod},
+      }}%
+      {{hash=SCH}{%
+         family={Smith},
+         family_i={S\bibinitperiod},
+         given={Carl\bibnamedelima H.},
+         given_i={C\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ADSCH1}
+    \strng{fullhash}{ADSCH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \verb{doi}
+    \verb 10.1145/356914.356918
+    \endverb
+    \field{number}{3}
+    \field{pages}{237\bibrangedash 269}
+    \field{title}{Inductive Inference: Theory and Methods}
+    \field{volume}{15}
+    \field{journaltitle}{ACM Computing Surveys (CSUR) Journal}
+    \field{month}{09}
+    \field{year}{1983}
+  \endentry
 
-\entry{Vapnik92}{inproceedings}{}
-  \name{author}{3}{}{%
-    {{}%
-     {Boser}{B.}%
-     {Bernhard~E.}{B.~E.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Guyon}{G.}%
-     {Isabelle~M.}{I.~M.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Vapnik}{V.}%
-     {Vladimir~N.}{V.~N.}%
-     {}{}%
-     {}{}}%
-  }
-  \list{organization}{1}{%
-    {COLT '92 Proceedings of the fifth annual workshop on Computational
+  \entry{Vapnik92}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=BBE}{%
+         family={Boser},
+         family_i={B\bibinitperiod},
+         given={Bernhard\bibnamedelima E.},
+         given_i={B\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+      {{hash=GIM}{%
+         family={Guyon},
+         family_i={G\bibinitperiod},
+         given={Isabelle\bibnamedelima M.},
+         given_i={I\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=VVN}{%
+         family={Vapnik},
+         family_i={V\bibinitperiod},
+         given={Vladimir\bibnamedelima N.},
+         given_i={V\bibinitperiod\bibinitdelim N\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {COLT '92 Proceedings of the fifth annual workshop on Computational
   learning theory}%
-  }
-  \strng{namehash}{BBEGIMVVN1}
-  \strng{fullhash}{BBEGIMVVN1}
-  \field{sortinit}{B}
-  \verb{doi}
-  \verb 10.1145/130385.130401
-  \endverb
-  \field{pages}{144\bibrangedash 152}
-  \field{title}{A training algorithm for optimal margin classifiers}
-  \field{month}{07}
-  \field{year}{1992}
-\endentry
+    }
+    \strng{namehash}{BBEGIMVVN1}
+    \strng{fullhash}{BBEGIMVVN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \verb{doi}
+    \verb 10.1145/130385.130401
+    \endverb
+    \field{pages}{144\bibrangedash 152}
+    \field{title}{A training algorithm for optimal margin classifiers}
+    \field{month}{07}
+    \field{year}{1992}
+  \endentry
 
-\entry{Burges98}{article}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Burges}{B.}%
-     {Christopher~J.C.}{C.~J.}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{BCJ1}
-  \strng{fullhash}{BCJ1}
-  \field{sortinit}{B}
-  \verb{doi}
-  \verb 10.1023/A:1009715923555
-  \endverb
-  \field{issn}{1573-756X}
-  \field{pages}{121\bibrangedash 167}
-  \field{title}{A Tutorial on Support Vector Machines for Pattern Recognition}
-  \verb{url}
-  \verb https://doi.org/10.1023/A:1009715923555
-  \endverb
-  \field{volume}{2}
-  \field{journaltitle}{Data Mining and Knowledge Discovery}
-  \field{month}{01}
-  \field{year}{1998}
-\endentry
+  \entry{Burges98}{article}{}
+    \name{author}{1}{}{%
+      {{hash=BCJ}{%
+         family={Burges},
+         family_i={B\bibinitperiod},
+         given={Christopher\bibnamedelima J.C.},
+         given_i={C\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BCJ1}
+    \strng{fullhash}{BCJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \verb{doi}
+    \verb 10.1023/A:1009715923555
+    \endverb
+    \field{issn}{1573-756X}
+    \field{pages}{121\bibrangedash 167}
+    \field{title}{A Tutorial on Support Vector Machines for Pattern
+  Recognition}
+    \verb{url}
+    \verb https://doi.org/10.1023/A:1009715923555
+    \endverb
+    \field{volume}{2}
+    \field{journaltitle}{Data Mining and Knowledge Discovery}
+    \field{month}{01}
+    \field{year}{1998}
+  \endentry
 
-\entry{Chomsky59}{article}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Chomsky}{C.}%
-     {Noam}{N.}%
-     {}{}%
-     {}{}}%
-  }
-  \list{publisher}{1}{%
-    {Elsevier}%
-  }
-  \strng{namehash}{CN1}
-  \strng{fullhash}{CN1}
-  \field{sortinit}{C}
-  \verb{doi}
-  \verb 10.1016/S0019-9958(59)90362-6
-  \endverb
-  \field{pages}{137\bibrangedash 167}
-  \field{title}{On Certain Formal Properties of Grammars}
-  \field{volume}{II}
-  \field{journaltitle}{Information and Computation}
-  \field{month}{06}
-  \field{year}{1959}
-\endentry
+  \entry{Chomsky59}{article}{}
+    \name{author}{1}{}{%
+      {{hash=CN}{%
+         family={Chomsky},
+         family_i={C\bibinitperiod},
+         given={Noam},
+         given_i={N\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{CN1}
+    \strng{fullhash}{CN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \verb{doi}
+    \verb 10.1016/S0019-9958(59)90362-6
+    \endverb
+    \field{pages}{137\bibrangedash 167}
+    \field{title}{On Certain Formal Properties of Grammars}
+    \field{volume}{II}
+    \field{journaltitle}{Information and Computation}
+    \field{month}{06}
+    \field{year}{1959}
+  \endentry
 
-\entry{Clark11}{article}{}
-  \name{author}{3}{}{%
-    {{}%
-     {Clark}{C.}%
-     {Alexander}{A.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Costa Flor{\^e}ncio}{C.}%
-     {Christophe}{C.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Watkins}{W.}%
-     {Chris}{C.}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{CACCWC1}
-  \strng{fullhash}{CACCWC1}
-  \field{sortinit}{C}
-  \verb{doi}
-  \verb 10.1007/s10994-010-5218-3
-  \endverb
-  \field{issn}{1573-0565}
-  \field{number}{3}
-  \field{pages}{351\bibrangedash 373}
-  \field{title}{Languages as hyperplanes: grammatical inference with string
+  \entry{Clark11}{article}{}
+    \name{author}{3}{}{%
+      {{hash=CA}{%
+         family={Clark},
+         family_i={C\bibinitperiod},
+         given={Alexander},
+         given_i={A\bibinitperiod},
+      }}%
+      {{hash=CC}{%
+         family={Costa Flor{\^e}ncio},
+         family_i={C\bibinitperiod},
+         given={Christophe},
+         given_i={C\bibinitperiod},
+      }}%
+      {{hash=WC}{%
+         family={Watkins},
+         family_i={W\bibinitperiod},
+         given={Chris},
+         given_i={C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CACCWC1}
+    \strng{fullhash}{CACCWC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \verb{doi}
+    \verb 10.1007/s10994-010-5218-3
+    \endverb
+    \field{issn}{1573-0565}
+    \field{number}{3}
+    \field{pages}{351\bibrangedash 373}
+    \field{title}{Languages as hyperplanes: grammatical inference with string
   kernels}
-  \verb{url}
-  \verb https://doi.org/10.1007/s10994-010-5218-3
-  \endverb
-  \field{volume}{82}
-  \field{journaltitle}{Machine Learning}
-  \field{month}{03}
-  \field{year}{2011}
-\endentry
+    \verb{url}
+    \verb https://doi.org/10.1007/s10994-010-5218-3
+    \endverb
+    \field{volume}{82}
+    \field{journaltitle}{Machine Learning}
+    \field{month}{03}
+    \field{year}{2011}
+  \endentry
 
-\entry{Clark06}{inbook}{}
-  \name{author}{4}{}{%
-    {{}%
-     {Clark}{C.}%
-     {Alexander}{A.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Flor{\^e}ncio}{F.}%
-     {Christophe~Costa}{C.~C.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Watkins}{W.}%
-     {Chris}{C.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Serayet}{S.}%
-     {Mariette}{M.}%
-     {}{}%
-     {}{}}%
-  }
-  \name{editor}{5}{}{%
-    {{}%
-     {Sakakibara}{S.}%
-     {Yasubumi}{Y.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Kobayashi}{K.}%
-     {Satoshi}{S.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Sato}{S.}%
-     {Kengo}{K.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Nishino}{N.}%
-     {Tetsuro}{T.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Tomita}{T.}%
-     {Etsuji}{E.}%
-     {}{}%
-     {}{}}%
-  }
-  \list{publisher}{1}{%
-    {Springer Berlin Heidelberg}%
-  }
-  \strng{namehash}{CA+1}
-  \strng{fullhash}{CAFCCWCSM1}
-  \field{sortinit}{C}
-  \field{booktitle}{Grammatical Inference: Algorithms and Applications: 8th
+  \entry{Clark06}{inbook}{}
+    \name{author}{4}{}{%
+      {{hash=CA}{%
+         family={Clark},
+         family_i={C\bibinitperiod},
+         given={Alexander},
+         given_i={A\bibinitperiod},
+      }}%
+      {{hash=FCC}{%
+         family={Flor{\^e}ncio},
+         family_i={F\bibinitperiod},
+         given={Christophe\bibnamedelima Costa},
+         given_i={C\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+      {{hash=WC}{%
+         family={Watkins},
+         family_i={W\bibinitperiod},
+         given={Chris},
+         given_i={C\bibinitperiod},
+      }}%
+      {{hash=SM}{%
+         family={Serayet},
+         family_i={S\bibinitperiod},
+         given={Mariette},
+         given_i={M\bibinitperiod},
+      }}%
+    }
+    \name{editor}{5}{}{%
+      {{hash=SY}{%
+         family={Sakakibara},
+         family_i={S\bibinitperiod},
+         given={Yasubumi},
+         given_i={Y\bibinitperiod},
+      }}%
+      {{hash=KS}{%
+         family={Kobayashi},
+         family_i={K\bibinitperiod},
+         given={Satoshi},
+         given_i={S\bibinitperiod},
+      }}%
+      {{hash=SK}{%
+         family={Sato},
+         family_i={S\bibinitperiod},
+         given={Kengo},
+         given_i={K\bibinitperiod},
+      }}%
+      {{hash=NT}{%
+         family={Nishino},
+         family_i={N\bibinitperiod},
+         given={Tetsuro},
+         given_i={T\bibinitperiod},
+      }}%
+      {{hash=TE}{%
+         family={Tomita},
+         family_i={T\bibinitperiod},
+         given={Etsuji},
+         given_i={E\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer Berlin Heidelberg}%
+    }
+    \strng{namehash}{CA+1}
+    \strng{fullhash}{CAFCCWCSM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{booktitle}{Grammatical Inference: Algorithms and Applications: 8th
   International Colloquium, ICGI 2006, Tokyo, Japan, September 20-22, 2006.
   Proceedings}
-  \verb{doi}
-  \verb 10.1007/11872436_13
-  \endverb
-  \field{isbn}{978-3-540-45265-2}
-  \field{pages}{148\bibrangedash 160}
-  \field{title}{Planar Languages and Learnability}
-  \verb{url}
-  \verb https://doi.org/10.1007/11872436_13
-  \endverb
-  \list{location}{1}{%
-    {Berlin, Heidelberg}%
-  }
-  \field{year}{2006}
-\endentry
+    \verb{doi}
+    \verb 10.1007/11872436_13
+    \endverb
+    \field{isbn}{978-3-540-45265-2}
+    \field{pages}{148\bibrangedash 160}
+    \field{title}{Planar Languages and Learnability}
+    \verb{url}
+    \verb https://doi.org/10.1007/11872436_13
+    \endverb
+    \list{location}{1}{%
+      {Berlin, Heidelberg}%
+    }
+    \field{year}{2006}
+  \endentry
 
-\entry{Cortes95}{article}{}
-  \name{author}{2}{}{%
-    {{}%
-     {Cortes}{C.}%
-     {Corinna}{C.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Vapnik}{V.}%
-     {Vladimir}{V.}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{CCVV1}
-  \strng{fullhash}{CCVV1}
-  \field{sortinit}{C}
-  \verb{doi}
-  \verb 10.1023/A:1022627411411
-  \endverb
-  \field{issn}{0885-6125}
-  \field{pages}{273\bibrangedash 297}
-  \field{title}{Support-Vector Networks}
-  \verb{url}
-  \verb https://doi.org/10.1023/A:1022627411411
-  \endverb
-  \field{volume}{20}
-  \field{journaltitle}{Machine Learning}
-  \field{month}{09}
-  \field{year}{1995}
-\endentry
+  \entry{Cortes95}{article}{}
+    \name{author}{2}{}{%
+      {{hash=CC}{%
+         family={Cortes},
+         family_i={C\bibinitperiod},
+         given={Corinna},
+         given_i={C\bibinitperiod},
+      }}%
+      {{hash=VV}{%
+         family={Vapnik},
+         family_i={V\bibinitperiod},
+         given={Vladimir},
+         given_i={V\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CCVV1}
+    \strng{fullhash}{CCVV1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \verb{doi}
+    \verb 10.1023/A:1022627411411
+    \endverb
+    \field{issn}{0885-6125}
+    \field{pages}{273\bibrangedash 297}
+    \field{title}{Support-Vector Networks}
+    \verb{url}
+    \verb https://doi.org/10.1023/A:1022627411411
+    \endverb
+    \field{volume}{20}
+    \field{journaltitle}{Machine Learning}
+    \field{month}{09}
+    \field{year}{1995}
+  \endentry
 
-\entry{Cot16}{inproceedings}{}
-  \name{author}{3}{}{%
-    {{}%
-     {Cottone}{C.}%
-     {Pietro}{P.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Ortolani}{O.}%
-     {Marco}{M.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Pergola}{P.}%
-     {Gabriele}{G.}%
-     {}{}%
-     {}{}}%
-  }
-  \list{organization}{2}{%
-    {CompSysTech '16 Proceedings of the 17th International Conference on
+  \entry{Cot16}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=CP}{%
+         family={Cottone},
+         family_i={C\bibinitperiod},
+         given={Pietro},
+         given_i={P\bibinitperiod},
+      }}%
+      {{hash=OM}{%
+         family={Ortolani},
+         family_i={O\bibinitperiod},
+         given={Marco},
+         given_i={M\bibinitperiod},
+      }}%
+      {{hash=PG}{%
+         family={Pergola},
+         family_i={P\bibinitperiod},
+         given={Gabriele},
+         given_i={G\bibinitperiod},
+      }}%
+    }
+    \list{organization}{2}{%
+      {CompSysTech '16 Proceedings of the 17th International Conference on
   Computer Systems}%
-    {Technologies 2016}%
-  }
-  \strng{namehash}{CPOMPG1}
-  \strng{fullhash}{CPOMPG1}
-  \field{sortinit}{C}
-  \verb{doi}
-  \verb 10.1145/2983468.2983502
-  \endverb
-  \field{pages}{339\bibrangedash 346}
-  \field{title}{Gl-learning: an optimized framework for grammatical inference}
-  \field{month}{06}
-  \field{year}{2016}
-\endentry
+      {Technologies 2016}%
+    }
+    \strng{namehash}{CPOMPG1}
+    \strng{fullhash}{CPOMPG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \verb{doi}
+    \verb 10.1145/2983468.2983502
+    \endverb
+    \field{pages}{339\bibrangedash 346}
+    \field{title}{Gl-learning: an optimized framework for grammatical
+  inference}
+    \field{month}{06}
+    \field{year}{2016}
+  \endentry
 
-\entry{Cover65}{article}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Cover}{C.}%
-     {Thomas~M.}{T.~M.}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{CTM1}
-  \strng{fullhash}{CTM1}
-  \field{sortinit}{C}
-  \verb{doi}
-  \verb 10.1109/pgec.1965.264137
-  \endverb
-  \field{pages}{326\bibrangedash 334}
-  \field{title}{Geometrical and Statistical Properties of Systems of Linear
+  \entry{Cover65}{article}{}
+    \name{author}{1}{}{%
+      {{hash=CTM}{%
+         family={Cover},
+         family_i={C\bibinitperiod},
+         given={Thomas\bibnamedelima M.},
+         given_i={T\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CTM1}
+    \strng{fullhash}{CTM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \verb{doi}
+    \verb 10.1109/pgec.1965.264137
+    \endverb
+    \field{pages}{326\bibrangedash 334}
+    \field{title}{Geometrical and Statistical Properties of Systems of Linear
   Inequalities with Applications in Pattern Recognition}
-  \verb{url}
-  \verb http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.366.5645&rep=r
-  \verb ep1&type=pdf
-  \endverb
-  \field{volume}{14}
-  \field{journaltitle}{IEEE Transactions on Electronic Computers}
-  \field{month}{06}
-  \field{year}{1965}
-\endentry
+    \verb{url}
+    \verb http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.366.5645&rep
+    \verb =rep1&type=pdf
+    \endverb
+    \field{volume}{14}
+    \field{journaltitle}{IEEE Transactions on Electronic Computers}
+    \field{month}{06}
+    \field{year}{1965}
+  \endentry
 
-\entry{DeLaHiguera10}{book}{}
-  \name{author}{1}{}{%
-    {{}%
-     {De~La~Higuera}{D.~L.~H.}%
-     {Colin}{C.}%
-     {}{}%
-     {}{}}%
-  }
-  \list{publisher}{1}{%
-    {Cambridge University Press}%
-  }
-  \strng{namehash}{DLHC1}
-  \strng{fullhash}{DLHC1}
-  \field{sortinit}{D}
-  \field{isbn}{0521763169 9780521763165}
-  \field{title}{Grammatical Inference: Learning Automata and Grammars}
-  \list{location}{1}{%
-    {New York, NY, USA}%
-  }
-  \field{year}{2010}
-\endentry
+  \entry{DeLaHiguera10}{book}{}
+    \name{author}{1}{}{%
+      {{hash=DLHC}{%
+         family={De\bibnamedelima La\bibnamedelima Higuera},
+         family_i={D\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim
+  H\bibinitperiod},
+         given={Colin},
+         given_i={C\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Cambridge University Press}%
+    }
+    \strng{namehash}{DLHC1}
+    \strng{fullhash}{DLHC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{isbn}{0521763169 9780521763165}
+    \field{title}{Grammatical Inference: Learning Automata and Grammars}
+    \list{location}{1}{%
+      {New York, NY, USA}%
+    }
+    \field{year}{2010}
+  \endentry
 
-\entry{Gold78}{article}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Gold}{G.}%
-     {Mark~E.}{M.~E.}%
-     {}{}%
-     {}{}}%
-  }
-  \list{publisher}{1}{%
-    {Elsevier}%
-  }
-  \strng{namehash}{GME1}
-  \strng{fullhash}{GME1}
-  \field{sortinit}{G}
-  \verb{doi}
-  \verb 10.1016/S0019-9958(78)90562-4
-  \endverb
-  \field{number}{3}
-  \field{pages}{302\bibrangedash 320}
-  \field{title}{Complexity of automaton identification from given data}
-  \field{volume}{37}
-  \field{journaltitle}{Information and Control}
-  \field{month}{06}
-  \field{year}{1978}
-\endentry
+  \entry{Gold78}{article}{}
+    \name{author}{1}{}{%
+      {{hash=GME}{%
+         family={Gold},
+         family_i={G\bibinitperiod},
+         given={Mark\bibnamedelima E.},
+         given_i={M\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{GME1}
+    \strng{fullhash}{GME1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \verb{doi}
+    \verb 10.1016/S0019-9958(78)90562-4
+    \endverb
+    \field{number}{3}
+    \field{pages}{302\bibrangedash 320}
+    \field{title}{Complexity of automaton identification from given data}
+    \field{volume}{37}
+    \field{journaltitle}{Information and Control}
+    \field{month}{06}
+    \field{year}{1978}
+  \endentry
 
-\entry{Gold67}{article}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Gold}{G.}%
-     {Mark~E.}{M.~E.}%
-     {}{}%
-     {}{}}%
-  }
-  \list{publisher}{1}{%
-    {Elsevier}%
-  }
-  \strng{namehash}{GME1}
-  \strng{fullhash}{GME1}
-  \field{sortinit}{G}
-  \verb{doi}
-  \verb 10.1016/S0019-9958(67)91165-5
-  \endverb
-  \field{pages}{447\bibrangedash 474}
-  \field{title}{Language identification in the limit}
-  \field{volume}{10}
-  \field{journaltitle}{Information and Control}
-  \field{month}{05}
-  \field{year}{1967}
-\endentry
+  \entry{Gold67}{article}{}
+    \name{author}{1}{}{%
+      {{hash=GME}{%
+         family={Gold},
+         family_i={G\bibinitperiod},
+         given={Mark\bibnamedelima E.},
+         given_i={M\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{GME1}
+    \strng{fullhash}{GME1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \verb{doi}
+    \verb 10.1016/S0019-9958(67)91165-5
+    \endverb
+    \field{pages}{447\bibrangedash 474}
+    \field{title}{Language identification in the limit}
+    \field{volume}{10}
+    \field{journaltitle}{Information and Control}
+    \field{month}{05}
+    \field{year}{1967}
+  \endentry
 
-\entry{Trevor09}{book}{}
-  \name{author}{3}{}{%
-    {{}%
-     {Hastie}{H.}%
-     {Trevor}{T.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Tibshirani}{T.}%
-     {Robert}{R.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Friedman}{F.}%
-     {Jerome}{J.}%
-     {}{}%
-     {}{}}%
-  }
-  \list{publisher}{1}{%
-    {Cambridge University Press}%
-  }
-  \strng{namehash}{HTTRFJ1}
-  \strng{fullhash}{HTTRFJ1}
-  \field{sortinit}{H}
-  \field{isbn}{978-0-387-84858-7}
-  \field{title}{The Elements of Statistical Learning}
-  \list{location}{1}{%
-    {New York, NY, USA}%
-  }
-  \field{year}{2009}
-\endentry
+  \entry{Trevor09}{book}{}
+    \name{author}{3}{}{%
+      {{hash=HT}{%
+         family={Hastie},
+         family_i={H\bibinitperiod},
+         given={Trevor},
+         given_i={T\bibinitperiod},
+      }}%
+      {{hash=TR}{%
+         family={Tibshirani},
+         family_i={T\bibinitperiod},
+         given={Robert},
+         given_i={R\bibinitperiod},
+      }}%
+      {{hash=FJ}{%
+         family={Friedman},
+         family_i={F\bibinitperiod},
+         given={Jerome},
+         given_i={J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Cambridge University Press}%
+    }
+    \strng{namehash}{HTTRFJ1}
+    \strng{fullhash}{HTTRFJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{isbn}{978-0-387-84858-7}
+    \field{title}{The Elements of Statistical Learning}
+    \list{location}{1}{%
+      {New York, NY, USA}%
+    }
+    \field{year}{2009}
+  \endentry
 
-\entry{Hop71}{report}{}
-  \name{author}{2}{}{%
-    {{}%
-     {Hopcroft}{H.}%
-     {J.E.}{J.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Karp}{K.}%
-     {R.M.}{R.}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{HJKR1}
-  \strng{fullhash}{HJKR1}
-  \field{sortinit}{H}
-  \field{title}{A Linear Algorithm for Testing Equivalence of Finite Automata}
-  \verb{url}
-  \verb http://hdl.handle.net/1813/5958
-  \endverb
-  \list{institution}{1}{%
-    {Cornell Unisersity}%
-  }
-  \field{type}{techreport}
-  \field{month}{12}
-  \field{year}{1971}
-\endentry
+  \entry{Hop71}{report}{}
+    \name{author}{2}{}{%
+      {{hash=HJ}{%
+         family={Hopcroft},
+         family_i={H\bibinitperiod},
+         given={J.E.},
+         given_i={J\bibinitperiod},
+      }}%
+      {{hash=KR}{%
+         family={Karp},
+         family_i={K\bibinitperiod},
+         given={R.M.},
+         given_i={R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HJKR1}
+    \strng{fullhash}{HJKR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{title}{A Linear Algorithm for Testing Equivalence of Finite
+  Automata}
+    \verb{url}
+    \verb http://hdl.handle.net/1813/5958
+    \endverb
+    \list{institution}{1}{%
+      {Cornell Unisersity}%
+    }
+    \field{type}{techreport}
+    \field{month}{12}
+    \field{year}{1971}
+  \endentry
 
-\entry{Hop07}{book}{}
-  \name{author}{3}{}{%
-    {{}%
-     {Hopcroft}{H.}%
-     {J.E.}{J.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Motwani}{M.}%
-     {R}{R}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Ullman}{U.}%
-     {J.D.}{J.}%
-     {}{}%
-     {}{}}%
-  }
-  \list{publisher}{1}{%
-    {Pearson/Addison Wesley}%
-  }
-  \strng{namehash}{HJMRUJ1}
-  \strng{fullhash}{HJMRUJ1}
-  \field{sortinit}{H}
-  \field{edition}{2}
-  \field{isbn}{9780201441246}
-  \field{pages}{153}
-  \field{title}{Introduction to Automata Theory, Languages, and Computation}
-  \field{year}{2007}
-\endentry
+  \entry{Hop07}{book}{}
+    \name{author}{3}{}{%
+      {{hash=HJ}{%
+         family={Hopcroft},
+         family_i={H\bibinitperiod},
+         given={J.E.},
+         given_i={J\bibinitperiod},
+      }}%
+      {{hash=MR}{%
+         family={Motwani},
+         family_i={M\bibinitperiod},
+         given={R},
+         given_i={R},
+      }}%
+      {{hash=UJ}{%
+         family={Ullman},
+         family_i={U\bibinitperiod},
+         given={J.D.},
+         given_i={J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Pearson/Addison Wesley}%
+    }
+    \strng{namehash}{HJMRUJ1}
+    \strng{fullhash}{HJMRUJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{edition}{2}
+    \field{isbn}{9780201441246}
+    \field{pages}{153}
+    \field{title}{Introduction to Automata Theory, Languages, and Computation}
+    \field{year}{2007}
+  \endentry
 
-\entry{Howar12}{thesis}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Howar}{H.}%
-     {Falk~M.}{F.~M.}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{HFM1}
-  \strng{fullhash}{HFM1}
-  \field{sortinit}{H}
-  \verb{doi}
-  \verb 2003/29486
-  \endverb
-  \field{pages}{9\bibrangedash 23}
-  \field{title}{Active learning of interface programs}
-  \list{institution}{1}{%
-    {Technischen Universitat Dortmund}%
-  }
-  \field{type}{phdthesis}
-  \field{year}{2012}
-\endentry
+  \entry{Howar12}{thesis}{}
+    \name{author}{1}{}{%
+      {{hash=HFM}{%
+         family={Howar},
+         family_i={H\bibinitperiod},
+         given={Falk\bibnamedelima M.},
+         given_i={F\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HFM1}
+    \strng{fullhash}{HFM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \verb{doi}
+    \verb 2003/29486
+    \endverb
+    \field{pages}{9\bibrangedash 23}
+    \field{title}{Active learning of interface programs}
+    \list{institution}{1}{%
+      {Technischen Universitat Dortmund}%
+    }
+    \field{type}{phdthesis}
+    \field{year}{2012}
+  \endentry
 
-\entry{SvmPracticalGuide10}{misc}{}
-  \name{author}{3}{}{%
-    {{}%
-     {Hsu}{H.}%
-     {Chih-wei}{C.-w.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Chang}{C.}%
-     {Chih-chung}{C.-c.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Lin}{L.}%
-     {Chih-jen}{C.-j.}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{HCwCCcLCj1}
-  \strng{fullhash}{HCwCCcLCj1}
-  \field{sortinit}{H}
-  \field{title}{A practical guide to support vector classification}
-  \verb{url}
-  \verb http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.224.4115
-  \endverb
-  \field{year}{2010}
-\endentry
+  \entry{SvmPracticalGuide10}{misc}{}
+    \name{author}{3}{}{%
+      {{hash=HCw}{%
+         family={Hsu},
+         family_i={H\bibinitperiod},
+         given={Chih-wei},
+         given_i={C\bibinitperiod-w\bibinitperiod},
+      }}%
+      {{hash=CCc}{%
+         family={Chang},
+         family_i={C\bibinitperiod},
+         given={Chih-chung},
+         given_i={C\bibinitperiod-c\bibinitperiod},
+      }}%
+      {{hash=LCj}{%
+         family={Lin},
+         family_i={L\bibinitperiod},
+         given={Chih-jen},
+         given_i={C\bibinitperiod-j\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HCwCCcLCj1}
+    \strng{fullhash}{HCwCCcLCj1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{title}{A practical guide to support vector classification}
+    \verb{url}
+    \verb http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.224.4115
+    \endverb
+    \field{year}{2010}
+  \endentry
 
-\entry{Kearns94}{book}{}
-  \name{author}{2}{}{%
-    {{}%
-     {Kearns}{K.}%
-     {Michael~J.}{M.~J.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Vazirani}{V.}%
-     {Umesh~V.}{U.~V.}%
-     {}{}%
-     {}{}}%
-  }
-  \list{publisher}{1}{%
-    {MIT Press}%
-  }
-  \strng{namehash}{KMJVUV1}
-  \strng{fullhash}{KMJVUV1}
-  \field{sortinit}{K}
-  \field{isbn}{0-262-11193-4}
-  \field{title}{An Introduction to Computational Learning Theory}
-  \list{location}{1}{%
-    {Cambridge, MA, USA}%
-  }
-  \field{year}{1994}
-\endentry
+  \entry{Kearns94}{book}{}
+    \name{author}{2}{}{%
+      {{hash=KMJ}{%
+         family={Kearns},
+         family_i={K\bibinitperiod},
+         given={Michael\bibnamedelima J.},
+         given_i={M\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=VUV}{%
+         family={Vazirani},
+         family_i={V\bibinitperiod},
+         given={Umesh\bibnamedelima V.},
+         given_i={U\bibinitperiod\bibinitdelim V\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {MIT Press}%
+    }
+    \strng{namehash}{KMJVUV1}
+    \strng{fullhash}{KMJVUV1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{isbn}{0-262-11193-4}
+    \field{title}{An Introduction to Computational Learning Theory}
+    \list{location}{1}{%
+      {Cambridge, MA, USA}%
+    }
+    \field{year}{1994}
+  \endentry
 
-\entry{Cortes08}{article}{}
-  \name{author}{3}{}{%
-    {{}%
-     {Kontorovich}{K.}%
-     {Leonid~(Aryeh)}{L.~A.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Cortes}{C.}%
-     {Corinna}{C.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Mohri}{M.}%
-     {Mehryar}{M.}%
-     {}{}%
-     {}{}}%
-  }
-  \list{publisher}{1}{%
-    {Elsevier Science Publishers Ltd.}%
-  }
-  \strng{namehash}{KLACCMM1}
-  \strng{fullhash}{KLACCMM1}
-  \field{sortinit}{K}
-  \verb{doi}
-  \verb 10.1016/j.tcs.2008.06.037
-  \endverb
-  \field{issn}{0304-3975}
-  \field{number}{3}
-  \field{pages}{223\bibrangedash 236}
-  \field{title}{Kernel Methods for Learning Languages}
-  \verb{url}
-  \verb http://dx.doi.org/10.1016/j.tcs.2008.06.037
-  \endverb
-  \field{volume}{405}
-  \list{location}{1}{%
-    {Essex, UK}%
-  }
-  \field{journaltitle}{Theoretical Computer Science}
-  \field{month}{10}
-  \field{year}{2008}
-\endentry
+  \entry{Cortes08}{article}{}
+    \name{author}{3}{}{%
+      {{hash=KLA}{%
+         family={Kontorovich},
+         family_i={K\bibinitperiod},
+         given={Leonid\bibnamedelima (Aryeh)},
+         given_i={L\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=CC}{%
+         family={Cortes},
+         family_i={C\bibinitperiod},
+         given={Corinna},
+         given_i={C\bibinitperiod},
+      }}%
+      {{hash=MM}{%
+         family={Mohri},
+         family_i={M\bibinitperiod},
+         given={Mehryar},
+         given_i={M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier Science Publishers Ltd.}%
+    }
+    \strng{namehash}{KLACCMM1}
+    \strng{fullhash}{KLACCMM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \verb{doi}
+    \verb 10.1016/j.tcs.2008.06.037
+    \endverb
+    \field{issn}{0304-3975}
+    \field{number}{3}
+    \field{pages}{223\bibrangedash 236}
+    \field{title}{Kernel Methods for Learning Languages}
+    \verb{url}
+    \verb http://dx.doi.org/10.1016/j.tcs.2008.06.037
+    \endverb
+    \field{volume}{405}
+    \list{location}{1}{%
+      {Essex, UK}%
+    }
+    \field{journaltitle}{Theoretical Computer Science}
+    \field{month}{10}
+    \field{year}{2008}
+  \endentry
 
-\entry{Kontorovich09}{article}{}
-  \name{author}{2}{}{%
-    {{}%
-     {Kontorovich}{K.}%
-     {Leonid~(Aryeh)}{L.~A.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Nadler}{N.}%
-     {Boaz}{B.}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{KLANB1}
-  \strng{fullhash}{KLANB1}
-  \field{sortinit}{K}
-  \field{pages}{1095\bibrangedash 1129}
-  \field{title}{Universal Kernel-Based Learning with Applications to Regular
+  \entry{Kontorovich09}{article}{}
+    \name{author}{2}{}{%
+      {{hash=KLA}{%
+         family={Kontorovich},
+         family_i={K\bibinitperiod},
+         given={Leonid\bibnamedelima (Aryeh)},
+         given_i={L\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=NB}{%
+         family={Nadler},
+         family_i={N\bibinitperiod},
+         given={Boaz},
+         given_i={B\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KLANB1}
+    \strng{fullhash}{KLANB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{pages}{1095\bibrangedash 1129}
+    \field{title}{Universal Kernel-Based Learning with Applications to Regular
   Languages}
-  \verb{url}
-  \verb http://dl.acm.org/citation.cfm?id=1577069.1577108
-  \endverb
-  \field{volume}{10}
-  \field{journaltitle}{The Journal of Machine Learning Research}
-  \field{month}{06}
-  \field{year}{2009}
-\endentry
+    \verb{url}
+    \verb http://dl.acm.org/citation.cfm?id=1577069.1577108
+    \endverb
+    \field{volume}{10}
+    \field{journaltitle}{The Journal of Machine Learning Research}
+    \field{month}{06}
+    \field{year}{2009}
+  \endentry
 
-\entry{SvmAnotherPracticalGuide14}{misc}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Kumar}{K.}%
-     {Neeraj}{N.}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{KN1}
-  \strng{fullhash}{KN1}
-  \field{sortinit}{K}
-  \verb{url}
-  \verb https://neerajkumar.org/writings/svm/
-  \endverb
-  \field{year}{2014}
-\endentry
+  \entry{SvmAnotherPracticalGuide14}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=KN}{%
+         family={Kumar},
+         family_i={K\bibinitperiod},
+         given={Neeraj},
+         given_i={N\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KN1}
+    \strng{fullhash}{KN1}
+    \field{labelnamesource}{author}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \verb{url}
+    \verb https://neerajkumar.org/writings/svm/
+    \endverb
+    \field{year}{2014}
+  \endentry
 
-\entry{Abbadingo98}{inproceedings}{}
-  \name{author}{3}{}{%
-    {{}%
-     {Lang}{L.}%
-     {Kevin~J.}{K.~J.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Pearlmutter}{P.}%
-     {Barak~A.}{B.~A.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Price}{P.}%
-     {Rodney~A.}{R.~A.}%
-     {}{}%
-     {}{}}%
-  }
-  \list{organization}{1}{%
-    {Proceedings of the 4th International Colloquium on Grammatical Inference,
-  ICGI 1998}%
-  }
-  \list{publisher}{1}{%
-    {Springer-Verlag}%
-  }
-  \strng{namehash}{LKJPBAPRA1}
-  \strng{fullhash}{LKJPBAPRA1}
-  \field{sortinit}{L}
-  \field{pages}{1\bibrangedash 12}
-  \field{title}{Results of the Abbadingo One DFA Learning Competition and a New
-  Evidence Driven State Merging Algorithm}
-  \verb{url}
-  \verb http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.48.7621
-  \endverb
-  \list{location}{1}{%
-    {London, UK}%
-  }
-  \field{month}{05}
-  \field{year}{1998}
-\endentry
+  \entry{Abbadingo98}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=LKJ}{%
+         family={Lang},
+         family_i={L\bibinitperiod},
+         given={Kevin\bibnamedelima J.},
+         given_i={K\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=PBA}{%
+         family={Pearlmutter},
+         family_i={P\bibinitperiod},
+         given={Barak\bibnamedelima A.},
+         given_i={B\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=PRA}{%
+         family={Price},
+         family_i={P\bibinitperiod},
+         given={Rodney\bibnamedelima A.},
+         given_i={R\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {Proceedings of the 4th International Colloquium on Grammatical
+  Inference, ICGI 1998}%
+    }
+    \list{publisher}{1}{%
+      {Springer-Verlag}%
+    }
+    \strng{namehash}{LKJPBAPRA1}
+    \strng{fullhash}{LKJPBAPRA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{pages}{1\bibrangedash 12}
+    \field{title}{Results of the Abbadingo One DFA Learning Competition and a
+  New Evidence Driven State Merging Algorithm}
+    \verb{url}
+    \verb http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.48.7621
+    \endverb
+    \list{location}{1}{%
+      {London, UK}%
+    }
+    \field{month}{05}
+    \field{year}{1998}
+  \endentry
 
-\entry{Levelt08}{book}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Levelt}{L.}%
-     {Willem~J.M.}{W.~J.}%
-     {}{}%
-     {}{}}%
-  }
-  \list{publisher}{1}{%
-    {John Benjamins Publishing Company}%
-  }
-  \strng{namehash}{LWJ1}
-  \strng{fullhash}{LWJ1}
-  \field{sortinit}{L}
-  \verb{doi}
-  \verb 10.1075/z.144
-  \endverb
-  \field{isbn}{9789027290069}
-  \field{title}{Formal Grammars in Linguistics and Psycholinguistics}
-  \field{volume}{I}
-  \field{year}{2008}
-\endentry
+  \entry{Levelt08}{book}{}
+    \name{author}{1}{}{%
+      {{hash=LWJ}{%
+         family={Levelt},
+         family_i={L\bibinitperiod},
+         given={Willem\bibnamedelima J.M.},
+         given_i={W\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {John Benjamins Publishing Company}%
+    }
+    \strng{namehash}{LWJ1}
+    \strng{fullhash}{LWJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \verb{doi}
+    \verb 10.1075/z.144
+    \endverb
+    \field{isbn}{9789027290069}
+    \field{title}{Formal Grammars in Linguistics and Psycholinguistics}
+    \field{volume}{I}
+    \field{year}{2008}
+  \endentry
 
-\entry{Mic86a}{incollection}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Michalski}{M.}%
-     {Ryszard~Si}{R.~S.}%
-     {}{}%
-     {}{}}%
-  }
-  \name{editor}{1}{}{%
-    {{}%
-     {Shapiro}{S.}%
-     {Stuart~C.}{S.~C.}%
-     {}{}%
-     {}{}}%
-  }
-  \list{publisher}{1}{%
-    {Wiley--Interscience Publications}%
-  }
-  \strng{namehash}{MRS1}
-  \strng{fullhash}{MRS1}
-  \field{sortinit}{M}
-  \field{booktitle}{Encyclopedia of Artificial Intelligence}
-  \field{pages}{185\bibrangedash 194}
-  \field{title}{Concept learning}
-  \field{volume}{I}
-  \field{month}{01}
-  \field{year}{1986}
-\endentry
+  \entry{Mic86a}{incollection}{}
+    \name{author}{1}{}{%
+      {{hash=MRS}{%
+         family={Michalski},
+         family_i={M\bibinitperiod},
+         given={Ryszard\bibnamedelima Si},
+         given_i={R\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \name{editor}{1}{}{%
+      {{hash=SSC}{%
+         family={Shapiro},
+         family_i={S\bibinitperiod},
+         given={Stuart\bibnamedelima C.},
+         given_i={S\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Wiley--Interscience Publications}%
+    }
+    \strng{namehash}{MRS1}
+    \strng{fullhash}{MRS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{booktitle}{Encyclopedia of Artificial Intelligence}
+    \field{pages}{185\bibrangedash 194}
+    \field{title}{Concept learning}
+    \field{volume}{I}
+    \field{month}{01}
+    \field{year}{1986}
+  \endentry
 
-\entry{Mic93}{incollection}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Michalski}{M.}%
-     {Ryszard~Si}{R.~S.}%
-     {}{}%
-     {}{}}%
-  }
-  \list{publisher}{1}{%
-    {Morgan Kauffman Inc.}%
-  }
-  \strng{namehash}{MRS1}
-  \strng{fullhash}{MRS1}
-  \field{sortinit}{M}
-  \field{booktitle}{Machine Learning: a Multistrategy Approach}
-  \field{title}{Inferential theory of learning: Developing fondations for
+  \entry{Mic93}{incollection}{}
+    \name{author}{1}{}{%
+      {{hash=MRS}{%
+         family={Michalski},
+         family_i={M\bibinitperiod},
+         given={Ryszard\bibnamedelima Si},
+         given_i={R\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Morgan Kauffman Inc.}%
+    }
+    \strng{namehash}{MRS1}
+    \strng{fullhash}{MRS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{booktitle}{Machine Learning: a Multistrategy Approach}
+    \field{title}{Inferential theory of learning: Developing fondations for
   multistrategy learning}
-  \field{volume}{IV}
-  \field{year}{1993}
-\endentry
+    \field{volume}{IV}
+    \field{year}{1993}
+  \endentry
 
-\entry{Mic86b}{incollection}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Michalski}{M.}%
-     {Ryszard~Si}{R.~S.}%
-     {}{}%
-     {}{}}%
-  }
-  \name{editor}{3}{}{%
-    {{}%
-     {Michalski}{M.}%
-     {S.~Ryszard}{S.~R.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Carbonell}{C.}%
-     {G.~Jaime}{G.~J.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Mitchell}{M.}%
-     {M.~Tom}{M.~T.}%
-     {}{}%
-     {}{}}%
-  }
-  \list{publisher}{1}{%
-    {Morgan Kaufmann}%
-  }
-  \strng{namehash}{MRS1}
-  \strng{fullhash}{MRS1}
-  \field{sortinit}{M}
-  \field{booktitle}{Machine Learning, an Artificial Intelligence Approach}
-  \field{isbn}{0-934613-00-1}
-  \field{title}{Understanding the nature of learning: Issue and research
+  \entry{Mic86b}{incollection}{}
+    \name{author}{1}{}{%
+      {{hash=MRS}{%
+         family={Michalski},
+         family_i={M\bibinitperiod},
+         given={Ryszard\bibnamedelima Si},
+         given_i={R\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \name{editor}{3}{}{%
+      {{hash=MSR}{%
+         family={Michalski},
+         family_i={M\bibinitperiod},
+         given={S.\bibnamedelima Ryszard},
+         given_i={S\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=CGJ}{%
+         family={Carbonell},
+         family_i={C\bibinitperiod},
+         given={G.\bibnamedelima Jaime},
+         given_i={G\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=MMT}{%
+         family={Mitchell},
+         family_i={M\bibinitperiod},
+         given={M.\bibnamedelima Tom},
+         given_i={M\bibinitperiod\bibinitdelim T\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Morgan Kaufmann}%
+    }
+    \strng{namehash}{MRS1}
+    \strng{fullhash}{MRS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{booktitle}{Machine Learning, an Artificial Intelligence Approach}
+    \field{isbn}{0-934613-00-1}
+    \field{title}{Understanding the nature of learning: Issue and research
   direction}
-  \field{volume}{II}
-  \field{year}{1986}
-\endentry
+    \field{volume}{II}
+    \field{year}{1986}
+  \endentry
 
-\entry{Ner58}{inproceedings}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Nerode}{N.}%
-     {Anil}{A.}%
-     {}{}%
-     {}{}}%
-  }
-  \list{organization}{1}{%
-    {Proceedings of the American Mathematical Society}%
-  }
-  \strng{namehash}{NA1}
-  \strng{fullhash}{NA1}
-  \field{sortinit}{N}
-  \verb{doi}
-  \verb 10.1090/S0002-9939-1958-0135681-9
-  \endverb
-  \field{pages}{541\bibrangedash 544}
-  \field{title}{Linear Automaton Transformations}
-  \field{volume}{9}
-  \field{month}{08}
-  \field{year}{1958}
-\endentry
+  \entry{Ner58}{inproceedings}{}
+    \name{author}{1}{}{%
+      {{hash=NA}{%
+         family={Nerode},
+         family_i={N\bibinitperiod},
+         given={Anil},
+         given_i={A\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {Proceedings of the American Mathematical Society}%
+    }
+    \strng{namehash}{NA1}
+    \strng{fullhash}{NA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{N}
+    \field{sortinithash}{N}
+    \verb{doi}
+    \verb 10.1090/S0002-9939-1958-0135681-9
+    \endverb
+    \field{pages}{541\bibrangedash 544}
+    \field{title}{Linear Automaton Transformations}
+    \field{volume}{9}
+    \field{month}{08}
+    \field{year}{1958}
+  \endentry
 
-\entry{Ng}{unpublished}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Ng}{N.}%
-     {Andrew}{A.}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{NA2}
-  \strng{fullhash}{NA2}
-  \field{sortinit}{N}
-  \field{title}{Support Vector Machines}
-\endentry
+  \entry{Ng}{unpublished}{}
+    \name{author}{1}{}{%
+      {{hash=NA}{%
+         family={Ng},
+         family_i={N\bibinitperiod},
+         given={Andrew},
+         given_i={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{NA2}
+    \strng{fullhash}{NA2}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{N}
+    \field{sortinithash}{N}
+    \field{title}{Support Vector Machines}
+  \endentry
 
-\entry{Nor09}{thesis}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Norton}{N.}%
-     {Daphne}{D.}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{ND1}
-  \strng{fullhash}{ND1}
-  \field{sortinit}{N}
-  \field{pages}{19\bibrangedash 31}
-  \field{title}{Algorithms for testing equivalence of finite automata, with a
+  \entry{Nor09}{thesis}{}
+    \name{author}{1}{}{%
+      {{hash=ND}{%
+         family={Norton},
+         family_i={N\bibinitperiod},
+         given={Daphne},
+         given_i={D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ND1}
+    \strng{fullhash}{ND1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{N}
+    \field{sortinithash}{N}
+    \field{pages}{19\bibrangedash 31}
+    \field{title}{Algorithms for testing equivalence of finite automata, with a
   grading tool for JFLAP}
-  \verb{url}
-  \verb http://scholarworks.rit.edu/theses/6939/
-  \endverb
-  \list{institution}{1}{%
-    {Rochester Institute of Technology}%
-  }
-  \field{type}{mathesis}
-  \field{month}{03}
-  \field{year}{2009}
-\endentry
+    \verb{url}
+    \verb http://scholarworks.rit.edu/theses/6939/
+    \endverb
+    \list{institution}{1}{%
+      {Rochester Institute of Technology}%
+    }
+    \field{type}{mathesis}
+    \field{month}{03}
+    \field{year}{2009}
+  \endentry
 
-\entry{Oncina92}{inproceedings}{}
-  \name{author}{2}{}{%
-    {{}%
-     {Oncina}{O.}%
-     {Jose}{J.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Garcia}{G.}%
-     {Pedro}{P.}%
-     {}{}%
-     {}{}}%
-  }
-  \list{publisher}{1}{%
-    {World Scientific}%
-  }
-  \strng{namehash}{OJGP1}
-  \strng{fullhash}{OJGP1}
-  \field{sortinit}{O}
-  \field{booktitle}{Advances in structural and Syntactic Pattern Recognition}
-  \field{pages}{99\bibrangedash 108}
-  \field{series}{Machine Perception and artificial intelligence}
-  \field{title}{Identifying Regular Languages In Polynomial Time}
-  \verb{url}
-  \verb http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.20.3126
-  \endverb
-  \field{volume}{5}
-  \field{year}{1992}
-\endentry
+  \entry{Oncina92}{inproceedings}{}
+    \name{author}{2}{}{%
+      {{hash=OJ}{%
+         family={Oncina},
+         family_i={O\bibinitperiod},
+         given={Jose},
+         given_i={J\bibinitperiod},
+      }}%
+      {{hash=GP}{%
+         family={Garcia},
+         family_i={G\bibinitperiod},
+         given={Pedro},
+         given_i={P\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {World Scientific}%
+    }
+    \strng{namehash}{OJGP1}
+    \strng{fullhash}{OJGP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{O}
+    \field{sortinithash}{O}
+    \field{booktitle}{Advances in structural and Syntactic Pattern Recognition}
+    \field{pages}{99\bibrangedash 108}
+    \field{series}{Machine Perception and artificial intelligence}
+    \field{title}{Identifying Regular Languages In Polynomial Time}
+    \verb{url}
+    \verb http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.20.3126
+    \endverb
+    \field{volume}{5}
+    \field{year}{1992}
+  \endentry
 
-\entry{Osuna97}{report}{}
-  \name{author}{3}{}{%
-    {{}%
-     {Osuna}{O.}%
-     {Edgar~E.}{E.~E.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Freund}{F.}%
-     {Robert}{R.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Girosi}{G.}%
-     {Federico}{F.}%
-     {}{}%
-     {}{}}%
-  }
-  \list{publisher}{1}{%
-    {Massachusetts Institute of Technology}%
-  }
-  \strng{namehash}{OEEFRGF1}
-  \strng{fullhash}{OEEFRGF1}
-  \field{sortinit}{O}
-  \field{title}{Support Vector Machines: Training and Applications}
-  \verb{url}
-  \verb http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.41.418&rep=rep
-  \verb 1&type=pdf
-  \endverb
-  \list{location}{1}{%
-    {Cambridge, MA, USA}%
-  }
-  \field{type}{techreport}
-  \field{month}{03}
-  \field{year}{1997}
-\endentry
+  \entry{Osuna97}{report}{}
+    \name{author}{3}{}{%
+      {{hash=OEE}{%
+         family={Osuna},
+         family_i={O\bibinitperiod},
+         given={Edgar\bibnamedelima E.},
+         given_i={E\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+      {{hash=FR}{%
+         family={Freund},
+         family_i={F\bibinitperiod},
+         given={Robert},
+         given_i={R\bibinitperiod},
+      }}%
+      {{hash=GF}{%
+         family={Girosi},
+         family_i={G\bibinitperiod},
+         given={Federico},
+         given_i={F\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Massachusetts Institute of Technology}%
+    }
+    \strng{namehash}{OEEFRGF1}
+    \strng{fullhash}{OEEFRGF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{O}
+    \field{sortinithash}{O}
+    \field{title}{Support Vector Machines: Training and Applications}
+    \verb{url}
+    \verb http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.41.418&rep=r
+    \verb ep1&type=pdf
+    \endverb
+    \list{location}{1}{%
+      {Cambridge, MA, USA}%
+    }
+    \field{type}{techreport}
+    \field{month}{03}
+    \field{year}{1997}
+  \endentry
 
-\entry{Pao78}{article}{}
-  \name{author}{2}{}{%
-    {{}%
-     {Pao}{P.}%
-     {T.}{T.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {J.W.}{J.}%
-     {Carr}{C.}%
-     {}{}%
-     {}{}}%
-  }
-  \list{publisher}{1}{%
-    {Elsevier}%
-  }
-  \strng{namehash}{PTJC1}
-  \strng{fullhash}{PTJC1}
-  \field{sortinit}{P}
-  \verb{doi}
-  \verb 10.1016/0096-0551(78)90006-1
-  \endverb
-  \field{number}{1}
-  \field{pages}{53\bibrangedash 64}
-  \field{title}{A solution of the syntactical induction-inference problem for
+  \entry{Pao78}{article}{}
+    \name{author}{2}{}{%
+      {{hash=PT}{%
+         family={Pao},
+         family_i={P\bibinitperiod},
+         given={T.},
+         given_i={T\bibinitperiod},
+      }}%
+      {{hash=JC}{%
+         family={J.W.},
+         family_i={J\bibinitperiod},
+         given={Carr},
+         given_i={C\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{PTJC1}
+    \strng{fullhash}{PTJC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \verb{doi}
+    \verb 10.1016/0096-0551(78)90006-1
+    \endverb
+    \field{number}{1}
+    \field{pages}{53\bibrangedash 64}
+    \field{title}{A solution of the syntactical induction-inference problem for
   regular languages}
-  \field{volume}{3}
-  \field{journaltitle}{Computer Languages}
-  \field{month}{06}
-  \field{year}{1978}
-\endentry
+    \field{volume}{3}
+    \field{journaltitle}{Computer Languages}
+    \field{month}{06}
+    \field{year}{1978}
+  \endentry
 
-\entry{Schapire93}{article}{}
-  \name{author}{2}{}{%
-    {{}%
-     {Rivest}{R.}%
-     {Ronald~L.}{R.~L.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Schapire}{S.}%
-     {Robert~E.}{R.~E.}%
-     {}{}%
-     {}{}}%
-  }
-  \list{publisher}{1}{%
-    {Academic Press, Inc.}%
-  }
-  \strng{namehash}{RRLSRE1}
-  \strng{fullhash}{RRLSRE1}
-  \field{sortinit}{R}
-  \verb{doi}
-  \verb 10.1006/inco.1993.1021
-  \endverb
-  \field{issn}{0890-5401}
-  \field{pages}{299\bibrangedash 347}
-  \field{title}{Inference of Finite Automata Using Homing Sequences}
-  \field{volume}{103}
-  \field{journaltitle}{Information and Computation}
-  \field{month}{04}
-  \field{year}{1993}
-\endentry
+  \entry{Schapire93}{article}{}
+    \name{author}{2}{}{%
+      {{hash=RRL}{%
+         family={Rivest},
+         family_i={R\bibinitperiod},
+         given={Ronald\bibnamedelima L.},
+         given_i={R\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+      {{hash=SRE}{%
+         family={Schapire},
+         family_i={S\bibinitperiod},
+         given={Robert\bibnamedelima E.},
+         given_i={R\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Academic Press, Inc.}%
+    }
+    \strng{namehash}{RRLSRE1}
+    \strng{fullhash}{RRLSRE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \verb{doi}
+    \verb 10.1006/inco.1993.1021
+    \endverb
+    \field{issn}{0890-5401}
+    \field{pages}{299\bibrangedash 347}
+    \field{title}{Inference of Finite Automata Using Homing Sequences}
+    \field{volume}{103}
+    \field{journaltitle}{Information and Computation}
+    \field{month}{04}
+    \field{year}{1993}
+  \endentry
 
-\entry{Rob47}{article}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Robinson}{R.}%
-     {M.~Raphael}{M.~R.}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{RMR1}
-  \strng{fullhash}{RMR1}
-  \field{sortinit}{R}
-  \verb{doi}
-  \verb 10.1090/S0002-9904-1947-08911-4
-  \endverb
-  \field{pages}{925\bibrangedash 942}
-  \field{title}{Primitive recursive functions}
-  \field{volume}{53}
-  \field{journaltitle}{Bulletin of the American Mathematical Society}
-  \field{year}{1947}
-\endentry
+  \entry{Rob47}{article}{}
+    \name{author}{1}{}{%
+      {{hash=RMR}{%
+         family={Robinson},
+         family_i={R\bibinitperiod},
+         given={M.\bibnamedelima Raphael},
+         given_i={M\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{RMR1}
+    \strng{fullhash}{RMR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \verb{doi}
+    \verb 10.1090/S0002-9904-1947-08911-4
+    \endverb
+    \field{pages}{925\bibrangedash 942}
+    \field{title}{Primitive recursive functions}
+    \field{volume}{53}
+    \field{journaltitle}{Bulletin of the American Mathematical Society}
+    \field{year}{1947}
+  \endentry
 
-\entry{RBF10}{proceedings}{}
-  \name{editor}{2}{}{%
-    {{}%
-     {Sempere}{S.}%
-     {José}{J.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Garcia}{G.}%
-     {Pedro}{P.}%
-     {}{}%
-     {}{}}%
-  }
-  \list{organization}{1}{%
-    {Proceedings of the 10th International Colloquium on Grammatical Inference,
-  ICGI 2010}%
-  }
-  \strng{namehash}{SJGP1}
-  \strng{fullhash}{SJGP1}
-  \field{sortinit}{S}
-  \field{title}{Grammatical Inference: Theoretical Results and Applications}
-  \field{month}{09}
-  \field{year}{2010}
-\endentry
+  \entry{RBF10}{proceedings}{}
+    \name{editor}{2}{}{%
+      {{hash=SJ}{%
+         family={Sempere},
+         family_i={S\bibinitperiod},
+         given={José},
+         given_i={J\bibinitperiod},
+      }}%
+      {{hash=GP}{%
+         family={Garcia},
+         family_i={G\bibinitperiod},
+         given={Pedro},
+         given_i={P\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {Proceedings of the 10th International Colloquium on Grammatical
+  Inference, ICGI 2010}%
+    }
+    \strng{namehash}{SJGP1}
+    \strng{fullhash}{SJGP1}
+    \field{labelnamesource}{editor}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{title}{Grammatical Inference: Theoretical Results and Applications}
+    \field{month}{09}
+    \field{year}{2010}
+  \endentry
 
-\entry{Cristianini04}{book}{}
-  \name{author}{2}{}{%
-    {{}%
-     {Shawe-Taylor}{S.-T.}%
-     {John}{J.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Cristianini}{C.}%
-     {Nello}{N.}%
-     {}{}%
-     {}{}}%
-  }
-  \list{publisher}{1}{%
-    {Cambridge University Press}%
-  }
-  \strng{namehash}{STJCN1}
-  \strng{fullhash}{STJCN1}
-  \field{sortinit}{S}
-  \field{isbn}{0521813972}
-  \field{title}{Kernel Methods for Pattern Analysis}
-  \list{location}{1}{%
-    {New York, NY, USA}%
-  }
-  \field{year}{2004}
-\endentry
+  \entry{Cristianini04}{book}{}
+    \name{author}{2}{}{%
+      {{hash=STJ}{%
+         family={Shawe-Taylor},
+         family_i={S\bibinitperiod-T\bibinitperiod},
+         given={John},
+         given_i={J\bibinitperiod},
+      }}%
+      {{hash=CN}{%
+         family={Cristianini},
+         family_i={C\bibinitperiod},
+         given={Nello},
+         given_i={N\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Cambridge University Press}%
+    }
+    \strng{namehash}{STJCN1}
+    \strng{fullhash}{STJCN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{isbn}{0521813972}
+    \field{title}{Kernel Methods for Pattern Analysis}
+    \list{location}{1}{%
+      {New York, NY, USA}%
+    }
+    \field{year}{2004}
+  \endentry
 
-\entry{Sim83}{incollection}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Simon}{S.}%
-     {Herbert~A.}{H.~A.}%
-     {}{}%
-     {}{}}%
-  }
-  \name{editor}{3}{}{%
-    {{}%
-     {Mitchell}{M.}%
-     {}{}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Michalski}{M.}%
-     {}{}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Carbonel}{C.}%
-     {}{}%
-     {}{}%
-     {}{}}%
-  }
-  \list{publisher}{1}{%
-    {Tioga Publishing Company}%
-  }
-  \strng{namehash}{SHA1}
-  \strng{fullhash}{SHA1}
-  \field{sortinit}{S}
-  \field{booktitle}{Machine Learning, an Artificial Intelligence Approach}
-  \field{pages}{25\bibrangedash 37}
-  \field{title}{Why should machine learn?}
-  \field{volume}{I}
-  \field{year}{1983}
-\endentry
+  \entry{Sim83}{incollection}{}
+    \name{author}{1}{}{%
+      {{hash=SHA}{%
+         family={Simon},
+         family_i={S\bibinitperiod},
+         given={Herbert\bibnamedelima A.},
+         given_i={H\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \name{editor}{3}{}{%
+      {{hash=M}{%
+         family={Mitchell},
+         family_i={M\bibinitperiod},
+      }}%
+      {{hash=M}{%
+         family={Michalski},
+         family_i={M\bibinitperiod},
+      }}%
+      {{hash=C}{%
+         family={Carbonel},
+         family_i={C\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Tioga Publishing Company}%
+    }
+    \strng{namehash}{SHA1}
+    \strng{fullhash}{SHA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{booktitle}{Machine Learning, an Artificial Intelligence Approach}
+    \field{pages}{25\bibrangedash 37}
+    \field{title}{Why should machine learn?}
+    \field{volume}{I}
+    \field{year}{1983}
+  \endentry
 
-\entry{SteffenTTT14}{incollection}{}
-  \name{author}{3}{}{%
-    {{}%
-     {Steffen}{S.}%
-     {Bernhard}{B.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Howar}{H.}%
-     {Falk~M.}{F.~M.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Isberner}{I.}%
-     {Malte}{M.}%
-     {}{}%
-     {}{}}%
-  }
-  \name{editor}{2}{}{%
-    {{}%
-     {Bonakdarpour}{B.}%
-     {}{}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Smolka}{S.}%
-     {}{}%
-     {}{}%
-     {}{}}%
-  }
-  \list{publisher}{1}{%
-    {Springer}%
-  }
-  \strng{namehash}{SBHFMIM1}
-  \strng{fullhash}{SBHFMIM1}
-  \field{sortinit}{S}
-  \field{booktitle}{Runtime Verification}
-  \verb{doi}
-  \verb 10.1007/978-3-319-11164-3
-  \endverb
-  \field{isbn}{978-3-319-11163-6}
-  \field{pages}{307\bibrangedash 322}
-  \field{series}{Lecture Notes in Computer Science}
-  \field{title}{The TTT Algorithm: A Redundancy Free Approach to Active
+  \entry{SteffenTTT14}{incollection}{}
+    \name{author}{3}{}{%
+      {{hash=SB}{%
+         family={Steffen},
+         family_i={S\bibinitperiod},
+         given={Bernhard},
+         given_i={B\bibinitperiod},
+      }}%
+      {{hash=HFM}{%
+         family={Howar},
+         family_i={H\bibinitperiod},
+         given={Falk\bibnamedelima M.},
+         given_i={F\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=IM}{%
+         family={Isberner},
+         family_i={I\bibinitperiod},
+         given={Malte},
+         given_i={M\bibinitperiod},
+      }}%
+    }
+    \name{editor}{2}{}{%
+      {{hash=B}{%
+         family={Bonakdarpour},
+         family_i={B\bibinitperiod},
+      }}%
+      {{hash=S}{%
+         family={Smolka},
+         family_i={S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{SBHFMIM1}
+    \strng{fullhash}{SBHFMIM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{booktitle}{Runtime Verification}
+    \verb{doi}
+    \verb 10.1007/978-3-319-11164-3
+    \endverb
+    \field{isbn}{978-3-319-11163-6}
+    \field{pages}{307\bibrangedash 322}
+    \field{series}{Lecture Notes in Computer Science}
+    \field{title}{The TTT Algorithm: A Redundancy Free Approach to Active
   Automata Learning}
-  \field{volume}{8734}
-  \field{year}{2014}
-\endentry
+    \field{volume}{8734}
+    \field{year}{2014}
+  \endentry
 
-\entry{Stef11}{incollection}{}
-  \name{author}{3}{}{%
-    {{}%
-     {Steffen}{S.}%
-     {Bernhard}{B.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Howar}{H.}%
-     {Falk~M.}{F.~M.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Merten}{M.}%
-     {Mike}{M.}%
-     {}{}%
-     {}{}}%
-  }
-  \name{editor}{2}{}{%
-    {{}%
-     {Bernanrdo}{B.}%
-     {}{}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Issarny}{I.}%
-     {}{}%
-     {}{}%
-     {}{}}%
-  }
-  \list{publisher}{1}{%
-    {Springer Verlag}%
-  }
-  \strng{namehash}{SBHFMMM1}
-  \strng{fullhash}{SBHFMMM1}
-  \field{sortinit}{S}
-  \field{booktitle}{Formal Methods for Eternal Networked Software Systems}
-  \verb{doi}
-  \verb 10.1007/978-3-642-21455-4_8
-  \endverb
-  \field{isbn}{978-3-642-21455-4}
-  \field{pages}{256\bibrangedash 259}
-  \field{series}{Lecture Notes in Computer Science}
-  \field{title}{Introduction to Active Automata Learning from a Practical
+  \entry{Stef11}{incollection}{}
+    \name{author}{3}{}{%
+      {{hash=SB}{%
+         family={Steffen},
+         family_i={S\bibinitperiod},
+         given={Bernhard},
+         given_i={B\bibinitperiod},
+      }}%
+      {{hash=HFM}{%
+         family={Howar},
+         family_i={H\bibinitperiod},
+         given={Falk\bibnamedelima M.},
+         given_i={F\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=MM}{%
+         family={Merten},
+         family_i={M\bibinitperiod},
+         given={Mike},
+         given_i={M\bibinitperiod},
+      }}%
+    }
+    \name{editor}{2}{}{%
+      {{hash=B}{%
+         family={Bernanrdo},
+         family_i={B\bibinitperiod},
+      }}%
+      {{hash=I}{%
+         family={Issarny},
+         family_i={I\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer Verlag}%
+    }
+    \strng{namehash}{SBHFMMM1}
+    \strng{fullhash}{SBHFMMM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{booktitle}{Formal Methods for Eternal Networked Software Systems}
+    \verb{doi}
+    \verb 10.1007/978-3-642-21455-4_8
+    \endverb
+    \field{isbn}{978-3-642-21455-4}
+    \field{pages}{256\bibrangedash 259}
+    \field{series}{Lecture Notes in Computer Science}
+    \field{title}{Introduction to Active Automata Learning from a Practical
   Perspective}
-  \field{volume}{6659}
-  \field{year}{2011}
-\endentry
+    \field{volume}{6659}
+    \field{year}{2011}
+  \endentry
 
-\entry{StefCounterexample14}{inproceedings}{}
-  \name{author}{2}{}{%
-    {{}%
-     {Steffen}{S.}%
-     {Bernhard}{B.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Isberner}{I.}%
-     {Malte}{M.}%
-     {}{}%
-     {}{}}%
-  }
-  \name{editor}{3}{}{%
-    {{}%
-     {Clark}{C.}%
-     {A.}{A.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Kanazawa}{K.}%
-     {M.}{M.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Yoshinaka}{Y.}%
-     {R.}{R.}%
-     {}{}%
-     {}{}}%
-  }
-  \list{organization}{1}{%
-    {Proceedings of the International Conference on Grammatical Inference, ICGI
-  2014}%
-  }
-  \strng{namehash}{SBIM1}
-  \strng{fullhash}{SBIM1}
-  \field{sortinit}{S}
-  \field{pages}{79\bibrangedash 93}
-  \field{title}{An Abstract Framework for Counterexample Analysis in Active
+  \entry{StefCounterexample14}{inproceedings}{}
+    \name{author}{2}{}{%
+      {{hash=SB}{%
+         family={Steffen},
+         family_i={S\bibinitperiod},
+         given={Bernhard},
+         given_i={B\bibinitperiod},
+      }}%
+      {{hash=IM}{%
+         family={Isberner},
+         family_i={I\bibinitperiod},
+         given={Malte},
+         given_i={M\bibinitperiod},
+      }}%
+    }
+    \name{editor}{3}{}{%
+      {{hash=CA}{%
+         family={Clark},
+         family_i={C\bibinitperiod},
+         given={A.},
+         given_i={A\bibinitperiod},
+      }}%
+      {{hash=KM}{%
+         family={Kanazawa},
+         family_i={K\bibinitperiod},
+         given={M.},
+         given_i={M\bibinitperiod},
+      }}%
+      {{hash=YR}{%
+         family={Yoshinaka},
+         family_i={Y\bibinitperiod},
+         given={R.},
+         given_i={R\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {Proceedings of the International Conference on Grammatical Inference,
+  ICGI 2014}%
+    }
+    \strng{namehash}{SBIM1}
+    \strng{fullhash}{SBIM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{pages}{79\bibrangedash 93}
+    \field{title}{An Abstract Framework for Counterexample Analysis in Active
   Automata Learning}
-  \verb{url}
-  \verb http://jmlr.org/proceedings/papers/v34/isberner14a.pdf
-  \endverb
-  \field{volume}{34}
-  \list{location}{1}{%
-    {Kyoto, Japan}%
-  }
-  \field{month}{09}
-  \field{year}{2014}
-\endentry
+    \verb{url}
+    \verb http://jmlr.org/proceedings/papers/v34/isberner14a.pdf
+    \endverb
+    \field{volume}{34}
+    \list{location}{1}{%
+      {Kyoto, Japan}%
+    }
+    \field{month}{09}
+    \field{year}{2014}
+  \endentry
 
-\entry{Val84}{article}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Valiant}{V.}%
-     {L.G.}{L.}%
-     {}{}%
-     {}{}}%
-  }
-  \list{publisher}{1}{%
-    {Waltz David}%
-  }
-  \strng{namehash}{VL1}
-  \strng{fullhash}{VL1}
-  \field{sortinit}{V}
-  \verb{doi}
-  \verb 10.1145/1968.1972
-  \endverb
-  \field{number}{11}
-  \field{pages}{1134\bibrangedash 1142}
-  \field{title}{A theory of the learnable}
-  \field{volume}{27}
-  \field{journaltitle}{Information and Control}
-  \field{month}{11}
-  \field{year}{1984}
-\endentry
+  \entry{Val84}{article}{}
+    \name{author}{1}{}{%
+      {{hash=VL}{%
+         family={Valiant},
+         family_i={V\bibinitperiod},
+         given={L.G.},
+         given_i={L\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Waltz David}%
+    }
+    \strng{namehash}{VL1}
+    \strng{fullhash}{VL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{V}
+    \field{sortinithash}{V}
+    \verb{doi}
+    \verb 10.1145/1968.1972
+    \endverb
+    \field{number}{11}
+    \field{pages}{1134\bibrangedash 1142}
+    \field{title}{A theory of the learnable}
+    \field{volume}{27}
+    \field{journaltitle}{Information and Control}
+    \field{month}{11}
+    \field{year}{1984}
+  \endentry
 
-\entry{Vapnik82}{book}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Vapnik}{V.}%
-     {Vladimir~N.}{V.~N.}%
-     {}{}%
-     {}{}}%
-  }
-  \list{publisher}{1}{%
-    {Springer-Verlag}%
-  }
-  \strng{namehash}{VVN1}
-  \strng{fullhash}{VVN1}
-  \field{sortinit}{V}
-  \field{isbn}{0387907335}
-  \field{title}{Estimation of Dependences Based on Empirical Data}
-  \list{location}{1}{%
-    {New York, NY, USA}%
-  }
-  \field{year}{1982}
-\endentry
+  \entry{Vapnik82}{book}{}
+    \name{author}{1}{}{%
+      {{hash=VVN}{%
+         family={Vapnik},
+         family_i={V\bibinitperiod},
+         given={Vladimir\bibnamedelima N.},
+         given_i={V\bibinitperiod\bibinitdelim N\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer-Verlag}%
+    }
+    \strng{namehash}{VVN1}
+    \strng{fullhash}{VVN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{V}
+    \field{sortinithash}{V}
+    \field{isbn}{0387907335}
+    \field{title}{Estimation of Dependences Based on Empirical Data}
+    \list{location}{1}{%
+      {New York, NY, USA}%
+    }
+    \field{year}{1982}
+  \endentry
 
-\entry{Vapnik95}{book}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Vapnik}{V.}%
-     {Vladimir~N.}{V.~N.}%
-     {}{}%
-     {}{}}%
-  }
-  \name{editor}{2}{}{%
-    {{}%
-     {Jordan}{J.}%
-     {M.}{M.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Lauritzen}{L.}%
-     {Steffen~L.}{S.~L.}%
-     {}{}%
-     {}{}}%
-  }
-  \list{publisher}{1}{%
-    {Springer-Verlag}%
-  }
-  \strng{namehash}{VVN1}
-  \strng{fullhash}{VVN1}
-  \field{sortinit}{V}
-  \field{isbn}{0-387-94559-8}
-  \field{title}{The nature of statistical learning theory}
-  \list{location}{1}{%
-    {New York, NY, USA}%
-  }
-  \field{year}{1995}
-\endentry
+  \entry{Vapnik95}{book}{}
+    \name{author}{1}{}{%
+      {{hash=VVN}{%
+         family={Vapnik},
+         family_i={V\bibinitperiod},
+         given={Vladimir\bibnamedelima N.},
+         given_i={V\bibinitperiod\bibinitdelim N\bibinitperiod},
+      }}%
+    }
+    \name{editor}{2}{}{%
+      {{hash=JM}{%
+         family={Jordan},
+         family_i={J\bibinitperiod},
+         given={M.},
+         given_i={M\bibinitperiod},
+      }}%
+      {{hash=LSL}{%
+         family={Lauritzen},
+         family_i={L\bibinitperiod},
+         given={Steffen\bibnamedelima L.},
+         given_i={S\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer-Verlag}%
+    }
+    \strng{namehash}{VVN1}
+    \strng{fullhash}{VVN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{V}
+    \field{sortinithash}{V}
+    \field{isbn}{0-387-94559-8}
+    \field{title}{The nature of statistical learning theory}
+    \list{location}{1}{%
+      {New York, NY, USA}%
+    }
+    \field{year}{1995}
+  \endentry
 
-\entry{Bogdanov08}{inproceedings}{}
-  \name{author}{3}{}{%
-    {{}%
-     {Walkinshaw}{W.}%
-     {Neil}{N.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Bogdanov}{B.}%
-     {Kirill}{K.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Johnson}{J.}%
-     {Ken}{K.}%
-     {}{}%
-     {}{}}%
-  }
-  \list{publisher}{1}{%
-    {Springer-Verlag}%
-  }
-  \strng{namehash}{WNBKJK1}
-  \strng{fullhash}{WNBKJK1}
-  \field{sortinit}{W}
-  \field{booktitle}{Proceedings of the 9th International Colloquium on
+  \entry{Bogdanov08}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=WN}{%
+         family={Walkinshaw},
+         family_i={W\bibinitperiod},
+         given={Neil},
+         given_i={N\bibinitperiod},
+      }}%
+      {{hash=BK}{%
+         family={Bogdanov},
+         family_i={B\bibinitperiod},
+         given={Kirill},
+         given_i={K\bibinitperiod},
+      }}%
+      {{hash=JK}{%
+         family={Johnson},
+         family_i={J\bibinitperiod},
+         given={Ken},
+         given_i={K\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer-Verlag}%
+    }
+    \strng{namehash}{WNBKJK1}
+    \strng{fullhash}{WNBKJK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{booktitle}{Proceedings of the 9th International Colloquium on
   Grammatical Inference: Algorithms and Applications}
-  \verb{doi}
-  \verb 10.1007/978-3-540-88009-7_20
-  \endverb
-  \field{isbn}{978-3-540-88008-0}
-  \field{pages}{252\bibrangedash 265}
-  \field{series}{ICGI '08}
-  \field{title}{Evaluation and Comparison of Inferred Regular Grammars}
-  \verb{url}
-  \verb http://dx.doi.org/10.1007/978-3-540-88009-7_20
-  \endverb
-  \list{location}{1}{%
-    {Saint-Malo, France}%
-  }
-  \field{year}{2008}
-  \warn{\item Can't use 'location' + 'address'}
-\endentry
+    \verb{doi}
+    \verb 10.1007/978-3-540-88009-7_20
+    \endverb
+    \field{isbn}{978-3-540-88008-0}
+    \field{pages}{252\bibrangedash 265}
+    \field{series}{ICGI '08}
+    \field{title}{Evaluation and Comparison of Inferred Regular Grammars}
+    \verb{url}
+    \verb http://dx.doi.org/10.1007/978-3-540-88009-7_20
+    \endverb
+    \list{location}{1}{%
+      {Saint-Malo, France}%
+    }
+    \field{year}{2008}
+    \warn{\item Can't use 'location' + 'address'}
+  \endentry
 
-\entry{Zhang05}{inproceedings}{}
-  \name{author}{6}{}{%
-    {{}%
-     {Zhuang}{Z.}%
-     {Dong}{D.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Zang}{Z.}%
-     {Benyu}{B.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Yang}{Y.}%
-     {Qiang}{Q.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Yan}{Y.}%
-     {Jun}{J.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Chen}{C.}%
-     {Zheng}{Z.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Chen}{C.}%
-     {Ying}{Y.}%
-     {}{}%
-     {}{}}%
-  }
-  \list{organization}{1}{%
-    {ICDM '05 Proceedings of the Fifth IEEE International Conference on Data
+  \entry{Zhang05}{inproceedings}{}
+    \name{author}{6}{}{%
+      {{hash=ZD}{%
+         family={Zhuang},
+         family_i={Z\bibinitperiod},
+         given={Dong},
+         given_i={D\bibinitperiod},
+      }}%
+      {{hash=ZB}{%
+         family={Zang},
+         family_i={Z\bibinitperiod},
+         given={Benyu},
+         given_i={B\bibinitperiod},
+      }}%
+      {{hash=YQ}{%
+         family={Yang},
+         family_i={Y\bibinitperiod},
+         given={Qiang},
+         given_i={Q\bibinitperiod},
+      }}%
+      {{hash=YJ}{%
+         family={Yan},
+         family_i={Y\bibinitperiod},
+         given={Jun},
+         given_i={J\bibinitperiod},
+      }}%
+      {{hash=CZ}{%
+         family={Chen},
+         family_i={C\bibinitperiod},
+         given={Zheng},
+         given_i={Z\bibinitperiod},
+      }}%
+      {{hash=CY}{%
+         family={Chen},
+         family_i={C\bibinitperiod},
+         given={Ying},
+         given_i={Y\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {ICDM '05 Proceedings of the Fifth IEEE International Conference on Data
   Mining}%
-  }
-  \strng{namehash}{ZD+1}
-  \strng{fullhash}{ZDZBYQYJCZCY1}
-  \field{sortinit}{Z}
-  \verb{doi}
-  \verb 10.1109/ICDM.2005.56
-  \endverb
-  \field{pages}{538\bibrangedash 545}
-  \field{title}{Efficient Text Classification by Weighted Proximal SVM}
-  \field{month}{11}
-  \field{year}{2005}
-\endentry
-
-\lossort
-\endlossort
-
+    }
+    \strng{namehash}{ZD+1}
+    \strng{fullhash}{ZDZBYQYJCZCY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{Z}
+    \field{sortinithash}{Z}
+    \verb{doi}
+    \verb 10.1109/ICDM.2005.56
+    \endverb
+    \field{pages}{538\bibrangedash 545}
+    \field{title}{Efficient Text Classification by Weighted Proximal SVM}
+    \field{month}{11}
+    \field{year}{2005}
+  \endentry
+\endsortlist
 \endinput
