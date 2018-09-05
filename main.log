@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Debian) (preloaded format=xelatex 2017.11.14)  15 NOV 2017 03:28
+This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Debian) (preloaded format=xelatex 2017.11.14)  5 SEP 2018 17:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1470,9 +1470,6 @@ LaTeX Warning: Label `eq:softvincd' multiply defined.
 
 LaTeX Warning: Label `eq:softvind2' multiply defined.
 
-
-LaTeX Warning: Label `app:due' multiply defined.
-
 )
 \openout1 = `main.aux'.
 
@@ -1991,17 +1988,17 @@ LaTeX Warning: Command \textless invalid in math mode on input line 33.
 LaTeX Warning: Command \textless invalid in math mode on input line 34.
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 35.
-
-
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [21]
+
+LaTeX Warning: Command \textless invalid in math mode on input line 35.
+
 LaTeX Font Info:    Try loading font information for U+euf on input line 43.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
 Package acronym Info: Label `acro:MAT' newly defined as it shall be overridden
@@ -2946,10 +2943,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 44729 strings out of 493591
- 832072 string characters out of 6145589
- 1113898 words of memory out of 5000000
- 47455 multiletter control sequences out of 15000+600000
+ 44731 strings out of 493591
+ 832090 string characters out of 6145589
+ 1113899 words of memory out of 5000000
+ 47457 multiletter control sequences out of 15000+600000
  17878 words of font info for 105 fonts, out of 8000000 for 9000
  1347 hyphenation exceptions out of 8191
  55i,20n,92p,10370b,5209s stack positions out of 5000i,500n,10000p,200000b,80000s

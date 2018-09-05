@@ -42,7 +42,7 @@ E' possibile trovare una caratterizzazione alternativa ma analoga del problema i
 \begin{description}
 \item[Presentazione delle istanze]Se l'insieme di istanze disponibili per l'algoritmo d'inferenza induttiva regolare, S , per apprendere una \ac{DFA}  target $A$ sono tali che $\forall x \in S \,\lambda^{A}(x) = 1$ si parla di \textbf{presentazione positiva} cioè tutti gli esempi(istanze) sono accettanti nel \ac{DFA} $A$. In questo caso si scrive $S=S^{+}$. Questo \textit{setting} è  denominato \textit{text learning}\cite[p. 217]{DeLaHiguera10}. Si parla invece di \textbf{presentazione completa} quando $S=S^{+} \cup S^{-}$ cioè esistono sia esempi accettanti che rigettanti in simboli $\exists x \in S :   \lambda^{A}(x)=1 \land \exists x \in S :   \lambda^{A}(x)=0$. Quest ultimo caso è menzionato come \textit{informed learning} \cite[p. 237]{DeLaHiguera10} .\\
 
-Si effettua un'ulteriore suddivisione del tipo di presentazione in base a come gli esempi vengono presentati all'algoritmo di'inferenza:
+Si effettua un'ulteriore suddivisione del tipo di presentazione in base a come gli esempi vengono presentati all'algoritmo d'inferenza:
 \begin{itemize}
 \item \textbf{Presentazione Given-Data}\\Le istanze sono un insieme finito presentate totalmente fin dall'inizio del processo.
 \item \textbf{Presentazione completa}\\Le istanze (positive o complete) sono una sequenza infinita e sono presentate in successione (in maniera incrementale).  
@@ -52,8 +52,8 @@ Si effettua un'ulteriore suddivisione del tipo di presentazione in base a come g
 
 \begin{teorema*}La classe dei linguaggi ricorsivi identificabili al limite da un algoritmo di inferenza grammaticale , è anche identificabile al limite da un algoritmo di induzione per numerazione
 \end{teorema*} 
- L'induzione per numerazione cerca ad ogni iterazione dell'algoritmo tra le descrizioni di tutti i concetti consistenti con gli esempi in ingresso secondo qualche criterio di preferenza. Tali descrizioni sono tipicamente un insieme di cardinalità infinita e ciò rende questo metodo impraticabile.\\
- Per algoritmi induttivi \textit{concreti} si intende invece quegli algoritmi efficientemente implementabili. Tra quest possiamo distinguere tra:
+ L'induzione per numerazione cerca ad ogni iterazione dell'algoritmo tra le descrizioni di tutti i concetti consistenti con gli esempi in ingresso e ne sceglie uno secondo qualche criterio di preferenza. Tali descrizioni sono tipicamente un insieme di cardinalità infinita e ciò rende questo metodo impraticabile.\\
+ Per algoritmi induttivi \textit{concreti} si intende invece quegli algoritmi efficientemente implementabili. Tra questi possiamo distinguere tra:
  \begin{itemize}
  \item \textbf{Algoritmi esaustivi}\\
  Sono algoritmi deterministici che sotto opportune condizioni degli esempi d'ingresso garantiscono di trovare il linguaggio target

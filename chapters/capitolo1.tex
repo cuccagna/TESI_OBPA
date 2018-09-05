@@ -148,7 +148,7 @@ In \cite{Mic93} l'inferenza viene considerata come un processo che prende in  In
 \hline 
 \textbf{Input} & $a \in X$ & $a$ è un elemento di $X$ \\
  \hline  
-\multirow{2}*{\textbf{BK}}  &  $\forall x \in X,q(x)$  & Tutti gli elementi di $X$ hanno la proprietà $q$. \\[6ex] \cline{2-3} & $ \forall x \in X,q(x) \implies (a \in X \implies q(a))$ &  Se tutti gli elementi di $X$ hanno la proprietà $q$, allora ogni elemento di $x$, e quindi anche $a$, deve avere la proprietà $q$ \\
+\multirow{2}*{\textbf{BK}}  &  $\forall x \in X,q(x)$  & Tutti gli elementi di $X$ hanno la proprietà $q$. \\[6ex] \cline{2-3} & $ \forall x \in X,q(x) \implies (a \in X \implies q(a))$ &  Se tutti gli elementi di $X$ hanno la proprietà $q$, allora ogni elemento di $X$, e quindi anche $a$, deve avere la proprietà $q$ \\
 \hline 
 \textbf{Output}  &  $q(a)$ & $a$ ha la proprietà $q$ \\
 \hline 
@@ -157,7 +157,7 @@ In \cite{Mic93} l'inferenza viene considerata come un processo che prende in  In
 \label{tab:ded}
 \end{table} \\
 
-\item INDUZIONE tabella \ref{tab:ind} Riferendosi all'equazione fondamentale \eqref{eqn:fond} l'Input è la conseguenza \textit{C} e l'Output è \textit{Q} (l'ipotesi).Si può dimostrare che l'Input è conseguenza logica dell'Output (l'ipotesi) e delle \ac{BK} quindi dato che l'equazione fondamentale \ref{eqn:fond} è rispettata l'inferenza è conclusiva (forte).  Infatti nel processo inferenziale è \emph{false-preserving}  se l'Input fosse falso (\textit{a} non ha la proprietà \textit{q}) allora l'Output avrebbe dovuto essere pure falso. Da rimarcare è che l'Output dell'inferenza induttiva (sia che sia conclusiva che contingente) non ha un valore di verità sempre vero ma può essere vero o falso (anche se l'Input e le \ac{BK} sono vere) da cui deriva il termine ipotesi per connotare l'Output.Essa si basa sull'assunzione che determinate regolarità osservate in un fenomeno continueranno a manifestarsi nella stessa forma anche in futuro e quindi generalizza ciò che è vero per alcune istanze ad un insieme più grande. Invece nell'inferenza deduttiva  conclusiva  è garantito logicamente che l'Output assuma valore di verità vero se l'Input e le \ac{BK} sono pure vere perchè ciò che è vero in generale resta vero in un caso specifico contemplato dalla regola generale. 
+\item INDUZIONE tabella \ref{tab:ind} Riferendosi all'equazione fondamentale \eqref{eqn:fond} l'Input è la conseguenza \textit{C} e l'Output è \textit{Q} (l'ipotesi).Si può dimostrare che l'Input è conseguenza logica dell'Output (l'ipotesi) e delle \ac{BK} quindi dato che l'equazione fondamentale \ref{eqn:fond} è rispettata l'inferenza è conclusiva (forte).  Inoltre il processo inferenziale è \emph{false-preserving},  se l'Input fosse falso (\textit{a} non ha la proprietà \textit{q}) allora l'Output deve essere pure falso. Da rimarcare che l'Output dell'inferenza induttiva (sia che sia conclusiva che contingente) non ha un valore di verità sempre vero ma può essere vero o falso (anche se l'Input e le \ac{BK} sono vere) da cui deriva il termine ipotesi per connotare l'Output.Essa si basa sull'assunzione che determinate regolarità osservate in un fenomeno continueranno a manifestarsi nella stessa forma anche in futuro e quindi generalizza ciò che è vero per alcune istanze ad un insieme più grande. Invece nell'inferenza deduttiva  conclusiva  è garantito logicamente che l'Output assuma valore di verità vero se l'Input e le \ac{BK} sono pure vere perchè ciò che è vero in generale resta vero in un caso specifico contemplato dalla regola generale. 
 
 Nell'esempio riportato le conoscenze di \ac{BK} sono le stesse della deduzione. Tuttavia l'Output(l'ipotesi) è ottenuto tracciando all'indietro la \textit{regola di specializzazione universale}. Quindi l'inferenza consiste nel supporre l'implicazione presente nella regola di specializzazione valida anche nel verso opposto, perciò si dice che l'induzione è una regola d'inferenza all'indietro a la deduzione una regola d'inferenza in avanti.
 \begin{table}[htp]
@@ -167,7 +167,7 @@ Nell'esempio riportato le conoscenze di \ac{BK} sono le stesse della deduzione. 
 \hline 
 \textbf{Input} & $q(a)$ & $a$ ha la proprietà $q$ \\
  \hline  
-\multirow{2}*{\textbf{BK}}  &  $a \in X$  & $a$ è un elemento dell'insieme $X$. \\[6ex] \cline{2-3} & $ \forall x \in X,q(x) \implies (a \in X \implies q(a))$ &  Se tutti gli elementi di $X$ hanno la proprietà $q$, allora ogni elemento di $x$, e quindi anche $a$, deve avere la proprietà $q$ \\
+\multirow{2}*{\textbf{BK}}  &  $a \in X$  & $a$ è un elemento dell'insieme $X$. \\[6ex] \cline{2-3} & $ \forall x \in X,q(x) \implies (a \in X \implies q(a))$ &  Se tutti gli elementi di $X$ hanno la proprietà $q$, allora ogni elemento di $X$, e quindi anche $a$, deve avere la proprietà $q$ \\
 \hline 
 \textbf{Output}  &  $ \forall x \in X,q(x)$ & Tutti gli elementi di $X$ hanno la proprietà $q$ \\
 \hline 
