@@ -10,60 +10,58 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Correlazione tra ipotesi e discrimination tree}}{34}{figure.caption.35}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Correlazione tra ipotesi e discrimination tree}}{35}{figure.caption.35}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces LCA di due nodi}}{35}{figure.caption.37}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.2}{\ignorespaces LCA di due nodi}}{36}{figure.caption.37}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Sfruttare il controesempio}}{37}{figure.caption.38}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Sfruttare il controesempio}}{38}{figure.caption.38}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces DFA ipotesi e corrispondente tabella di osservazione in L*\relax }}{48}{figure.caption.45}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.4}{\ignorespaces DFA ipotesi e corrispondente tabella di osservazione in L*\relax }}{49}{figure.caption.45}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces \emph {Tab. Osservazione L*}}}{48}{subfigure.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces \emph {Tab. Osservazione L*}}}{49}{subfigure.4.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces \emph {DFA ipotesi}.}}{48}{subfigure.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces \emph {DFA ipotesi}.}}{49}{subfigure.4.2}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Discrimination Tree e split di uno stato\relax }}{48}{figure.caption.46}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Discrimination Tree e split di uno stato\relax }}{49}{figure.caption.46}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces \emph {Discrimination Tree}}}{48}{subfigure.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces \emph {Discrimination Tree}}}{49}{subfigure.5.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces \emph {Split}.}}{49}{subfigure.5.2}
-\defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Tre punti shattered nel piano}}{57}{figure.caption.50}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Principio della SRM}}{59}{figure.caption.52}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Sottoinsiemi SRM}}{59}{figure.caption.53}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Lineare separabilità}}{61}{figure.caption.54}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Esempio iperpiano separatore}}{63}{figure.caption.55}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Mapping in feature space}}{72}{figure.caption.61}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Campioni dissimili}}{76}{figure.caption.65}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Campioni simili differenti etichette}}{77}{figure.caption.66}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Campioni simili differenti etichette}}{77}{figure.caption.67}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces \emph {Split}.}}{48}{subfigure.5.2}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Gerarchia di linguaggi}}{92}{figure.caption.75}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Gerarchia di linguaggi}}{59}{figure.caption.53}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Maximal Canonical Automaton}}{96}{figure.caption.79}
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Maximal Canonical Automaton}}{63}{figure.caption.57}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {A.3}{\ignorespaces Prefix Tre Acceptor}}{97}{figure.caption.82}
-\defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Prefix Tre Acceptor}}{64}{figure.caption.60}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {C.1}{\ignorespaces Bias-Varianza trade-off}}{104}{figure.caption.88}
+\addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {C.2}{\ignorespaces Matrice di confusione}}{112}{figure.caption.92}
+\contentsline {figure}{\numberline {C.1}{\ignorespaces Tre punti shattered nel piano}}{73}{figure.caption.67}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {C.2}{\ignorespaces Principio della SRM}}{75}{figure.caption.69}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {C.3}{\ignorespaces Sottoinsiemi SRM}}{75}{figure.caption.70}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {C.4}{\ignorespaces Lineare separabilità}}{77}{figure.caption.71}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {C.5}{\ignorespaces Esempio iperpiano separatore}}{79}{figure.caption.72}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {C.6}{\ignorespaces Mapping in feature space}}{88}{figure.caption.78}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {C.7}{\ignorespaces Campioni dissimili}}{92}{figure.caption.82}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {C.8}{\ignorespaces Campioni simili differenti etichette}}{93}{figure.caption.83}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {C.9}{\ignorespaces Campioni simili differenti etichette}}{93}{figure.caption.84}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {D.1}{\ignorespaces Bias-Varianza trade-off}}{103}{figure.caption.88}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {D.2}{\ignorespaces Matrice di confusione}}{111}{figure.caption.92}
