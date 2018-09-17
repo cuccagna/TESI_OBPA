@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Debian) (preloaded format=xelatex 2017.11.14)  14 SEP 2018 16:39
+This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Debian) (preloaded format=xelatex 2017.11.14)  17 SEP 2018 20:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1637,7 +1637,7 @@ LaTeX Info: Redefining \nameref on input line 133.
 
 File: ./pictures/frontespizio/logo_unipa.png Graphic file (type QTm)
  <use  "./pictures/frontespizio/logo_unipa.png" >
-Overfull \hbox (79.61171pt too wide) in paragraph at lines 167--197
+Overfull \hbox (79.61171pt too wide) in paragraph at lines 169--199
 [] []
  []
 
@@ -1726,7 +1726,7 @@ LaTeX Font Warning: Font shape `EU1/lmr/bx/sc' undefined
 (Font)              using `EU1/lmr/bx/n' instead on input line 10.
 
 
-Overfull \hbox (75.16173pt too wide) in paragraph at lines 18--28
+Overfull \hbox (53.82086pt too wide) in paragraph at lines 19--29
 [][] [] 
  []
 
@@ -2920,7 +2920,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 ]
-Overfull \hbox (7.57083pt too wide) in paragraph at lines 287--287
+Overfull \hbox (7.57083pt too wide) in paragraph at lines 289--289
 \EU1/lmr/m/it/12 mars\EU1/lmr/m/n/12 . New York, NY, USA: Cambridge University 
 Press, 2010. \EU1/lmr/m/sc/12 isbn\EU1/lmr/m/n/12 : 0521763169
  []
@@ -2939,7 +2939,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [117]
-Overfull \hbox (4.22997pt too wide) in paragraph at lines 287--287
+Overfull \hbox (4.22997pt too wide) in paragraph at lines 289--289
 \EU1/lmr/m/n/12 Homing Sequences». In: \EU1/lmr/m/it/12 Information and Computa
 tion \EU1/lmr/m/n/12 103 (apr. 1993), pp. 299–
  []
@@ -2963,11 +2963,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 ]) 
 AED: lastpage setting LastPage
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 296.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 296.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 298.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 298.
 (./main.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 296.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 296.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 298.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 298.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.

@@ -7,15 +7,16 @@
   	\centering
  	\includegraphics[width=1.5cm]{../pictures/frontespizio/logo_unipa_piccolo.png}
 \end{figure}
-\textsc{\textbf{UNIVERSITA' DEGLI STUDI DI PALERMO}} \\
+\textsc{\textbf{UNIVERSIT\`A DEGLI STUDI DI PALERMO}} \\
 SCUOLA POLITECNICA\\
 \small{Laurea Magistrale in Ingegneria Informatica}\\
 \end{center}
 \begin{center}
-SPERIMENTAZIONE DI ALGORITMI DI ACTIVE LEARNING NELL'INFERENZA INDUTTIVA REGOLARE
+\uppercase{Estrazione di conoscenza mediante algoritmi di apprendimento attivo per l'inferenza regolare}
+%SPERIMENTAZIONE DI ALGORITMI DI ACTIVE LEARNING NELL'INFERENZA INDUTTIVA REGOLARE
 \end{center}
 
-\begin{minipage}[t]{0.7\textwidth}\raggedright
+\begin{minipage}[t]{0.65\textwidth}\raggedright
 { \scriptsize{TESI DI LAUREA DI:}\\
 \scriptsize{\textbf{Dott. Nicola Ciaco}}
 }
@@ -26,18 +27,27 @@ SPERIMENTAZIONE DI ALGORITMI DI ACTIVE LEARNING NELL'INFERENZA INDUTTIVA REGOLAR
 }
 \end{minipage}
 \begin{center}
-{\small Anno Accademico 2017\textbackslash18 \\}%inserire l'anno accademico a cui si è iscritti
+{\small Anno Accademico 2017/18 \\}%inserire l'anno accademico a cui si è iscritti
 \vspace{3mm}
 \small{\textbf{Sommario}}\\
 \end{center}
 
 
 \label{cap:sommario}
-In Intelligenza Artificiale un sistema intelligente è connotato dalla sua capacità di apprendere che presuppone a monte la capacità di rappresentare la conoscenza a-priori e di \textit{inferire} nuova conoscenza.  Ad oggi, le tecniche più efficaci per l'\textit{estrazione di conoscenza}  sono state sviluppate nella sfera della Statistical  Learning Theory(SLT).   Un notevole svantaggio di tali metodi è che tipicamente si limitano a fornire i parametri ottimi per una \textit{black-box} --- che costituisce il modello inferenziale utilizzato --- impossibilitando o rendendo ardua la correlazione e l'interpretazione dei \textit{samples} iniziali nel modello.\\
-Nell'ambito dei metodi dell' Algorithmic Learning Theory(ALT) invece i dati non sono assunti come campioni casuali da mappare in uno spazio vettoriale bensì come specifiche istanze del modello nascosto che è oggetto di inferenza.  Queste tecniche sono ulteriormente collocabili in quella che va sotto il nome di \textit{Grammatical Inference (GI)}, un processo che si basa sull'\textit{induzione}  che è in grado di selezionare il migliore modello --- rappresentato come una grammatica e quindi nel contesto dei linguaggi formali e degli automi --- consistente con i campioni iniziali. Questi campioni sono interpretabili come stringhe generabili dalla grammatica. Saranno illustrati i limiti teorici di questo processo di apprendimento seguendo il lavoro di Gold \cite{Gold67}. Nella fattispecie la classe dei linguaggi oggetto di studio è quella dei linguaggi regolari e si parla di \textit{Regular Inductive Inference (IIR)} in luogo di \textit{Grammatical Inference (GI)}.\\
- Il modus operandi tipico di questi algoritmi si riconduce a quello di una ricerca euristica, guidata dai campioni iniziali, in un grafo di ricerca contenente gli automi consistenti coi campioni. Quest ultimo approccio prende il nome di \textit{passive learning} ed è duale rispetto alle tecniche di \textit{active learning} su cui verte principalmente questo lavoro. Il paradigma dell' \textit{active learning} presuppone l'esistenza di un \textit{Oracolo} capace di rispondere nativamente ad alcuni tipi di query sottopostegli attivamente dal sistema sotto apprendimento; è stato dimostrato \cite{Angluin87} che l'\textit{Oracolo} deve appartenere alla classe dei Minimally Adequate Teacher (MAT) cioè deve essere in grado di rispondere ad alcuni tipi di query,  che implica la conoscenza preliminare dell'automa oggetto d'inferenza, un requisito molto forte che limita l'utilizzo in contesti reali dell'Inferenza Induttiva Regolare declinata nell'accezione dell'\textit{Active Learning}.\\  
-Il lavoro svolto in questa tesi è volto a sostituire l' \textit{Oracolo} mediante un classificatore statistico costruito a partire da esempi positivi e negativi del linguaggio target che approssimi l'\textit{Oracolo} ideale nell'ottica di permetterne un utilizzo nelle applicazioni reali.  Quindi si ha una commistione tra le tecniche di SLT ed ALT per sperimentare se l'utilizzo combinato conducesse al superamento dei limiti di entrambi cioè la mancanza di un modello strutturale significativo per i campioni ed i requisiti stringenti per l'\textit{Oracolo}.
-Corredata a questa tesi vi è  l'implementazione in C++11 , codice che è stato integrato in  Gi-learning \cite{Cot16} una libreria preesistente.\\
-Al fine di valutare la correttezza della soluzione ottenuta  questa è stata testata sperimentalmente prima sui Tomita \cite{Tomita82} \cite{Dupont94} ,degli automi che rappresentano linguaggi semplici, ottenendo ottimi risultati paragonabili al caso ideale.
-Infine le performances e la precisione  del modello sono state vagliate con dei data set di automi estratti casualmente --- la cui complessità è paragonabile ai sistemi da apprendere nei casi pratici --- ottenendo che all'aumentare della complessità del target si ha un progressivo decadimento del grado di approssimazione. Quindi è possibile avere un livello di fiducia alto sull'utilizzo dell'algoritmo solo fino ad un certo livello di complessità del target.
+Un sistema intelligente è caratterizzato dalla capacità di apprendere in modo automatico, la quale a sua volta presuppone la capacità sia di rappresentare la conoscenza nota a priori sia di \textit{inferirne} di nuova. Allo stato dell'arte attuale, le tecniche più efficaci per l'\textit{estrazione di conoscenza} sono state sviluppate nell'ambito di quella che è nota come Statistical Learning Theory (SLT). Per quanto tali metodi forniscano risultati apprezzabili in termini di accuratezza, essi presentano tuttavia anche dei non trascurabili svantaggi, quali ad esempio il fatto che il loro funzionamento si basa sull'inferire dei parametri ottimali per un modello che è visto necessariamente come una \textit{black-box}, rendendo ardua o impossibilitando di fatto l'\textit{interpretazione} dei campioni a partire dai quali il modello è stato costruito.
+
+La presente tesi si colloca invece nel solco di un framework teorico alternativo, noto come Algorithmic Learning Theory (ALT), secondo cui i dati non sono considerati come campioni casuali da mappare in uno spazio vettoriale, bensì come specifiche istanze del modello nascosto che è oggetto di inferenza. In particolare, lo studio si è concentrato su una tecnica di estrazione di conoscenza che va sotto il nome di \textit{Inferenza Grammaticale} (GI), un processo di apprendimento che si basa sull'\textit{induzione} nel contesto dei linguaggi formali e del relativo formalismo grammaticale. In tale contesto, l'obiettivo è selezionare il migliore modello rappresentato mediante il tipico riconoscitore di una grammatica formale, ovvero l'automa a stati finiti, consistente con i campioni iniziali, che a loro volta sono interpretabili come stringhe generabili dalla grammatica. Nella fattispecie, la classe dei linguaggi oggetto di studio per la presente tesi è quella dei linguaggi regolari e si parla pertanto più specificamente di \textit{Inferenza Induttiva Regolare} (IIR), i cui limiti teorici sono stati messi in luce dal lavoro di Gold \cite{Gold67}.
+
+Gli algoritmi della letteratura iniziale sull'argomento riconducevano l'apprendimento ad una ricerca euristica in un spazio rappresentato come un grafo contenente gli automi consistenti con i campioni forniti in cui il modello, inizialmente iperspecializzato, viene progressivamente generalizzato. Tale approccio va sotto il nome di \textit{passive learning} ed è caratterizzato da un'inevitabile esplosione combinatoria che ne rende la complessità ingestibile a meno di non sacrificare le garanzie teoriche di terminazione e ottimalità.
+
+Nella presente tesi si è quindi scelto di seguire un approccio proposto nella letteratura più recente, duale rispetto al precedente, secondo cui un modello, inizialmente molto generale e quindi poco accurato, viene progressivamente specializzato per rappresentare con precisione i dati forniti. Questo paradigma, noto come \textit{active learning}, presuppone l'esistenza di un \textit{oracolo} che guida l'apprendimento rispondendo ad alcuni tipi di query sottopostegli attivamente dal sistema che cerca di inferire il modello. La base teorica del paradigma è stata fornita dagli studi di Angluin \cite{Angluin87} che stabiliscono che l'oracolo debba appartenere alla classe dei cosiddetti Minimally Adequate Teacher (MAT) che, per garantire l'abilità di fornire risposte utili ai principali tipi di query considerate, richiede la conoscenza preliminare dell'automa oggetto d'inferenza.
+Questo è un requisito molto forte e fin tropo stringente, che limita l'utilizzo in contesti reali dell'inferenza induttiva regolare declinata nell'accezione dell'\textit{active learning}.
+ 
+
+Il cuore del lavoro svolto in questa tesi ha quindi riguardato la sostituzione di un tradizionale oracolo con una sua approssimazione mediante un classificatore statistico costruito a partire da esempi positivi e negativi del linguaggio target nell'ottica di permetterne un utilizzo nelle applicazioni reali. L'obiettivo è quello di tracciare un parallelo tra i modelli ottenibili seguendo il paradigma della teoria dell'apprendimento statistico e quelli formulabili algoritmicamente e di verificare sperimentalmente se l'uso combinato possa condurre al superamento dei limiti di entrambi. In altre parole, si vuole costruire per i campioni dati un modello strutturale, da usare in luogo dell'oracolo in modo da superarne i requisiti stringenti.  Il modello statistico prescelto per affrontare il delineato problema di classificazione binaria è stato quello delle Support Vector Machines (SVM) perchè rappresentano un modello molto potente e malgrado esistano dei lavori inerenti il tema non sono stati contestualizzati nell'ambito dell'inferenza induttiva regolare mediante \textit{active learning}  oppure sono limitati all’apprendimento di alcune specifiche classi di linguaggi sottoinsiemi di quelli regolari.
+
+
+Al fine di valutare la correttezza della soluzione ottenuta, durante il lavoro di tesi si è progettata un'implementazione in linguaggio C++11, integrando il codice nella preesistente libreria di passive learning Gi-learning \cite{Cot16}. L'implementazione è stata testata sperimentalmente inizialmente su una nota classe di automi che rappresentano linguaggi semplici, ovvero i Tomita \cite{Tomita82, Dupont94}, ottenendo ottimi risultati paragonabili al caso ideale.
+Infine le performance e la precisione dei modelli ottenuti dall'approccio qui proposto sono state vagliate su data set di automi estratti casualmente, la cui complessità è paragonabile ai sistemi da apprendere nei casi pratici. I risultati ottenuti rivelano che all'aumentare della complessità del target si ha un progressivo decadimento del grado di approssimazione ed è quindi possibile concludere che un livello di fiducia alto sull'utilizzo dell'algoritmo è ottenibile solo fino ad un certo livello di complessità del target.
+
 
