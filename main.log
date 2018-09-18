@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Debian) (preloaded format=xelatex 2017.11.14)  18 SEP 2018 19:06
+This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Debian) (preloaded format=xelatex 2017.11.14)  19 SEP 2018 00:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1682,41 +1682,7 @@ File: se-ascii-print.def 2016/05/16 v1.11 stringenc: Printable ASCII characters
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
- (./main.toc
-LaTeX Font Info:    Try loading font information for U+msa on input line 11.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 11.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
-
-
-
-] [2])
-\tf@toc=\write8
-\openout8 = `main.toc'.
-
- [3]
-(./main.lof)
-\tf@lof=\write9
-\openout9 = `main.lof'.
-
- [4
-
-] (./main.lot)
-\tf@lot=\write10
-\openout10 = `main.lot'.
-
- [5
-
-] (./chapters/acronym.tex) [6
-
-
-]
-(./chapters/sommario.tex
+ (./chapters/sommario.tex
 File: pictures/../pictures/frontespizio/logo_unipa_piccolo.png Graphic file (ty
 pe QTm)
 
@@ -1730,9 +1696,45 @@ Overfull \hbox (53.82086pt too wide) in paragraph at lines 19--36
 [][] [] 
  []
 
-[7
+[1
 
-]) [8] (./chapters/capitolo1.tex
+
+
+]) [2] (./main.toc
+LaTeX Font Info:    Try loading font information for U+msa on input line 13.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 13.
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [3
+
+] [4])
+\tf@toc=\write8
+\openout8 = `main.toc'.
+
+ [5]
+(./main.lof)
+\tf@lof=\write9
+\openout9 = `main.lof'.
+
+ [6
+
+] (./main.lot)
+\tf@lot=\write10
+\openout10 = `main.lot'.
+
+ [7
+
+] (./chapters/acronym.tex) [8
+
+
+]
+(./chapters/intro.tex [9
+
+
+]) [10] (./chapters/capitolo1.tex
 Capitolo 1.
 
 Underfull \hbox (badness 10000) in paragraph at lines 23--24
@@ -2920,7 +2922,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 ]
-Overfull \hbox (7.57083pt too wide) in paragraph at lines 289--289
+Overfull \hbox (7.57083pt too wide) in paragraph at lines 299--299
 \EU1/lmr/m/it/12 mars\EU1/lmr/m/n/12 . New York, NY, USA: Cambridge University 
 Press, 2010. \EU1/lmr/m/sc/12 isbn\EU1/lmr/m/n/12 : 0521763169
  []
@@ -2939,7 +2941,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [117]
-Overfull \hbox (4.22997pt too wide) in paragraph at lines 289--289
+Overfull \hbox (4.22997pt too wide) in paragraph at lines 299--299
 \EU1/lmr/m/n/12 Homing Sequences». In: \EU1/lmr/m/it/12 Information and Computa
 tion \EU1/lmr/m/n/12 103 (apr. 1993), pp. 299–
  []
@@ -2963,11 +2965,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 ]) 
 AED: lastpage setting LastPage
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 298.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 298.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 308.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 308.
 (./main.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 298.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 298.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 308.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 308.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -2975,17 +2977,21 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were multiply-defined labels.
 
+
+Package biblatex Warning: Please rerun LaTeX.
+(biblatex)                Page breaks have changed.
+
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 44755 strings out of 493591
- 832614 string characters out of 6145589
- 1113899 words of memory out of 5000000
+ 44756 strings out of 493591
+ 832577 string characters out of 6145589
+ 1113897 words of memory out of 5000000
  47479 multiletter control sequences out of 15000+600000
- 17894 words of font info for 107 fonts, out of 8000000 for 9000
+ 17878 words of font info for 105 fonts, out of 8000000 for 9000
  1347 hyphenation exceptions out of 8191
- 55i,20n,92p,10370b,5206s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,20n,92p,10370b,5205s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (129 pages).
+Output written on main.pdf (131 pages).

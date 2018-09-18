@@ -158,11 +158,11 @@ Dipartimento di Innovazione Industriale e Digitale \\Ingegneria Chimica, Gestion
 \begin{center}
 %\uppercase{Estrazione di conoscenza mediante algoritmi di apprendimento attivo per %l'inferenza regolare}
 %SPERIMENTAZIONE DI ALGORITMI DI ACTIVE LEARNING NELL'INFERENZA INDUTTIVA REGOLARE
-{\LARGE{\bf SPERIMENTAZIONE DI ALGORITMI DI }}\\
+{\Large{\bf ESTRAZIONE DI CONOSCENZA MEDIANTE}}\\
 \vspace{3mm}
-{\LARGE{\bf ACTIVE LEARNING NELL’INFERENZA }}\\
+{\Large{\bf  ALGORITMI DI APPRENDIMENTO ATTIVO }}\\
  \vspace{3mm}
- {\LARGE{\bf INDUTTIVA REGOLARE}}\\
+ {\Large{\bf PER L'INFERENZA REGOLARE}}\\
 \end{center}
 \vspace{18mm}
 \par
@@ -205,6 +205,14 @@ Controrelatore:\\
 
 \frontmatter % Use roman page numbering style (i, ii, iii, iv...) for the pre-content pages
 
+%%%%%%%%
+% Sommario %
+%%%%%%%%
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{Sommario}
+\input{./chapters/sommario}
+
 %----------------------------------------------------------------------------------------
 %	INDICE
 %----------------------------------------------------------------------------------------
@@ -245,19 +253,21 @@ Controrelatore:\\
 \addcontentsline{toc}{chapter}{Acronimi}
 \input{./chapters/acronym}
 
+
+
 %%%%%%%%%%%
 % INTRODUZIONE %
 %%%%%%%%%%%
 \cleardoublepage
 \phantomsection
-\addcontentsline{toc}{chapter}{Sommario}
-\input{./chapters/sommario}
-
+\addcontentsline{toc}{chapter}{Introduzione}
+\input{./chapters/intro}
 
 
 
 \mainmatter 		% Begin numeric (1,2,3...) page numbering
 \pagestyle{fancy} 	% Return the page headers back to the "fancy" style
+
 
 %%%%%%%%%
 % CAPITOLO1  %
