@@ -32,11 +32,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.3.2}Algoritmi concreti}{17}{subsection.2.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Red-Blue Framework}{17}{section*.22}
+\contentsline {subsubsection}{Red-Blue Framework}{17}{section*.23}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{RPNI}{17}{section*.23}
+\contentsline {subsubsection}{RPNI}{17}{section*.24}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{EDSM}{18}{section*.24}
+\contentsline {subsubsection}{EDSM}{18}{section*.25}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.4}Active Learning}{19}{section.2.4}
 \defcounter {refsection}{0}\relax 
@@ -48,17 +48,17 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.5.2}L'algoritmo}{23}{subsection.2.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Funzionamento}{23}{section*.28}
+\contentsline {subsubsection}{Funzionamento}{23}{section*.29}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Correttezza}{26}{section*.29}
+\contentsline {subsubsection}{Correttezza}{26}{section*.30}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Complessità computazionale}{27}{section*.30}
+\contentsline {subsubsection}{Complessità computazionale}{27}{section*.31}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.5.3}Il teacher}{28}{subsection.2.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Table-filling}{28}{section*.31}
+\contentsline {subsubsection}{Table-filling}{28}{section*.32}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Una versione più efficiente}{29}{section*.32}
+\contentsline {subsubsection}{Una versione più efficiente}{29}{section*.33}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Observation Pack}{30}{chapter.3}
 \defcounter {refsection}{0}\relax 
@@ -110,140 +110,142 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {4}OBP Approssimato}{53}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Scelte Progettuali}{54}{section.4.1}
+\contentsline {section}{\numberline {4.1}Scelte Progettuali}{53}{section.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Preliminari}{56}{appendix.A}
+\contentsline {chapter}{\numberline {5}Risultati sperimentali}{56}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.1}Notazione matematica}{56}{section.A.1}
+\contentsline {chapter}{\numberline {A}Preliminari}{57}{appendix.A}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.1.1}Insiemi}{56}{subsection.A.1.1}
+\contentsline {section}{\numberline {A.1}Notazione matematica}{57}{section.A.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.1.2}Relazione d'equivalenza}{56}{subsection.A.1.2}
+\contentsline {subsection}{\numberline {A.1.1}Insiemi}{57}{subsection.A.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.2}Linguaggi e grammatiche}{57}{section.A.2}
+\contentsline {subsection}{\numberline {A.1.2}Relazione d'equivalenza}{57}{subsection.A.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.2.1}Alfabeto, stringhe e linguaggi}{57}{subsection.A.2.1}
+\contentsline {section}{\numberline {A.2}Linguaggi e grammatiche}{58}{section.A.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Alfabeto}{57}{section*.54}
+\contentsline {subsection}{\numberline {A.2.1}Alfabeto, stringhe e linguaggi}{58}{subsection.A.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Stringhe}{57}{section*.55}
+\contentsline {subsubsection}{Alfabeto}{58}{section*.54}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Linguaggi}{58}{section*.56}
+\contentsline {subsubsection}{Stringhe}{58}{section*.55}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.2.2}Grammatiche}{59}{subsection.A.2.2}
+\contentsline {subsubsection}{Linguaggi}{59}{section*.56}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.3}Automi a stati finiti}{61}{section.A.3}
+\contentsline {subsection}{\numberline {A.2.2}Grammatiche}{60}{subsection.A.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.3.1}FSA particolari}{63}{subsection.A.3.1}
+\contentsline {section}{\numberline {A.3}Automi a stati finiti}{62}{section.A.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Maximal Canonical Automaton}{63}{section*.61}
+\contentsline {subsection}{\numberline {A.3.1}FSA particolari}{64}{subsection.A.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Automa quoziente}{64}{section*.63}
+\contentsline {subsubsection}{Maximal Canonical Automaton}{64}{section*.61}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Prefix Tree Acceptor}{65}{section*.64}
+\contentsline {subsubsection}{Automa quoziente}{65}{section*.63}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Automa Universale}{65}{section*.66}
+\contentsline {subsubsection}{Prefix Tree Acceptor}{66}{section*.64}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.3.2}Funzioni di output regolari}{65}{subsection.A.3.2}
+\contentsline {subsubsection}{Automa Universale}{66}{section*.66}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Relazione di Nerode}{65}{section*.67}
+\contentsline {subsection}{\numberline {A.3.2}Funzioni di output regolari}{66}{subsection.A.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Teorema Myhill-Nerode}{66}{section*.68}
+\contentsline {subsubsection}{Relazione di Nerode}{66}{section*.67}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {B}Prel. e impl. ObP}{67}{appendix.B}
+\contentsline {subsubsection}{Teorema Myhill-Nerode}{67}{section*.68}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.1}Notazione specifica per l'ObP}{67}{section.B.1}
+\contentsline {chapter}{\numberline {B}Prel. e impl. ObP}{68}{appendix.B}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {B.1.1}Definizioni}{67}{subsection.B.1.1}
+\contentsline {section}{\numberline {B.1}Notazione specifica per l'ObP}{68}{section.B.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {B.1.2}Def. fram.}{68}{subsection.B.1.2}
+\contentsline {subsection}{\numberline {B.1.1}Definizioni}{68}{subsection.B.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Prefix Transformation}{68}{section*.69}
+\contentsline {subsection}{\numberline {B.1.2}Def. fram.}{69}{subsection.B.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Altre definizioni}{68}{section*.70}
+\contentsline {subsubsection}{Prefix Transformation}{69}{section*.69}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.2}Dett. impl. ObP}{68}{section.B.2}
+\contentsline {subsubsection}{Altre definizioni}{69}{section*.70}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {C}SVM}{71}{appendix.C}
+\contentsline {section}{\numberline {B.2}Dett. impl. ObP}{69}{section.B.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {C.1}Overview teorica}{71}{section.C.1}
+\contentsline {chapter}{\numberline {C}SVM}{72}{appendix.C}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.1.1}Rischio Atteso}{72}{subsection.C.1.1}
+\contentsline {section}{\numberline {C.1}Overview teorica}{72}{section.C.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.1.2}\textit {VC dimension}}{73}{subsection.C.1.2}
+\contentsline {subsection}{\numberline {C.1.1}Rischio Atteso}{73}{subsection.C.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.1.3}Structural Risk Minimization}{75}{subsection.C.1.3}
+\contentsline {subsection}{\numberline {C.1.2}\textit {VC dimension}}{74}{subsection.C.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {C.2}SVM}{76}{section.C.2}
+\contentsline {subsection}{\numberline {C.1.3}Structural Risk Minimization}{76}{subsection.C.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.2.1}Classificazione binaria}{77}{subsection.C.2.1}
+\contentsline {section}{\numberline {C.2}SVM}{77}{section.C.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.2.2}Classificatore a margine massimo}{78}{subsection.C.2.2}
+\contentsline {subsection}{\numberline {C.2.1}Classificazione binaria}{78}{subsection.C.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Legame con SRM}{80}{section*.78}
+\contentsline {subsection}{\numberline {C.2.2}Classificatore a margine massimo}{79}{subsection.C.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Formulazione matematica}{81}{section*.79}
+\contentsline {subsubsection}{Legame con SRM}{81}{section*.78}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Fase di Test}{85}{section*.80}
+\contentsline {subsubsection}{Formulazione matematica}{82}{section*.79}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.2.3}Soft Margin}{85}{subsection.C.2.3}
+\contentsline {subsubsection}{Fase di Test}{86}{section*.80}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Formulazione matematica}{87}{section*.81}
+\contentsline {subsection}{\numberline {C.2.3}Soft Margin}{86}{subsection.C.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Parametro C e legami con SRM}{88}{section*.82}
+\contentsline {subsubsection}{Formulazione matematica}{88}{section*.81}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.2.4}Kernels}{88}{subsection.C.2.4}
+\contentsline {subsubsection}{Parametro C e legami con SRM}{89}{section*.82}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Formulazione matematica}{92}{section*.85}
+\contentsline {subsection}{\numberline {C.2.4}Kernels}{89}{subsection.C.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Prodotto scalare come misura di similarità}{92}{section*.86}
+\contentsline {subsubsection}{Formulazione matematica}{93}{section*.85}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{String kernels}{95}{section*.90}
+\contentsline {subsubsection}{Prodotto scalare come misura di similarità}{93}{section*.86}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.2.5}Versione soft margin kernelized}{96}{subsection.C.2.5}
+\contentsline {subsubsection}{String kernels}{96}{section*.90}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.2.6}Globalità e unicità della soluzione}{97}{subsection.C.2.6}
+\contentsline {subsection}{\numberline {C.2.5}Versione soft margin kernelized}{97}{subsection.C.2.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.2.7}Dati non bilanciati}{98}{subsection.C.2.7}
+\contentsline {subsection}{\numberline {C.2.6}Globalità e unicità della soluzione}{98}{subsection.C.2.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.2.8}Algoritmo di ottimizzazione}{99}{subsection.C.2.8}
+\contentsline {subsection}{\numberline {C.2.7}Dati non bilanciati}{99}{subsection.C.2.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {C.3}SVM$^{light}$}{99}{section.C.3}
+\contentsline {subsection}{\numberline {C.2.8}Algoritmo di ottimizzazione}{100}{subsection.C.2.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.3.1}Formato dei file}{100}{subsection.C.3.1}
+\contentsline {section}{\numberline {C.3}SVM$^{light}$}{100}{section.C.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.3.2}Parametri}{101}{subsection.C.3.2}
+\contentsline {subsection}{\numberline {C.3.1}Formato dei file}{101}{subsection.C.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {D}Prel. add. class.}{103}{appendix.D}
+\contentsline {subsection}{\numberline {C.3.2}Parametri}{102}{subsection.C.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {D.1}Bias-Varianza tradeoff}{103}{section.D.1}
+\contentsline {chapter}{\numberline {D}Prel. add. class.}{104}{appendix.D}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {D.2}Tecniche selezione class.}{104}{section.D.2}
+\contentsline {section}{\numberline {D.1}Bias-Varianza tradeoff}{104}{section.D.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {D.2.1}Holdout}{105}{subsection.D.2.1}
+\contentsline {section}{\numberline {D.2}Tecniche selezione class.}{105}{section.D.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {D.2.2}Validazione incrociata}{106}{subsection.D.2.2}
+\contentsline {subsection}{\numberline {D.2.1}Holdout}{106}{subsection.D.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {D.2.3}Algorithm selection}{107}{subsection.D.2.3}
+\contentsline {subsection}{\numberline {D.2.2}Validazione incrociata}{107}{subsection.D.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {D.2.4}Boosting}{107}{subsection.D.2.4}
+\contentsline {subsection}{\numberline {D.2.3}Algorithm selection}{108}{subsection.D.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {D.3}Data Preprocessing}{108}{section.D.3}
+\contentsline {subsection}{\numberline {D.2.4}Boosting}{108}{subsection.D.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {D.3.1}Codifiche}{108}{subsection.D.3.1}
+\contentsline {section}{\numberline {D.3}Data Preprocessing}{109}{section.D.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Integer Encoding}{109}{section*.94}
+\contentsline {subsection}{\numberline {D.3.1}Codifiche}{109}{subsection.D.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{One Hot Encoding}{109}{section*.95}
+\contentsline {subsubsection}{Integer Encoding}{110}{section*.94}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {D.3.2}Scaling}{109}{subsection.D.3.2}
+\contentsline {subsubsection}{One Hot Encoding}{110}{section*.95}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {D.3.3}Feature extraction}{110}{subsection.D.3.3}
+\contentsline {subsection}{\numberline {D.3.2}Scaling}{110}{subsection.D.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {D.4}Addestrare una SVM}{110}{section.D.4}
+\contentsline {subsection}{\numberline {D.3.3}Feature extraction}{111}{subsection.D.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {D.5}Misure}{112}{section.D.5}
+\contentsline {section}{\numberline {D.4}Addestrare una SVM}{111}{section.D.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliografia}{115}{section*.98}
+\contentsline {section}{\numberline {D.5}Misure}{113}{section.D.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Indice analitico}{120}{section*.100}
+\contentsline {chapter}{Bibliografia}{116}{section*.98}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Indice analitico}{121}{section*.100}
