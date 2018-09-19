@@ -371,6 +371,47 @@
     \field{year}{2006}
   \endentry
 
+  \entry{Zulu10}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=CD}{%
+         family={Combe},
+         family_i={C\bibinitperiod},
+         given={David},
+         given_i={D\bibinitperiod},
+      }}%
+      {{hash=DLHC}{%
+         family={De\bibnamedelima La\bibnamedelima Higuera},
+         family_i={D\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim
+  H\bibinitperiod},
+         given={Colin},
+         given_i={C\bibinitperiod},
+      }}%
+      {{hash=JJC}{%
+         family={Janodet},
+         family_i={J\bibinitperiod},
+         given={Jean-Christophe},
+         given_i={J\bibinitperiod-C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CDDLHCJJC1}
+    \strng{fullhash}{CDDLHCJJC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{booktitle}{Journal of Machine Learning Research}
+    \verb{doi}
+    \verb 10.1.1.370.7333
+    \endverb
+    \field{pages}{473\bibrangedash 497}
+    \field{title}{Zulu: an Interactive Learning Competition}
+    \verb{url}
+    \verb http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.370.7333&rep
+    \verb =rep1&type=pdf
+    \endverb
+    \field{year}{2010}
+  \endentry
+
   \entry{Cortes95}{article}{}
     \name{author}{2}{}{%
       {{hash=CC}{%
@@ -540,6 +581,28 @@
       {Berlin, Heidelberg}%
     }
     \field{year}{1994}
+  \endentry
+
+  \entry{Forcada02}{unpublished}{}
+    \name{author}{1}{}{%
+      {{hash=FML}{%
+         family={Forcada},
+         family_i={F\bibinitperiod},
+         given={Mikel\bibnamedelima L.},
+         given_i={M\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{FML1}
+    \strng{fullhash}{FML1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{title}{Neural Networks: Automata and Formal Models of Computation}
+    \verb{url}
+    \verb https://www.dlsi.ua.es//~mlf/nnafmc/pbook.pdf
+    \endverb
+    \field{year}{2002}
   \endentry
 
   \entry{Gold78}{article}{}
@@ -1767,6 +1830,68 @@
       {Saint-Malo, France}%
     }
     \field{year}{2008}
+    \warn{\item Can't use 'location' + 'address'}
+  \endentry
+
+  \entry{Stamina10}{inproceedings}{}
+    \name{author}{5}{}{%
+      {{hash=WN}{%
+         family={Walkinshaw},
+         family_i={W\bibinitperiod},
+         given={Neil},
+         given_i={N\bibinitperiod},
+      }}%
+      {{hash=BK}{%
+         family={Bogdanov},
+         family_i={B\bibinitperiod},
+         given={Kirill},
+         given_i={K\bibinitperiod},
+      }}%
+      {{hash=DC}{%
+         family={Damas},
+         family_i={D\bibinitperiod},
+         given={Christophe},
+         given_i={C\bibinitperiod},
+      }}%
+      {{hash=LB}{%
+         family={Lambeau},
+         family_i={L\bibinitperiod},
+         given={Bernard},
+         given_i={B\bibinitperiod},
+      }}%
+      {{hash=DP}{%
+         family={Dupont},
+         family_i={D\bibinitperiod},
+         given={Pierre},
+         given_i={P\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {ACM}%
+    }
+    \strng{namehash}{WN+1}
+    \strng{fullhash}{WNBKDCLBDP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{booktitle}{Proceedings of the First International Workshop on Model
+  Inference In Testing}
+    \verb{doi}
+    \verb 10.1145/1868044.1868045
+    \endverb
+    \field{isbn}{978-1-4503-0147-3}
+    \field{pages}{1\bibrangedash 9}
+    \field{series}{MIIT '10}
+    \field{title}{A Framework for the Competitive Evaluation of Model Inference
+  Techniques}
+    \verb{url}
+    \verb http://doi.acm.org/10.1145/1868044.1868045
+    \endverb
+    \list{location}{1}{%
+      {Trento, Italy}%
+    }
+    \field{year}{2010}
     \warn{\item Can't use 'location' + 'address'}
   \endentry
 

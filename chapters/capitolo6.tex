@@ -2,13 +2,39 @@
 %!TEX root = ./../main.tex
 %!TEX TS-program = xelatex
 
-\chapter[OBP Approssimato]{Observation Pack Approssimato} % chapter 6 title
+\chapter[OBP App.]{Observation Pack Approssimato} % chapter 6 title
 \label{cap:sei}
 L'obiettivo di questo lavoro è indagare la capacità di apprendere linguaggi regolari in uno scenario di \textit{Active Learning}, nel caso in cui non si disponga di un \textit{Oracolo} capace di rispondere nativamente ne ad \ac{EQ} ne a \ac{MQ}. La tesi è volta ad investigare lo scenario in cui si utilizzi \ac{SVM} come classificatore atto a modellare un \textit{Oracolo}, classificatore costruito a partire da alcuni esempi positivi e negativi del linguaggio da apprendere. In letteratura esistono diversi algoritmi utilizzati per  l'appredimento di linguaggi regolari. L'apprendimento di linguaggi regolari è collocabile nel più ampio tema dell' inferenza grammaticale --- usata in una varietà di campi come pattern recognition, biologia computazionale e elaborazione del linguaggio naturale --- ed è il processo di inferire automaticamente una grammatica esaminando delle stringhe di un linguaggio sconosciuto.
 Il modus operandi degli algoritmi d'inferenza grammaticale o regolare  è inquadrabile all'interno dell'apprendimento per induzione e per questo è spesso detta \ac{IIR}  (o grammaticale).
 Il lavoro svolto in questa tesi è volto ad approssimare un \textit{Oracolo} ed è  indipendente dallo specifico algoritmo d'\ac{IIR}, tuttavia per renderlo concreto l'attenzione è stata focalizzata sull'\ac{ObP}.
 Allo stato dell'arte l' \ac{ObP} costituisce il secondo algoritmo di riferimento nell'ambito dell'apprendimento di linguaggi regolari.  L'algoritmo più performante è invece il più recente TTT algorithm \cite{SteffenTTT14}.
 Si può trovare una presentazione completa dell' \ac{ObP}  in \cite{Howar12} e relativa implemetazione nella libreria LearnLib\footnote{\href{http://www.learnlib.de/}{http://www.learnlib.de/} Qui \ac{ObP} è menzionato come Discrimination Tree} .  Corredata a questa tesi vi è anche l'implementazione dell' \ac{ObP} in C++11 , codice che è stato integrato in  Gi-learning \cite{Cot16} una libreria preesistente. Nelle applicazioni reali tuttavia è altamente improbabile la disponibilità di un \textit{Oracolo} in grado di rispondere a delle \ac{EQ} da cui l'esigenza di un \textit{Oracolo ''approssimato''} la cui relativa implementazione oggetto di tesi è stata parimenti integrata in  Gi-learning \cite{Cot16}.
+
+\section{Precedenti lavori in letteratura}
+Assumere che il \textit{teacher} sia in possesso del formalismo del linguaggio target \ac{L} è uno scenario poco plausibile essendo esso stesso l'oggetto dell'inferenza.
+Quindi l'obiettivo delineato in questa tesi è indagare il comportamento di un algoritmo di \textit{active learning} per inferire il \ac{DFA} A tale che $L(A) =\ac{L}$ tramite un oracolo approssimato realizzato con un classificatore statistico e tale intento si discosta dai lavori preesistenti in letteratura. In realtà una prima versione di un algoritmo di \textit{active learning} che realizza un Oracolo approssimato è già presente in Angluin \cite{Angluin87} in cui si approssima un \ac{EQ} tramite un certo numero di \ac{MQ} nella sua versione di L* approssimato. Più di recente, nella stessa direzione è andata la competizione Zulu \cite{Zulu10}: il vincitore della competizione \cite{Howar12} definisce il nuovo tipo di query: l'  \textit{Identity Query}
+\begin{definizione*}[Identity Query] Testa se due prefissi $u,u'$ sono nella stessa classe di equivalenza del target A cioè se $u \not\simeq_{\lambda^{A}} \! u'$. In caso $u \not\simeq_{\lambda^{A}} \! u'$ ritorna un suffisso $v$ per il quale $\lambda^{A}(uv) \neq \lambda^{A}(u'v)$. Altrimenti ritorna il successo. 
+\end{definizione*}
+e dimostra che i linguaggi regolari possono essere inferiti con un numero polinomiale di \ac{MQ} ed \textit{Identity Query}.       
+Le \textit{Identity Query} non sono meno realistiche delle \ac{EQ} ma forniscono un framework per organizzare le \ac{EQ} incrementalmente in modo da approssimarle in maniera relativamente facile ed efficiente tramite \ac{MQ}.  Anche gli altri algoritmi in letteratura sono focalizzati sulla ricerca di algoritmi che in maniera efficiente riescono ad approssimare le \ac{EQ} tramite \ac{MQ}.  In questa sede si assume invece l'impossibilità di rispondere nativamente anche alle \ac{MQ} oltre che alle \ac{EQ}, cioè  anche l'esito delle \ac{MQ} non è noto ed andrà approssimato.
+
+Per quanto concerne la selezione del classificatore statistico per approssimare l'Oracolo la scelta è ricaduta su \ac{SVM} perchè costituiscono uno dei migliori modelli. Inoltre sono poche le applicazioni delle \ac{SVM} per l'apprendimento di linguaggi regolari come in \cite{Clark11}\cite{Clark06}  in cui si riesce a definire un kernel string utile per l'apprendimento dei linguaggi planari\footnote{I linguaggi planari sono una classe di linguaggi che attraversano la tassonomia di Chomsky nel senso che apprendono solo in maniera parziale i linguaggi finiti,regolari,context-free,context-sensitive ecc. senza saturare nessuno di essi}  oppure in \cite{Kontorovich09} dove si delinea un lavoro teorico sui linguaggi regolari e si propone un kernel string senza concretizzarlo specificamente per l'apprendimento di linguaggi regolari nell'accezione dell'\textit{active learning}. Altri tipi di classificatori come ad esempio le \textit{Recurrent Neural Network} si sono rilevate particolarmente adatte allo scopo di modellare un \ac{DFA} ma come si evince da \cite{Forcada02}, che costituisce una panoramica su di esse a riguardo dell'impiego in  \ac{GI}, sono state già ampiamente dibattute in letteratura.
+
+
+\section{Generazione di campioni da un DFA}
+\label{sec:gensam}
+La valutazione delle \textit{performances} di un algoritmo di \ac{GI} possono essere influenzate sia positivamente che negativamente da alcuni fattori \cite{Stamina10}: 
+\begin{itemize}
+\item Numero di campioni del \textit{training set} e del \textit{test set}
+\item campioni suddetti strutturalmente completi
+\item Complessità del \ac{DFA} target 
+\end{itemize}
+
+Se si decidesse di generare  i campioni come stringhe casuali fino a una certa lunghezza in cui ogni simbolo costituente una stringa è estratto in maniera uniforme tra tutti i simboli dell'alfabeto si  incorrerebbe nel problema che  si verrebbe ad avere un insieme non bilanciato a causa della predominanza di campioni negativi dato che tipicamente su $\Sigma*$ sono in minoranza le stringhe accettate da un \ac{DFA}. 
+Inoltre  per l'addestramento di un classificatore e anche per un algoritmo di \ac{GI} è molto importante avere un insieme caratteristico (definizione \label{def:car}) o perlomeno un insieme di stringhe che raggiunge gran parte degli stati e delle transizioni di un \ac{DFA}.
+In \cite{Stamina10} è descritto un algoritmo in grado di assicurare con altà probabilità la completezza strutturale dei campioni e di produrre campioni bilanciati. L'algoritmo effettua un \textbf{random walk} sul \ac{DFA} target e si rimanda al riferimento per i dettagli.
+La proprietà dei campioni di essere strutturalmente completi(c'è solo una probabilità alta che lo siano ma non la certezza) potrebbe condurre a delle stime ottimisticamente biased dell'algoritmo \ac{ObPA} dato che i campioni a disposizione dell'utente sono di norma del tutto casuali (anche con random walk lo sono ma come detto in modo da esplorare tutti i percorsi del \ac{DFA})  . Nonostante ciò si è deciso  di utilizzare comunque \textit{random walk}  perchè  questa procedura è diventata uno standard de facto per generare i campioni nelle competizioni tra algoritmi riguardanti \ac{GI}.   
+
 
 
 \section{Scelte Progettuali}

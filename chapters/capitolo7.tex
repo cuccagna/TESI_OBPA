@@ -4,3 +4,21 @@
 
 \chapter{Risultati sperimentali} % 5th chapter title
 \label{cap:sette}
+La valutazione delle \textit{performances} di un algoritmo di \ac{GI} possono essere influenzate sia positivamente che negativamente da alcuni fattori come già evidenziato in \ref{sec:gensam}. Uno di questi fattori è la complessità del \ac{DFA} target con cui si intende\cite{Stamina10}:
+\begin{itemize}
+\item numero di stati
+\item dimensione dell'alfabeto
+\item la lunghezza del più lungo dei cammini minimi dallo stato iniziale a qualunque altro stato
+\item il numero di transizioni
+\item il numero di transizioni totali\footnote{ (escluse quelle che vanno nello stato pozzo, altrimenti sarebbero tutte in egual numero in un \ac{DFA})}
+\end{itemize}
+Anche la dimensione del \textit{training set} e del \textit{test set} è rilevante e quindi è necessario scandagliare il comportamento dell'algoritmo al variare della dimensionalità di questi parametri. Attenendosi all'impostazione della competizione STAMINA \cite{Stamina10} si è scelto di [INSERIRE DIMENSIONI ALFABETO STATI TRAINING SET]
+
+Nell'effettuazione degli esperimenti è necessario tenerne conto onde evitare dei risultati pessimisticamente o ottimisticamente \textit{biased}. 
+
+todo:
+Riorganizzare quanto sopra introducendo prima Tomita.
+Descrivi Tomita
+Giustifica risultati anche perchè si approssimano anche le MQ.
+Fai vedere che comunque esistono dei modelli complessi con cui si hanno buoni risultati (anche se la complessità è tutta da vedeere e non è decisa solo dagli stati dall'alfabeto e dalla profondità, ma dipende anche da quanto sono buoni i campioni estratti col random walk).
+Illustra i set di esperimenti e i risultati.
