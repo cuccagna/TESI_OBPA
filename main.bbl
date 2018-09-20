@@ -141,6 +141,47 @@
     \field{year}{1983}
   \endentry
 
+  \entry{Balanescu03}{article}{}
+    \name{author}{4}{}{%
+      {{hash=BT}{%
+         family={Balanescu},
+         family_i={B\bibinitperiod},
+         given={Tudor},
+         given_i={T\bibinitperiod},
+      }}%
+      {{hash=GM}{%
+         family={Gheorghe},
+         family_i={G\bibinitperiod},
+         given={Marian},
+         given_i={M\bibinitperiod},
+      }}%
+      {{hash=IF}{%
+         family={Ipate},
+         family_i={I\bibinitperiod},
+         given={Florentin},
+         given_i={F\bibinitperiod},
+      }}%
+      {{hash=HM}{%
+         family={Holcombe},
+         family_i={H\bibinitperiod},
+         given={M},
+         given_i={M},
+      }}%
+    }
+    \strng{namehash}{BT+1}
+    \strng{fullhash}{BTGMIFHM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{booktitle}{Foundations of Computing and Decision Sciences}
+    \field{title}{Formal black box testing for partially specified
+  deterministic finite state machines}
+    \field{volume}{28}
+    \field{month}{01}
+    \field{year}{2003}
+  \endentry
+
   \entry{Vapnik92}{inproceedings}{}
     \name{author}{3}{}{%
       {{hash=BBE}{%
