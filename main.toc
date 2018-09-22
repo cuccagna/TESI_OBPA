@@ -62,7 +62,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Observation Pack}{30}{chapter.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Fondamenta teoriche}{30}{section.3.1}
+\contentsline {section}{\numberline {3.1}Fondamenti teorici}{30}{section.3.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.2}Costruzione dell'ipotesi}{31}{section.3.2}
 \defcounter {refsection}{0}\relax 

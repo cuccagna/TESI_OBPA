@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Debian) (preloaded format=xelatex 2017.11.14)  22 SEP 2018 11:05
+This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Debian) (preloaded format=xelatex 2017.11.14)  22 SEP 2018 13:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2362,7 +2362,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [52]
 Capitolo 4.
 Package acronym Info: Label `acro:SVM' newly defined as it shall be overridden
-although it is yet undefined on input line 7.
+although it is yet undefined on input line 10.
+Package acronym Info: Label `acro:ObPA' newly defined as it shall be overridden
+
+although it is yet undefined on input line 11.
 [53
 
 ]
@@ -2373,10 +2376,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [54]
-Package acronym Info: Label `acro:ObPA' newly defined as it shall be overridden
-
-although it is yet undefined on input line 37.
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
