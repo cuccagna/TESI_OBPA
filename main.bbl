@@ -282,6 +282,34 @@
     \field{year}{1959}
   \endentry
 
+  \entry{Chow78}{article}{}
+    \name{author}{1}{}{%
+      {{hash=CTS}{%
+         family={Chow},
+         family_i={C\bibinitperiod},
+         given={Tsun\bibnamedelima S.},
+         given_i={T\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CTS1}
+    \strng{fullhash}{CTS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \verb{doi}
+    \verb 10.1109/TSE.1978.231496
+    \endverb
+    \field{issn}{0098-5589}
+    \field{number}{3}
+    \field{pages}{178\bibrangedash 187}
+    \field{title}{Testing Software Design Modeled by Finite-State Machines}
+    \field{volume}{SE-4}
+    \field{journaltitle}{IEEE Transactions on Software Engineering}
+    \field{year}{1978}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
   \entry{Clark11}{article}{}
     \name{author}{3}{}{%
       {{hash=CA}{%
