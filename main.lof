@@ -30,78 +30,78 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Ereditarietà Oracolo}}{58}{figure.caption.53}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Ereditarietà Oracolo}}{55}{figure.caption.52}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Interfaccia classe base Oracolo}}{59}{figure.caption.54}
-\defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Linguaggi di Tomita\relax }}{62}{figure.caption.56}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces $L_1$}}{62}{subfigure.1.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces $L_2$}}{62}{subfigure.1.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces $L_3$}}{62}{subfigure.1.3}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces $L_4$}}{62}{subfigure.1.4}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(e)}{\ignorespaces $L_5$}}{62}{subfigure.1.5}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(f)}{\ignorespaces $L_6$}}{62}{subfigure.1.6}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(g)}{\ignorespaces $L_7$}}{62}{subfigure.1.7}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(h)}{\ignorespaces $L_8$}}{62}{subfigure.1.8}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Linguaggi di Tomita\relax }}{63}{figure.caption.57}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(i)}{\ignorespaces $L_9$}}{63}{subfigure.1.9}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(j)}{\ignorespaces $L_10$}}{63}{subfigure.1.10}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(k)}{\ignorespaces $L_11$}}{63}{subfigure.1.11}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(l)}{\ignorespaces $L_12$}}{63}{subfigure.1.12}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(m)}{\ignorespaces $L_13$}}{63}{subfigure.1.13}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(n)}{\ignorespaces $L_14$}}{63}{subfigure.1.14}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(o)}{\ignorespaces $L_15$}}{63}{subfigure.1.15}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Interfaccia classe base Oracolo}}{56}{figure.caption.53}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Gerarchia di linguaggi}}{69}{figure.caption.64}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Linguaggi di Tomita\relax }}{59}{figure.caption.55}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Maximal Canonical Automaton}}{73}{figure.caption.68}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces $L_1$}}{59}{subfigure.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {A.3}{\ignorespaces Prefix Tre Acceptor}}{74}{figure.caption.71}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces $L_2$}}{59}{subfigure.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces $L_3$}}{59}{subfigure.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces $L_4$}}{59}{subfigure.1.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces $L_5$}}{59}{subfigure.1.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces $L_6$}}{59}{subfigure.1.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(g)}{\ignorespaces $L_7$}}{59}{subfigure.1.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(h)}{\ignorespaces $L_8$}}{59}{subfigure.1.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Linguaggi di Tomita\relax }}{60}{figure.caption.56}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(i)}{\ignorespaces $L_9$}}{60}{subfigure.1.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(j)}{\ignorespaces $L_10$}}{60}{subfigure.1.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(k)}{\ignorespaces $L_11$}}{60}{subfigure.1.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(l)}{\ignorespaces $L_12$}}{60}{subfigure.1.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(m)}{\ignorespaces $L_13$}}{60}{subfigure.1.13}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(n)}{\ignorespaces $L_14$}}{60}{subfigure.1.14}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(o)}{\ignorespaces $L_15$}}{60}{subfigure.1.15}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Gerarchia di linguaggi}}{72}{figure.caption.64}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Maximal Canonical Automaton}}{76}{figure.caption.68}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Prefix Tre Acceptor}}{77}{figure.caption.71}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {C.1}{\ignorespaces Tre punti shattered nel piano}}{83}{figure.caption.78}
+\contentsline {figure}{\numberline {C.1}{\ignorespaces Tre punti shattered nel piano}}{86}{figure.caption.78}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {C.2}{\ignorespaces Principio della SRM}}{85}{figure.caption.80}
+\contentsline {figure}{\numberline {C.2}{\ignorespaces Principio della SRM}}{88}{figure.caption.80}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {C.3}{\ignorespaces Sottoinsiemi SRM}}{85}{figure.caption.81}
+\contentsline {figure}{\numberline {C.3}{\ignorespaces Sottoinsiemi SRM}}{88}{figure.caption.81}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {C.4}{\ignorespaces Lineare separabilità}}{87}{figure.caption.82}
+\contentsline {figure}{\numberline {C.4}{\ignorespaces Lineare separabilità}}{90}{figure.caption.82}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {C.5}{\ignorespaces Esempio iperpiano separatore}}{89}{figure.caption.83}
+\contentsline {figure}{\numberline {C.5}{\ignorespaces Esempio iperpiano separatore}}{92}{figure.caption.83}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {C.6}{\ignorespaces Mapping in feature space}}{98}{figure.caption.89}
+\contentsline {figure}{\numberline {C.6}{\ignorespaces Mapping in feature space}}{101}{figure.caption.89}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {C.7}{\ignorespaces Campioni dissimili}}{102}{figure.caption.93}
+\contentsline {figure}{\numberline {C.7}{\ignorespaces Campioni dissimili}}{105}{figure.caption.93}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {C.8}{\ignorespaces Campioni simili differenti etichette}}{103}{figure.caption.94}
+\contentsline {figure}{\numberline {C.8}{\ignorespaces Campioni simili differenti etichette}}{106}{figure.caption.94}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {C.9}{\ignorespaces Campioni simili differenti etichette}}{103}{figure.caption.95}
+\contentsline {figure}{\numberline {C.9}{\ignorespaces Campioni simili differenti etichette}}{106}{figure.caption.95}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {D.1}{\ignorespaces Bias-Varianza trade-off}}{113}{figure.caption.99}
+\contentsline {figure}{\numberline {D.1}{\ignorespaces Bias-Varianza trade-off}}{116}{figure.caption.99}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {D.2}{\ignorespaces Matrice di confusione}}{121}{figure.caption.103}
+\contentsline {figure}{\numberline {D.2}{\ignorespaces Matrice di confusione}}{124}{figure.caption.103}
