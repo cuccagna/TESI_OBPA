@@ -1272,4 +1272,4 @@ Questa misura può essere utilizzata in luogo dell'accuracy per insiemi non bila
 \begin{equation*}
 MCC = \frac{TP \cdot TN−FP \cdot FN}{\sqrt{(TP+FP)(TP+FN)(TN+FP)(TN+FN)}}
  \end{equation*}
- Questa misura è ottima nel caso di dati non bilanciati e rappresenta bene la matrice di confusione ed è sicuramente più adatta di F1-score nel caso in cui sia i campioni positivi che quelli negativi sono rilevanti.
+ Questa misura è ottima nel caso di dati non bilanciati e rappresenta bene la matrice di confusione ed è sicuramente più adatta di F1-score nel caso in cui sia i campioni positivi che quelli negativi sono rilevanti. Il valore ritornato varia tra $-1$ e $1$ e $0$ è equivalente ad un'accuracy del $50\%$.  Ad esempio un MCC di $0.5$ è comparabile ad un'accuracy del $75\%$. 
