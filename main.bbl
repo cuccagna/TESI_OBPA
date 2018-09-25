@@ -617,6 +617,47 @@
     \field{year}{2010}
   \endentry
 
+  \entry{Duan03}{article}{}
+    \name{author}{3}{}{%
+      {{hash=DK}{%
+         family={Duan},
+         family_i={D\bibinitperiod},
+         given={Kaibo},
+         given_i={K\bibinitperiod},
+      }}%
+      {{hash=KSS}{%
+         family={Keerthi},
+         family_i={K\bibinitperiod},
+         given={Sathiya\bibnamedelima S.},
+         given_i={S\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=PAN}{%
+         family={Poo},
+         family_i={P\bibinitperiod},
+         given={Aun\bibnamedelima Neow},
+         given_i={A\bibinitperiod\bibinitdelim N\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{DKKSSPAN1}
+    \strng{fullhash}{DKKSSPAN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{pages}{41\bibrangedash 59}
+    \field{title}{Evaluation of simple performance measures for tuning svm
+  hyperparameters}
+    \verb{url}
+    \verb http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.107.1325
+    \endverb
+    \field{volume}{51}
+    \field{journaltitle}{Neurocomputing}
+    \field{year}{2003}
+  \endentry
+
   \entry{Dupont94}{inproceedings}{}
     \name{author}{1}{}{%
       {{hash=DP}{%

@@ -22,13 +22,13 @@ Le \textit{Identity Query} non sono meno realistiche delle \ac{EQ} ma forniscono
 Per quanto concerne la selezione del classificatore statistico per approssimare l'Oracolo la scelta è ricaduta su \ac{SVM} perchè costituiscono uno dei migliori modelli. Inoltre sono poche le applicazioni delle \ac{SVM} per l'apprendimento di linguaggi regolari come in \cite{Clark11}\cite{Clark06}  in cui si riesce a definire un kernel string utile per l'apprendimento dei linguaggi planari\footnote{I linguaggi planari sono una classe di linguaggi che attraversano la tassonomia di Chomsky nel senso che apprendono solo in maniera parziale i linguaggi finiti,regolari,context-free,context-sensitive ecc. senza saturare nessuno di essi}  oppure in \cite{Kontorovich09} dove si delinea un lavoro teorico sui linguaggi regolari e si propone un kernel string senza concretizzarlo specificamente per l'apprendimento di linguaggi regolari nell'accezione dell'\textit{active learning}. Altri tipi di classificatori come ad esempio le \textit{Recurrent Neural Network} si sono rilevate particolarmente adatte allo scopo di modellare un \ac{DFA} ma come si evince da \cite{Forcada02}, che costituisce una panoramica su di esse a riguardo dell'impiego in  \ac{GI}, sono state già ampiamente dibattute in letteratura.
 
 \section{Funzionamento ObPA}
-Una preliminare osservazione per evitare la creazione di ambiguità nel prosieguo consiste nel rimarcare che il codice prodotto è costituito da una duplice versione. Vi è infatti il codice riguardante la fase di \textit{debug} riferito d'ora in avanti come \textit{debug version} e quello pronto per l'utilizzo reale riferito d'ora in avanti come \textit{release version}\footnote{In realtà esiste un unica versione del codice ma si passa da una versione all'altra attivando o disattivando il flag in compilazione DEBUG$\_$EVALUATION (se è definito si sta optando per la \textit{debug version})}. La differenza principale tra le due versioni è che nella \textit{debug version} si è in possesso del \ac{DFA} target. Con l'intento di spiegare più in dettaglio le differenze tra le due versioni e contemporaneamente introdurre l'\ac{ObPA} vengono forniti gli pseudocodici \ref{alg:obpad} e \ref{alg:obpar} di alto livello:
+Una preliminare osservazione per evitare la creazione di ambiguità nel prosieguo consiste nel rimarcare che il codice prodotto è costituito da una duplice versione. Vi è infatti il codice riguardante la fase di \textit{debug} riferito d'ora in avanti come \textit{debug version} e quello pronto per l'utilizzo reale riferito d'ora in avanti come \textit{release version}\footnote{In realtà esiste un unica versione del codice ma si passa da una versione all'altra attivando o disattivando il flag in compilazione DEBUG$\_$EVALUATION (se è definito si sta optando per la \textit{debug version})}.  Con l'intento di spiegare le differenze principali tra le due versioni e contemporaneamente introdurre l'\ac{ObPA} vengono forniti gli pseudocodici \ref{alg:obpad} e \ref{alg:obpar} di alto livello:
 
 \begin{algorithm}
 \caption{OBPA \textit{debug version}}\label{alg:obpad}
 \begin{algorithmic}[1]
 \Statex
-\Input il \ac{DFA} target $A$,l' alfabeto $\Sigma$ di $A$ 
+\Input il \ac{DFA} target $A$,l' alfabeto $\Sigma$ 
 \Output il \ac{DFA} inferito $Ob\_DFA$
 \State $samples \gets A.random\_walk(750,750)$
 \State $training\_set \gets pull\_out(samples,500)$
@@ -45,6 +45,74 @@ Una preliminare osservazione per evitare la creazione di ambiguità nel prosiegu
 
 
 
+\begin{algorithm}
+\caption{OBPA \textit{release version}}\label{alg:obpar}
+\begin{algorithmic}[1]
+\Statex
+\Input l' alfabeto $\Sigma$
+\Output il \ac{DFA} inferito $Ob\_DFA$
+\State $training\_set \gets read\_file(path\_file)$ \Comment{Nel file samples disponibili all'utente}
+\State $appr\_oracle \gets \textbf{new}\:\: appr\_oracle(|\Sigma|,\Sigma,training\_set)$
+ \LineComment{Sul training\_set si addestra SVM e non si effettua  model evaluation}
+\State $Ob\_DFA \gets OBSERVATION\_PACK(appr\_oracle).run()$
+ \State \textbf{return} $Ob\_DFA$
+     
+\end{algorithmic}
+\end{algorithm}
+
+La differenza principale tra le due versioni è che nella \textit{debug version} si è in possesso del \ac{DFA} target e nella \textit{release version} non si possiede in alcun modo questa conoscenza.  Si generano 1500 campioni bilanciati campioni con un particolare algoritmo ,\textbf{random walk}.  Dai campioni iniziali si estraggono il \textit{training set} di 500 elementi e il \textit{test set} composto dai rimanenti 1000. Si crea un oracolo approssimato che provvede internamente a costruire un classificatore a partire dal \textit{training set} e usa il \textit{test set} per valutare il classificatore scelto. Si invoca l'\ac{ObP} passandogli l'Oracolo approssimato; \ac{ObP} funziona in maniera classica come descritto nel capitolo [INSERIRE RIFERIMENTO CAPITOLO ObP] ma al momento di invocare i metodi per effettuare le \ac{MQ} ed \ac{EQ} saranno chiamati i metodi dell'Oracolo approssimato --- che \ac{ObP} ''ha'' (composizione)--- che saranno realizzati mediante il classificatore precedentemente costruito. Viene inferito un \ac{DFA} che viene confrontato con il \ac{DFA} target tramite delle misure statistiche.  L'algoritmo \textit{random walk} nonchè la scelta della dimensione del \textit{training set} e del \textit{test set}  e come avviene il confronto tra il target e il \ac{DFA} inferito sarà spiegato più approfonditamente nella sezione \ref{sec:gensam}.\\
+Nella \textit{release version} non essendo in possesso di un \ac{DFA} target ,come accade del resto in uno scenario reale, i campioni in possesso dell'utente vengono inseriti su un file e una volta caricati nel programma costituiscono essi stessi il \textit{training set}. Come per la \textit{release version} si costruisce un Oracolo approssimato ma non si effettua model evaluation (non c'è un \textit{test set}) e il perchè sarà spiegato successivamente. Alla stregua di quanto descritto per la \textit{release version} si inferisce un \ac{DFA} mediante l'algoritmo \ac{ObP} ma non è possibile effettuare una comparazione di quest ultimo con il \ac{DFA} target dato che è ignoto. \\
+Si puntualizza che la \textit{release version} è stata implementata generando i campioni comunque su un \ac{DFA} target anzichè inserirli e poi leggerli da file proprio per non doversi sobbarcare  l'onere di generare manualmente i campioni. 
+
+\subsection{Costruzione del classificatore}
+Come capita spesso nell'addestramento di un classificatore  sono molti gli \textit{iperparametri} da potere regolare e le possibili strade perseguibili per di cercare una soluzione soddisfacente. Per questo motivo sono state realizzate tre diversi implementazioni nominate in seguito come \ac{ObPA}1 \ac{ObPA}2 e \ac{ObPA}3. Per ognuna di esse vi è sia una \textit{debug version} che una \textit{release version}. Per ciascuna di esse l'implementazione fornita negli algoritmi \ref{alg:obpad} e \ref{alg:obpar} rimane valida ma cambiano le tecniche utilizzate per costruire il classificatore per l'oracolo approssimato a partire dal \textit{training set}.
+
+\subsubsection{ObPA1}
+Come detto il modello prescelto è \ac{SVM} e la libreria esterna scelta è l'implementazione di Thorsten Joachims nella versione $\ac{SVM}^{light}$ e per ulteriori dettagli si rimanda all'appendice \ref{sec:light}. Qui si aggiunge che che $\ac{SVM}^{light}$ è in linguaggio $C$ mentre la libreria GI-learning è in $C++$, che è concepita come un eseguibile pronto all'uso, che è una libreria povera  in termini delle tecniche di \textit{data processing} e model selection, che è stato necessario integrarla all'interno di GI-learning. Quindi è stato necessario un notevole sforzo implementativo per aggiungere alcune funzionalità di cui si parlerà a breve (k-fold-validation, codifica, scaling ecc.) e non è stato possibile utilizzare  $\ac{SVM}^{light}$ come una \textit{black-box} ma interagire con essa a basso livello e modificare porzioni di codice e la \textit{signature} di alcune funzioni interne per riadattarle agli scopi di \ac{ObPA}.
+
+L'algoritmo \ac{ObPA}1 (la parte relativa all'addestramento del classificatore) viene presentata a grandi linee nell'algoritmo [INSERIRE RIFERIMENTO]. OBPA1 corrisponde a una particolarizzazione di quello che negli algoritmi \ref{alg:obpar} e \ref{alg:obpad} è stato indicato con $appr\_oracle$
+
+\begin{algorithm}
+\caption{OBPA1}\label{alg:obpa1}
+\begin{algorithmic}[1]
+\Statex
+\Input a $TRS = training\_set$, a $TES = test\_set$, a $\Sigma$   
+\Output $app\_oracle$
+\State $encode(TRS , TES)$
+\State $padding(TRS , TES)$
+\State $scale(TRS , TES)$
+\State $\textbf{best\_model} \gets grid\_search(TRS)$ \Comment{Si fa model selection}\label{sta:quattro}
+\State $new\_best\_model \gets$ retrain $\textbf{best\_model}$ found, on whole TRS
+\State $statistical\_results \gets model\_evaluation(new\_best\_model,TES)$ \label{sta:moe}
+\State $\textbf{return}$ app\_oracle(new\_best\_model) 
+
+   
+\end{algorithmic}
+\end{algorithm}
+Nell'algoritmo \ref{alg:obpa1} è stata presentata la \textit{debug version} di \ac{ObPA} , la \textit{release version} differisce solo per la riga \ref{sta:moe} e per l'assenza del \textit{test set} quindi per essa non si fa \textit{model evaluation} come si approfondirà a breve.\\
+I dati devono essere necessariamente processati perchè essendo categorici (l'alfabeto in generale è fatto da stringhe di caratteri alfanumerici) sono direttamente utilizzabili da \ac{SVM} e allora li si rende numerici con \textbf{integer encoding} (appendice [INSERIRE RIFERIMENTO INTEGER ENCODING]).\\
+\ac{SVM} presuppone che i campioni siano della stessa lunghezza ed ecco giustificato il \textit{padding}. Si seleziona la stringa più lunga nel \textit{training set} e tutte le altre stringhe sono uniformate a questa lunghezza tramite il \textit{padding}. Siccome \ac{SVM} si basa su misure di similarità tra i campioni [INSERIRE RIFERIMENTO SVM SU MISURE DI SIMILARITA'] non è stato ritenuto opportuno scegliere un valore fisso per il valore di padding che è allora diventato un parametro.\\
+Dato che i singoli attributi variano nello stesso range e come si dirà si è usato un \textit{kernel} gaussiano che non ha problemi numeri lo \textit{scaling} dei dati non è strettamente necessario ed allora se effettuarlo o meno e diventato un altro parametro. La tecnica usata per lo \textit{scaling} è quella della \textbf{standardizzazione} e per i dettagli si rimanda all'appendice [INSERIRE RIFERIMENTO APPENDICE STANDARDIZZAZIONE]. In seguito va fatta model selection per la scelta degli \textit{iperparametri migliori}. Si è scelto il \textit{kernel} gaussiano per i motivi ampiamente illustrati nell'appendice [INSERIRE RIFERIMENTO APPENDICE] e l'intervallo di variazione del parametro $\gamma$ del \textit{kernel} nonchè del parametro $C$(trade-off parameter) è quello indicato nella sezione \ref{sec:adsvm} in cui è anche spiegato che una ricerca come \textit{grid search} per la selezione dei parametri migliori malgrado sia molto onerosa computazionalmente sia la più affidabile.  Per il parametro $C$ è anche usato il valore du default della libreria \ac{SVM}. Il padding è settato con 8 valori positivi diversi più due valori negativi e nel caso che il valore di padding positivo corrente non produca un classificatore migliore rispetto a un valore di padding precedente si passa direttamente all'ultimo valore di padding saltando quelli intermedi. In definitiva vi sono quattro parametri lo scaling,il padding,$C$,$\gamma$ che rende molto grande lo spazio dei parametri.\\
+
+
+Discorso a parte meritano la model selection e la model evaluation. Innanzitutto  si è scelto di utilizzare per avere stime il più possibile unbiased la \textit{5-fold-validation}. $\ac{SVM}^{light}$ mette a disposizione anche \textit{LOO} ma ne calcola solo un'approssimazione e quindi non del tutto attendibile nonostante ciò  \ac{ObPA} è implementato in modo tale da potere scegliere dall'esterno la preferenza sul metodo di validazione incrociata (LOO o 5-fold-validation).  Un altro criterio di stima dell'errore messo a disposizione da $\ac{SVM}^{light}$ è  Xi-Alpha che viene calcolato in maniera molto efficiente ma come si evince da \cite{Duan03} 5-fold-validation è più attendibile.  \\Il modo di procedere classico sarebbe quello di dividere i campioni disponibili (cio quelli menzionati come $TRS$ alla riga \ref{sta:quattro} in due parti un \textit{training set} e un \textit{test set} . Sul \textit{training set} si fa \textit{5-fold-validation} e si usa la media dei cinque valori di \textit{accuracy} per fare model selection. Per il modello migliore trovato (e i suoi parametri) si rieffettua l'addestramento usando tutto il \textit{training set} che è non quello indicato come $TRS$ ma quello originato dalla divisione sull'insieme iniziale $TRS$. Per il classificatore costruito si fa model valuation utilizzando gli \textit{unseen} campioni del \textit{test set}(quello originato dalla suddivisione dell'insieme $TRS$) (con qualche misura come MCC)  e infine si rieffettua l'addestramento su tutti i campioni  iniziali (cioè i 500 campioni di $TRS$). \\
+In \ac{ObPA}1 (e anche nelle altre versioni) in \textit{release version} si è fatta una scelta diversa. Con l'intento di ottimizzare le prestazioni e di usare il massimo numero di campioni per la scelta del modello si fa solo model selection tramite \textit{5-fold-validation} su tutti i campioni (i 500 campioni di $TRS$) riaddestrando dopo la scelta dei migliori \textit{iperparametri} su tutto l'insieme di campioni $TRS$ e rinunciando a fare model evaluation. Quindi non verrà fornito un \textit{feedback}  sulle capacità di generalizzare del costruito classificatore statistico all'utente dato che quest ultimo potrà visionare solo l'accuracy della \textit{5-fold-validation} che è indicativa ma non una stima precisa dell'errore di generalizzazione.\\
+In \textit{debug version} si effettua la stessa cosa che in \textit{release version} ma avendo il \ac{DFA} target i campioni sono disponibili e ne vengono generati 1000 dall'esterno (senza sovrapposizione con quelli del \textit{training set}) che serviranno da \textit{test set} per fare model evaluation sul migliore modello scelto (si ribadisce scelto alla stregua della \textit{release version}).\\
+Due aspetti importanti relativi a quanto appena esposto sono:
+\begin{enumerate}
+\item I campioni del \textit{test set} vanno processati con gli stessi valori trovati nella fase di preprocessing per il training set. Tali valori non vanno quindi ricalcolati \textit{ex novo} sul \textit{test set}.
+\item Dal \textit{test set} vanno scartate le eventuali stringhe di lunghezza maggiore della stringa di lunghezza massima tra quelle incontrate nel \textit{training set}. Quindi il classificatore costruito ha il limite di funzionare solo su stringhe fino ad una certa lunghezza. Quindi se \ac{ObP} dovesse formula una \ac{MQ} più lunga di quella di lunghezza massima incontrata nel \ac{training set} il classificatore non è in grado di rispondere. 
+\end {enumerate}
+
+\subsubsection{ObPA2}
+In \ac{ObPA}2 si usa come codifica dei dati \textbf{OHE} (vedasi appendice [INSERIRE RIFERIMENTO OHE]) la cui rappresentazione risultante è quella in cui ogni stringa rappresenta un vertice dell'ipercubo di lato unitario. Questa è una rappresentazione molto sparsa e ridondante, per cui incline all'\textit{overfitting}, ma nella fattispecie i molti gradi di libertà potrebbero tornare utile per la rappresentazione ostica dei linguaggi regolari.\\
+Rispetto a quanto spiegato su OHE nell'appendice [INSERIRE RIFERIMENTO OHE] occorre un bit in più per tenere in considerazione il valore per il padding. Ad esempio se l'alfabeto $|\Sigma|=3$ in OHE si ha:
+\begin{equation*}
+1000 \quad 0100 \quad 0010 \quad 0001
+\end{equation*} 
+
+laddove l'ultimo elemento è la codifica OHE per il valore di padding mentre i primi tre elementi servono a codificare le stringhe che costituiscono l'alfabeto $\Sigma$.\\
+Tutte le considerazioni effettuate per \ac{ObPA}1 restano valide per \ac{ObPA}2. Le uniche differenze a parte quella suddetta sono che il valore di padding è unico e che per la codifica OHE non è necessario effettuare lo scaling quindi vengono a decadere due parametri velocizzando l'algoritmo. Il rovescio della medaglia è che il numero di attributi per stringa aumenta notevolmente e per stringhe o alfabeti molto lunghi questo metodo può allungare notevolmente l'onere computazionale per la convergenza dell'algoritmo  della librearia $\ac{SVM}^{light}$  
 
 \section{ALtro}
 Inserire il discorso che in debug version alla fine è comunque necessario confrontare l'ipotesi finale col target per rendersi conto del dfa inferito quanto è buono. Infatti che l'ipotesi sia verificato tramite un'equivalence query essere simile al classificatore non è sufficiente in quanto il classificatore è già di per sè un'approssimazione del target e quindi un'ipotesi che approssima bene il classificatore potrebbe non approssimare bene il target e quindi un confronto finale tra target e ipotesi è necessario. 
