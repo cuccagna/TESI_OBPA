@@ -22,7 +22,25 @@ Le \textit{Identity Query} non sono meno realistiche delle \ac{EQ} ma forniscono
 Per quanto concerne la selezione del classificatore statistico per approssimare l'Oracolo la scelta è ricaduta su \ac{SVM} perchè costituiscono uno dei migliori modelli. Inoltre sono poche le applicazioni delle \ac{SVM} per l'apprendimento di linguaggi regolari come in \cite{Clark11}\cite{Clark06}  in cui si riesce a definire un kernel string utile per l'apprendimento dei linguaggi planari\footnote{I linguaggi planari sono una classe di linguaggi che attraversano la tassonomia di Chomsky nel senso che apprendono solo in maniera parziale i linguaggi finiti,regolari,context-free,context-sensitive ecc. senza saturare nessuno di essi}  oppure in \cite{Kontorovich09} dove si delinea un lavoro teorico sui linguaggi regolari e si propone un kernel string senza concretizzarlo specificamente per l'apprendimento di linguaggi regolari nell'accezione dell'\textit{active learning}. Altri tipi di classificatori come ad esempio le \textit{Recurrent Neural Network} si sono rilevate particolarmente adatte allo scopo di modellare un \ac{DFA} ma come si evince da \cite{Forcada02}, che costituisce una panoramica su di esse a riguardo dell'impiego in  \ac{GI}, sono state già ampiamente dibattute in letteratura.
 
 \section{Funzionamento ObPA}
+Una preliminare osservazione per evitare la creazione di ambiguità nel prosieguo consiste nel rimarcare che il codice prodotto è costituito da una duplice versione. Vi è infatti il codice riguardante la fase di \textit{debug} riferito d'ora in avanti come \textit{debug version} e quello pronto per l'utilizzo reale riferito d'ora in avanti come \textit{release version}\footnote{In realtà esiste un unica versione del codice ma si passa da una versione all'altra attivando o disattivando il flag in compilazione DEBUG$\_$EVALUATION (se è definito si sta optando per la \textit{debug version})}. La differenza principale tra le due versioni è che nella \textit{debug version} si è in possesso del \ac{DFA} target. Con l'intento di spiegare più in dettaglio le differenze tra le due versioni e contemporaneamente introdurre l'\ac{ObPA} vengono forniti gli pseudocodici \ref{alg:obpad} e \ref{alg:obpar} di alto livello:
 
+\begin{algorithm}
+\caption{OBPA \textit{debug version}}\label{alg:obpad}
+\begin{algorithmic}[1]
+\Statex
+\Input il \ac{DFA} target $A$,l' alfabeto $\Sigma$ di $A$ 
+\Output il \ac{DFA} inferito $Ob\_DFA$
+\State $samples \gets A.random\_walk(750,750)$
+\State $training\_set \gets pull\_out(samples,500)$
+\State $test\_set \gets pull\_out(samples,1000)$
+\State $appr\_oracle \gets \textbf{new}\:\: appr\_oracle(|\Sigma|,\Sigma,training\_set,test\_set)$
+ \LineComment{Sul training\_set si addestra SVM e con il  \textit{test\_set} si fa model evaluation}
+\State $Ob\_DFA \gets OBSERVATION\_PACK(appr\_oracle).run()$
+\State $statistical\_measure \gets compare(Ob\_DFA , A)$
+ \State \textbf{return} $Ob\_DFA$
+     
+\end{algorithmic}
+\end{algorithm}
 
 
 
