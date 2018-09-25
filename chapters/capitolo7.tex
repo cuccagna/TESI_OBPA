@@ -216,6 +216,12 @@ Se le stringhe generate col W-Method sono in numero esiguo si tenta di aumentare
 Nel caso si usi \textit{random walk} si cerca di generare 1500 campioni, se non ci riesce per motivi analoghi ai linguaggi Tomita si usa un \textit{test set} ridotto ma nel caso che non vengano creati neanche 100 campioni si ha il lancio di un'eccezione e la terminazione di \ac{ObPA}.
 
 
+Parla del fatto che la soglia per l'eq si è impostata con un'accuracy del 90$\%$ ma non va bene questa misura. Se si ha a che fare con un \ac{DFA} come Tomita2 ad esempio che genera molte più stringhe negative che positive si ha che molte delle stringhe estratte dal W-Method se non tutte sono negative e nel primo round di \ac{ObPA} l'iptesi è il DFA che rigetta tutte le stringhe l'accuracy è al 100$\%$ e nonostante un buon classificatore si ottiene un risultato errato. Allora si è usato Matthews come misura che tenendo conto di entrambe le classi evita questo problema.
+
+\section{ALtro}
+Inserire il discorso che in debug version alla fine è comunque necessario confrontare l'ipotesi finale col target per rendersi conto del dfa inferito quanto è buono. Infatti che l'ipotesi sia verificato tramite un'equivalence query essere simile al classificatore non è sufficiente in quanto il classificatore è già di per sè un'approssimazione del target e quindi un'ipotesi che approssima bene il classificatore potrebbe non approssimare bene il target e quindi un confronto finale tra target e ipotesi è necessario. 
+
+Inserire il discorso dell'esplosione del DFA. E che questo è dovuto anche al fatto che quando viene tornato un controesempio che non è un controesempio si fanno degli split errati. Siccome la versione implementata in librearia è ONEGlobally questa può generare più di uno split alla volta a differenza di ONELocally. Inoltre il controesempio viene sfruttato più di una volta, quindi anche un solo errore può condurre nel controesempio può condurre ad un DFA ipotesi completamente divergente dal target. Quindi potrebb essere meglio usare ONELocally che però è stato implementato ma non funzionava bene al 100 per 100.
 
 Fai vedere le difficoltà anche nell'approssimare con OneGlobally OBP il linguaggio che il classificatore rappresenta, e non solo difficoltà nell'approssimare il linguaggio target col classificatore in addestramento.
 
@@ -226,3 +232,5 @@ Parla del caso di campioni non bilanciati che lo splitting permette di gestire c
 Giustifica risultati anche perchè si approssimano anche le MQ.
 Fai vedere che comunque esistono dei modelli complessi con cui si hanno buoni risultati (anche se la complessità è tutta da vedeere e non è decisa solo dagli stati dall'alfabeto e dalla profondità, ma dipende anche da quanto sono buoni i campioni estratti col random walk).
 Illustra i set di esperimenti e i risultati.
+
+Scrivi che non c'è un feedback per la bontà del classificatore come spiegato nel Capitolo 4 ma comunque si ha l'accuracy in ObPA1 e ObPA2 e il margine in ObPA3 (vedi se hai anche altro in obpa 3). E un metodo alla femminina per capire se il classificatore è buono è vedere se il classificatore viene costruito velocemente oppure SVM perde tempo. 

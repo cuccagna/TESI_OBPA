@@ -689,6 +689,7 @@ b = \frac{1}{\abs{sv}} \sum_{i \in sv}^{}\Biggl(y_i - \Bigl(\sum_{j \in sv}^{}\a
 \end{equation}
 
 \subsubsection{Fase di Test}
+\label{sub:fte}
 Una volta trovati $w$ e $b$, e quindi una volta che la \ac{SVM} è stata \textit{trained} come si usa il classificatore trovato? Immaginiamo di avere un campione n-dimensionale del \textit{test set} $m$ allora si usa l'iperpiano $w \bullet x +b$ per classificare il campione \emph{unseen} $m$ in base all'esito di $sign(w \bullet m + b)$ (l'etichetta di m è 1 oppure -1 in base a $sign(w \bullet m + b)$)
 
 \subsection{Soft Margin}
@@ -1179,6 +1180,7 @@ Ad esempio per l'attributo categorico che rappresenta i colori del semaforo una 
 \end{alignat} 
 In questo modo il campione $\Braket{verde , 9}$ che è composto da due attributi che indicano il colore del semaforo e l'ora viene codificato come $\Braket{0 , 9}$ e si osservi che il secondo attributo essendo già numerico non viene codificato.
 \subsubsection{One Hot Encoding}
+\label{subsub:ohe}
 \ac{OHE} (One Hot Encoding) assegna un bit ad ogni classe di un attributo. La lunghezza di questa codifica è quindi il numero di classi dell' attributo. Riproponendo l'esempio della sottosezione \ref{subsub:ien} una possibile codifica per le classi dell'attributo categorico semaforo è:
 \begin{alignat}{3}
 &verde \to 0 0 1\\
