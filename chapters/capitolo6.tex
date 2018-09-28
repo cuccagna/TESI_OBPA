@@ -134,10 +134,47 @@ c = \{x \in X :  (w \star \phi(x))  > 0\}
 \end{equation*}
 
 \end{definizione*}
+La classe dei concetti $C$ è \textit{finitamente linearmente seprabile} se ogni $c \in C$ è \textit{finitamente lineramente separabile} sotto lo stessa funzione $\phi$ ($w$ invece varia da un concetto all'altro). Il concetto di supporto finito è molto importante perchè assicura che vi sia per ogni concetto $c$ una dimensione finita $D(c)$ tale che $c$ è linearmente separabile in $\mathbb{B}^{D(c)}$, cioè in ultima analisi la funzione $\phi()$ mappa le stringhe del concetto in uno spazio di dimensione finita $D(c)$ in cui le stringhe sono lineramente separabili cioè esiste un iperpiano che separa le stringhe positive del concetto da quelle negative.
+\begin{teorema}
+Ogni classe dei concetti numerabile C su uno spazio delle istanze X numerabile è finitamente linearmente separabile. 
+\end{teorema}
+Questo teorema ,per la cui dimostrazione si rimanda al riferimento succitato, è strettamente correlato alla Structural Risk Minimization (INSERIRE RIFERIMENTO APPENDICE) infatti vengono utilizzate due funzioni generiche $|\cdot| \text{ e } \norma{\cdot}$ che indicano rispettivamente una misura della complessità di un'istanza e di un concetto (ad esempio nel caso di una stringa si può scegliere la sua lunghezza e per un \ac{DFA} il numero di stati dell'automa canonico).  Il trucco nella costruzione della funzione $\phi()$ è di arrivare alla lineare separabilità  regolando queste funzioni che difatti sono una misurà della capacità cioè complessità del concetto e delle stringhe.\\
+Un primo risultato rilevante è il seguente teorema nell'ambito del \textit{PAC-learning} \cite{Val84}:
+\begin{teorema}
+\label{teo:unk}
+Detta C una classe di concetti sulle istanze X, entrambe numerabili. Si definisce la famiglia di kernel:
+
+\begin{equation}
+\label{eq:univk}
+K_{n}(x,y) = \sum_{c:\norma{c} \leq n} \lambda^{c}(x)\lambda^{c}(y)\quad\quad\footnote{L funzione $\lambda$ è stata definita per il \ac{DFA} e qui la si estende a un concetto generico}
+\end{equation}
+
+per $n \in \mathbb{N}$. Allora è possibile apprendere efficientemente $C$ dagli esempi etichettati. Detto $c \in C$ uno specifico concetto, e detto $S \subset X$ un \textit{training set} cioè una sequenza di m istanze casuali etichettate secondo $c$.
+
+Esiste un efficiente algoritmo \textbf{UniversalKernel}, che prende in ingresso S con $|S| = m$ e restituisce un classificatore $\hat{f} : X \to \{-1,1\}$ che con probabilità almeno $1 - \delta$ ha un piccolo errore di generalizzazione limitato superiormente da:
+
+\begin{equation*}
+\frac{2}{m}(R(c) \log(8em)\log(32m)+\log(\frac{8m}{\delta}) ), \quad\quad per \:\:\: m \geq  \theta^{-1}(\norma{c})
+\end{equation*}
+
+\end{teorema} 
+
+Si chiarifica per evitare ambiguità che le istanze $x,y$ di $K_n$ appartengono al training set $S$. \\
+In pratica le funzioni dentro il \textit{kernel} $K_i$ sono le funzioni che costituiscono le componenti della funzione $\phi()$ ([INSERIRE RIFERIMENTO IN CUI SI DICE CHE UN MAPPING E' DEFINITO COME UNA SERIE DI COMPONENTI] che realizzano la trasformazione dei campioni in uno spazio delle \textit{features} (spazio di Hilbert). Queste funzioni sono tutti i concetti fino alla dimensione $\norma(i)$.  L'algoritmo UniversKernel consiste , per un dato i,nel trasformare e mappare nello spazio delle \textit{features} i singoli campioni del training set $S$ secondo la funzione $\phi_{i}()$ (che consiste nel calcolare ogni singola \textit{feature} cioè attributo di un campione x del \textit{training set} S secondo l'esito di $\lambda^{c}(x)$ con i concetti c che sono tutti quelli tali che $\norma{c} \leq i$ ).\\
+Per un dato $i$ si mappano nello spazio delle \textit{features} tutti i campioni di $S$ e per essi si calcola il \textbf{margine} la cui definizione è analoga a quella data per le \ac{SVM} e ad esse si rimanda(INSERIRE RIFERIMENTO SVM). Quindi si seleziona l'iperpiano (il vettore dei pesi) che rende il margine massimo.\\
+Il calcolo del margine può avvenire in maniera molto naturale con \ac{SVM}. Infatti il teorema \ref{teo:unk} parla di \textit{kernel} $K_i$ definito difatti come un prodotto scalare perchè UniveralKernel può essere realizzato con \ac{SVM} dato che una volta trasformati i campioni secondo la funzione $\phi()$ \ac{SVM} calcola automaticamente il vettore dei pesi che massimizza il margine e nella  forma duale calcola il prodotto scalare dei campioni e nel caso di \ac{SVM} con \textit{kernel} calcola il prodotto scalare dei  campioni trasformati nel \textit{feature space} tramite $\phi()$ (oppure valuta direttamente il \textit{kernel} sui campioni a coppie con il \textit{kernel trick} ma non è questo il caso).\\
+UniversalKernel ripete il calcolo descritto sopra per  $\forall i : 1<i<\theta{m}$ e alla fine seleziona il mapping per quel valore di $i$ che permette di calcolare il margine massimo.\\
+La condizione $m \geq \theta^{-1}(\norma{c})$ implica che per almeno un valore di $i$ sia garantita la lineare separabilità del \textit{training set} S dopo la trasformazione $\phi()$. \'E richiesto che $\theta$ sia una funzione monotonicamente crescente. Inoltre se $\theta$ cresce troppo velocemente $\theta(m)$ sarà troppo grande e l'algoritmo UniversalKernel diventa inefficiente, al contrario con una funzione $\theta$ che cresce lentamente $\theta(m)$ sarà troppo piccolo la condizione del teorema \ref{teo:unk}  $m \geq  \theta^{-1}(\norma{c})$ cioè $\theta(m) \geq  (\norma{c})$ potrebbe non essere rispettata\footnote{Si usa il condizionale perchè il target cioè il concetto $c$ è ignoto e quindi non si conosce la sua dimensione $\norma(m)$ e per questo non è possibile impostare esattamente $\theta(\cdot)$}. Quindi è necessario scegliere attentamente la funzione$\theta$ e $ceil(\sqrt{\cdot})$ viene suggerita come un giusto compromesso.
+
+UniversalKernel è intimamente collegato al Boosting (Appendice [INSERIRE RIFERIMENTO BOOSTING]) dato che il \textit{kernel} $K_n$ per un concetto $c$ viene calcolato a partire da concetti di complessità (per i \ac{DFA} il numero di stati) minore di $c$. \\
+
+L'algoritmo UniversalKernel rende la classe dei concetti $C$ linearmente separabile ma un suo utilizzo pratico è improponibile  perchè l'esatta valutazione di questo kernel coinvolge la sommatoria in \eqref{eq:univk} che può contenere un numero super-esponenziale di termini (cioè i concetti tali che $\norma{c} \leq n$). Viene in soccorso il seguente teorema:
+
+\begin{teorema}
+Detta C una classe di concetti sulle istanze X, entrambe numerabili. Detta $S \subset X$ una sequenza di m istanze(\textit{training set} casuali etichettate in accordo a qualche ignoto $c \in C$. Per qualsiasi $\delta > 0, esiste $ Si definisce la famiglia di kernel:
+\end{teorema}
 
 
-
-nell'ambito del \textit{PAC-learning} 
 
 \subsection{Aprrossimazione di EQ e MQ}
 Terminata la fase di addestramento e costruzione del classificatore la successiva fase  è  del tutto analoga a quanto visto per i metodi classici di \textit{active learning} e nella fattispecie \ac{ObP}. La sostanziale differenza in \ac{ObPA} è che le \ac{MQ} ed \ac{EQ} sono realizzate mediante l'oracolo approssimato e in ultimo mediante il classificatore precedentemente realizzato.
