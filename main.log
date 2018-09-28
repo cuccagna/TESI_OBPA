@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Debian) (preloaded format=xelatex 2017.11.14)  25 SEP 2018 19:48
+This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Debian) (preloaded format=xelatex 2017.11.14)  28 SEP 2018 15:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1456,13 +1456,7 @@ Package biblatex Info: ... file 'italian.lbx' found.
 File: italian.lbx 2016/05/14 v3.4 biblatex localization (PK/JW/AB)
 ) (./main.aux
 
-LaTeX Warning: Label `sub:ceq' multiply defined.
-
-
 LaTeX Warning: Label `fig:lsd' multiply defined.
-
-
-LaTeX Warning: Label `subsub:prscal' multiply defined.
 
 
 LaTeX Warning: Label `eq:softford' multiply defined.
@@ -2375,6 +2369,10 @@ although it is yet undefined on input line 11.
 [53
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 63--66
+
+ []
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2389,7 +2387,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [55]
-Underfull \hbox (badness 10000) in paragraph at lines 92--96
+Underfull \hbox (badness 10000) in paragraph at lines 78--79
 
  []
 
@@ -2414,6 +2412,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [58]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[59]
 File: pictures/EreditaOracolo.png Graphic file (type QTm)
  <use  "pictures/EreditaOracolo.png" >
 
@@ -2422,16 +2427,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[59]
+[60]
 File: pictures/Oracolo.png Graphic file (type QTm)
  <use  "pictures/Oracolo.png" >) (./chapters/capitolo7.tex
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[60]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2522,6 +2520,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [68]
+Underfull \hbox (badness 10000) in paragraph at lines 171--173
+
+ []
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2529,10 +2531,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [69]
-Underfull \hbox (badness 10000) in paragraph at lines 171--173
-
- []
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -3190,10 +3188,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 44920 strings out of 493591
- 834953 string characters out of 6145589
+ 44890 strings out of 493591
+ 834521 string characters out of 6145589
  1113899 words of memory out of 5000000
- 47623 multiletter control sequences out of 15000+600000
+ 47593 multiletter control sequences out of 15000+600000
  17870 words of font info for 104 fonts, out of 8000000 for 9000
  1347 hyphenation exceptions out of 8191
  55i,20n,92p,10370b,5205s stack positions out of 5000i,500n,10000p,200000b,80000s

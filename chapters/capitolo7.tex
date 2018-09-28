@@ -69,48 +69,48 @@ contenute per un numero divisibile per tre.  \\
 
 \begin{figure}[htp]
 \centering
-\subfloat[$L_1$][\label{sub:tom1}]
-{\includegraphics[width=.40\textwidth,height=4cm,keepaspectratio]{Tomita1}} \quad
-\subfloat[$L_2$][\label{sub:tom2}]
-{\includegraphics[width=.45\textwidth,height=4cm,keepaspectratio]{Tomita2}}\\
+\subfloat[$L_1$][$L_1$]
+{\includegraphics[width=.40\textwidth,height=4cm,keepaspectratio]{Tomita1}} \label{sub:tom1}\quad
+\subfloat[$L_2$][$L_2$]
+{\includegraphics[width=.45\textwidth,height=4cm,keepaspectratio]{Tomita2}} \label{sub:tom2}\\
 
-\subfloat[$L_3$][\label{sub:tom3}]
-{\includegraphics[width=.45\textwidth,height=4cm,keepaspectratio]{Tomita3}} \quad
-\subfloat[$L_4$][\label{sub:tom4}]
-{\includegraphics[width=.45\textwidth,height=4cm,keepaspectratio]{Tomita4}}\\
+\subfloat[$L_3$][$L_3$]
+{\includegraphics[width=.45\textwidth,height=4cm,keepaspectratio]{Tomita3}} \label{sub:tom3}\quad
+\subfloat[$L_4$][$L_4$]
+{\includegraphics[width=.45\textwidth,height=4cm,keepaspectratio]{Tomita4}} \label{sub:tom4}\\
 
-\subfloat[$L_5$][\label{sub:tom5}]
-{\includegraphics[width=.45\textwidth,height=4cm,keepaspectratio]{Tomita5}} \quad
-\subfloat[$L_6$][\label{sub:tom6}]
-{\includegraphics[width=.45\textwidth,height=4cm,keepaspectratio]{Tomita6}}\\
+\subfloat[$L_5$][$L_5$]
+{\includegraphics[width=.45\textwidth,height=4cm,keepaspectratio]{Tomita5}} \label{sub:tom5}\quad
+\subfloat[$L_6$][$L_6$]
+{\includegraphics[width=.45\textwidth,height=4cm,keepaspectratio]{Tomita6}} \label{sub:tom6}\\
 
-\subfloat[$L_7$][\label{sub:tom7}]
-{\includegraphics[width=.50\textwidth,height=4cm,keepaspectratio]{Tomita7}} \quad
-\subfloat[$L_8$][\label{sub:tom8}]
-{\includegraphics[width=.40\textwidth,height=4cm,keepaspectratio]{Tomita8}}\\
+\subfloat[$L_7$][$L_7$]
+{\includegraphics[width=.50\textwidth,height=4cm,keepaspectratio]{Tomita7}} \label{sub:tom7}\quad
+\subfloat[$L_8$][$L_8$]
+{\includegraphics[width=.40\textwidth,height=4cm,keepaspectratio]{Tomita8}} \label{sub:tom8}\\
 \caption{Linguaggi di Tomita}
 \label{fig:ltom1}
 \end{figure} 
 
 \begin{figure}[htp]\ContinuedFloat
 \centering
-\subfloat[$L_9$][\label{sub:tom9}]
-{\includegraphics[width=.45\textwidth,height=4cm,keepaspectratio]{Tomita9}} \quad
-\subfloat[$L_10$][\label{sub:tom10}]
-{\includegraphics[width=.45\textwidth,height=4cm,keepaspectratio]{Tomita10}}\\
+\subfloat[$L_9$][$L_9$]
+{\includegraphics[width=.45\textwidth,height=4cm,keepaspectratio]{Tomita9}} \label{sub:tom9}\quad
+\subfloat[$L_10$][$L_{10}$]
+{\includegraphics[width=.45\textwidth,height=4cm,keepaspectratio]{Tomita10}} \label{sub:tom10}\\
 
-\subfloat[$L_11$][\label{sub:tom11}]
-{\includegraphics[width=.45\textwidth,height=4cm,keepaspectratio]{Tomita11}} \quad
-\subfloat[$L_12$][\label{sub:tom12}]
-{\includegraphics[width=.45\textwidth,height=4cm,keepaspectratio]{Tomita12}}\\
+\subfloat[$L_11$][$L_{11}$]
+{\includegraphics[width=.45\textwidth,height=4cm,keepaspectratio]{Tomita11}} \label{sub:tom11}\quad
+\subfloat[$L_12$][$L_{12}$]
+{\includegraphics[width=.45\textwidth,height=4cm,keepaspectratio]{Tomita12}} \label{sub:tom12}\\
 
-\subfloat[$L_13$][\label{sub:tom13}]
-{\includegraphics[width=.45\textwidth,height=4cm,keepaspectratio]{Tomita13}} \quad
-\subfloat[$L_14$][\label{sub:tom14}]
-{\includegraphics[width=.45\textwidth,height=4cm,keepaspectratio]{Tomita14}}\\
+\subfloat[$L_13$][$L_{13}$]
+{\includegraphics[width=.45\textwidth,height=4cm,keepaspectratio]{Tomita13}} \label{sub:tom13}\quad
+\subfloat[$L_14$][$L_{14}$]
+{\includegraphics[width=.45\textwidth,height=4cm,keepaspectratio]{Tomita14}} \label{sub:tom14}\\
 
-\subfloat[$L_15$][\label{sub:tom15}]
-{\includegraphics[width=.45\textwidth,height=4cm,keepaspectratio]{Tomita15}}
+\subfloat[$L_15$][$L_{15}$]
+{\includegraphics[width=.45\textwidth,height=4cm,keepaspectratio]{Tomita15}} \label{sub:tom15}
 
 \caption{Linguaggi di Tomita}
 \label{fig:ltom2}
@@ -135,7 +135,7 @@ La proprietà dei campioni di essere strutturalmente completi(c'è solo una prob
 \label{sub:wme}
 Per la generazione di un \textit{test set} per fare model evaluation  è improbabile che delle stringhe generate casualmente testino adeguatamente un classificatore. Quindi per la generazione del \textit{test set} dacade la valenza del discorso che campioni strutturalmente completi potrebbero condurre a sovrastimare positivamente un classificatore, assunto che rimane valido per il \textit{training set}, anzi il possedimento di questa proprietà dei dati nel \textit{test set} è ricercata per testare in maniera affidabile un classificatore che difatti approssima \ac{L}. Quindi l'utilizzo di \textit{random walk} per la generazione del \textit{test set} è assolutamente appropriato. \\   \ac{ObPA} però necessita anche del confronto dell'ipotesi intermedia \ac{H} ottenuta ad ogni \textit{round} con il \ac{DFA} target ma quest ultimo non è noto ma è approssimato da un classificatore\footnote{il classificatore approssima l'Oracolo, ma in ultima istanza ad essere approsimato è il linguaggio alias \ac{DFA} target dato che un Oracolo nel caso ideale ha il \ac{DFA} target e tramite esso risponde alle query} preliminarmente costruito tramite \ac{SVM} a partire dai campioni disponibili.   Di conseguenza l'\ac{EQ} come spiegato in [INSERIRE RIFERIMENTO SEZIONE] va implementata sottoponendo  una serie di stringhe sia al classificatore che al \ac{DFA} ipotesi \ac{H} ed è fondamentale che queste stringhe siano selezionate in maniera attenta. Estrarre le stringhe con l'algoritmo \textit{random walk} sul \ac{DFA} target in questo caso genera delle stringhe particolarmente significative ma solo per il \ac{DFA} \ac{H} ma possibilmente non rappresentative del \ac{DFA} target dato che è ignoto.\\
  E ancora sia  \textit{random smapling} che \textit{random walk} possono produrre un \textit{test set} che ha alcuni campioni in comune con il \textit{training set} con cui è stato addestrato il classificatore che approssima l'oracolo ottenendo una possibile corrispondenza mistificatoria dell' \ac{EQ}.\\
- Inoltre solo per la \textit{debug version} è possibile confrontare il \ac{DFA} finale inferito da \ac{ObPA} con il \ac{DFA} target ed anche in questo caso si ripresentano i problemi precedentemente esposti cioè eseguendo \textit{random walk} su uno dei due automi (o il target o l'ipotesi) potrebbe essere prodotto un insieme di stringhe per testare la similarità dei due linguaggi che non esplora parte dell'altro \ac{DFA} (quello su cui non si è eseguito \textit{random walk}) risultando quindi non del tutto appropriato allo scopo. Pertanto adesso è descritto l' algoritmo \textbf{W-Method} \cite{Chow78} che è esente dai problemi summenzionati.
+ Inoltre solo per la \textit{ideal version} è possibile confrontare il \ac{DFA} finale inferito da \ac{ObPA} con il \ac{DFA} target ed anche in questo caso si ripresentano i problemi precedentemente esposti cioè eseguendo \textit{random walk} su uno dei due automi (o il target o l'ipotesi) potrebbe essere prodotto un insieme di stringhe per testare la similarità dei due linguaggi che non esplora parte dell'altro \ac{DFA} (quello su cui non si è eseguito \textit{random walk}) risultando quindi non del tutto appropriato allo scopo. Pertanto adesso è descritto l' algoritmo \textbf{W-Method} \cite{Chow78} che è esente dai problemi summenzionati.
 
 \subsubsection{Algoritmo W-Method}
 
@@ -147,7 +147,7 @@ Tramite il W-Method nel contesto della \ac{GI} si realizza un' \ac{EQ} esatta im
 \item Si conosce $\norma{A}$
 \item \ac{H} e A devono essere completamente specificati cioè da ogni stato per ogni $\Sigma$ si raggiunge uno stato che non sia lo stato pozzo(questa condizione può essere rilassata \cite{Balanescu03})
 \end{itemize}
-Si descrive brevemente il W-Method a grandi linee.   La ratio è che nel target potrei avere degli extra-stati che non vengono esplorati con il \textit{test set} generato con metodi classici e che potrebbero causare un comportamento indesiderato ed alterare la valutazione senza averne avvisaglie. Per questo motivo si stima in anticipo in numero di stati nel \ac{DFA} target (in modo che il test set esplori tutti gli stati del target). Per questo motivo è importante eseguire il \textit{W-Method} sul \ac{DFA} (tra ipotesi e target quando in \textit{debug version} si testa la similarità tra il target ed \ac{H}) che ha il numero minore di stati stimando gli stati dell'altro.\\
+Si descrive brevemente il W-Method a grandi linee.   La ratio è che nel target potrei avere degli extra-stati che non vengono esplorati con il \textit{test set} generato con metodi classici e che potrebbero causare un comportamento indesiderato ed alterare la valutazione senza averne avvisaglie. Per questo motivo si stima in anticipo in numero di stati nel \ac{DFA} target (in modo che il test set esplori tutti gli stati del target). Per questo motivo è importante eseguire il \textit{W-Method} sul \ac{DFA} (tra ipotesi e target quando in \textit{ideal version} si testa la similarità tra il target ed \ac{H}) che ha il numero minore di stati stimando gli stati dell'altro.\\
 Ipotizzando in chiave espositiva che il \ac{DFA} col numero minore di stati sia \ac{H} si procede generando lo \textit{state cover} $C$ su \ac{H} cioè  $C =\{c : \forall q \in Q^{\ac{H}} \:\: \hat{\delta}^{\ac{H}}(q_\epsilon,c)=q\}$ cioè l'insieme di stringhe necessarie per raggiungere ogni stato a partire dallo stato iniziale. Due stati $q_1,q_2$ di \ac{H} sono detti \textit{W-distinguibili} se dato un insieme di stringhe $W \subseteq \Sigma^{*}  \: \:\exists x \in W : ( ( \lambda^{\ac{H}}_{q_{1}}(x) = 1 \land \lambda^{\ac{H}}_{q_{2}}(x) = 0) \lor ( \lambda^{\ac{H}}_{q_{1}}(x) = 0 \land \lambda^{\ac{H}}_{q_{2}}(x) = 1) )$ . W è detto un \textit{characterization set} se tutti gli stati distinti di \ac{H} (essendo \ac{H} minimo tutti gli stati sono distinti) presi a due a due  sono \textit{W-distinguibili}. Definito $k = \norma{A} - \norma{H}$ essere una stima (si parla di stima perchè il target A è ignoto) di quanti stati ha il target in più dell'ipotesi si ha che il \textit{test set} $Y$ è:
 \begin{equation*}
 Y = C(\{\epsilon\} \cup \Sigma \cup \dots \cup \Sigma^{k+1})W
@@ -160,7 +160,7 @@ Il difetto di questa tecnica è che la complessità dipende in maniera esponenzi
 \label{sub:csvm}
 Per effettuare l'addestramento delle \ac{SVM} è necessario creare un \textit{training set}. Anche la dimensione del \textit{training set} e del \textit{test set} è estremamente rilevante per le performances di un classificatore statistico e quindi è necessario scandagliare il comportamento dell'algoritmo al variare della dimensionalità di questi parametri. Attenendosi a quanto fatto nella competizione STAMINA \cite{Stamina10} si crea un \textit{sample set} tramite \textit{random walk}, che fornisce stringhe in maniera equamente bilanciata tra accettanti e rigettanti, sul \ac{DFA} target e da esso si estrapolano due insiemi \textbf{disgiunti}\footnote{Affinchè le performances non siano ottimisticamente biased è necessario che l'addestramento avvenga su un \textit{training set} che non ha elementi in comune con il \textit{test set}} \textit{training set} e un \textit{test set}. In STAMINA il \textit{sample set} è di dimensione 20000 e da esso si estrae un \textit{test set} di dimensione 1500 e dalle rimanenti stringhe si estrae con una procedura che non è rilevante descrivere il \textit{training set} di quattro diverse dimensioni che dipendono da un valore impostato dall'esterno ma grossolanamente si può che le quattro dimensioni del \textit{training set} sono $\{20000,10000,5000,2500\}$. Ricalcando da vicino quanto appena descritto in STAMINA si è creato con \textit{random walk} un insieme di 1500 stringhe da cui si è estratto un insieme di 1000 elementi per il \textit{test set} e 500 per il \textit{training set}. Il metodo implementato per effettuare lo \textit{splitting} è COPY\_DELETE\_SAMPLES (realizza un ''sampling without replacing'')che realizza la stratificazione (vedi Appendice \ref{sub:hol}) e funziona anche nel caso che i campioni non siano equamente bilanciati.
 Rispetto a STAMINA il \textit{test set} anzichè 1500 elementi ne ha 1000 perchè è comunque un numero di campioni sufficientemente significativo e perchè per alcuni automi è risultato  complicato generare un numero elevato di campioni con \textit{random walk} come si spiegherà a breve. Per lo stesso motivo il \textit{training set} è molto ridotto rispetto a STAMINA e ciò potrebbe costituire un notevole svantaggio. Un'altra ragione per un \textit{training set} ridotto è pratico dato che SVM$^{light}$ ha dei seri problemi di convergenza quando la dimensione dell'insieme di addestramento diventa dell'ordine di 2000--3000 elementi quindi aumentarne la dimensione potrebbe rendere l'algoritmo estremamente lento. Si puntualizza che la velocità dell'algoritmo di \ac{SVM} di trovare una soluzione dipende non solo da quanti sono in numero i campioni ma anche dagli specifici dati, sia da un punto di vista di contingenza di quest ultimi che dalla difficoltà nel separarli perchè essi riflettono la complessità del linguaggio target che rappresentano cioè più il target è complesso e più è probabile che i dati siano difficili da separare con \ac{SVM}. Da un punto di vista di un'eventuale utilizzazione il limite di 500 campioni non costituisce un limite dato che i campioni in questo caso sono quelli forniti dall'utente e tipicamente non sono un numero ingente, ma ciò ha impedito di testare il comportamento di \ac{ObPA} su \textit{training set} grandi e uniformarsi a quanto fatto nelle varie competiziono di \ac{GI}.  \\ 
- Nella \textit{debug version} del codice il \textit{setting} per la generazioni dei campioni per l'addestramento è quello appena descritto; volendo simulare la  \textit{release version} senza lo sforzo di inserire dall'esterno(su file) i campioni disponibili è possibile passare  solo 500 campioni (il \textit{training set} generati sul \ac{DFA} target) senza creare il \textit{test set} nè di conseguenza dovere fare uno \textit{splitting} con stratificazione. \\
+ Nella \textit{ideal version} del codice il \textit{setting} per la generazioni dei campioni per l'addestramento è quello appena descritto; volendo simulare la  \textit{release version} senza lo sforzo di inserire dall'esterno(su file) i campioni disponibili è possibile passare  solo 500 campioni (il \textit{training set} generati sul \ac{DFA} target) senza creare il \textit{test set} nè di conseguenza dovere fare uno \textit{splitting} con stratificazione. \\
 Nella \textit{release version} effettiva i campioni non vanno generati su un\ac{DFA} target perchè ignoto ma vanno inseriti dall'esterno. L'utente dovrà provvedere ad inserirli su file rispettando uno specifico formato:  
 \begin{equation*}
 etichetta \quad simbolo\_alfabeto \quad simbolo\_alfabeto \quad simbolo\_alfabeto \dots
@@ -175,7 +175,7 @@ Dove il primo e unico 1 è l'etichetta per una stringa accettante, l'etichetta p
  
 \subsection[Valutazione DFA inferito]{Comparazione di DFA target e DFA inferito da ObPA}
 \label{sub:comdfa}
-Nella sottosezione \ref{sub:wme} è stato detto che ,nella \textit{debug version}, quando \ac{ObPA} termina è necessario confrontare il \ac{DFA} target con il \ac{DFA} inferito dall'algoritmo \ac{ObPA}. Il \textit{test set} per effettuare il confronto va creato con il W-Method perchè rende irrilevante la presenza di eventuali campioni già usati in fase di addestramento nel \textit{test set}, genera un insieme di campioni estremamente significativo per il confronto, non necessità di un'impostazione manuale del numero di campioni nel \textit{test set} che è automaticamente tornato dal W-Method. Non sarà richiesta neanche la stima del numero di stati del \ac{DFA} target dato che quest ultimo in \textit{debug version} è noto. Nonostante i pregi evidenziati il W-Method ha originato molti problemi pratici ed è stato necessario provvedere con rimedi ad hoc. Nei seguenti casi non si usa il W-Method per la generazione dei campioni per il confronto:
+Nella sottosezione \ref{sub:wme} è stato detto che ,nella \textit{ideal version}, quando \ac{ObPA} termina è necessario confrontare il \ac{DFA} target con il \ac{DFA} inferito dall'algoritmo \ac{ObPA}. Il \textit{test set} per effettuare il confronto va creato con il W-Method perchè rende irrilevante la presenza di eventuali campioni già usati in fase di addestramento nel \textit{test set}, genera un insieme di campioni estremamente significativo per il confronto, non necessità di un'impostazione manuale del numero di campioni nel \textit{test set} che è automaticamente tornato dal W-Method. Non sarà richiesta neanche la stima del numero di stati del \ac{DFA} target dato che quest ultimo in \textit{ideal version} è noto. Nonostante i pregi evidenziati il W-Method ha originato molti problemi pratici ed è stato necessario provvedere con rimedi ad hoc. Nei seguenti casi non si usa il W-Method per la generazione dei campioni per il confronto:
 \begin{enumerate}
 \item \label{ite:wm1}Differenza di stati tra \ac{DFA} target e \ac{DFA} inferito maggiore di 10
 \item \label{ite:wm2} \textit{Test set} creato dal W-Method troppo grande, maggior di 500000 campioni
@@ -219,7 +219,11 @@ Nel caso si usi \textit{random walk} si cerca di generare 1500 campioni, se non 
 Parla del fatto che la soglia per l'eq si è impostata con un'accuracy del 90$\%$ ma non va bene questa misura. Se si ha a che fare con un \ac{DFA} come Tomita2 ad esempio che genera molte più stringhe negative che positive si ha che molte delle stringhe estratte dal W-Method se non tutte sono negative e nel primo round di \ac{ObPA} l'iptesi è il DFA che rigetta tutte le stringhe l'accuracy è al 100$\%$ e nonostante un buon classificatore si ottiene un risultato errato. Allora si è usato Matthews come misura che tenendo conto di entrambe le classi evita questo problema.
 
 \section{ALtro}
-Inserire il discorso che in debug version alla fine è comunque necessario confrontare l'ipotesi finale col target per rendersi conto del dfa inferito quanto è buono. Infatti che l'ipotesi sia verificato tramite un'equivalence query essere simile al classificatore non è sufficiente in quanto il classificatore è già di per sè un'approssimazione del target e quindi un'ipotesi che approssima bene il classificatore potrebbe non approssimare bene il target e quindi un confronto finale tra target e ipotesi è necessario. 
+Allo stato dell'arte l' \ac{ObP} costituisce il secondo algoritmo di riferimento nell'ambito dell'apprendimento di linguaggi regolari.  L'algoritmo più performante è invece il più recente TTT algorithm \cite{SteffenTTT14}.
+
+Inserire discorso che la lineare separabilità (hard margin) non è direttamente implementabile in svm light e si usa il parametro C=1. SI potrebbe provare ad usare un'altra libreria che ha questa lineare separabilità  o ad usare una ricerca nello spazio del parametro C (perchè anche con dati lineramente separabili per evitare overfitting e problemi con gli outliers si usa spesso soft margi lo stesso).
+
+Inserire il discorso che in ideal version alla fine è comunque necessario confrontare l'ipotesi finale col target per rendersi conto del dfa inferito quanto è buono. Infatti che l'ipotesi sia verificato tramite un'equivalence query essere simile al classificatore non è sufficiente in quanto il classificatore è già di per sè un'approssimazione del target e quindi un'ipotesi che approssima bene il classificatore potrebbe non approssimare bene il target e quindi un confronto finale tra target e ipotesi è necessario. 
 
 Inserire il discorso dell'esplosione del DFA. E che questo è dovuto anche al fatto che quando viene tornato un controesempio che non è un controesempio si fanno degli split errati. Siccome la versione implementata in librearia è ONEGlobally questa può generare più di uno split alla volta a differenza di ONELocally. Inoltre il controesempio viene sfruttato più di una volta, quindi anche un solo errore può condurre nel controesempio può condurre ad un DFA ipotesi completamente divergente dal target. Quindi potrebb essere meglio usare ONELocally che però è stato implementato ma non funzionava bene al 100 per 100.
 
