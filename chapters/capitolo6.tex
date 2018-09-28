@@ -151,7 +151,7 @@ K_{n}(x,y) = \sum_{c:\norma{c} \leq n} \lambda^{c}(x)\lambda^{c}(y)\quad\quad\fo
 
 per $n \in \mathbb{N}$. Allora è possibile apprendere efficientemente $C$ dagli esempi etichettati. Detto $c \in C$ uno specifico concetto, e detto $S \subset X$ un \textit{training set} cioè una sequenza di m istanze casuali etichettate secondo $c$.
 
-Esiste un efficiente algoritmo \textbf{UniversalKernel}, che prende in ingresso S con $|S| = m$ e restituisce un classificatore $\hat{f} : X \to \{-1,1\}$ che con probabilità almeno $1 - \delta$ ha un piccolo errore di generalizzazione limitato superiormente da:
+Esiste un efficiente algoritmo \textbf{UniversalLearn}, che prende in ingresso S con $|S| = m$ e restituisce un classificatore $\hat{f} : X \to \{-1,1\}$ che con probabilità almeno $1 - \delta$ ha un piccolo errore di generalizzazione limitato superiormente da:
 
 \begin{equation*}
 \frac{2}{m}(R(c) \log(8em)\log(32m)+\log(\frac{8m}{\delta}) ), \quad\quad per \:\:\: m \geq  \theta^{-1}(\norma{c})
@@ -163,18 +163,95 @@ Si chiarifica per evitare ambiguità che le istanze $x,y$ di $K_n$ appartengono 
 In pratica le funzioni dentro il \textit{kernel} $K_i$ sono le funzioni che costituiscono le componenti della funzione $\phi()$ ([INSERIRE RIFERIMENTO IN CUI SI DICE CHE UN MAPPING E' DEFINITO COME UNA SERIE DI COMPONENTI] che realizzano la trasformazione dei campioni in uno spazio delle \textit{features} (spazio di Hilbert). Queste funzioni sono tutti i concetti fino alla dimensione $\norma(i)$.  L'algoritmo UniversKernel consiste , per un dato i,nel trasformare e mappare nello spazio delle \textit{features} i singoli campioni del training set $S$ secondo la funzione $\phi_{i}()$ (che consiste nel calcolare ogni singola \textit{feature} cioè attributo di un campione x del \textit{training set} S secondo l'esito di $\lambda^{c}(x)$ con i concetti c che sono tutti quelli tali che $\norma{c} \leq i$ ).\\
 Per un dato $i$ si mappano nello spazio delle \textit{features} tutti i campioni di $S$ e per essi si calcola il \textbf{margine} la cui definizione è analoga a quella data per le \ac{SVM} e ad esse si rimanda(INSERIRE RIFERIMENTO SVM). Quindi si seleziona l'iperpiano (il vettore dei pesi) che rende il margine massimo.\\
 Il calcolo del margine può avvenire in maniera molto naturale con \ac{SVM}. Infatti il teorema \ref{teo:unk} parla di \textit{kernel} $K_i$ definito difatti come un prodotto scalare perchè UniveralKernel può essere realizzato con \ac{SVM} dato che una volta trasformati i campioni secondo la funzione $\phi()$ \ac{SVM} calcola automaticamente il vettore dei pesi che massimizza il margine e nella  forma duale calcola il prodotto scalare dei campioni e nel caso di \ac{SVM} con \textit{kernel} calcola il prodotto scalare dei  campioni trasformati nel \textit{feature space} tramite $\phi()$ (oppure valuta direttamente il \textit{kernel} sui campioni a coppie con il \textit{kernel trick} ma non è questo il caso).\\
-UniversalKernel ripete il calcolo descritto sopra per  $\forall i : 1<i<\theta{m}$ e alla fine seleziona il mapping per quel valore di $i$ che permette di calcolare il margine massimo.\\
-La condizione $m \geq \theta^{-1}(\norma{c})$ implica che per almeno un valore di $i$ sia garantita la lineare separabilità del \textit{training set} S dopo la trasformazione $\phi()$. \'E richiesto che $\theta$ sia una funzione monotonicamente crescente. Inoltre se $\theta$ cresce troppo velocemente $\theta(m)$ sarà troppo grande e l'algoritmo UniversalKernel diventa inefficiente, al contrario con una funzione $\theta$ che cresce lentamente $\theta(m)$ sarà troppo piccolo la condizione del teorema \ref{teo:unk}  $m \geq  \theta^{-1}(\norma{c})$ cioè $\theta(m) \geq  (\norma{c})$ potrebbe non essere rispettata\footnote{Si usa il condizionale perchè il target cioè il concetto $c$ è ignoto e quindi non si conosce la sua dimensione $\norma(m)$ e per questo non è possibile impostare esattamente $\theta(\cdot)$}. Quindi è necessario scegliere attentamente la funzione$\theta$ e $ceil(\sqrt{\cdot})$ viene suggerita come un giusto compromesso.
+UniversalLearn ripete il calcolo descritto sopra per  $\forall i : 1<i<\theta{m}$ e alla fine seleziona il mapping per quel valore di $i$ che permette di calcolare il margine massimo.\\
+La condizione $m \geq \theta^{-1}(\norma{c})$ implica che per almeno un valore di $i$ sia garantita la lineare separabilità del \textit{training set} S dopo la trasformazione $\phi()$. \'E richiesto che $\theta$ sia una funzione monotonicamente crescente. Inoltre se $\theta$ cresce troppo velocemente $\theta(m)$ sarà troppo grande e l'algoritmo UniversalLearn diventa inefficiente, al contrario con una funzione $\theta$ che cresce lentamente $\theta(m)$ sarà troppo piccolo la condizione del teorema \ref{teo:unk}  $m \geq  \theta^{-1}(\norma{c})$ cioè $\theta(m) \geq  (\norma{c})$ potrebbe non essere rispettata\footnote{Si usa il condizionale perchè il target cioè il concetto $c$ è ignoto e quindi non si conosce la sua dimensione $\norma(m)$ e per questo non è possibile impostare esattamente $\theta(\cdot)$}. Quindi è necessario scegliere attentamente la funzione$\theta$ e $ceil(\sqrt{\cdot})$ viene suggerita come un giusto compromesso.
 
-UniversalKernel è intimamente collegato al Boosting (Appendice [INSERIRE RIFERIMENTO BOOSTING]) dato che il \textit{kernel} $K_n$ per un concetto $c$ viene calcolato a partire da concetti di complessità (per i \ac{DFA} il numero di stati) minore di $c$. \\
+UniversalLearn è intimamente collegato al Boosting (Appendice [INSERIRE RIFERIMENTO BOOSTING]) dato che il \textit{kernel} $K_n$ per un concetto $c$ viene calcolato a partire da concetti di complessità (per i \ac{DFA} il numero di stati) minore di $c$. \\
 
-L'algoritmo UniversalKernel rende la classe dei concetti $C$ linearmente separabile ma un suo utilizzo pratico è improponibile  perchè l'esatta valutazione di questo kernel coinvolge la sommatoria in \eqref{eq:univk} che può contenere un numero super-esponenziale di termini (cioè i concetti tali che $\norma{c} \leq n$). Viene in soccorso il seguente teorema:
+L'algoritmo UniversalLearn rende la classe dei concetti $C$ linearmente separabile ma un suo utilizzo pratico è improponibile  perchè l'esatta valutazione di questo kernel coinvolge la sommatoria in \eqref{eq:univk} che può contenere un numero super-esponenziale di termini (cioè i concetti tali che $\norma{c} \leq n$). Viene in soccorso il seguente teorema:
 
 \begin{teorema}
-Detta C una classe di concetti sulle istanze X, entrambe numerabili. Detta $S \subset X$ una sequenza di m istanze(\textit{training set} casuali etichettate in accordo a qualche ignoto $c \in C$. Per qualsiasi $\delta > 0, esiste $ Si definisce la famiglia di kernel:
+Detta C una classe di concetti sulle istanze X, entrambe numerabili. Detta $S \subset X$ una sequenza di m istanze(\textit{training set} casuali etichettate in accordo a qualche ignoto $c \in C$. Per qualsiasi $\delta > 0$, esiste un algoritmo randomizzato \textbf{ApproxUnivLearn} che da in uscita un classificatore $\hat{f} : X \to \{-1,1\}$ tale che con probabilità almeno $1 - \delta$ si ha un errore di generalizzazione piccolo limitato superiormente da:
+ 
+ \begin{equation*}
+\frac{2}{m}(4R(c) \log(8em)\log(32m)+\log(\frac{16m}{\delta}) ), \quad\quad per \:\:\: m \geq  max\{theta^{-1}(\norma{c}) , D(c)/2 , R(c)^{2}/8.4 x 10^{4}\}
+\end{equation*}
+dove $D(c)>0$ e $R(c) < \infty$ sono costanti che dipendono solo da $c$.
 \end{teorema}
 
+e si dimostra che ha anche un tempo di esecuzione polinomiale.
 
+ApproxUnivLearn come UniversalLearn esegue il ciclo principale $\theta(m)$ volte (al variare n). Gli algoritmi sono identici , la differenza è che per approssimare $K_n$ vengono estratti casualmente in maniera uniforme T  concetti $c :  1 \geq \norma{c} \leq n$ con \textit{sampling without replacing} \footnote{Significa che se si estrae un elemento x da un insieme X alla successiva estrazione l'elemento x viene eliminato dall'insieme}. T equivale a :
+\begin{equation*}
+T = \frac{1}{2\epsilon^{2}}\log(\frac{m^{2}+m}{\delta/2})
+\end{equation*}
+con $\epsilon$ che deve essere piccolo dato che rappresenta anche la differenza tra il il \textit{kernel} esatto e quello approssimato. Nel riferimento si consiglia di scegliere $\epsilon = 1/\sqrt{m}$.  Per ogni $n$ si calcola il margine: con i T concetti precedentemente estratti si mappano i campioni nello spazio delle \textit{features} e per essi si calcola il margine maggiore. I campioni che hanno il margine maggiore determinano  quale trasformazione dei campioni scegliere per mappare in un secondo momento anche i campioni del \textit{test set} .
+
+ApproxUnivLearn è un algoritmo che si applica a una classe generica di concetti e istanze numerabili in cui rientrano anche i linguaggi regolari. Un altro risultato interessante anche se esula dallo scopo di questo lavoro è che tramite il \textit{kernel} si può arrivare a una nuova caratterizzazione della classe dei linguaggi regolari.
+
+Per \ac{ObPA3} rimane valido quanto detto negli algoritmi [INSERIRE RIFERIMENTI ALGORITMI 16 e 17] ma costruisce il classificatore implementando l'algoritmo ApproxUnivLearn per i linguaggi regolari. Acciocchè risulti chiaro il lavoro svolto viene presentato lo pseudocodice \ref{alg:obpa3} di alto livello e autoesplicativo per \ac{ObPA3} inerente la costruzione del classificatore nella \textit{ideal version}:
+
+\begin{algorithm}
+\caption{OBPA3}\label{alg:obpa3}
+\begin{algorithmic}[1]
+\Statex
+\Input a $TRS = training\_set$, a $TES = test\_set$, a $\Sigma, \epsilon$   
+\Output $app\_oracle , feature \ac{DFA}$
+\State $m = |TRS|$ \Comment{m è la dimensione del training set}
+\State $T \gets \frac{m}{2}\log(\frac{m^{2}+m}{\delta/2})$ \Comment{Formula a cui si riduce T per $\epsilon = 1/\sqrt{m}$}
+\State $T\_DFA\_Final = \{\}$ \Comment{Inizializzazione vuota. Conterrà i feature DFA finali}
+\State $best\_margin = -\infty$
+\State $best\_model = \{\}$ 
+\For{$i\gets 1, ceil(\sqrt{m})$}
+   \State $T\_DFA \gets uniform\_sampling(T , \ac{DFA}(1:i))$ \Comment{Estrai T features DFA}
+   \State $feature\_TRS = \{\}$ \Comment{Conterrà i campioni trasformati nel feature space}
+   \Statex
+   \ForAll{$x \in TRS$}
+     \State $feature\_x =\epsilon $ \Comment{Inizializza con la stringa vuota}
+      \ForAll{$feature dfa \: a \in T\_DFA$}
+          \State $feature\_x \gets feature\_x \cdot \lambda^{a}(x)$
+      \EndFor
+      \State \textbf{end for all}
+      \State $put \: feature\_x \: in \: feature\_TRS$
+      
+   \EndFor
+   \State \textbf{end for all}
+\Statex
+
+\State $temp\_margin = compute\_margin(feature\_TRS)$ \Comment{Calcolalo con \ac{SVM}}
+\State $store current\_model$ \Comment{Salva il modello \ac{SVM} corrente.}
+\If{best\_margin > temp\_margin}
+\State $best\_margin \gets temp\_margin$
+\State $best\_model = current\_model$
+\State $T\_DFA\_Final \gets T\_DFA$
+\State \textbf{end if}
+\EndIf
+\State $i \gets i+1$
+\EndFor
+\State \textbf{end for}
+
+
+ \LineComment{A seguire si mappa TES nel feature space e si fa model evaluation}
+ \State $feature\_TES = \{\}$ 
+   \ForAll{$x \in TES$}
+     \State $feature\_x =\epsilon $ \Comment{Inizializza con la stringa vuota}
+      \ForAll{$feature dfa \: a \in T\_DFA\_Final$}
+          \State $feature\_x \gets feature\_x \cdot \lambda^{a}(x)$
+      \EndFor
+      \State \textbf{end for all}
+      \State $put \: feature\_x \: in \: feature\_TES$
+      
+   \EndFor
+   \State \textbf{end for all}
+
+\State $statistical\_results \gets model\_evaluation(best\_model,feature\_TES)$ 
+\State $\textbf{return}$ app\_oracle(best\_model,T\_DFA\_Final) 
+
+   
+\end{algorithmic}
+\end{algorithm}
+
+Discorso lineare separabilità in SVM light.
 
 \subsection{Aprrossimazione di EQ e MQ}
 Terminata la fase di addestramento e costruzione del classificatore la successiva fase  è  del tutto analoga a quanto visto per i metodi classici di \textit{active learning} e nella fattispecie \ac{ObP}. La sostanziale differenza in \ac{ObPA} è che le \ac{MQ} ed \ac{EQ} sono realizzate mediante l'oracolo approssimato e in ultimo mediante il classificatore precedentemente realizzato.
