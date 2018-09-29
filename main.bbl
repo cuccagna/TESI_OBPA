@@ -141,6 +141,27 @@
     \field{year}{1983}
   \endentry
 
+  \entry{AppleHash}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=AA}{%
+         family={Appleby},
+         family_i={A\bibinitperiod},
+         given={Austin},
+         given_i={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{AA1}
+    \strng{fullhash}{AA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{title}{MurmurHash3 hash function}
+    \verb{url}
+    \verb https://github.com/aappleby/smhasher/blob/master/src/MurmurHash3.cpp
+    \endverb
+  \endentry
+
   \entry{Balanescu03}{article}{}
     \name{author}{4}{}{%
       {{hash=BT}{%

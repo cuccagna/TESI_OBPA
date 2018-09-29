@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Debian) (preloaded format=xelatex 2017.11.14)  28 SEP 2018 23:43
+This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Debian) (preloaded format=xelatex 2017.11.14)  29 SEP 2018 15:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1467,9 +1467,6 @@ LaTeX Warning: Label `eq:softvincd' multiply defined.
 
 LaTeX Warning: Label `eq:softvind2' multiply defined.
 
-
-LaTeX Warning: Label `sub:measure' multiply defined.
-
 )
 \openout1 = `main.aux'.
 
@@ -2369,7 +2366,7 @@ although it is yet undefined on input line 11.
 [53
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 63--66
+Underfull \hbox (badness 10000) in paragraph at lines 65--68
 
  []
 
@@ -2387,7 +2384,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [55]
-Underfull \hbox (badness 10000) in paragraph at lines 78--79
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
 
  []
 
@@ -2426,20 +2423,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [60]
-Underfull \hbox (badness 10000) in paragraph at lines 169--170
+Underfull \hbox (badness 10000) in paragraph at lines 172--173
 
- []
-
-
-Overfull \hbox (68.47675pt too wide) detected at line 178
-[]\OT1/cmr/m/n/12 (4\OML/cmm/m/it/12 R\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 c\OT1/c
-mr/m/n/12 ) [](8\OML/cmm/m/it/12 em\OT1/cmr/m/n/12 ) [](32\OML/cmm/m/it/12 m\OT
-1/cmr/m/n/12 ) + []([]))\OML/cmm/m/it/12 ;   per   m \OMS/cmsy/m/n/12 ^^U \OML/
-cmm/m/it/12 max\OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 theta[]\OT1/cmr/m/n/12 ([]\OM
-L/cmm/m/it/12 c[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; D\OT1/cmr/m/n/12 (\OML/cmm
-/m/it/12 c\OT1/cmr/m/n/12 )/2\OML/cmm/m/it/12 ; R\OT1/cmr/m/n/12 (\OML/cmm/m/it
-/12 c\OT1/cmr/m/n/12 )[]/8\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 4\OML/cmm/m/it/12 x
-\OT1/cmr/m/n/12 10[]\OMS/cmsy/m/n/12 g
  []
 
 
@@ -2449,19 +2434,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [61]
-Package acronym Info: Label `acro:ObPA3' newly defined as it shall be overridde
-n
-although it is yet undefined on input line 192.
-
-
-Package acronym Warning: Acronym `ObPA3' is not defined on input line 192.
-
-
-Package acronym Warning: Acronym `ObPA3' is not defined on input line 192.
-
-
-Package acronym Warning: Acronym `ObPA3' is not defined on input line 192.
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2476,6 +2448,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [63]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[64]
 File: pictures/EreditaOracolo.png Graphic file (type QTm)
  <use  "pictures/EreditaOracolo.png" >
 
@@ -2484,7 +2463,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[64]
+[65]
 File: pictures/Oracolo.png Graphic file (type QTm)
  <use  "pictures/Oracolo.png" >) (./chapters/capitolo7.tex
 
@@ -2493,9 +2472,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[65]
+[66]
 Capitolo 5.
-[66
+[67
 
 ]
 File: pictures/Tomita1.png Graphic file (type QTm)
@@ -2541,13 +2520,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[67]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
 [68]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2577,10 +2549,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [72]
-Underfull \hbox (badness 10000) in paragraph at lines 171--173
-
- []
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2595,6 +2563,17 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [74]
+Underfull \hbox (badness 10000) in paragraph at lines 171--173
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[75]
 Overfull \hbox (14.51112pt too wide) in paragraph at lines 190--192
 \EU1/lmr/m/n/12 spiegato nella sottosezione [][]5.2.2[][] per i linguaggi di To
 mita$\OML/cmm/m/it/12 L[]; L[]; L[]; L[]; L[]; L[]; L[]; L[]$
@@ -2611,13 +2590,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[75]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
 [76]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2625,37 +2597,28 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[77])
+[77]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[78] (./chapters/conclusioni.tex) (./chapters/appendice1.tex [79
+[78])
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[79] (./chapters/conclusioni.tex) (./chapters/appendice1.tex [80
 
 
 ]
 Appendice A.
-[80
+[81
 
 ]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[81]
-Underfull \hbox (badness 10000) in paragraph at lines 58--60
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 76--77
-
- []
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2663,29 +2626,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [82]
-Underfull \hbox (badness 10000) in paragraph at lines 81--86
+Underfull \hbox (badness 10000) in paragraph at lines 74--76
 
  []
 
-
-Overfull \hbox (29.3747pt too wide) in paragraph at lines 92--94
-[] 
- []
-
-
-Overfull \hbox (29.3747pt too wide) in paragraph at lines 96--98
-[] 
- []
-
-
-Overfull \hbox (29.3747pt too wide) in paragraph at lines 100--102
-[] 
- []
-
-Package acronym Info: Label `acro:FSA' newly defined as it shall be overridden
-although it is yet undefined on input line 103.
-File: pictures/LinguaggiGerarchia.jpg Graphic file (type QTm)
-<use  "pictures/LinguaggiGerarchia.jpg" >
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2693,8 +2637,18 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [83]
-Underfull \hbox (badness 10000) in paragraph at lines 115--116
+Underfull \hbox (badness 10000) in paragraph at lines 92--93
 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--102
+
+ []
+
+
+Overfull \hbox (29.3747pt too wide) in paragraph at lines 108--110
+[] 
  []
 
 
@@ -2704,22 +2658,20 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [84]
-Package acronym Info: Label `acro:FSM' newly defined as it shall be overridden
-although it is yet undefined on input line 135.
-Package acronym Info: Label `acro:NFA' newly defined as it shall be overridden
-although it is yet undefined on input line 135.
-
-Underfull \hbox (badness 10000) in paragraph at lines 138--139
-
+Overfull \hbox (29.3747pt too wide) in paragraph at lines 112--114
+[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 142--148
-
+Overfull \hbox (29.3747pt too wide) in paragraph at lines 116--118
+[] 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 149--151
+Package acronym Info: Label `acro:FSA' newly defined as it shall be overridden
+although it is yet undefined on input line 119.
+File: pictures/LinguaggiGerarchia.jpg Graphic file (type QTm)
+<use  "pictures/LinguaggiGerarchia.jpg" >
+Underfull \hbox (badness 10000) in paragraph at lines 131--132
 
  []
 
@@ -2730,12 +2682,17 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [85]
-Underfull \hbox (badness 10000) in paragraph at lines 157--166
+Package acronym Info: Label `acro:FSM' newly defined as it shall be overridden
+although it is yet undefined on input line 151.
+Package acronym Info: Label `acro:NFA' newly defined as it shall be overridden
+although it is yet undefined on input line 151.
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--155
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 157--166
+Underfull \hbox (badness 10000) in paragraph at lines 158--164
 
  []
 
@@ -2746,12 +2703,17 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [86]
-Underfull \hbox (badness 10000) in paragraph at lines 192--200
+Underfull \hbox (badness 10000) in paragraph at lines 165--167
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 201--230
+Underfull \hbox (badness 10000) in paragraph at lines 173--182
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 173--182
 
  []
 
@@ -2762,6 +2724,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [87]
+Underfull \hbox (badness 10000) in paragraph at lines 208--216
+
+ []
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2769,6 +2735,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [88]
+Underfull \hbox (badness 10000) in paragraph at lines 217--246
+
+ []
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2783,10 +2753,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [90]
-Appendice B.
-[91
 
-]
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[91]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2794,22 +2767,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [92]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[93]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[94]
-Appendice C.
-[95
+Appendice B.
+[93
 
 ]
 
@@ -2818,9 +2777,34 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
+[94]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[95]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
 [96]
+Appendice C.
+[97
+
+]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[98]
 Package acronym Info: Label `acro:VC' newly defined as it shall be overridden
-although it is yet undefined on input line 424.
+although it is yet undefined on input line 440.
 File: pictures/RettaShatter.png Graphic file (type QTm)
  <use  "pictures/RettaShatter.png" >
 
@@ -2829,16 +2813,16 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[97]
+[99]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[98]
+[100]
 Package acronym Info: Label `acro:SRM' newly defined as it shall be overridden
-although it is yet undefined on input line 441.
+although it is yet undefined on input line 457.
 File: pictures/SRM.png Graphic file (type QTm)
  <use  "pictures/SRM.png" >
 
@@ -2847,7 +2831,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[99]
+[101]
 File: pictures/SottoinsiemiSRM.png Graphic file (type QTm)
  <use  "pictures/SottoinsiemiSRM.png" >
 
@@ -2856,8 +2840,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[100]
-Overfull \hbox (8.25479pt too wide) in paragraph at lines 500--503
+[102]
+Overfull \hbox (8.25479pt too wide) in paragraph at lines 516--519
 \EU1/lmr/m/n/12 Una volta scelto il classificatore dallo spazio delle ipotesi, 
 l’ingresso $\OML/cmm/m/it/12 x \OT1/cmr/m/n/12 = (\OML/cmm/m/it/12 x[]; x[]; []
  ; x[]\OT1/cmr/m/n/12 )$
@@ -2869,7 +2853,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[101]
+[103]
 File: pictures/linearlyseparabledata.png Graphic file (type QTm)
  <use  "pictures/linearlyseparabledata.png" >
 
@@ -2878,31 +2862,17 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[102]
-Underfull \hbox (badness 10000) in paragraph at lines 545--547
+[104]
+Underfull \hbox (badness 10000) in paragraph at lines 561--563
 
  []
 
 File: pictures/Margine.png Graphic file (type QTm)
 <use  "pictures/Margine.png" >
-Underfull \hbox (badness 10000) in paragraph at lines 561--562
+Underfull \hbox (badness 10000) in paragraph at lines 577--578
 
  []
 
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[103]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[104]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2917,10 +2887,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [106]
-Underfull \hbox (badness 10000) in paragraph at lines 640--643
-
- []
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2935,6 +2901,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [108]
+Underfull \hbox (badness 10000) in paragraph at lines 656--659
+
+ []
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2956,8 +2926,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [111]
-File: pictures/KernelLinSepara.png Graphic file (type QTm)
- <use  "pictures/KernelLinSepara.png" >
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2972,6 +2940,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [113]
+File: pictures/KernelLinSepara.png Graphic file (type QTm)
+ <use  "pictures/KernelLinSepara.png" >
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2993,14 +2963,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [116]
-File: pictures/VettoriDissimili.png Graphic file (type QTm)
- <use  "pictures/VettoriDissimili.png" >
-File: pictures/VettoriSimiliDifferenteLabel.png Graphic file (type QTm)
-
-<use  "pictures/VettoriSimiliDifferenteLabel.png" >
-File: pictures/VettoriSimiliUgualeLabel.png Graphic file (type QTm)
-
-<use  "pictures/VettoriSimiliUgualeLabel.png" >
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -3015,6 +2977,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [118]
+File: pictures/VettoriDissimili.png Graphic file (type QTm)
+ <use  "pictures/VettoriDissimili.png" >
+File: pictures/VettoriSimiliDifferenteLabel.png Graphic file (type QTm)
+
+<use  "pictures/VettoriSimiliDifferenteLabel.png" >
+File: pictures/VettoriSimiliUgualeLabel.png Graphic file (type QTm)
+
+<use  "pictures/VettoriSimiliUgualeLabel.png" >
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -3044,18 +3014,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [122]
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1040.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 1040.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1040.
-
-
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
@@ -3069,9 +3027,17 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [124]
-Underfull \hbox (badness 10000) in paragraph at lines 1062--1064
 
- []
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1058.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 1058.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1058.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3087,12 +3053,17 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [126]
-Appendice D.
-[127
+Underfull \hbox (badness 10000) in paragraph at lines 1080--1082
 
-]
-File: pictures/BiasVariance.png Graphic file (type QTm)
- <use  "pictures/BiasVariance.png" >
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[127]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -3100,13 +3071,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [128]
+Appendice D.
+[129
 
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[129]
+]
+File: pictures/BiasVariance.png Graphic file (type QTm)
+ <use  "pictures/BiasVariance.png" >
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -3128,9 +3098,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [132]
-Package acronym Info: Label `acro:OHE' newly defined as it shall be overridden
-although it is yet undefined on input line 1184.
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -3145,6 +3112,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [134]
+Package acronym Info: Label `acro:OHE' newly defined as it shall be overridden
+although it is yet undefined on input line 1202.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -3152,8 +3122,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [135]
-File: pictures/MatriceConfusione.png Graphic file (type QTm)
- <use  "pictures/MatriceConfusione.png" >
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -3167,39 +3135,36 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[137])
+[137]
+File: pictures/MatriceConfusione.png Graphic file (type QTm)
+ <use  "pictures/MatriceConfusione.png" >
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[138] [139
+[138]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[139])
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[140] [141
 
 
 ]
 Overfull \hbox (7.57083pt too wide) in paragraph at lines 309--309
 \EU1/lmr/m/it/12 mars\EU1/lmr/m/n/12 . New York, NY, USA: Cambridge University 
 Press, 2010. \EU1/lmr/m/sc/12 isbn\EU1/lmr/m/n/12 : 0521763169
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[140]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[141]
-Overfull \hbox (4.22997pt too wide) in paragraph at lines 309--309
-\EU1/lmr/m/n/12 Homing Sequences». In: \EU1/lmr/m/it/12 Information and Computa
-tion \EU1/lmr/m/n/12 103 (apr. 1993), pp. 299–
  []
 
 
@@ -3216,13 +3181,32 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [143]
+Overfull \hbox (4.22997pt too wide) in paragraph at lines 309--309
+\EU1/lmr/m/n/12 Homing Sequences». In: \EU1/lmr/m/it/12 Information and Computa
+tion \EU1/lmr/m/n/12 103 (apr. 1993), pp. 299–
+ []
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[144] (./main.ind [145
+[144]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[145]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[146] (./main.ind [147
 
 
 
@@ -3245,12 +3229,12 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 44904 strings out of 493591
- 834681 string characters out of 6145589
+ 44908 strings out of 493591
+ 834782 string characters out of 6145589
  1113899 words of memory out of 5000000
- 47607 multiletter control sequences out of 15000+600000
+ 47611 multiletter control sequences out of 15000+600000
  17870 words of font info for 104 fonts, out of 8000000 for 9000
  1347 hyphenation exceptions out of 8191
- 55i,20n,92p,10370b,5205s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,20n,92p,10370b,5206s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (157 pages).
+Output written on main.pdf (159 pages).

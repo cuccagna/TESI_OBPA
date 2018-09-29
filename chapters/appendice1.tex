@@ -6,14 +6,30 @@
 \label{app:uno}
 Lo scopo di quest'appendice è di stabilire una comune sintassi e semantica per concetti che sono rilevanti in tutta la tesi. Le definizioni e le notazioni qui introdotte sono essenziali per la maggior parte dei capitoli e quindi andrebbero lette.
 
-L'appendice è divisa concettualmente in tre parti. Nella prima parte si introdurranno questioni  puramente matematiche mentre nella seconda parte si definiranno grammatiche e linguaggi, infine nell'ultima parte si tratteranno in dettaglio gli automi a stati finiti. 
+L'appendice è divisa concettualmente in quattro parti. Nella prima parte si introdurranno questioni  puramente matematiche e si definiranno grammatiche e linguaggi e automi e annesse proprietà, nella seconda parte si delinea una notazione e alcuni dettagli implementativi per l'algoritmo \ac{ObP}, nella terza parte sono prese in esame le SVM infine nell'ultima parte si tratteranno gli argomenti relativi all'addestramento di un classificatore statistico con particolare attenzione per le SVM. 
 
 \section{Notazione matematica}
 L'obiettivo di questa sezione è di introdurre i concetti matematici propedeutici per questa tesi. Senza dubbio una conoscenza matematica di base è necessaria e chiaramente non può essere introdotto ogni singolo elementare concetto.
 \subsection{Insiemi}
-Con $\mathbb{N}$ si indica l'insieme di numeri naturali interi non negativi incluso 0 (cioè $\mathbb{N} = {0,1,2,\dots}$). L'insieme di interi positivi è denotato da $\mathbb{N}^{+}$ . Si definisce con $\mathbb{B} = \{0,1\}$ l'insieme di valori booleani dove 0 è associato al valore logico \textit{falso} ed 1 al valore logico \textit{vero}.
+Con $\mathbb{N}$ si indica l'insieme di numeri naturali interi non negativi incluso 0 (cioè $\mathbb{N} = {0,1,2,\dots}$). L'insieme di interi positivi è denotato da $\mathbb{N}^{+}$ . Si definisce con $\mathbb{B} = \{0,1\}$ l'insieme di valori booleani dove 0 è associato al valore logico \textit{falso} ed 1 al valore logico \textit{vero}.\\
+Dato un generico insieme $X, \abs{X}$ denota la sua cardinalità, cioè il numero di elementi che contiene.\\
+Si definisce l'operazione di elevamento a potenza di un insieme per un altro con la notazione $A^{B}$ come l'insieme di tutte le funzioni che vanno dall'insieme B all'insieme A cioè se $f \in A^{B} $ allora $f : B \to A$ .
 
-Dato un generico insieme $X, \abs{X}$ denota la sua cardinalità, cioè il numero di elementi che contiene.
+\subsection{Funzioni}
+Per qualsiasi $x \in \mathbb{R}^{\mathbb{N}}$ si definisce il suo \textit{supporto} come il numero di coordinate diverse da zero:
+\begin{equation*}
+supp(x) = \{i \in \mathbb{N} : x_i  \neq 0\}
+\end{equation*}
+
+Si definisce l'\textit{inner product} di due elementi $x,y \in \mathbb{R}^{A}$ con:
+\begin{equation*}
+x \star y = \sum_{a \in A} x_{a}y_{a}
+\end{equation*}
+Ad esempio se $A=\{1,3\}$ e $x=\{(1,7),(3,9)\}$ e $y=\{(1,5.2),(3,4)\}$ si ha che
+\begin{equation*}
+x \star y = 7\times5.2 + 9\times4 = 72.4
+\end{equation*}
+
 \subsection{Relazione d'equivalenza}
 Una relazione binaria riflessiva ,simmetrica e transitiva  $\approx \, \subseteq X\!\times{}\!X$ su un insieme $X$ è detta una \textbf{\textit{relazione d'equivalenza}}. Dato un insieme $X$ ed un elemento $x \in X$ si denota con $[x]_\approx = \{x' \in X\ | \: x \approx x'\}$ la \textit{classe di equivalenza} di x(rispetto alla relazione d'equivalenza $\approx$).
 
@@ -792,6 +808,7 @@ Inoltre $(x_i \bullet x_j)$ nella formulazione duale in \eqref{eq:dual} diventa 
 k(x_i , x_j) = \phi(x_i) \bullet \phi(x_j)
 \end{equation}
 che consente di usare il \textit{kernel} K nelle \ac{SVM} senza esplicitamente conoscere $\phi$.
+\label{sub:kerc}
 Una puntualizzazione su $\phi$ è doverosa. Se $\mathcal{H}$ è di dimensione $M$ $\phi$ può essere una funzione che per calcolare ciascuna delle $M$ coordinate del generico campione $x \in \mathbb{R}^{d}$ nello spazio $H$ utilizza $M$ differenti funzioni cioè:
 \[
 \phi(x) =[\phi_1(x),\dots,\phi_M(x)]
@@ -945,6 +962,7 @@ Il motivo per cui si predilige la formulazione duale rispetto a quella primaria 
 \end{figure}
 
 \subsubsection{String kernels}
+\label{subsub:stk}
 Come accennato in precedenza in \ref{subsub:prscal} in determinati ambiti è possibili definire un \textit{kernel} che rappresenta una misura di similarità adatta allo specifico problema da affrontare o in cui gli elementi del \textit{training set} sono strutturati, come ad esempio stringhe ed alberi. Un esempio molto importante , e rilevante ai fini della tesi, è quello dei \textbf{string kernels}, dei quali  è possibile trovare un'introduzione in \cite[p. 60]{DeLaHiguera10}. In questa sede a titolo esemplificativo se ne descriveranno un paio. In generale l'obiettivo di uno \textit{string kernel} è quello di rappresentare o estrapolare delle features delle stringhe che possono essere rilevanti per un problema specifico in termini di similarità o dissimilarità. Uno dei più semplici è il \textbf{Parikh kernel} che associa ad ogni stringa un vettore di numeri naturali dove ogni componente è il numero di occorrenze di un simbolo dell'alfabeto nella stringa. La dimensione del \textit{feature space} dipende dal numero di elementi nell'alfabeto. Si consideri l' esempio nella tabella \ref{tab:parker} in cui si hanno quattro elementi del \textit{training set} $\{bac , baa , cab , bad\}$ e i quattro simboli dell'alfabeto $\{a,b,c,d\}$ che rappresentano le funzioni $\phi_{1}\text{,}\phi_{2}\text{,}\phi_{3}\text{,}\phi_{4}$ che mappano gli elementi nel \textit{feature space}. Si ha allora che la valutazione del \textit{kernel} tra gli elementi $bad \text{ e } baa$ è
 \begin{equation*}
 k(bad , baa) = 1\cdot2 + 1\cdot1 + 0\cdot0+1\cdot0 = 3
