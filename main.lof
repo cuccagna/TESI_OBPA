@@ -72,36 +72,36 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Gerarchia di linguaggi}}{85}{figure.caption.66}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Gerarchia di linguaggi}}{88}{figure.caption.70}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Maximal Canonical Automaton}}{89}{figure.caption.70}
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Maximal Canonical Automaton}}{92}{figure.caption.74}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {A.3}{\ignorespaces Prefix Tre Acceptor}}{90}{figure.caption.73}
-\defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Prefix Tre Acceptor}}{93}{figure.caption.77}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {C.1}{\ignorespaces Tre punti shattered nel piano}}{100}{figure.caption.80}
+\addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {C.2}{\ignorespaces Principio della SRM}}{102}{figure.caption.82}
+\contentsline {figure}{\numberline {C.1}{\ignorespaces Tre punti shattered nel piano}}{103}{figure.caption.84}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {C.3}{\ignorespaces Sottoinsiemi SRM}}{102}{figure.caption.83}
+\contentsline {figure}{\numberline {C.2}{\ignorespaces Principio della SRM}}{105}{figure.caption.86}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {C.4}{\ignorespaces Lineare separabilità}}{104}{figure.caption.84}
+\contentsline {figure}{\numberline {C.3}{\ignorespaces Sottoinsiemi SRM}}{105}{figure.caption.87}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {C.5}{\ignorespaces Esempio iperpiano separatore}}{106}{figure.caption.85}
+\contentsline {figure}{\numberline {C.4}{\ignorespaces Lineare separabilità}}{107}{figure.caption.88}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {C.6}{\ignorespaces Mapping in feature space}}{115}{figure.caption.91}
+\contentsline {figure}{\numberline {C.5}{\ignorespaces Esempio iperpiano separatore}}{109}{figure.caption.89}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {C.7}{\ignorespaces Campioni dissimili}}{119}{figure.caption.95}
+\contentsline {figure}{\numberline {C.6}{\ignorespaces Mapping in feature space}}{118}{figure.caption.95}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {C.8}{\ignorespaces Campioni simili differenti etichette}}{120}{figure.caption.96}
+\contentsline {figure}{\numberline {C.7}{\ignorespaces Campioni dissimili}}{122}{figure.caption.99}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {C.9}{\ignorespaces Campioni simili differenti etichette}}{120}{figure.caption.97}
+\contentsline {figure}{\numberline {C.8}{\ignorespaces Campioni simili differenti etichette}}{123}{figure.caption.100}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {C.9}{\ignorespaces Campioni simili differenti etichette}}{123}{figure.caption.101}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {D.1}{\ignorespaces Bias-Varianza trade-off}}{130}{figure.caption.101}
+\contentsline {figure}{\numberline {D.1}{\ignorespaces Bias-Varianza trade-off}}{133}{figure.caption.105}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {D.2}{\ignorespaces Matrice di confusione}}{138}{figure.caption.105}
+\contentsline {figure}{\numberline {D.2}{\ignorespaces Matrice di confusione}}{141}{figure.caption.109}
