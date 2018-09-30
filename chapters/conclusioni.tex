@@ -1,45 +1,13 @@
 \chapter*{Conclusioni}
 \label{cap:con}
 
-
-
-
-\section{ALtro}
-Parla del fatto che la soglia per l'eq si è impostata con un'accuracy del 90$\%$ ma non va bene questa misura. Se si ha a che fare con un \ac{DFA} come Tomita2 ad esempio che genera molte più stringhe negative che positive si ha che molte delle stringhe estratte dal W-Method se non tutte sono negative e nel primo round di \ac{ObPA} l'iptesi è il DFA che rigetta tutte le stringhe l'accuracy è al 100$\%$ e nonostante un buon classificatore si ottiene un risultato errato. Allora si è usato Matthews come misura che tenendo conto di entrambe le classi evita questo problema.
-
-Allo stato dell'arte l' \ac{ObP} costituisce il secondo algoritmo di riferimento nell'ambito dell'apprendimento di linguaggi regolari.  L'algoritmo più performante è invece il più recente TTT algorithm \cite{SteffenTTT14}.
-
-Inserire discorso che la lineare separabilità (hard margin) non è direttamente implementabile in svm light e si usa il parametro C=1. SI potrebbe provare ad usare un'altra libreria che ha questa lineare separabilità  o ad usare una ricerca nello spazio del parametro C (perchè anche con dati lineramente separabili per evitare overfitting e problemi con gli outliers si usa spesso soft margi lo stesso).
-
-Inserire il discorso che in ideal version alla fine è comunque necessario confrontare l'ipotesi finale col target per rendersi conto del dfa inferito quanto è buono. Infatti che l'ipotesi sia verificato tramite un'equivalence query essere simile al classificatore non è sufficiente in quanto il classificatore è già di per sè un'approssimazione del target e quindi un'ipotesi che approssima bene il classificatore potrebbe non approssimare bene il target e quindi un confronto finale tra target e ipotesi è necessario. 
-
-Inserire il discorso dell'esplosione del DFA. E che questo è dovuto anche al fatto che quando viene tornato un controesempio che non è un controesempio si fanno degli split errati. Siccome la versione implementata in librearia è ONEGlobally questa può generare più di uno split alla volta a differenza di ONELocally. Inoltre il controesempio viene sfruttato più di una volta, quindi anche un solo errore può condurre nel controesempio può condurre ad un DFA ipotesi completamente divergente dal target. Quindi potrebb essere meglio usare ONELocally che però è stato implementato ma non funzionava bene al 100 per 100.
-
-Fai vedere le difficoltà anche nell'approssimare con OneGlobally OBP il linguaggio che il classificatore rappresenta, e non solo difficoltà nell'approssimare il linguaggio target col classificatore in addestramento.
-
-Parla del fatto che è pssibile provare ad implementare SVM PERFCT per velocizzare il codice e provare così ad usare un training set di dimensioni maggiori e si spera migliori risultati.
-
-Parla del caso di campioni non bilanciati che lo splitting permette di gestire campioni non bilanciati e che c'è un parametro per gestire i campioni non bilanciati. Nessun esperimento fatto su di essi.
-
-Inserire il discorso che al crescere dell'ipotesi comunque l'ipotesi si avvicina al classificatore. Ma se il classificatore fa schifo ci si avvicina a qualcosa che fa schifo. Cioè fai capire che se non è buono il classificatore ObPA non ha niente che fare.
-
-Giustifica risultati anche perchè si approssimano anche le MQ. Ma che comunque non c'è niente da fare se il classificatore fa schifo.
-
-
-
-Fai vedere che comunque esistono dei modelli complessi con cui si hanno buoni risultati (anche se la complessità è tutta da vedeere e non è decisa solo dagli stati dall'alfabeto e dalla profondità, ma dipende anche da quanto sono buoni i campioni estratti col random walk).
-Illustra i set di esperimenti e i risultati.
-
-Scrivi che non c'è un feedback per la bontà del classificatore come spiegato nel Capitolo 4 ma comunque si ha l'accuracy in ObPA1 e ObPA2 e il margine in ObPA3 (vedi se hai anche altro in obpa 3). E un metodo alla femminina per capire se il classificatore è buono è vedere se il classificatore viene costruito velocemente oppure SVM perde tempo. 
-
-
-
-
-
-
-Inserire il discorso che è possibile provare ObPA nel caso si approssimano solo le eq. query e le MQ sono esatte. CHe lo scenario cui si è ricondotti qui è molto simile agli algoritmi di passive learning. Gli algoritmi di active learning invece sono più efficienti proprio perchè hanno piu informazioni e qui riducendo a zero l'informazione aggiuntiva riconducendoci a uno scenario operativo degli algoritmi di passive learning ma sempre inseriti in un algoritmo di active learning si hanno riultati non ottimi. Diminuendo solo parzialmente l'informazione (appr. solo l'eq. come fanno molti lavori in letteratura sicuramente si otterrebbero risultati migliori).
-
-Dato che il W-Method ha una complessità esponenziale (Vedi CHow) esistono metodi simili più efficienti come il Wp-Method e HSI method che si può pensare di implementare per provare a risolvere i problemi col W-Method
-
-Inserire il fatto che la versione ONEGlobally di Observation Pack probabilmente non è adattissima in questo algoritmo. Perchè altra versione come OneLocally fa solo uno split e quindi se il controesempio è errato c'è solo uno split errato invece con OneGlobally ci possono essere (è molto probabile) più split e l'ipotesi diverge molto di più in una direzione errata. (Comunque sottolinea che un solo controesempio errato può essere catastrofico, perchè in pratica saranno 2 linguaggi diversi. Se ad esempio avviene uno split laddove non doveva avvenire indietro non si può tornare.
+Questa tesi ha trattato le tematiche inerenti l'estrazione di conoscenza nell'ambito dell'Inferenza Grammaticale. 
+ I metodi tradizionali tipicamente falliscono nel fornire una reale intuizione della natura dei dati, poichè i modelli consistono solo in una serie di parametri, incapaci di dare una umana comprensibile rappresentazione. \\
+ Un approccio diametralmente opposto consiste nel rappresentare la conoscenza tramite una \textit{struttura} significativa per i campioni rifacendosi ai metodi dell'Algorithmic Learning Theory. Il modo di procedere di questi algoritmi detti di \textit{passive learning} consiste nella modellazione dello spazio dei concetti come nodi di un grafo e in una ricerca informata e guidata dai campioni a partire da una struttura sovradattata ai dati che conduce a scoprire delle nuove ipotesi che includono propriamente il concetto precedente e ne costituiscono una generalizzazione.  La tecnica duale a quest' ultima è l'\textit{active learning} che assume la conoscenza di un Oracolo in grado di risponde a \ac{MQ} ed \ac{EQ}.\\ Negli scenari reali come ad esempio \textit{model-based testing} e altre branche di \textit{formal-methods} il requisito di un Oracolo in grado di rispondere a \ac{EQ} è troppo stringente.\\
+ Con l'intento di valicare questo limite sono stati realizzati varie versioni di un algoritmo denominato \ac{ObPA} che approssima la conoscenza dell'Oracolo e in ultima analisi l'\ac{EQ} tramite un classificatore costruito selezionandolo dal modello \ac{SVM} con un addestramento dell'insieme di campioni inizialmente noti.\\
+L'algoritmo inizialmente proposto è stato potenziato tramite l'aggiunta di un \textit{kernel string} proposto in letteratura che da delle garanzie teoriche nell'ambito del \textit{PAC-learning}.  \\
+Gli algoritmi sono stati sottoposti a una fase di sperimentazione su due dataset uno più semplice e un altro paragonabile per la complessità  degli elementi a quelli presenti in uno scenario reale; mediante il primo dataset si è dimostrata la correttezza degli algoritmi ottenendo anche degli ottimi risultati mentre sul secondo dataset l'algoritmo e in particolare la fase cruciale di addestramento del classificatore ha dimostrato che oltre una certa soglia di complessità nella maggior parte dei casi diventa poco efficace nonostante le promesse teoriche  dell'algoritmo di selection model implementato.\\
+A causa dell'onerosità computazionale di alcune funzioni di libreria interne ed esterne a GI-Learning la fase di sperimentazione è stata ardua e non è stato possibile testare i limiti dell'algoritmo al massimo delle sue potenzialità. Per consentire di aumentare considerevolmente la dimensione del \textit{training set}  si potrebbe usare $\ac{SVM}^{perfct}$ che promette risultati equivalenti ad $\ac{SVM}^{light}$ ma prestazioni notevolmente migliori. Inoltre la libreria \ac{SVM} scelta non consente l'implementazione di \textit{hard margin}  simulato fissando il parametro trade-off C ad 1, si potrebbe pensare di fare una ricerca del migliore valore di C in connubio con 5-fold-validation o usare una libreria alternativa che implementi l'\textit{hard margin}.  Inoltre per uniformare l'algoritmo alle impostazione delle varie competizioni d'Inferenza Grammaticale come ZULU si potrebbe testare il comportamento dell'algoritmo approssimando soltanto le \ac{EQ} ed assumendo di potere effettuare \ac{MQ} esatte.\\
+Un altro miglioramento alle prestazioni  potrebbe riguardare la sostituzione del W-Method che ha dato tanti problemi in fase di sperimentazione con i più efficienti Wp-Method e HSI.
+ Infine \ac{ObPA} esula per ciò che concerne il funzionamento dal particolare algoritmo di \textit{active learning} e in questa sede si è scelto come si è detto \ac{ObP} perchè è uno dei più efficienti, ma nell'ottica di incrementare le prestazioni di \ac{ObPA} lo si può sostituire per sviluppi futuri con il più performante e recente  TTT algorithm \cite{SteffenTTT14}. 
 

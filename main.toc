@@ -4,9 +4,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{Sommario}{i}{section*.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Acronimi}{viii}{section*.7}
+\contentsline {chapter}{Acronimi}{ix}{section*.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Introduzione}{ix}{section*.9}
+\contentsline {chapter}{Introduzione}{x}{section*.9}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {1}Inferenza Induttiva}{1}{chapter.1}
 \defcounter {refsection}{0}\relax 
@@ -155,8 +155,6 @@
 \contentsline {section}{\numberline {5.3}Risultati}{79}{section.5.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{Conclusioni}{84}{section*.67}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.4}ALtro}{84}{section.5.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {A}Preliminari}{86}{appendix.A}
 \defcounter {refsection}{0}\relax 

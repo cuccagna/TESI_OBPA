@@ -559,13 +559,13 @@ Si può dimostrare che la distanza di un generico punto $x$ da un iperpiano $w \
 \begin{equation*}
 d = \frac{\abs{w \bullet x + b}}{\norma{w}}
 \end{equation*}
-In accordo alla normalizzazione definita in \ref{eq:vin2} la distanza tra l'\textit{iperpiano canonico} e il più vicino degli elementi del \textit{training set} è $\frac{1}{\norma{w}}$. Quindi il margine di un \textit{iperpiano separatore canonico} secondo la definizione \ref{def:mar} è allora $\frac{2}{\norma{w}}$. L'immagine  \ref{fig:lsd} può essere chiarificatrice.\\
+In accordo alla normalizzazione definita in \ref{eq:vin2} la distanza tra l'\textit{iperpiano canonico} e il più vicino degli elementi del \textit{training set} è $\frac{1}{\norma{w}}$. Quindi il margine di un \textit{iperpiano separatore canonico} secondo la definizione \ref{def:mar} è allora $\frac{2}{\norma{w}}$. L'immagine  \ref{fig:lsdmar} può essere chiarificatrice.\\
 
 \begin{figure}[htp]
 	\centering
 	\includegraphics[ width=0.7\textwidth]{Margine}
-	\caption[Esempio iperpiano separatore]{Iperpiano separatore per dati linearmente separabili. $H_{1}$ e $H{2}$ sono paralleli dato che hanno la stessa normale $w$ come si apprezza nelle equazioni \ref{eqn:h1} e \ref{eqn:h2}}
-   \label{fig:lsd}
+	\caption[Esempio iperpiano separatore]{Iperpiano separatore per dati linearmente separabili. $H_{1}$ e $H_{2}$ sono paralleli dato che hanno la stessa normale $w$ come si apprezza nelle equazioni \ref{eqn:h1} e \ref{eqn:h2}}
+   \label{fig:lsdmar}
 \end{figure}
 
 Lo scopo di una \ac{SVM} è:
@@ -671,7 +671,7 @@ Il problema appena impostato è un problema di programmazione quadratico dato ch
 \[
 \alpha_{i}[y_{i}(w \bullet x_i + b) - 1] \quad \forall i
 \]
-ci dice che solo i punti del \textit{training set} $x_i$ per i quali $y_{i}(w \bullet x_i + b) = 1$ ,cioè i punti più vicini all'iperpiano separatore (quelli doppiamente cerchiati in figura \ref{fig:lsd} sugli iperpiani $H_{1}$ e $H_{2}$ ) , hanno valori $\alpha_{i}$ non nulli. Pertanto solo tali punti contribuiranno al calcolo dei pesi $w$ e per tale motivo sono chiamati \textbf{vettori di supporto}.\\
+ci dice che solo i punti del \textit{training set} $x_i$ per i quali $y_{i}(w \bullet x_i + b) = 1$ ,cioè i punti più vicini all'iperpiano separatore (quelli doppiamente cerchiati in figura \ref{fig:lsdmar} sugli iperpiani $H_{1}$ e $H_{2}$ ) , hanno valori $\alpha_{i}$ non nulli. Pertanto solo tali punti contribuiranno al calcolo dei pesi $w$ e per tale motivo sono chiamati \textbf{vettori di supporto}.\\
 La formulazione duale del problema è detta \textbf{Wolf duale}, vediamo come si ottiene. Si sostituiscono i vincoli di eguaglianza \eqref{wvar} e \eqref{bvar} riguardanti $b$ e $w$ ($\frac{\partial L_{p}}{\partial w} = 0 \text{ e } \frac{\partial L_{p}}{\partial b} = 0$) nella formulazione primaria cioè nell'equazione \eqref{eq:pri}. Si ha:
 \begin{equation}
 \begin{split}
@@ -1020,11 +1020,10 @@ bad  &  1 & 1 & 1 & 0 &  1 & 0 & 0 & 0  &  1 & 1 & 0 & 1 &  0 & 0 \\
 \subsection{Versione soft margin kernelized}
 Le tecniche esposte nelle sottosezioni \ref{sub:kernels} e \ref{sub:softmargin} sono combinate insieme per ottenere la versione delle \ac{SVM} di riferimento maggiormente adottata. Infatti sebbene i  \textit{kernels} rendano presumibilmente il \textit{training set} linearmente separabile non c'è alcuna garanzia che questo avvenga realmente. Inoltre anche se i deti vengono resi linearmente separabili è consigliabile utilizzare ugualmente la tecnica soft margin anzichè quella del classificatore a margine massimo (hard margin) perchè può accadere che a causa della presenza di alcuni \textbf{\textit{outliers}}\footnote{Sono delle anomalie cioè degli elementi del \textit{training set}, tipicamente in numero esiguo, che si discostano nettamente dal resto dei campioni} ci sia \textit{overfitting} , cioè eccessivo adattamento al \textit{training set} e scarsa capacità di generalizzare , che potrebbe essere scongiurato scegliendo un \textbf{decision boundary}\footnote{cioè un iperpiano separatore} con soft margin che anche se ignora gli \textit{outliers} misclassificandoli porta alla scelta di un iperpiano separatore con un margine più grande e quindi con migliori capacità di generalizzare. Per questa ragione anche se la scelta di un kernel rendesse i dati lineramente separabili (asserzione che comunque non è sempre verificata) si predilige soft margin ad hard margin per cui usualmente la versione di riferimento di \ac{SVM} combina i \textit{kernels} con soft margin e la formulazione matematica del problema duale da risolvere diventa:
 \begin{alignat}{3}
-\label{eq:softford}
+\label{eq:softford2}
 &massimizzare \quad&&L_{d} = - \frac{1}{2} \sum_{i,j = 1}^{l}\alpha_{i}\alpha_{j}y_{i}y_{j}\,k(x_{i} , x_{j}) + \sum_{i=1}^{l}\alpha_{i} \\
-\label{eq:softvincd}
+\label{eq:softvincd2}
 &soggetto \:\:a &&0 \leq \alpha_i \leq C \qquad \qquad \\
-\label{eq:softvind2}
 &\:&&\sum_{i=1}^{l} \alpha_i y_i = 0 
 \end{alignat}
 

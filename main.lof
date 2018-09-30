@@ -70,6 +70,18 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subfigure}{\numberline {(o)}{\ignorespaces $L_15$}}{70}{subfigure.1.15}
 \defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Accuracy del classificatore per i Tomita: ObPA2 vs ObPA3\relax }}{81}{figure.caption.61}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Accuracy del classificatore DFA casuali: ObPA2 vs ObPA3\relax }}{81}{figure.caption.62}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Similarità tra target e DFA inferito da ObPA3 con MCC\relax }}{82}{figure.caption.63}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Correlazione tra Accuracy del classificatore e Margine\relax }}{82}{figure.caption.64}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Confronto Accuracy Model Selection e Model Evaluation su Tomita dataset per ObPA2 \relax }}{83}{figure.caption.65}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Confronto Accuracy Model Selection e Model Evaluation su Tomita dataset per ObPA2 \relax }}{83}{figure.caption.66}
+\defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {A.1}{\ignorespaces Gerarchia di linguaggi}}{90}{figure.caption.73}

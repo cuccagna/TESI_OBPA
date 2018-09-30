@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Debian) (preloaded format=xelatex 2017.11.14)  30 SEP 2018 11:13
+This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Debian) (preloaded format=xelatex 2017.11.14)  30 SEP 2018 15:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1574,23 +1574,7 @@ Package biblatex Info: Trying to load language 'italian'...
 Package biblatex Info: ... file 'italian.lbx' found.
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/italian.lbx
 File: italian.lbx 2016/05/14 v3.4 biblatex localization (PK/JW/AB)
-) (./main.aux
-
-LaTeX Warning: Label `tab:tom' multiply defined.
-
-
-LaTeX Warning: Label `fig:lsd' multiply defined.
-
-
-LaTeX Warning: Label `eq:softford' multiply defined.
-
-
-LaTeX Warning: Label `eq:softvincd' multiply defined.
-
-
-LaTeX Warning: Label `eq:softvind2' multiply defined.
-
-)
+) (./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 136.
@@ -1609,7 +1593,7 @@ LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 136.
 LaTeX Font Info:    ... okay on input line 136.
 LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 136.
 LaTeX Font Info:    Try loading font information for T3+cmr on input line 136.
- (/usr/share/texmf/tex/latex/tipa/t3cmr.fd
+(/usr/share/texmf/tex/latex/tipa/t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
 LaTeX Font Info:    ... okay on input line 136.
@@ -1853,23 +1837,23 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \openout8 = `main.toc'.
 
  [5]
-(./main.lof)
+(./main.lof [6
+
+])
 \tf@lof=\write9
 \openout9 = `main.lof'.
 
- [6
-
-] (./main.lot)
+ [7] (./main.lot)
 \tf@lot=\write10
 \openout10 = `main.lot'.
 
- [7
+ [8
 
-] (./chapters/acronym.tex) [8
+] (./chapters/acronym.tex) [9
 
 
 ]
-(./chapters/intro.tex [9
+(./chapters/intro.tex [10
 
 
 ]
@@ -1879,7 +1863,7 @@ Package acronym Info: Label `acro:ObP' newly defined as it shall be overridden
 although it is yet undefined on input line 29.
 Package acronym Info: Label `acro:DFA' newly defined as it shall be overridden
 although it is yet undefined on input line 31.
-) [10] [11] (./chapters/capitolo1.tex
+) [11] [12] (./chapters/capitolo1.tex
 Capitolo 1.
 
 Underfull \hbox (badness 10000) in paragraph at lines 23--24
@@ -2729,31 +2713,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [77]
-
-Package caption Warning: \label without proper reference on input line 350.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:obpa3tomcla' on page 78 undefined on input line 2
-55.
-
-
-Package caption Warning: \label without proper reference on input line 350.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:obpa3tomcla' on page 78 undefined on input line 2
-55.
-
-
-Package caption Warning: \label without proper reference on input line 465.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:obpa3tommat' on page 78 undefined on input line 2
-57.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 254--258
 
  []
@@ -2771,38 +2730,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[79]
-
-Package caption Warning: \label without proper reference on input line 411.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:obpa3rancla' on page 80 undefined on input line 2
-59.
-
-
-Package caption Warning: \label without proper reference on input line 525.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:maracc' on page 80 undefined on input line 260.
-
-
-Package caption Warning: \label without proper reference on input line 592.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:ob2tom' on page 80 undefined on input line 260.
-
-
-Package caption Warning: \label without proper reference on input line 647.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:varacdimtr' on page 80 undefined on input line 26
-2.
-
-)
+[79])
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -3255,15 +3183,15 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [129]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1058.
+(hyperref)                removing `math shift' on input line 1057.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 1058.
+(hyperref)                removing `superscript' on input line 1057.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1058.
+(hyperref)                removing `math shift' on input line 1057.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3279,7 +3207,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [131]
-Underfull \hbox (badness 10000) in paragraph at lines 1080--1082
+Underfull \hbox (badness 10000) in paragraph at lines 1079--1081
 
  []
 
@@ -3339,7 +3267,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [139]
 Package acronym Info: Label `acro:OHE' newly defined as it shall be overridden
-although it is yet undefined on input line 1202.
+although it is yet undefined on input line 1201.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3447,23 +3375,17 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 321.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 54734 strings out of 493591
- 1162657 string characters out of 6145589
- 1583175 words of memory out of 5000000
- 57298 multiletter control sequences out of 15000+600000
+ 54739 strings out of 493591
+ 1162726 string characters out of 6145589
+ 1584403 words of memory out of 5000000
+ 57303 multiletter control sequences out of 15000+600000
  17870 words of font info for 104 fonts, out of 8000000 for 9000
  1347 hyphenation exceptions out of 8191
  57i,20n,107p,10370b,5206s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (164 pages).
+Output written on main.pdf (165 pages).
