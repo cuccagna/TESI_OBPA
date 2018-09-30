@@ -1,7 +1,6 @@
 %!TEX encoding = UTF-8 Unicode
 %!TEX root = ./../main.tex
 %!TEX TS-program = xelatex
-
 \chapter{Risultati sperimentali} % 5th chapter title
 \label{cap:sette}
 La valutazione delle \textit{performances} di un algoritmo di \ac{GI} possono essere influenzate sia positivamente che negativamente da alcuni fattori come  evidenziato in \cite{Stamina10}. Alcuni di questi fattori riguardano la complessità del \ac{DFA} target:
@@ -255,10 +254,12 @@ Nel caso si usi \textit{random walk} si cerca di generare 1500 campioni, se non 
 In questa sezione vengono riportati e si analizzano i risultati degli esperimenti condotti. \\
 Nel grafico \ref{fig:obpa3tomcla} viene valutato il grado di approssimazione del linguaggio target da parte del classificatore ottenuto tramite \ac{SVM} per quanto riguarda il dataset Tomita. Nel grafico come misura è riportata l'accuracy su un \textit{test set} di 1000 campioni come ampiamente spiegato nella sezione precedente. Sono state prese in considerazione anche altre misure come precision e recall che non sono state riportate in quanto sono coerenti con i risultati positivi trovati per \ac{ObPA}3. Gli esperimenti sono stati condotti per \ac{ObPA}2 ed \ac{ObPA}3 che sono messi a confronto nel grafico \ref{fig:obpa3tomcla} da cui si evince che \ac{ObPA}4 ottiene delle performances quasi sempre migliori nella costruzione del classificatore . \'E importante osservare che sarebbe stato opportuno eseguire più volte lo stesso algoritmo per ciascun linguaggio di Tomita e poi fare una media dei risultati ottenuti per ottenere una misura ancora più affidabile e il più possibile indipendente dalla casualità dello specifico \textit{training set} estratto in fase di addestramento, ma la potenza elaborativa a disposizione non lo ha permesso. \\
 L'algoritmo \ac{ObPA}1 ha mostrato delle performances di generalizzazione paragonabili a quelle di \ac{ObPA}2 ma non ne sono stati riportati i risultati perchè per esso si è addestrato il classificatore con un \textit{training set} più piccolo a causa dello spazio dei parametri molto grande di questo algoritmo e della mancanza di potenza computazionale a disposizione.\\ Si precisa che \ac{ObPA}1 \ac{ObPA}2 e \ac{ObPA}3 possono richiedere molto tempo in alcuni frangenti a causa dei problemi di efficienza legati al W-Method o in fase di addestramento con $\ac{SVM}^{light}$ o a causa dell'ipotesi che diventa troppo grande come si chiarirà a breve . Tra i tre l'algoritmo più efficiente si è mostrato essere \ac{ObPA}3 principalmente perchè non deve eseguire una $grid-search()$.\\
-La seconda fase di \ac{ObPA} consiste nell'inferire un \ac{DFA}. Si imposta la soglia per il superamento di un' \ac{EQ} approssimata pari a 0.8 (corrispondente al valore di MCC, 0.8 per MCC è equivalente a un valore di accuracy di circa il 90$\%$) \footnote{è resa parametrica e quindi impostabile dall'esterno a un altro valore}. Infine il \ac{DFA} inferito va confrontato con il target e per \ac{ObPA}3 i risultati di questo  confronto sono riportati nel grafico   \ref{fig:obpa3tommat} per il dataset Tomita  ottenendo ottimi risultati. Per $L_1$,$L_2$,$L_5$,$L_6$,$L_{11}$,$L_{12}$,$L_{13}$,$L_{14}$ viene inferito un \ac{DFA} identico al \ac{DFA} target. Per gli altri casi si ottengono comunque ottime performances. Nonostante il \ac{DFA} inferito e il target siano simili come linguaggi per tutto il dataset Tomita per alcuni linguaggi non lo sono nella forma infatti  i \ac{DFA} inferiti per $L_3$,$L_4$,$L_7$,$L_9$ hanno dai 4000 ai 9000 stati.  Il problema probabilmente deriva dal fatto che il classificatore che si addestra approssima soltanto il linguaggio target a meno che non raggiunga un'accuracy del $100\%$ e quindi il classificatore potrebbe rappresentare un linguaggio corrispondente a un \ac{DFA} con un numero di stati enorme o addirittura un linguaggio non regolare. Per questo motivo quando \ac{ObP} cerca di apprendere il linguaggio rappresentato dal classificatore si assiste a un'esplosione nel numero di stati del \ac{DFA} inferito. A suffragare questa tesi vi è il fatto che per $L_3$,$L_4$,$L_7$ tre dei linguaggi per i quali il \ac{DFA} inferito ha un numero di stati enorme il classificatore addestrato era buono ma non perfetto.  Da un punto di vista pratico si ha che la soglia dell'\ac{EQ} non viene superata e l'ipotesi continua a crescere e si è dovvuto provvedere fissando una dimenione massima dell'ipotesi oltre la quale fermare l'esecuzione dell'algoritmo per motivi di efficienza.   \ac{ObP} cerca di apprendere il classificatore che si è preventivamente addestrato ma se quest ultimo non approssima bene il \ac{DFA} target \ac{ObP} apprenderà un linguaggio errato. Quindi conditio sine qua per la riuscita dell'algoritmo è la ''bontà'' del classificatore.\\
+La seconda fase di \ac{ObPA} consiste nell'inferire un \ac{DFA}. Si imposta la soglia per il superamento di un' \ac{EQ} approssimata pari a 0.8 (corrispondente al valore di MCC, 0.8 per MCC è equivalente a un valore di accuracy di circa il 90$\%$) \footnote{è resa parametrica e quindi impostabile dall'esterno a un altro valore}. Infine il \ac{DFA} inferito va confrontato con il target e per \ac{ObPA}3 i risultati di questo  confronto sono riportati nel grafico   \ref{fig:obpa3tommat} per il dataset Tomita  ottenendo ottimi risultati. Per $L_1$,$L_2$,$L_5$,$L_6$,$L_{11}$,$L_{12}$,$L_{13}$,$L_{14}$ viene inferito un \ac{DFA} identico al \ac{DFA} target. Per gli altri casi si ottengono comunque ottime performances. Nonostante il \ac{DFA} inferito e il target siano simili come linguaggi per tutto il dataset Tomita per alcuni linguaggi non lo sono nella forma infatti  i \ac{DFA} inferiti per $L_3$,$L_4$,$L_7$,$L_9$ hanno dai 4000 ai 9000 stati.  Il problema probabilmente deriva dal fatto che il classificatore che si addestra approssima soltanto il linguaggio target a meno che non raggiunga un'accuracy del $100\%$ e quindi il classificatore potrebbe rappresentare un linguaggio corrispondente a un \ac{DFA} con un numero di stati enorme o addirittura un linguaggio non regolare. Per questo motivo quando \ac{ObP} cerca di apprendere il linguaggio rappresentato dal classificatore si assiste a un'esplosione nel numero di stati del \ac{DFA} inferito. A suffragare questa tesi vi è il fatto che per $L_3$,$L_4$,$L_7$ tre dei linguaggi per i quali il \ac{DFA} inferito ha un numero di stati enorme il classificatore addestrato era buono ma non perfetto.  Da un punto di vista pratico si ha che la soglia dell'\ac{EQ} non viene superata e l'ipotesi continua a crescere e per gestire  l'evenienza si è provvede fissando una dimensione massima dell'ipotesi oltre la quale fermare l'esecuzione dell'algoritmo per motivi di efficienza.   \ac{ObP} cerca di apprendere il classificatore che è stato precedentemente costruito ma se quest ultimo non approssima bene il \ac{DFA} target \ac{ObP} apprenderà un linguaggio errato. Quindi conditio sine qua per la riuscita dell'algoritmo è l' efficacia del classificatore.\\
 
-Nel grafico \ref{fig:obpa3rancla} sono illustrati i risultati di \ac{ObPA}2 e \ac{ObPA}3 che mettono in evidenza come anche per \ac{ObPA}3 si assiste a una rapida diminuzione delle performances al crescere della complessità del \ac{DFA} target. 
-
+Nel grafico \ref{fig:obpa3rancla} sono illustrati i risultati di \ac{ObPA}2 e \ac{ObPA}3 che mettono in evidenza come anche per \ac{ObPA}3 si assiste a una rapida diminuzione delle performances al crescere della complessità del \ac{DFA} target e del suo alfabeto. \\
+Facendo un'analisi critica dei risultati si potrebbe concludere che anche il migliore degli algoritmi cioè \ac{ObPA}3 oltre 10 stati e alfabeto 5 non è più efficace. Tuttavia nella fruizione pratica della libreria il target è ignoto dato che è l'oggetto dell'inferenza e occorrerebbe qualche parametro oggettivo per capire se l'inferenza ha avuto buon fine oppure ciò che è stato inferito è a malapena migliore del lancio di una moneta.  Acciochè per \ac{ObPA}3 si può utilizzare il massimo margine trovato. Nel grafico \ref{fig:maracc} che mette in relazione l'accuracy di \ac{ObPA}3 sul random dataset con il margine  si trova conferma di quanto detto. Per \ac{ObPA}2 si può utilizzare come feedback l'accuracy tornata dalla \textit{5-fold-validation} mentre si fa model selection come si evince dal grafico \ref{fig:ob2tom} che confronta i risultati di model  selection e model evaluation (quest ultimi già precedentemente illustrati) per il Dataset Tomita. \\
+I confini di funzionamento dell'algoritmo non sono tuttavia netti e delineati, ad esempio sono stati sperimentati dei \ac{DFA} estratti casualmente con la libreria LearnLib (oltre quelli del Random Dataset) di dimensione dell'alfabeto 2 e numero di stati 5 per il quale \ac{ObPA}3 si comportava male ed anche un \ac{DFA} di 47 stati e alfabeto 15 per il quale \ac{ObPA} 3 riesce a creare un classificatore con un'accuracy dell'$88\%$. Un modo empirico anche se privo di fondamento scientifico per rendersi conto  in \textit{release version} di \ac{ObPA} se il classificatore inferito è una buona approssimazione del linguaggio target da scovare è il tempo impiegato da \ac{ObPA} per costruire il classificatore che a sua volta dipende principalmente da quanto è veloce l'algoritmo della libreria $\ac{SVM}^{light}$ nel separare i campioni.\\
+Infine nel grafico \ref{fig:varacdimtr} si riporta uno studio sulla variazione dell'accuracy del classificatore al crescere del \textit{training set}. Tuttavia si è scelto di testare un singolo \ac{DFA} di dimensione dell'alfabeto 15 e numero di stati 5 estratto casualmente anzichè uno dei due dataset nella loro interezza per questioni inerenti la sfera della potenza elaborativa a disposizione. 
 
 
 \definecolor{col1}{RGB}{37,116,169}
@@ -469,30 +470,182 @@ anchor=south
 
 
 
-\section{ALtro}
-Parla del fatto che la soglia per l'eq si è impostata con un'accuracy del 90$\%$ ma non va bene questa misura. Se si ha a che fare con un \ac{DFA} come Tomita2 ad esempio che genera molte più stringhe negative che positive si ha che molte delle stringhe estratte dal W-Method se non tutte sono negative e nel primo round di \ac{ObPA} l'iptesi è il DFA che rigetta tutte le stringhe l'accuracy è al 100$\%$ e nonostante un buon classificatore si ottiene un risultato errato. Allora si è usato Matthews come misura che tenendo conto di entrambe le classi evita questo problema.
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\pgfplotsset{
+every axis legend/.append style={
+at={(0.5,1.03)},
+anchor=south
+},
+}
+\begin{axis}
+[
+        width=13cm,
+        height=7cm,
+        legend columns=4,
+        legend style={draw=none},
+        %title style={at={(0.5,0)},anchor=north,yshift=-0.1},
+        %title={\ac{ObPA}3},
+        ticklabel style={font=\tiny},
+        %xlabel style={font=\tiny, above},
+        %ylabel style={font=\tiny},
+        xlabel=\textbf{Random Dataset},
+        %ylabel=\textbf{Accuracy},
+        %ylabel style={rotate=-90},
+        ymajorgrids=true,
+        xtick=data,
+        %mark size=2.0pt,
+        xtick style={draw=none},
+       %,xtick={0,1,...,3}
+        xticklabels={$R_1$,$R_2$,$R_3$,$R_4$,$R_5$,$R_6$,$R_7$,$R_8$,$R_9$,$R_{10}$,$R_{11}$,$R_{12}$,$R_{13}$,$R_{14}$,$R_{15}$,$R_{16}$}
+        ]
+        
+\addplot[very thick, color=col1,mark=*,
+                mark options={solid},
+                draw opacity=0.9,
+                %smooth
+                ] coordinates
+    {(0,99.70) (1,70.00) (2,52.15) (3,51.00) (4,66.5) (5,58.18) (6,50.00) (7,49.00) (8,60.00) (9,53.10) (10,49.04) (11,50.60) (12,53.00) (13,50.00) (14,50.00) (15,50.30)};
 
-Allo stato dell'arte l' \ac{ObP} costituisce il secondo algoritmo di riferimento nell'ambito dell'apprendimento di linguaggi regolari.  L'algoritmo più performante è invece il più recente TTT algorithm \cite{SteffenTTT14}.
+\addplot[very thick, color=col1,mark=*,
+                mark options={solid},
+                draw opacity=0.5,
+                %smooth
+                ] coordinates
+{(0,7.06) (1,2.78) (2,1.71) (3,1.36)  (4,1.68) (5,1.62) (6,1.59) (7,1.54)  (8,2.64) (9,1.61) (10,1.58) (11,1.55) (12,1.74) (13,1.54) (14,1.6) (15,1.30)};
 
-Inserire discorso che la lineare separabilità (hard margin) non è direttamente implementabile in svm light e si usa il parametro C=1. SI potrebbe provare ad usare un'altra libreria che ha questa lineare separabilità  o ad usare una ricerca nello spazio del parametro C (perchè anche con dati lineramente separabili per evitare overfitting e problemi con gli outliers si usa spesso soft margi lo stesso).
+\legend{\tiny{ObPA3}, \tiny{Margine}}
+   
+   
+\end{axis}
+\end{tikzpicture}
 
-Inserire il discorso che in ideal version alla fine è comunque necessario confrontare l'ipotesi finale col target per rendersi conto del dfa inferito quanto è buono. Infatti che l'ipotesi sia verificato tramite un'equivalence query essere simile al classificatore non è sufficiente in quanto il classificatore è già di per sè un'approssimazione del target e quindi un'ipotesi che approssima bene il classificatore potrebbe non approssimare bene il target e quindi un confronto finale tra target e ipotesi è necessario. 
-
-Inserire il discorso dell'esplosione del DFA. E che questo è dovuto anche al fatto che quando viene tornato un controesempio che non è un controesempio si fanno degli split errati. Siccome la versione implementata in librearia è ONEGlobally questa può generare più di uno split alla volta a differenza di ONELocally. Inoltre il controesempio viene sfruttato più di una volta, quindi anche un solo errore può condurre nel controesempio può condurre ad un DFA ipotesi completamente divergente dal target. Quindi potrebb essere meglio usare ONELocally che però è stato implementato ma non funzionava bene al 100 per 100.
-
-Fai vedere le difficoltà anche nell'approssimare con OneGlobally OBP il linguaggio che il classificatore rappresenta, e non solo difficoltà nell'approssimare il linguaggio target col classificatore in addestramento.
-
-Parla del fatto che è pssibile provare ad implementare SVM PERFCT per velocizzare il codice e provare così ad usare un training set di dimensioni maggiori e si spera migliori risultati.
-
-Parla del caso di campioni non bilanciati che lo splitting permette di gestire campioni non bilanciati e che c'è un parametro per gestire i campioni non bilanciati. Nessun esperimento fatto su di essi.
-
-Inserire il discorso che al crescere dell'ipotesi comunque l'ipotesi si avvicina al classificatore. Ma se il classificatore fa schifo ci si avvicina a qualcosa che fa schifo. Cioè fai capire che se non è buono il classificatore ObPA non ha niente che fare.
-
-Giustifica risultati anche perchè si approssimano anche le MQ. Ma che comunque non c'è niente da fare se il classificatore fa schifo.
-
+\caption*{Correlazione tra Accuracy del classificatore e Margine}
+   \label{fig:maracc}
+\end{figure}
 
 
-Fai vedere che comunque esistono dei modelli complessi con cui si hanno buoni risultati (anche se la complessità è tutta da vedeere e non è decisa solo dagli stati dall'alfabeto e dalla profondità, ma dipende anche da quanto sono buoni i campioni estratti col random walk).
-Illustra i set di esperimenti e i risultati.
 
-Scrivi che non c'è un feedback per la bontà del classificatore come spiegato nel Capitolo 4 ma comunque si ha l'accuracy in ObPA1 e ObPA2 e il margine in ObPA3 (vedi se hai anche altro in obpa 3). E un metodo alla femminina per capire se il classificatore è buono è vedere se il classificatore viene costruito velocemente oppure SVM perde tempo. 
+
+
+
+
+
+
+
+
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\pgfplotsset{
+every axis legend/.append style={
+at={(0.5,1.03)},
+anchor=south
+},
+}
+\begin{axis}
+[
+        width=13cm,
+        height=7cm,
+        legend columns=4,
+        legend style={draw=none},
+        %title style={at={(0.5,0)},anchor=north,yshift=-0.1},
+        %title={\ac{ObPA}3},
+        ticklabel style={font=\tiny},
+        %xlabel style={font=\tiny, above},
+        %ylabel style={font=\tiny},
+        xlabel=\textbf{Tomita Dataset},
+        ylabel=\textbf{Accuracy},
+        %ylabel style={rotate=-90},
+        ymajorgrids=true,
+        xtick=data,
+        %mark size=2.0pt,
+        xtick style={draw=none},
+       %,xtick={0,1,...,3}
+        xticklabels={$L_1$,$L_2$,$L_3$,$L_4$,$L_5$,$L_6$,$L_7$,$L_8$,$L_9$,$L_{10}$,$L_{11}$,$L_{12}$,$L_{13}$,$L_{14}$,$L_{15}$}
+        ]
+        
+
+
+\addplot[very thick, color=col1,mark=square,
+               draw opacity=0.9,
+                mark options={solid},
+                %smooth
+                ] coordinates
+    {(0,66.00) (1,93.00) (2,76.30) (3,88.39) (4,80.00) (5,63.56) (6,97.80) (7,59.43) (8,80.06) (9,62.76) (10,82.70) (11,60.80) (12,51.20) (13,85.14) (14,61.00)};  
+
+\addplot[very thick, color=col1,mark=*,
+                mark options={solid},
+                draw opacity=0.5,
+                %smooth
+                ] coordinates
+    {(0,66.6) (1,92.00) (2,79.00) (3,87.80) (4,82.40) (5,64.56) (6,98.00) (7,63.00) (8,78.8) (9,67.6) (10,81.4) (11,54.00) (12,49.6) (13,80.60) (13,85.14) (14,57.20)};
+
+\legend{\tiny{M. ev.}, \tiny{5fcv}}
+   
+    
+\end{axis}
+\end{tikzpicture}
+
+\caption*{Confronto Accuracy Model Selection e Model Evaluation su  Tomita dataset per ObPA2 }
+   \label{fig:ob2tom}
+\end{figure}
+
+
+
+
+
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\pgfplotsset{
+every axis legend/.append style={
+at={(0.5,1.03)},
+anchor=south
+},
+}
+\begin{axis}
+[
+        width=13cm,
+        height=7cm,
+        legend columns=4,
+        legend style={draw=none},
+        %title style={at={(0.5,0)},anchor=north,yshift=-0.1},
+        %title={\ac{ObPA}3},
+        ticklabel style={font=\tiny},
+        %xlabel style={font=\tiny, above},
+        %ylabel style={font=\tiny},
+        xlabel=\textbf{Dimensione tr. set},
+        ylabel=\textbf{Accuracy},
+        %ylabel style={rotate=-90},
+        ymajorgrids=true,
+        xtick=data,
+        %mark size=2.0pt,
+        xtick style={draw=none},
+       %,xtick={0,1,...,3}
+        xticklabels={100,250,500}
+        ]
+        
+
+
+\addplot[very thick, color=col1,mark=square,
+               draw opacity=0.9,
+                mark options={solid},
+                %smooth
+                ] coordinates
+    {(0,56.2) (1,59.5) (2,65.8)};  
+
+
+
+   
+    
+\end{axis}
+\end{tikzpicture}
+
+\caption*{Confronto Accuracy Model Selection e Model Evaluation su  Tomita dataset per ObPA2 }
+   \label{fig:varacdimtr}
+\end{figure}
+
+
+

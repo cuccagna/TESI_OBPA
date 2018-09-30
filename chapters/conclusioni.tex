@@ -1,6 +1,42 @@
 \chapter*{Conclusioni}
 \label{cap:con}
 
+
+
+
+\section{ALtro}
+Parla del fatto che la soglia per l'eq si è impostata con un'accuracy del 90$\%$ ma non va bene questa misura. Se si ha a che fare con un \ac{DFA} come Tomita2 ad esempio che genera molte più stringhe negative che positive si ha che molte delle stringhe estratte dal W-Method se non tutte sono negative e nel primo round di \ac{ObPA} l'iptesi è il DFA che rigetta tutte le stringhe l'accuracy è al 100$\%$ e nonostante un buon classificatore si ottiene un risultato errato. Allora si è usato Matthews come misura che tenendo conto di entrambe le classi evita questo problema.
+
+Allo stato dell'arte l' \ac{ObP} costituisce il secondo algoritmo di riferimento nell'ambito dell'apprendimento di linguaggi regolari.  L'algoritmo più performante è invece il più recente TTT algorithm \cite{SteffenTTT14}.
+
+Inserire discorso che la lineare separabilità (hard margin) non è direttamente implementabile in svm light e si usa il parametro C=1. SI potrebbe provare ad usare un'altra libreria che ha questa lineare separabilità  o ad usare una ricerca nello spazio del parametro C (perchè anche con dati lineramente separabili per evitare overfitting e problemi con gli outliers si usa spesso soft margi lo stesso).
+
+Inserire il discorso che in ideal version alla fine è comunque necessario confrontare l'ipotesi finale col target per rendersi conto del dfa inferito quanto è buono. Infatti che l'ipotesi sia verificato tramite un'equivalence query essere simile al classificatore non è sufficiente in quanto il classificatore è già di per sè un'approssimazione del target e quindi un'ipotesi che approssima bene il classificatore potrebbe non approssimare bene il target e quindi un confronto finale tra target e ipotesi è necessario. 
+
+Inserire il discorso dell'esplosione del DFA. E che questo è dovuto anche al fatto che quando viene tornato un controesempio che non è un controesempio si fanno degli split errati. Siccome la versione implementata in librearia è ONEGlobally questa può generare più di uno split alla volta a differenza di ONELocally. Inoltre il controesempio viene sfruttato più di una volta, quindi anche un solo errore può condurre nel controesempio può condurre ad un DFA ipotesi completamente divergente dal target. Quindi potrebb essere meglio usare ONELocally che però è stato implementato ma non funzionava bene al 100 per 100.
+
+Fai vedere le difficoltà anche nell'approssimare con OneGlobally OBP il linguaggio che il classificatore rappresenta, e non solo difficoltà nell'approssimare il linguaggio target col classificatore in addestramento.
+
+Parla del fatto che è pssibile provare ad implementare SVM PERFCT per velocizzare il codice e provare così ad usare un training set di dimensioni maggiori e si spera migliori risultati.
+
+Parla del caso di campioni non bilanciati che lo splitting permette di gestire campioni non bilanciati e che c'è un parametro per gestire i campioni non bilanciati. Nessun esperimento fatto su di essi.
+
+Inserire il discorso che al crescere dell'ipotesi comunque l'ipotesi si avvicina al classificatore. Ma se il classificatore fa schifo ci si avvicina a qualcosa che fa schifo. Cioè fai capire che se non è buono il classificatore ObPA non ha niente che fare.
+
+Giustifica risultati anche perchè si approssimano anche le MQ. Ma che comunque non c'è niente da fare se il classificatore fa schifo.
+
+
+
+Fai vedere che comunque esistono dei modelli complessi con cui si hanno buoni risultati (anche se la complessità è tutta da vedeere e non è decisa solo dagli stati dall'alfabeto e dalla profondità, ma dipende anche da quanto sono buoni i campioni estratti col random walk).
+Illustra i set di esperimenti e i risultati.
+
+Scrivi che non c'è un feedback per la bontà del classificatore come spiegato nel Capitolo 4 ma comunque si ha l'accuracy in ObPA1 e ObPA2 e il margine in ObPA3 (vedi se hai anche altro in obpa 3). E un metodo alla femminina per capire se il classificatore è buono è vedere se il classificatore viene costruito velocemente oppure SVM perde tempo. 
+
+
+
+
+
+
 Inserire il discorso che è possibile provare ObPA nel caso si approssimano solo le eq. query e le MQ sono esatte. CHe lo scenario cui si è ricondotti qui è molto simile agli algoritmi di passive learning. Gli algoritmi di active learning invece sono più efficienti proprio perchè hanno piu informazioni e qui riducendo a zero l'informazione aggiuntiva riconducendoci a uno scenario operativo degli algoritmi di passive learning ma sempre inseriti in un algoritmo di active learning si hanno riultati non ottimi. Diminuendo solo parzialmente l'informazione (appr. solo l'eq. come fanno molti lavori in letteratura sicuramente si otterrebbero risultati migliori).
 
 Dato che il W-Method ha una complessità esponenziale (Vedi CHow) esistono metodi simili più efficienti come il Wp-Method e HSI method che si può pensare di implementare per provare a risolvere i problemi col W-Method
